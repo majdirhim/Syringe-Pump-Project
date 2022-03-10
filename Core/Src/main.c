@@ -48,7 +48,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t END_CMD[3] = {0xFF , 0XFF , 0XFF};
+uint8_t END_CMD[3] = {0xFF , 0XFF , 0XFF}; // "End Command" for nextion display
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
