@@ -48,7 +48,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t END_CMD[3] = {0xFF , 0XFF , 0XFF}; // "End Command" for nextion display
+//uint8_t END_CMD[3] = {0xFF , 0XFF , 0XFF}; // "End Command" for nextion display (we will not be using it)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -123,7 +123,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   L6474_SetRegisterToGivenValues(0,gL6474InitParams);
   BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,1);
-  BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
   HAL_ADC_Start(&hadc3); // internal_temp measurement
 
 
@@ -276,12 +275,12 @@ void MyFlagInterruptHandler(void)
   }
 
 }
-void Send(char *obj , int16_t value){ //sending data to the nextion display via uart
+/*void Send(char *obj , int16_t value){ //sending data to the nextion display via uart
 	char buff [30] ;
 	int len = sprintf(buff,"%s=%d" ,obj , value);
 	HAL_UART_Transmit(&huart5, (uint8_t*)&buff, len, 100);
 	HAL_UART_Transmit(&huart5, END_CMD, 3, 100);
-}
+}*/ // (----we will not be using it-----)
 void Get(char *obj , int16_t value){ // receiving data from the displat via uart
 	// working on
 }

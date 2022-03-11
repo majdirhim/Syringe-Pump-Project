@@ -88,7 +88,7 @@ const osThreadAttr_t IHM_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-
+void MyFlagInterruptHandler(void);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -179,10 +179,12 @@ void StartDefaultTask(void *argument)
 void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
+	BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
   /* Infinite loop */
   for(;;)
   {
-	L6474_ApplySpeed(0,100);// MAX 10000 pps , Min 2 pps
+	L6474_SetMaxSpeed(0, 100);
+	L6474_SetMinSpeed(0, 100);
 	L6474_Move(0, BACKWARD, 16000);
 	L6474_WaitWhileActive(0);
 	osDelay(1000);

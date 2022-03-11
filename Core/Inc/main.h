@@ -54,15 +54,17 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-static void MyFlagInterruptHandler(void);
-void Send(char *obj , int16_t value);
+void MyFlagInterruptHandler(void);// stepper motor driver flags handler ( under_voltage / thermal warning ...)
+//void Send(char *obj , int16_t value);  // used for uart communication with the Nextion display.( we will not be using it )
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED4_Pin GPIO_PIN_8
-#define LED4_GPIO_Port GPIOI
-#define LED3_Pin GPIO_PIN_4
-#define LED3_GPIO_Port GPIOH
+#define STBY_RST_Pin GPIO_PIN_8
+#define STBY_RST_GPIO_Port GPIOI
+#define FLAG_Pin GPIO_PIN_4
+#define FLAG_GPIO_Port GPIOH
+#define DIR1_Pin GPIO_PIN_3
+#define DIR1_GPIO_Port GPIOI
 #define LED1_Pin GPIO_PIN_6
 #define LED1_GPIO_Port GPIOB
 #define LED2_Pin GPIO_PIN_7
