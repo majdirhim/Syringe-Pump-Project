@@ -28,7 +28,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "l6474.h"
-#include "stdio.h"
+// #include "stdio.h" // used for Send function (sprintf) ( --- we will not be using it ---- )
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
