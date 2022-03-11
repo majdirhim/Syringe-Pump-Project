@@ -1357,7 +1357,7 @@ void L6474_ApplySpeed(uint8_t deviceId, uint16_t newSpeed)
 void L6474_ComputeSpeedProfile(uint8_t deviceId, uint32_t nbSteps)
 {
   uint32_t reqAccSteps; 
-	uint32_t reqDecSteps;
+  uint32_t reqDecSteps;
    
   /* compute the number of steps to get the targeted speed */
   uint16_t minSpeed = devicePrm[deviceId].minSpeed;

@@ -21,7 +21,7 @@
   */ 
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef X_NUCLEO_IHM01A1_STM32F4XX_H // STM32H7
+#ifndef X_NUCLEO_IHM01A1_STM32F4XX_H // -----------STM32H7 not F4---------
 #define X_NUCLEO_IHM01A1_STM32F4XX_H
 
 #ifdef __cplusplus

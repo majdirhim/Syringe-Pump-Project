@@ -21,7 +21,7 @@
   */ 
   
 /* Includes ------------------------------------------------------------------*/
-#include "x_nucleo_ihm01a1_stm32f4xx.h" // stm32H7
+#include "x_nucleo_ihm01a1_stm32f4xx.h" // ------------stm32H7 not F4-------------
 
 /** @addtogroup BSP
   * @{
