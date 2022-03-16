@@ -21,6 +21,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "adc.h"
+#include "i2c.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
@@ -120,6 +121,7 @@ int main(void)
   MX_SPI2_Init();
   MX_ADC3_Init();
   MX_UART5_Init();
+  MX_I2C1_SMBUS_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetRegisterToGivenValues(0,gL6474InitParams);
   BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,1);

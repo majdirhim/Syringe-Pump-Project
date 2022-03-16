@@ -48,7 +48,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-int tCelsius ;
+int tCelsius ; // cpu_temp
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -249,8 +249,7 @@ void Interface(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	Send("temp" , tCelsius );
-    osDelay(100);
+
   }
   /* USER CODE END Interface */
 }
