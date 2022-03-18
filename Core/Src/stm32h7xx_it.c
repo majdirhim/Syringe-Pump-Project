@@ -56,6 +56,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern LTDC_HandleTypeDef hltdc;
 extern TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN EV */
@@ -172,6 +173,20 @@ void TIM3_IRQHandler(void)
   /* USER CODE BEGIN TIM3_IRQn 1 */
 
   /* USER CODE END TIM3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles LTDC global interrupt.
+  */
+void LTDC_IRQHandler(void)
+{
+  /* USER CODE BEGIN LTDC_IRQn 0 */
+
+  /* USER CODE END LTDC_IRQn 0 */
+  HAL_LTDC_IRQHandler(&hltdc);
+  /* USER CODE BEGIN LTDC_IRQn 1 */
+
+  /* USER CODE END LTDC_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

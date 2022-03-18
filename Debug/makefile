@@ -9,6 +9,22 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/hal/simulator/sdl2/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/touchgfx/framework/source/platform/driver/touch/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/simulator/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen1_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/model/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/common/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/texts/src/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen1_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/common/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/subdir.mk
+-include TouchGFX/App/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk

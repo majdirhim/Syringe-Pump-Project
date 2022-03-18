@@ -21,10 +21,14 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "adc.h"
+#include "crc.h"
+#include "dma2d.h"
 #include "i2c.h"
+#include "ltdc.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
+#include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -122,6 +126,10 @@ int main(void)
   MX_ADC3_Init();
   MX_UART5_Init();
   MX_I2C1_SMBUS_Init();
+  MX_DMA2D_Init();
+  MX_LTDC_Init();
+  MX_CRC_Init();
+  MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetRegisterToGivenValues(0,gL6474InitParams);
   BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,1);
@@ -283,9 +291,9 @@ void MyFlagInterruptHandler(void)
 	HAL_UART_Transmit(&huart5, (uint8_t*)&buff, len, 100);
 	HAL_UART_Transmit(&huart5, END_CMD, 3, 100);
 }*/ // (----we will not be using it-----)
-void Get(char *obj , int16_t value){ // receiving data from the displat via uart
+/*void Get(char *obj , int16_t value){ // receiving data from the displat via uart
 	// working on
-}
+}*/
 
 /* USER CODE END 4 */
 
