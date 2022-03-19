@@ -7,11 +7,11 @@
 C_SRCS += \
 ../TouchGFX/App/app_touchgfx.c 
 
-OBJS += \
-./TouchGFX/App/app_touchgfx.o 
-
 C_DEPS += \
 ./TouchGFX/App/app_touchgfx.d 
+
+OBJS += \
+./TouchGFX/App/app_touchgfx.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

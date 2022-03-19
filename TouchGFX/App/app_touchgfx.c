@@ -17,18 +17,16 @@
 
 #include "app_touchgfx.h"
 
-
-//void touchgfx_init(void);
-
+void touchgfx_init(void);
 void touchgfx_taskEntry(void);
 
 /**
  * Initialize TouchGFX application
  */
- void MX_TouchGFX_Init(void)
+void MX_TouchGFX_Init(void)
 {
   // Calling farward to touchgfx_init in C++ domain
-	  void touchgfx_init(void); // waiting for excuting to verify
+  touchgfx_init();
 }
 
 /**

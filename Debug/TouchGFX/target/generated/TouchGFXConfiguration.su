@@ -1,3 +1,4 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:81:5:touchgfx::colortype::colortype()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:130:5:touchgfx::Rect::Rect()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:169:17:static void touchgfx::TypedText::registerTexts(const touchgfx::Texts*)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp:46:13:touchgfx::FontProvider::~FontProvider()	16	static
@@ -19,6 +20,13 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:89:18:virtual void touchgfx::Application::requestRedraw(touchgfx::Rect&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:182:13:touchgfx::GenericCallback<void>::~GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:182:13:virtual touchgfx::GenericCallback<void>::~GenericCallback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:63:13:touchgfx::DMA_Queue::~DMA_Queue()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:63:13:virtual touchgfx::DMA_Queue::~DMA_Queue()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:146:18:virtual void touchgfx::DMA_Interface::initialize()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:214:21:virtual touchgfx::DMAType touchgfx::DMA_Interface::getDMAType()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:220:13:touchgfx::DMA_Interface::~DMA_Interface()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:220:13:virtual touchgfx::DMA_Interface::~DMA_Interface()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:230:5:touchgfx::DMA_Interface::DMA_Interface(touchgfx::DMA_Queue&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:41:9:touchgfx::Gestures::DragState::DragState()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:65:5:touchgfx::Gestures::Gestures()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:33:13:touchgfx::TouchController::~TouchController()	16	static
@@ -47,6 +55,13 @@
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:44:7:touchgfx::Partition<touchgfx::meta::TypeList<screenView, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::Partition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:44:7:touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::Partition()	16	static
 ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:67:5:FrontendHeap::FrontendHeap()	32	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp:46:8:touchgfx::BlitOp::BlitOp()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:38:5:touchgfx::NoDMA::NoDMA()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:48:28:virtual touchgfx::BlitOperations touchgfx::NoDMA::getBlitCaps()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:58:18:virtual void touchgfx::NoDMA::setupDataCopy(const touchgfx::BlitOp&)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:68:18:virtual void touchgfx::NoDMA::setupDataFill(const touchgfx::BlitOp&)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:74:18:virtual void touchgfx::NoDMA::signalDMAInterrupt()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:82:18:virtual void touchgfx::NoDMA::flush()	16	static
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:44:5:TouchGFXGeneratedHAL::TouchGFXGeneratedHAL(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, uint16_t, uint16_t)	32	static
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:28:7:TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:28:7:virtual TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
@@ -55,6 +70,8 @@
 ../TouchGFX/target/STM32TouchController.hpp:37:5:STM32TouchController::STM32TouchController()	16	static
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp:38:6:void touchgfx_init()	32	static
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp:58:6:void touchgfx_taskEntry()	8	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:35:7:touchgfx::NoDMA::~NoDMA()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/NoDMA.hpp:35:7:virtual touchgfx::NoDMA::~NoDMA()	16	static
 ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:6:7:FrontendHeap::~FrontendHeap()	16	static
 ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:6:7:virtual FrontendHeap::~FrontendHeap()	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:44:7:touchgfx::Partition<touchgfx::meta::TypeList<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	16	static
@@ -74,6 +91,8 @@
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp:67:1:void __static_initialization_and_destruction_0(int, int)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:430:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:430:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:89:7:touchgfx::LockFreeDMA_Queue::~LockFreeDMA_Queue()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:89:7:virtual touchgfx::LockFreeDMA_Queue::~LockFreeDMA_Queue()	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:60:22:uint16_t touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::capacity() const [with ListOfTypes = touchgfx::meta::TypeList<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:65:22:uint32_t touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::element_size() [with ListOfTypes = touchgfx::meta::TypeList<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:71:19:void* touchgfx::Partition<ListOfTypes, NUMBER_OF_ELEMENTS>::element(uint16_t) [with ListOfTypes = touchgfx::meta::TypeList<touchgfx::SlideTransition<touchgfx::EAST>, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >; short unsigned int NUMBER_OF_ELEMENTS = 1]	16	static

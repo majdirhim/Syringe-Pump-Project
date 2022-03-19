@@ -26,28 +26,6 @@ C_SRCS += \
 ../Core/Src/usart.c \
 ../Core/Src/x_nucleo_ihm01a1_stm32f4xx.c 
 
-OBJS += \
-./Core/Src/adc.o \
-./Core/Src/crc.o \
-./Core/Src/dma2d.o \
-./Core/Src/freertos.o \
-./Core/Src/gpio.o \
-./Core/Src/i2c.o \
-./Core/Src/l6474.o \
-./Core/Src/ltdc.o \
-./Core/Src/main.o \
-./Core/Src/motorcontrol.o \
-./Core/Src/spi.o \
-./Core/Src/stm32h7xx_hal_msp.o \
-./Core/Src/stm32h7xx_hal_timebase_tim.o \
-./Core/Src/stm32h7xx_it.o \
-./Core/Src/syscalls.o \
-./Core/Src/sysmem.o \
-./Core/Src/system_stm32h7xx.o \
-./Core/Src/tim.o \
-./Core/Src/usart.o \
-./Core/Src/x_nucleo_ihm01a1_stm32f4xx.o 
-
 C_DEPS += \
 ./Core/Src/adc.d \
 ./Core/Src/crc.d \
@@ -69,6 +47,28 @@ C_DEPS += \
 ./Core/Src/tim.d \
 ./Core/Src/usart.d \
 ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.d 
+
+OBJS += \
+./Core/Src/adc.o \
+./Core/Src/crc.o \
+./Core/Src/dma2d.o \
+./Core/Src/freertos.o \
+./Core/Src/gpio.o \
+./Core/Src/i2c.o \
+./Core/Src/l6474.o \
+./Core/Src/ltdc.o \
+./Core/Src/main.o \
+./Core/Src/motorcontrol.o \
+./Core/Src/spi.o \
+./Core/Src/stm32h7xx_hal_msp.o \
+./Core/Src/stm32h7xx_hal_timebase_tim.o \
+./Core/Src/stm32h7xx_it.o \
+./Core/Src/syscalls.o \
+./Core/Src/sysmem.o \
+./Core/Src/system_stm32h7xx.o \
+./Core/Src/tim.o \
+./Core/Src/usart.o \
+./Core/Src/x_nucleo_ihm01a1_stm32f4xx.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

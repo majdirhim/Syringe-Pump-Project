@@ -26,6 +26,7 @@
 #include "i2c.h"
 #include "ltdc.h"
 #include "spi.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 #include "app_touchgfx.h"
@@ -129,6 +130,7 @@ int main(void)
   MX_DMA2D_Init();
   MX_LTDC_Init();
   MX_CRC_Init();
+  MX_TIM2_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetRegisterToGivenValues(0,gL6474InitParams);
