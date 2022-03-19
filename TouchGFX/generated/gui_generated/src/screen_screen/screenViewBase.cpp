@@ -4,6 +4,7 @@
 #include <gui_generated/screen_screen/screenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
 
 screenViewBase::screenViewBase() :
     buttonCallback(this, &screenViewBase::buttonCallbackHandler)
@@ -16,8 +17,21 @@ screenViewBase::screenViewBase() :
     button1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     button1.setAction(buttonCallback);
 
+    slider1.setXY(0, 33);
+    slider1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_SLIDER3_VERTICAL_ROUND_FILL_ID), touchgfx::Bitmap(BITMAP_BLUE_SLIDER_VERTICAL_SMALL_INDICATORS_SLIDER3_VERTICAL_ROUND_NOB_ID));
+    slider1.setupVerticalSlider(7, 3, 0, 0, 125);
+    slider1.setValueRange(0, 100);
+    slider1.setValue(0);
+
+    textArea1.setXY(52, 33);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID2));
+
     add(__background);
     add(button1);
+    add(slider1);
+    add(textArea1);
 }
 
 void screenViewBase::setupScreen()
