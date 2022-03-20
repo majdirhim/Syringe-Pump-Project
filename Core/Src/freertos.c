@@ -88,7 +88,8 @@ const osThreadAttr_t IHM_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-void MyFlagInterruptHandler(void);
+void MyFlagInterruptHandler(void); // stepper interrupts
+void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc); // cpu temp interrupts
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -224,10 +225,10 @@ void Sensors_measurements(void *argument)
 {
   /* USER CODE BEGIN Sensors_measurements */
 	uint16_t readValue;
-
   /* Infinite loop */
   for(;;)
   {
+	  HAL_ADC_Start(&hadc3); // temp
 	  HAL_ADC_PollForConversion(&hadc3, 10000);
 	  readValue = HAL_ADC_GetValue(&hadc3);
 	  tCelsius = 357.558 - 0.187364 * readValue;

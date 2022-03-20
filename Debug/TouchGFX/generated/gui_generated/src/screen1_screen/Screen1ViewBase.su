@@ -1,6 +1,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:94:5:touchgfx::colortype::colortype(uint32_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:130:5:touchgfx::Rect::Rect()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:146:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:127:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:53:5:touchgfx::Drawable::Drawable()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:64:13:touchgfx::Drawable::~Drawable()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:64:13:virtual touchgfx::Drawable::~Drawable()	16	static
@@ -42,13 +43,17 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:68:13:touchgfx::TypedText::~TypedText()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:68:13:virtual touchgfx::TypedText::~TypedText()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:47:5:touchgfx::TextArea::TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:42:7:touchgfx::Image::~Image()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:42:7:virtual touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:40:7:touchgfx::View<Screen1Presenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:40:7:virtual touchgfx::View<Screen1Presenter>::~View()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:17:13:Screen1ViewBase::~Screen1ViewBase()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:17:13:virtual Screen1ViewBase::~Screen1ViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:18:13:Screen1ViewBase::~Screen1ViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:18:13:virtual Screen1ViewBase::~Screen1ViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:25:18:virtual void Screen1ViewBase::syringePumpProgress()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:51:22:static touchgfx::colortype touchgfx::Color::getColorFrom24BitRGB(uint8_t, uint8_t, uint8_t)	24	static
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:8:1:Screen1ViewBase::Screen1ViewBase()	56	static
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:23:6:virtual void Screen1ViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:9:1:Screen1ViewBase::Screen1ViewBase()	64	static
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:34:6:virtual void Screen1ViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:40:6:virtual void Screen1ViewBase::afterTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:43:5:touchgfx::View<T>::View() [with T = Screen1Presenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:42:7:touchgfx::Container::~Container()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:42:7:virtual touchgfx::Container::~Container()	16	static
@@ -56,3 +61,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:36:7:virtual touchgfx::Box::~Box()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:44:7:touchgfx::TextArea::~TextArea()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:44:7:virtual touchgfx::TextArea::~TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:virtual touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:32:7:touchgfx::AbstractDirectionProgress::~AbstractDirectionProgress()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:32:7:virtual touchgfx::AbstractDirectionProgress::~AbstractDirectionProgress()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:38:7:touchgfx::TiledImage::~TiledImage()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:38:7:virtual touchgfx::TiledImage::~TiledImage()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp:36:7:touchgfx::ImageProgress::~ImageProgress()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp:36:7:virtual touchgfx::ImageProgress::~ImageProgress()	16	static

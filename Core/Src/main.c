@@ -135,7 +135,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   L6474_SetRegisterToGivenValues(0,gL6474InitParams);
   BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,1);
-  HAL_ADC_Start(&hadc3); // internal_temp measurement
 
 
   /* USER CODE END 2 */
@@ -217,6 +216,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+//stepper driver interrupt
 void MyFlagInterruptHandler(void)
 {
   /* Get the value of the status register via the L6474 command GET_STATUS */
@@ -287,15 +287,10 @@ void MyFlagInterruptHandler(void)
   }
 
 }
-/*void Send(char *obj , int16_t value){ //sending data to the nextion display via uart
-	char buff [30] ;
-	int len = sprintf(buff,"%s=%d" ,obj , value);
-	HAL_UART_Transmit(&huart5, (uint8_t*)&buff, len, 100);
-	HAL_UART_Transmit(&huart5, END_CMD, 3, 100);
-}*/ // (----we will not be using it-----)
-/*void Get(char *obj , int16_t value){ // receiving data from the displat via uart
-	// working on
-}*/
+// cpu temp interrupt
+void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
+	// do something in case of analog watchdog interrupts
+}
 
 /* USER CODE END 4 */
 

@@ -7,23 +7,20 @@
 CPP_SRCS += \
 ../TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.cpp \
 ../TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.cpp \
-../TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.cpp \
-../TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.cpp \
-../TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.cpp 
+../TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.cpp \
+../TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.cpp 
 
 OBJS += \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o \
-./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.o \
-./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.o \
-./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.o 
+./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.o \
+./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.o 
 
 CPP_DEPS += \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.d \
 ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.d \
-./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.d \
-./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.d \
-./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.d 
+./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.d \
+./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -33,7 +30,7 @@ TouchGFX/generated/images/src/__designer/%.o TouchGFX/generated/images/src/__des
 clean: clean-TouchGFX-2f-generated-2f-images-2f-src-2f-__designer
 
 clean-TouchGFX-2f-generated-2f-images-2f-src-2f-__designer:
-	-$(RM) ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.su ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.su ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.d ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.o ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.su ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.d ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.o ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.su ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.d ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.o ./TouchGFX/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.su
+	-$(RM) ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.su ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.d ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o ./TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.su ./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.d ./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.o ./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.su ./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.d ./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.o ./TouchGFX/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-images-2f-src-2f-__designer
 

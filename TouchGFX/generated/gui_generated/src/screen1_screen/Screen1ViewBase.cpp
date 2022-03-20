@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include "BitmapDatabase.hpp"
 
 Screen1ViewBase::Screen1ViewBase()
 {
@@ -16,11 +17,30 @@ Screen1ViewBase::Screen1ViewBase()
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
 
+    imageProgress1.setXY(148, 79);
+    imageProgress1.setProgressIndicatorPosition(2, 2, 180, 16);
+    imageProgress1.setRange(0, 100);
+    imageProgress1.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
+    imageProgress1.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_PROGRESS_INDICATOR_BG_SQUARE_0_DEGREES_ID));
+    imageProgress1.setBitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_TILING_PROGRESS_INDICATOR_FILL_STRIPED_NORMAL_HORIZONTAL_ID);
+    imageProgress1.setValue(60);
+    imageProgress1.setAnchorAtZero(false);
+
     add(__background);
     add(textArea1);
+    add(imageProgress1);
 }
 
 void Screen1ViewBase::setupScreen()
 {
 
+}
+
+//Called when the screen transition ends
+void Screen1ViewBase::afterTransition()
+{
+    //Interaction1
+    //When screen transition ends call virtual function
+    //Call syringePumpProgress
+    syringePumpProgress();
 }

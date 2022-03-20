@@ -14,3 +14,10 @@ void Screen1View::tearDownScreen()
 {
     Screen1ViewBase::tearDownScreen();
 }
+
+void Screen1View::syringePumpProgress(){
+	for(int i=0;i<100;i++){
+	imageProgress1.setValue(i);
+	}
+}
+

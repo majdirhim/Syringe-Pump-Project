@@ -9,8 +9,6 @@
 #include <gui/screen_screen/screenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/containers/Slider.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 
 class screenViewBase : public touchgfx::View<screenPresenter>
 {
@@ -29,8 +27,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Button button1;
-    touchgfx::Slider slider1;
-    touchgfx::TextArea textArea1;
 
 private:
 
