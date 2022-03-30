@@ -50,10 +50,10 @@
 /* USER CODE BEGIN Variables */
 int tCelsius ; // cpu_temp
 /* USER CODE END Variables */
-/* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
+/* Definitions for battery_manage */
+osThreadId_t battery_manageHandle;
+const osThreadAttr_t battery_manage_attributes = {
+  .name = "battery_manage",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
@@ -92,7 +92,7 @@ void MyFlagInterruptHandler(void); // stepper interrupts
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc); // cpu temp interrupts
 /* USER CODE END FunctionPrototypes */
 
-void StartDefaultTask(void *argument);
+void StartBatteryManage(void *argument);
 void Stepper_motor(void *argument);
 void Cloud_Connectivity(void *argument);
 void Sensors_measurements(void *argument);
@@ -127,8 +127,8 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  /* creation of battery_manage */
+  battery_manageHandle = osThreadNew(StartBatteryManage, NULL, &battery_manage_attributes);
 
   /* creation of Stepper */
   StepperHandle = osThreadNew(Stepper_motor, NULL, &Stepper_attributes);
@@ -152,22 +152,22 @@ void MX_FREERTOS_Init(void) {
 
 }
 
-/* USER CODE BEGIN Header_StartDefaultTask */
+/* USER CODE BEGIN Header_StartBatteryManage */
 /**
-  * @brief  Function implementing the defaultTask thread.
+  * @brief  Function implementing the battery_manage thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void *argument)
+/* USER CODE END Header_StartBatteryManage */
+void StartBatteryManage(void *argument)
 {
-  /* USER CODE BEGIN StartDefaultTask */
+  /* USER CODE BEGIN StartBatteryManage */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END StartDefaultTask */
+  /* USER CODE END StartBatteryManage */
 }
 
 /* USER CODE BEGIN Header_Stepper_motor */

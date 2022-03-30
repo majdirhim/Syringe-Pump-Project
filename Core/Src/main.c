@@ -134,8 +134,6 @@ int main(void)
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,&gL6474InitParams);
-
-
   /* USER CODE END 2 */
 
   /* Init scheduler */
