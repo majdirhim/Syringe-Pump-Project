@@ -133,8 +133,7 @@ int main(void)
   MX_TIM2_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  L6474_SetRegisterToGivenValues(0,gL6474InitParams);
-  BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,1);
+  BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,&gL6474InitParams);
 
 
   /* USER CODE END 2 */
