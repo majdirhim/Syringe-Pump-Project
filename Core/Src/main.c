@@ -67,12 +67,12 @@ void MX_FREERTOS_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-L6474_Init_t gL6474InitParams =
+/*L6474_Init_t gL6474InitParams =
   {
-      160,                               /// Acceleration rate in step/s2. Range: (0..+inf).
-      160,                               /// Deceleration rate in step/s2. Range: (0..+inf).
-      1600,                              /// Maximum speed in step/s. Range: (30..10000].
-      800,                               ///Minimum speed in step/s. Range: [30..10000).
+      1,                               /// Acceleration rate in step/s2. Range: (0..+inf).
+      1,                               /// Deceleration rate in step/s2. Range: (0..+inf).
+      1000,                              /// Maximum speed in step/s. Range: (30..10000].
+      1000,                               ///Minimum speed in step/s. Range: [30..10000).
       250,                               ///Torque regulation current in mA. (TVAL register) Range: 31.25mA to 4000mA.
       750,                               ///Overcurrent threshold (OCD_TH register). Range: 375mA to 6000mA.
       L6474_CONFIG_OC_SD_ENABLE,         ///Overcurrent shutwdown (OC_SD field of CONFIG register).
@@ -92,7 +92,7 @@ L6474_Init_t gL6474InitParams =
        L6474_ALARM_EN_UNDERVOLTAGE     |
        L6474_ALARM_EN_SW_TURN_ON       |
        L6474_ALARM_EN_WRONG_NPERF_CMD)    /// Alarm (ALARM_EN register).
-  };
+  };*/
 /* USER CODE END 0 */
 
 /**
@@ -133,7 +133,8 @@ int main(void)
   MX_TIM2_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,&gL6474InitParams);
+  L6474_SetNbDevices(1);
+  BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,NULL);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -287,6 +288,22 @@ void MyFlagInterruptHandler(void)
 // cpu temp interrupt
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	// do something in case of analog watchdog interrupts
+}
+
+// returns the speed of Screws needed for a given flow_rate (mm/h) and syringe radius(mm)
+uint8_t Screws_Speed_From_FlowRate(uint8_t flow_rate , uint8_t radius ){
+	radius = radius*0.001;
+	uint8_t section = radius*radius*3.14159;
+	flow_rate = (flow_rate * 0.001) / 3600;
+	return flow_rate/section ;
+}
+// returns the speed of Screws needed for a given fluid volume , time and radius
+uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius){
+	return Screws_Speed_From_FlowRate(volume/time,radius) ;
+}
+// returns the motor speed needed
+uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed){
+	return screwspeed / screwstep;
 }
 
 /* USER CODE END 4 */

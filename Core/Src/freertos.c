@@ -88,8 +88,16 @@ const osThreadAttr_t IHM_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-void MyFlagInterruptHandler(void); // stepper interrupts
-void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc); // cpu temp interrupts
+// stepper interrupts
+void MyFlagInterruptHandler(void);
+// cpu temp interrupts
+void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc);
+// returns the speed of Screws needed for a given flow_rate (mm/h) and syringe radius(mm)
+uint8_t Screws_Speed_From_FlowRate(uint8_t flow_rate , uint8_t radius );
+// returns the speed of Screws needed for a given fluid volume , time and radius
+uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius);
+// returns the motor speed needed
+uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed);
 /* USER CODE END FunctionPrototypes */
 
 void StartBatteryManage(void *argument);
@@ -184,8 +192,8 @@ void Stepper_motor(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	L6474_SetMaxSpeed(0, 100);
-	L6474_SetMinSpeed(0, 100);
+	L6474_SetMaxSpeed(0, 1000);
+	L6474_SetMinSpeed(0, 1000);
 	L6474_Move(0, BACKWARD, 16000);
 	L6474_WaitWhileActive(0);
 	osDelay(1000);
@@ -250,7 +258,7 @@ void Interface(void *argument)
   /* Infinite loop */
   for(;;)
   {
-
+	  osDelay(1);
   }
   /* USER CODE END Interface */
 }
