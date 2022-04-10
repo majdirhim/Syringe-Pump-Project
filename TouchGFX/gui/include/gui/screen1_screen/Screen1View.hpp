@@ -10,6 +10,7 @@ class Screen1View : public Screen1ViewBase
 {
 public:
     Screen1View();
+    uint8_t Flow;
     virtual ~Screen1View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();

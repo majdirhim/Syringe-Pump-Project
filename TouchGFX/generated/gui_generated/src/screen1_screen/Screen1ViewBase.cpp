@@ -3,19 +3,15 @@
 /*********************************************************************************/
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
 
-Screen1ViewBase::Screen1ViewBase()
+Screen1ViewBase::Screen1ViewBase() :
+    buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
-
-    textArea1.setXY(227, 124);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(240, 18, 18));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID1));
 
     imageProgress1.setXY(148, 79);
     imageProgress1.setProgressIndicatorPosition(2, 2, 180, 16);
@@ -26,9 +22,32 @@ Screen1ViewBase::Screen1ViewBase()
     imageProgress1.setValue(60);
     imageProgress1.setAnchorAtZero(false);
 
+    textProgress1.setXY(198, 180);
+    textProgress1.setProgressIndicatorPosition(0, 0, 84, 34);
+    textProgress1.setRange(0, 100);
+    textProgress1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textProgress1.setNumberOfDecimals(0);
+    textProgress1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID3));
+    textProgress1.setBackground(touchgfx::Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_MEDIUM_TEXT_PROGRESS_BG_SQUARE_ID));
+    textProgress1.setValue(60);
+
+    textArea1.setXY(208, 124);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 0, 0));
+    textArea1.setLinespacing(0);
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID5).getText());
+    textArea1.setWildcard(textArea1Buffer);
+    textArea1.resizeToCurrentText();
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID4));
+
+    button1.setXY(12, 124);
+    button1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    button1.setAction(buttonCallback);
+
     add(__background);
-    add(textArea1);
     add(imageProgress1);
+    add(textProgress1);
+    add(textArea1);
+    add(button1);
 }
 
 void Screen1ViewBase::setupScreen()
@@ -36,11 +55,13 @@ void Screen1ViewBase::setupScreen()
 
 }
 
-//Called when the screen transition ends
-void Screen1ViewBase::afterTransition()
+void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    //Interaction1
-    //When screen transition ends call virtual function
-    //Call syringePumpProgress
-    syringePumpProgress();
+    if (&src == &button1)
+    {
+        //Interaction1
+        //When button1 clicked call virtual function
+        //Call syringePumpProgress
+        syringePumpProgress();
+    }
 }

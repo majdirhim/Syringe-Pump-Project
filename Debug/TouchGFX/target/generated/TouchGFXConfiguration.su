@@ -82,8 +82,8 @@
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:44:7:virtual touchgfx::Partition<touchgfx::meta::TypeList<Screen1Presenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	16	static
 ../TouchGFX/target/TouchGFXHAL.hpp:31:7:TouchGFXHAL::~TouchGFXHAL()	16	static
 ../TouchGFX/target/TouchGFXHAL.hpp:31:7:virtual TouchGFXHAL::~TouchGFXHAL()	16	static
-../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:29:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
-../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:29:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
+../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:31:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
+../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:31:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:46:7:touchgfx::LCD16bpp::~LCD16bpp()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:46:7:virtual touchgfx::LCD16bpp::~LCD16bpp()	16	static
 ../TouchGFX/target/STM32TouchController.hpp:33:7:STM32TouchController::~STM32TouchController()	16	static

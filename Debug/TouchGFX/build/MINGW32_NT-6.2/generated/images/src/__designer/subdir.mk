@@ -8,10 +8,8 @@ O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_small_pressed.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.o \
-../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.o \
-../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_nob.o \
-../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_back.o \
-../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_Slider_Vertical_Small_Slider3_Vertical_Round_fill.o 
+../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_ProgressIndicators_bg_medium_text_progress_bg_square.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__designer/image_Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

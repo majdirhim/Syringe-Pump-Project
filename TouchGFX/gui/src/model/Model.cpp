@@ -10,3 +10,6 @@ void Model::tick()
 {
 
 }
+void Model::ModelGetFlowRate(uint8_t Flow){
+
+}

@@ -26,7 +26,7 @@ public:
     virtual void deactivate();
 
     virtual ~Screen1Presenter() {};
-
+    void PresenterGetFlowRate(uint8_t Flow);
 private:
     Screen1Presenter();
 

@@ -16,3 +16,6 @@ void Screen1Presenter::deactivate()
 {
 
 }
+void Screen1Presenter::PresenterGetFlowRate(uint8_t Flow){
+	model->ModelGetFlowRate(Flow);
+}

@@ -1,3 +1,4 @@
+#include <stdint.h>
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
@@ -14,6 +15,7 @@ public:
     }
 
     void tick();
+    void ModelGetFlowRate(uint8_t Flow);
 protected:
     ModelListener* modelListener;
 };

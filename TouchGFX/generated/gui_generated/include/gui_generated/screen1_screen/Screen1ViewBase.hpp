@@ -8,8 +8,10 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/progress_indicators/ImageProgress.hpp>
+#include <touchgfx/containers/progress_indicators/TextProgress.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Button.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -17,7 +19,6 @@ public:
     Screen1ViewBase();
     virtual ~Screen1ViewBase() {}
     virtual void setupScreen();
-    virtual void afterTransition();
 
     /*
      * Virtual Action Handlers
@@ -36,10 +37,28 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::TextArea textArea1;
     touchgfx::ImageProgress imageProgress1;
+    touchgfx::TextProgress textProgress1;
+    touchgfx::TextAreaWithOneWildcard textArea1;
+    touchgfx::Button button1;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTAREA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

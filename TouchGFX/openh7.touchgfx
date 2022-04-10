@@ -45,30 +45,6 @@
       {
         "Components": [
           {
-            "Type": "TextArea",
-            "TextId": "SingleUseId1",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 240,
-              "Green": 18,
-              "Blue": 18
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Name": "textArea1",
-            "X": 227,
-            "Y": 124,
-            "Width": 26,
-            "Height": 25,
-            "Visible": true,
-            "LockPosition": false,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
             "Type": "ImageProgress",
             "FileNameProgress": "__designer\\Blue_ProgressIndicators_fill_tiling_progress_indicator_fill_striped_normal_horizontal.png",
             "AnchorAtZero": false,
@@ -95,6 +71,86 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Type": "TextProgress",
+            "NumberOfDecimals": 0,
+            "TextId": "SingleUseId3",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "Style": "Style3",
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_medium_text_progress_bg_square.png",
+            "IndicatorPositionX": 0,
+            "IndicatorPositionY": 0,
+            "IndicatorPositionWidth": 84,
+            "IndicatorPositionHeight": 34,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 60,
+            "Name": "textProgress1",
+            "X": 198,
+            "Y": 180,
+            "Width": 84,
+            "Height": 34,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "textArea1",
+            "X": 208,
+            "Y": 124,
+            "Width": 65,
+            "Height": 25,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Button",
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_small_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_small.png",
+            "Alpha": 255,
+            "Style": "Style4",
+            "Name": "button1",
+            "X": 12,
+            "Y": 124,
+            "Width": 170,
+            "Height": 60,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -102,7 +158,8 @@
             "InteractionName": "Interaction1",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "Type": "TriggerScreenEntered"
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -118,7 +175,15 @@
     "CustomContainerDefinitions": [],
     "TextEntries": [
       {
-        "TextEntryId": "SingleUseId1",
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
         "IsResource": false
       }
     ],

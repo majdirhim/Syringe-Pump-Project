@@ -16,8 +16,8 @@ void Screen1View::tearDownScreen()
 }
 
 void Screen1View::syringePumpProgress(){
-	for(int i=0;i<100;i++){
-	imageProgress1.setValue(i);
-	}
+	//Flow=textArea1.getWildcard();
+	Flow=textProgress1.getValue();
+	presenter->PresenterGetFlowRate(Flow);
 }
 
