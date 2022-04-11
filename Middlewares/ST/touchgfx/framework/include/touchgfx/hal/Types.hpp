@@ -1,17 +1,14 @@
-/**
-  ******************************************************************************
-  * This file is part of the TouchGFX 4.16.1 distribution.
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+/******************************************************************************
+* Copyright (c) 2018(-2022) STMicroelectronics.
+* All rights reserved.
+*
+* This file is part of the TouchGFX 4.19.1 distribution.
+*
+* This software is licensed under terms that can be found in the LICENSE file in
+* the root directory of this software component.
+* If no LICENSE file comes with this software, it is provided AS-IS.
+*
+*******************************************************************************/
 
 /**
  * @file touchgfx/hal/Types.hpp
@@ -19,8 +16,8 @@
  * Declares the touchgfx::colortype, touchgfx::Rect, touchgfx::Vector, touchgfx::Point,
  * touchgfx::Pair classes as well as some less used classes and structs.
  */
-#ifndef TYPES_HPP
-#define TYPES_HPP
+#ifndef TOUCHGFX_TYPES_HPP
+#define TOUCHGFX_TYPES_HPP
 
 #include <assert.h>
 #include <stdint.h>
@@ -92,17 +89,17 @@ struct colortype
      * @see Color::getColorFrom24BitRGB
      */
     colortype(uint32_t col)
+        : color(col)
     {
-        color = col;
     }
 
     /**
-     * Gets color as a 32bit value suitable for passing to Color::getRedColor(),
-     * Color::getGreenColor() and Color::getBlueColor() which will handle all bitdeptchs.
+     * Gets color as a 32bit value suitable for passing to Color::getRed(),
+     * Color::getGreen() and Color::getBlue() which will handle all bitdeptchs.
      *
      * @return The color 32.
      *
-     * @see Color::getRedColor, Color::getGreenColor, Color::getBlueColor
+     * @see Color::getRed, Color::getGreen, Color::getBlue
      */
     FORCE_INLINE_FUNCTION uint32_t getColor32() const
     {
@@ -128,11 +125,8 @@ class Rect
 public:
     /** Default constructor. Resulting in an empty Rect with coordinates 0,0. */
     Rect()
+        : x(0), y(0), width(0), height(0)
     {
-        x = 0;
-        y = 0;
-        width = 0;
-        height = 0;
     }
 
     /**
@@ -144,11 +138,8 @@ public:
      * @param  height The height.
      */
     Rect(int16_t x, int16_t y, int16_t width, int16_t height)
+        : x(x), y(y), width(width), height(height)
     {
-        this->x = x;
-        this->y = y;
-        this->width = width;
-        this->height = height;
     }
 
     int16_t x;      ///< The x coordinate
@@ -157,9 +148,10 @@ public:
     int16_t height; ///< The height
 
     /**
-     * Gets the x coordinate of the right edge of the Rect.
+     * Gets the x coordinate of the right edge of the Rect, i.e. the number
+     * of the first column just to the right of the Rect.
      *
-     * @return x coordinate of the right edge.
+     * @return x coordinate of the right edge (calculated as "x + width").
      */
     FORCE_INLINE_FUNCTION int16_t right() const
     {
@@ -167,9 +159,10 @@ public:
     }
 
     /**
-     * Gets the y coordinate of the bottom edge of the Rect.
+     * Gets the y coordinate of the bottom edge of the Rect, i.e. the number
+     * of the first row just below the Rect.
      *
-     * @return y coordinate of the buttom edge.
+     * @return y coordinate of the bottom edge (calculated as "y + height").
      */
     FORCE_INLINE_FUNCTION int16_t bottom() const
     {
@@ -186,7 +179,7 @@ public:
      */
     bool intersect(int16_t otherX, int16_t otherY) const
     {
-        return (otherX >= x && otherX < right() && otherY >= y && otherY < bottom());
+        return otherX >= x && otherX < right() && otherY >= y && otherY < bottom();
     }
 
     /**
@@ -210,10 +203,7 @@ public:
      */
     bool includes(const Rect& other) const
     {
-        return other.x >= x
-               && other.y >= y
-               && other.right() <= right()
-               && other.bottom() <= bottom();
+        return other.isEmpty() || (other.x >= x && other.y >= y && other.right() <= right() && other.bottom() <= bottom());
     }
 
     /**
@@ -222,7 +212,7 @@ public:
      *
      * @param  other The other rectangle.
      *
-     * @return Intersecting rectangle or Rect(0, 0, 0, 0) in case of no intersection.
+     * @return Intersecting rectangle or empty Rect in case of no intersection.
      */
     Rect operator&(const Rect& other) const
     {
@@ -233,7 +223,7 @@ public:
 
     /**
      * Assigns this Rect to the intersection of the current Rect and the assigned Rect. The
-     * assignment will result in a Rect(0, 0, 0, 0) if they do not intersect.
+     * assignment will result in a empty Rect if they do not intersect.
      *
      * @param  other The rect to intersect with.
      */
@@ -292,6 +282,39 @@ public:
     }
 
     /**
+     * Restrict the area to not exceed the given max width and max height. As a result, width or
+     * height can be negative if the rect is completely outside Rect(0, 0, max_width, max_height),
+     * but this is nicely handled by the isEmpty() function.
+     *
+     * @param   max_width   The maximum width.
+     * @param   max_height  The maximum height.
+     *
+     * @see intersect, isEmpty
+     */
+    void restrictTo(int16_t max_width, int16_t max_height)
+    {
+        // Limit area to the screen (0,0,HAL::WIDTH,HAL::HEIGT)
+        if (x < 0)
+        {
+            width += x;
+            x = 0; // Negative width is ok (isEmpty => true)
+        }
+        if (width > max_width - x) // right() > max_width
+        {
+            width = max_width - x;
+        }
+        if (y < 0)
+        {
+            height += y;
+            y = 0; // Negative height is ok (isEmpty => true)
+        }
+        if (height > max_height - y) // bottom() > max_height
+        {
+            height = max_height - y;
+        }
+    }
+
+    /**
      * Compares equality of two Rect by the dimensions and position of these.
      *
      * @param  other The Rect to compare with.
@@ -332,16 +355,13 @@ public:
      */
     uint32_t area() const
     {
-        return width * height;
+        return isEmpty() ? 0 : width * height;
     }
 
 private:
     bool isEqual(const Rect& other) const
     {
-        return x == other.x
-               && y == other.y
-               && width == other.width
-               && height == other.height;
+        return x == other.x && y == other.y && width == other.width && height == other.height;
     }
 };
 
@@ -357,8 +377,8 @@ class Vector
 public:
     /** Default constructor. Constructs an empty vector. */
     Vector()
+        : _size(0)
     {
-        clear();
     }
 
     /**
@@ -435,17 +455,14 @@ public:
      */
     T removeAt(uint16_t index)
     {
-        T tmp;
+        assert(index < _size);
 
-        if (index < _size)
+        T tmp = _elem[index];
+        for (int i = index; i < _size; i++)
         {
-            tmp = _elem[index];
-            for (int i = index; i < _size; i++)
-            {
-                _elem[i] = _elem[i + 1];
-            }
-            _size--;
+            _elem[i] = _elem[i + 1];
         }
+        _size--;
         return tmp;
     }
 
@@ -457,14 +474,13 @@ public:
      */
     void quickRemoveAt(uint16_t index)
     {
+        assert(index < _size);
+
+        _size--;
+        // No need to copy element when removing the last element in the vector
         if (index < _size)
         {
-            _size--;
-            if (index < _size)
-            {
-                // No need to copy element when removing the last element in the vector
-                _elem[index] = _elem[_size];
-            }
+            _elem[index] = _elem[_size];
         }
     }
 
@@ -569,13 +585,13 @@ struct Point
 };
 
 /** Values that represent directions. */
-typedef enum
+enum Direction
 {
     NORTH, ///< An enum constant representing the north option
     SOUTH, ///< An enum constant representing the south option
     EAST,  ///< An enum constant representing the east option
     WEST   ///< An enum constant representing the west option
-} Direction;
+};
 
 /** Defines an alignment type. */
 typedef uint8_t Alignment;
@@ -589,52 +605,52 @@ static const TextDirection TEXT_DIRECTION_LTR = 0; ///< Text is written Left-To-
 static const TextDirection TEXT_DIRECTION_RTL = 1; ///< Text is written Right-To-Left, e.g. Hebrew
 
 /** Values that represent frame buffers. */
-typedef enum
+enum FrameBuffer
 {
     FB_PRIMARY,   ///< First framebuffer
     FB_SECONDARY, ///< Second framebuffer
     FB_TERTIARY   ///< Third framebuffer
-} FrameBuffer;
+};
 
 /** Values that represent gradients. */
-typedef enum
+enum Gradient
 {
     GRADIENT_HORIZONTAL, ///< Horizontal gradient.
     GRADIENT_VERTICAL    ///< Vertical gradient
-} Gradient;
+};
 
 /** Values that represent display rotations. */
-typedef enum
+enum DisplayRotation
 {
     rotate0, ///< The display is oriented like the framebuffer
     rotate90 ///< The display is rotated 90 degrees compared to the framebuffer layout
-} DisplayRotation;
+};
 
 /** Values that represent display orientations. */
-typedef enum
+enum DisplayOrientation
 {
     ORIENTATION_LANDSCAPE, ///< The display has more pixels from left to right than from top to bottom
     ORIENTATION_PORTRAIT   ///< The display has more pixels from top to bottom than from right to left
-} DisplayOrientation;
+};
 
 /** Values that represent text rotations. */
-typedef enum
+enum TextRotation
 {
     TEXT_ROTATE_0,   ///< Text is written from left to right
     TEXT_ROTATE_90,  ///< Text is written from top to bottom
     TEXT_ROTATE_180, ///< Text is written from right to left (upside down)
     TEXT_ROTATE_270  ///< Text is written bottom to top
-} TextRotation;
+};
 
 /** Values that represent wide text actions. */
-typedef enum
+enum WideTextAction
 {
     WIDE_TEXT_NONE,                          ///< Do nothing, simply cut the text in the middle of any character that extends beyond the width of the TextArea
     WIDE_TEXT_WORDWRAP,                      ///< Wrap between words, ellipsis anywhere "Very long t..."
     WIDE_TEXT_WORDWRAP_ELLIPSIS_AFTER_SPACE, ///< Wrap between words, ellipsis anywhere only after space "Very long ..."
     WIDE_TEXT_CHARWRAP,                      ///< Wrap between any two characters, ellipsis anywhere, as used in Chinese
     WIDE_TEXT_CHARWRAP_DOUBLE_ELLIPSIS       ///< Wrap between any two characters, double ellipsis anywhere, as used in Chinese
-} WideTextAction;
+};
 
 /**
  * A simple struct for holding pairs of data.
@@ -738,12 +754,12 @@ struct DrawingSurface
 typedef uint16_t TypedTextId;
 
 /** Values that represent dma types. */
-typedef enum
+enum DMAType
 {
     DMA_TYPE_GENERIC, ///< Generic DMA Implementation
     DMA_TYPE_CHROMART ///< ChromART hardware DMA Implementation
-} DMAType;
+};
 
 } // namespace touchgfx
 
-#endif // TYPES_HPP
+#endif // TOUCHGFX_TYPES_HPP

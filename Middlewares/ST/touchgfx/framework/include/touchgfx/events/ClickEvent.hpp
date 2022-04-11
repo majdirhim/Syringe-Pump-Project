@@ -1,25 +1,22 @@
-/**
-  ******************************************************************************
-  * This file is part of the TouchGFX 4.16.1 distribution.
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+/******************************************************************************
+* Copyright (c) 2018(-2022) STMicroelectronics.
+* All rights reserved.
+*
+* This file is part of the TouchGFX 4.19.1 distribution.
+*
+* This software is licensed under terms that can be found in the LICENSE file in
+* the root directory of this software component.
+* If no LICENSE file comes with this software, it is provided AS-IS.
+*
+*******************************************************************************/
 
 /**
  * @file touchgfx/events/ClickEvent.hpp
  *
  * Declares the touchgfx::ClickEvent class.
  */
-#ifndef CLICKEVENT_HPP
-#define CLICKEVENT_HPP
+#ifndef TOUCHGFX_CLICKEVENT_HPP
+#define TOUCHGFX_CLICKEVENT_HPP
 
 #include <touchgfx/Event.hpp>
 #include <touchgfx/hal/Types.hpp>
@@ -36,12 +33,12 @@ class ClickEvent : public Event
 {
 public:
     /** Values that represent click event types. */
-    typedef enum
+    enum ClickEventType
     {
         PRESSED,  ///< An enum constant representing the pressed option
         RELEASED, ///< An enum constant representing the released option
         CANCEL    ///< An enum constant representing the cancel option
-    } ClickEventType;
+    };
 
     /**
      * Initializes a new instance of the ClickEvent class.
@@ -134,7 +131,7 @@ public:
      *
      * @return The type of this event.
      */
-    virtual Event::EventType getEventType()
+    virtual Event::EventType getEventType() const
     {
         return Event::EVENT_CLICK;
     }
@@ -148,4 +145,4 @@ private:
 
 } // namespace touchgfx
 
-#endif // CLICKEVENT_HPP
+#endif // TOUCHGFX_CLICKEVENT_HPP

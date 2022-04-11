@@ -29,6 +29,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
+#include "fmc.h"
 #include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -105,6 +106,12 @@ int main(void)
 
   /* USER CODE END 1 */
 
+  /* Enable I-Cache---------------------------------------------------------*/
+  SCB_EnableICache();
+
+  /* Enable D-Cache---------------------------------------------------------*/
+  SCB_EnableDCache();
+
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -131,6 +138,7 @@ int main(void)
   MX_LTDC_Init();
   MX_CRC_Init();
   MX_TIM2_Init();
+  MX_FMC_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);

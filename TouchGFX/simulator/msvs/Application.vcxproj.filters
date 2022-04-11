@@ -142,23 +142,11 @@
     <Filter Include="Header Files\generated\gui_generated">
       <UniqueIdentifier>BADBA3CB-E738-224C-2A14-3A7B912CF680</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen1_screen">
-      <UniqueIdentifier>C55734F3-4B84-7FB8-C7A3-7154611D45E3</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\screen1_screen">
-      <UniqueIdentifier>17DF3755-F403-4AD7-B544-2440A3157322</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>6F86CD38-E3F4-3B0B-038F-3FAEE50F545F</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen_screen">
-      <UniqueIdentifier>7F3D9AE3-C606-64CB-3315-D373B1E4A3BF</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\gui\model">
       <UniqueIdentifier>ADACCA4C-F6A3-5C05-775E-41BE2A3D241E</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\screen_screen">
-      <UniqueIdentifier>21951F03-6C65-5D96-1646-2A426A925E41</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\model">
       <UniqueIdentifier>D6531864-DDDA-9EF4-BCA3-4145EC205241</UniqueIdentifier>
@@ -169,20 +157,404 @@
     <Filter Include="Source Files\generated\gui_generated\common">
       <UniqueIdentifier>E9B430B6-86AA-EF55-5831-93B566028E6C</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>42CEA87A-D3B2-2F40-03C7-4DF2FA09ECCE</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated\common">
       <UniqueIdentifier>61931FB1-8434-A0E3-5B88-146605420742</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>00F10E09-EE47-3A00-1CB6-173C0999B0D4</UniqueIdentifier>
+    <Filter Include="Header Files\gui\diagnostic_screen">
+      <UniqueIdentifier>A6F7A5ED-50BE-BCF9-1ED2-AAAF89FE0F8A</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>EDA9ABDC-6D20-1634-2329-661CC83BFA83</UniqueIdentifier>
+    <Filter Include="Source Files\gui\oclusionthresholds_screen">
+      <UniqueIdentifier>CDB4FF73-C06D-868E-5BD5-AC2DFD439568</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>50E4107A-1309-F5A6-4DB9-C2510E4B25C3</UniqueIdentifier>
+    <Filter Include="Source Files\gui\diagnostic_screen">
+      <UniqueIdentifier>8CD6FAB7-903B-4153-E71E-8352F539570E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\oclusionthresholds_screen">
+      <UniqueIdentifier>7ACDA5AE-1997-7060-7F30-B43F5A09BEB7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\newpatient_screen">
+      <UniqueIdentifier>92FB3B4C-1BBB-7CF5-40BA-B70D64769B3F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\newpatient_screen">
+      <UniqueIdentifier>F2CA01A3-2F08-7AFA-A57E-FBFEAAD30517</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\password_screen">
+      <UniqueIdentifier>38C1A674-6D14-1583-B462-78E0901A94F8</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\password_screen">
+      <UniqueIdentifier>06FBFD22-7AE8-433A-E201-53D5DA7486B9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\activealarms_screen">
+      <UniqueIdentifier>01D90D4D-A360-7425-0096-C981E4349976</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\activealarms_screen">
+      <UniqueIdentifier>343A5E97-0EE7-8D29-E07B-3E8E170A3EA9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>D0FD6578-3081-73C2-17AF-8559D74FD7DB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\timeanddatesetting_screen">
+      <UniqueIdentifier>99CE2EAF-7974-1585-5E99-BAF4048C2101</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\timeanddatesetting_screen">
+      <UniqueIdentifier>FF2D68A3-0108-FB3F-9600-13B27F72C9B6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\patientdatabase_screen">
+      <UniqueIdentifier>B4BCF222-919E-BBEF-1600-9226D80ED377</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\patientdatabase_screen">
+      <UniqueIdentifier>F78FF87A-52CF-476A-892F-D04A85EB7831</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\departements_screen">
+      <UniqueIdentifier>0D0EEF43-3B0B-B6E8-BD33-3E7B649AC531</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\displaymode_screen">
+      <UniqueIdentifier>94B9D5B6-6831-60CC-42B3-F8E6F2BD0D22</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\manual_screen">
+      <UniqueIdentifier>8D900ECF-B327-9971-D009-70227985EB96</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>C8F6ACF6-A954-8744-7630-9DE366627F77</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\departements_screen">
+      <UniqueIdentifier>0C246C23-897F-4698-96AD-4204D5A1E4DC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\manual_screen">
+      <UniqueIdentifier>BDA51140-1DFB-2D6A-B1B6-785264135EA0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\displaymode_screen">
+      <UniqueIdentifier>7961D1C9-70B5-CBBD-9EE6-A6E55A3D46EB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\perfusiontimesetting_screen">
+      <UniqueIdentifier>4A9A07DB-CEDC-D149-9631-2506C50E1607</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\perfusiontimesetting_screen">
+      <UniqueIdentifier>C192E5DC-0672-17E0-4E88-20D3F377D5A2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\main_screen">
+      <UniqueIdentifier>FADBEFF0-B919-37C7-69E0-F1B80A819741</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\main_screen">
+      <UniqueIdentifier>2688BC22-1255-6A41-2885-D412D6FFE19B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\samepatient_screen">
+      <UniqueIdentifier>95227EDA-71B9-AC98-C82B-7C00FD844A16</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\samepatient_screen">
+      <UniqueIdentifier>8985B3BB-B295-D2CD-20DB-9A70CFCF31C0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\maintenance_screen">
+      <UniqueIdentifier>B60A50CF-16CB-4CBC-DC4F-7F893854A8FD</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\maintenance_screen">
+      <UniqueIdentifier>CA89834C-BFB1-628B-C177-7C2BAB695E8A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\druglibrary_screen">
+      <UniqueIdentifier>E7883BF8-E13E-0365-2199-AC55FF250A6C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\druglibrary_screen">
+      <UniqueIdentifier>861AB341-18D7-8BF6-A66F-F1EEB16DED33</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\configuration_screen">
+      <UniqueIdentifier>A79B40F0-388A-80E2-646B-569CB76F2201</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\syringeselection_screen">
+      <UniqueIdentifier>1BB4702C-B33C-416D-DF31-B83D488B8A0A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\log_screen">
+      <UniqueIdentifier>9C0556EF-CD43-7450-25ED-64D830E9C6F6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\settings_screen">
+      <UniqueIdentifier>745C321B-146A-9F7A-38FF-647ED6F9ECCE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\configuration_screen">
+      <UniqueIdentifier>B7C30B71-0900-371E-94E6-BAD4D9BBE43B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\log_screen">
+      <UniqueIdentifier>D341975E-0513-8E02-50A0-7E2E51299C86</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\settings_screen">
+      <UniqueIdentifier>00899293-98D6-A2F4-017E-79BF37ECAD5D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\transitions_screen">
+      <UniqueIdentifier>150D1D46-E758-5EC9-EF5D-74921C706F2B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\syringeselection_screen">
+      <UniqueIdentifier>928ECA85-6432-51A2-DCED-0C0199E9BDAB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\transitions_screen">
+      <UniqueIdentifier>C058B215-DB3C-7DEB-EC43-A5694EA50EF9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\language_screen">
+      <UniqueIdentifier>110C8AC9-EE26-C338-6889-806C2F05036F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\language_screen">
+      <UniqueIdentifier>66EB7514-DD74-3190-23A9-3435BECA974B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\battery_screen">
+      <UniqueIdentifier>4851EF3D-093C-AB89-7C8C-6B0045FA6959</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\sound_screen">
+      <UniqueIdentifier>C1952926-A593-0AFC-DF6C-979B6BE1B0DC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\keyboard_screen">
+      <UniqueIdentifier>BBBDF59F-A7AF-34E0-C603-C1C2D96C6AC1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\sound_screen">
+      <UniqueIdentifier>AF325E95-894E-CA48-A78E-CA9B8BE793C1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\battery_screen">
+      <UniqueIdentifier>CF95DFF3-8337-42A5-0F17-18F3DDEC45D6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\keyboard_screen">
+      <UniqueIdentifier>02B9A722-794E-1F12-5342-1EF9DBBCB6DF</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\specialmodes_screen">
+      <UniqueIdentifier>359C6D60-EF2B-7D4A-4B58-AE15B50E1E67</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\specialmodes_screen">
+      <UniqueIdentifier>534A226B-5B28-A45B-3A2D-C92A383B0F6D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\keyboardnb_screen">
+      <UniqueIdentifier>2BE30E32-2B80-BF42-1CE2-999D20E64B6E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\keyboardnb_screen">
+      <UniqueIdentifier>7EBF1309-58EA-5A63-F71B-4E59CD1B7F91</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\genderchoice_screen">
+      <UniqueIdentifier>47660233-45CE-4453-716D-AD1EFEEB61E7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\syringelibrary_screen">
+      <UniqueIdentifier>D4CE0A9C-D592-1C0F-0569-CA614B9FF4DC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\genderchoice_screen">
+      <UniqueIdentifier>61C9E39E-5851-8590-D682-E78C5E3AE0C0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\startup_screen">
+      <UniqueIdentifier>ED01A688-33EF-1716-7DDA-DCC3E8F61A37</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\startup_screen">
+      <UniqueIdentifier>74FB6F64-63F2-B1B9-45C7-21C8D5E52BC5</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\alarmandeventconfig_screen">
+      <UniqueIdentifier>9F972FF4-4ACC-716B-80D4-7588D9B82A57</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\home_screen">
+      <UniqueIdentifier>5A1CC674-2B7D-B1F5-2248-EC3A6027779B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\alarmandeventconfig_screen">
+      <UniqueIdentifier>A30CFF09-C4DE-489D-24A4-5CD10642400A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\home_screen">
+      <UniqueIdentifier>208AABC6-5405-E300-3204-812A84E7ED34</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\syringelibrary_screen">
+      <UniqueIdentifier>223BA55C-7960-3F48-C792-D48CD53E4E94</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\startup_screen">
+      <UniqueIdentifier>45887B8A-2850-B306-6F42-D04B33E8FAE7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\startup_screen">
+      <UniqueIdentifier>83AC179D-29C8-C5C5-A076-A1A6039E4158</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\specialmodes_screen">
+      <UniqueIdentifier>BDB038E9-1598-AB53-2E7B-19573B16D63A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\alarmandeventconfig_screen">
+      <UniqueIdentifier>E57E1304-8CFA-6F3A-CE08-928DB659B2B7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\activealarms_screen">
+      <UniqueIdentifier>C84BE968-CDCB-03AF-A5A4-62F125CBC918</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\specialmodes_screen">
+      <UniqueIdentifier>AADF198C-3199-D0EA-5056-55BB49462DB7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\alarmandeventconfig_screen">
+      <UniqueIdentifier>4237B9D4-AFD0-4C13-D90A-20501BD28533</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\syringelibrary_screen">
+      <UniqueIdentifier>299C1AC8-70CF-DA2E-F612-B67AA26BD987</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\sound_screen">
+      <UniqueIdentifier>00528C7D-DB87-D1C1-1AB6-EE7DB7986FD9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\sound_screen">
+      <UniqueIdentifier>8788F7C8-5793-5414-D001-948477729098</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\genderchoice_screen">
+      <UniqueIdentifier>C082D0DC-5545-4CEE-6E71-0F0744970259</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\syringelibrary_screen">
+      <UniqueIdentifier>676882CF-234A-91B8-5327-28784092DB93</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\genderchoice_screen">
+      <UniqueIdentifier>83035941-4D21-34CE-649B-D44BB672B368</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator\include">
+      <UniqueIdentifier>50006983-2543-23BA-FBD5-D02396443645</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\simulator\video">
+      <UniqueIdentifier>DC3E9614-83B1-2F29-5B2C-6BF4390FC332</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\activealarms_screen">
+      <UniqueIdentifier>3A936BF0-645C-1A2C-8376-12621E37FCDB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>67019FDC-636D-857A-90C1-2280E60F91E0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\battery_screen">
+      <UniqueIdentifier>11D59850-B554-F42A-4AEF-44E4AA248E77</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>67D9A798-176E-4893-2DC9-643BC0EE837D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\battery_screen">
+      <UniqueIdentifier>66DFE6BD-D485-78C2-547E-873E2D8EF63B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\settings_screen">
+      <UniqueIdentifier>BA26308F-84A1-70C0-96AB-07C572A1239A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\settings_screen">
+      <UniqueIdentifier>FBDF38DF-58B9-934C-57CC-B33886CB87D9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\configuration_screen">
+      <UniqueIdentifier>7F0332EE-C721-A059-09B7-CEA0E5C92AC1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\samepatient_screen">
+      <UniqueIdentifier>BCDE0D4F-D3E1-3B99-0A57-353F3FEF1A80</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\syringeselection_screen">
+      <UniqueIdentifier>61E35842-4F40-9BB7-8BAD-F796A15AA0F7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\samepatient_screen">
+      <UniqueIdentifier>AF0E7AC9-AF95-467D-5FB0-C066306AB30C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\configuration_screen">
+      <UniqueIdentifier>4F57BAAB-A8F3-9930-4F6D-2ACC6780040F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\perfusiontimesetting_screen">
+      <UniqueIdentifier>694A7750-828C-CADB-9397-58ED4A836B8E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\syringeselection_screen">
+      <UniqueIdentifier>FAD4AA1C-3662-4671-F19E-030D3E61EB96</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\perfusiontimesetting_screen">
+      <UniqueIdentifier>2A44BE82-5C10-C82E-AB91-5B22EFB1E018</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\patientdatabase_screen">
+      <UniqueIdentifier>B482DEDD-6118-21ED-5131-889FAC1CE8F7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\patientdatabase_screen">
+      <UniqueIdentifier>DFCAF60D-F349-BA7C-539C-113E9E68A2F2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\departements_screen">
+      <UniqueIdentifier>1F8A144D-0B43-A500-C36D-082DF6664BA9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\password_screen">
+      <UniqueIdentifier>6E9E5F3E-A7F9-5839-7D69-BE6ED883C595</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\password_screen">
+      <UniqueIdentifier>58C28749-5B6B-BF67-18CE-432761149D0C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\departements_screen">
+      <UniqueIdentifier>C7B861D5-886A-D927-C911-61EC01E01636</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\oclusionthresholds_screen">
+      <UniqueIdentifier>3A5A2DCE-E55A-25D4-45FF-2C5004E1F246</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\oclusionthresholds_screen">
+      <UniqueIdentifier>A832FE20-3079-466F-AC72-B50EA9399C85</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\newpatient_screen">
+      <UniqueIdentifier>76413FD3-EECF-D236-5B1A-C7736DBBFED0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\newpatient_screen">
+      <UniqueIdentifier>B8CA2B32-C6EB-30DA-FEA2-A51D47435F42</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\diagnostic_screen">
+      <UniqueIdentifier>C0FD887E-3794-6FED-6CFB-E7C00B41CF89</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\diagnostic_screen">
+      <UniqueIdentifier>C356F3D2-8CCF-76B1-6DF1-3048423C1A53</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\home_screen">
+      <UniqueIdentifier>9A80345D-DB6C-9264-4FB7-36037E0F506E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\transitions_screen">
+      <UniqueIdentifier>5633AAC3-DB22-9AE2-A1D9-498C3C33FC42</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\home_screen">
+      <UniqueIdentifier>5D6A75F5-7DA8-5F53-CFE9-D47AD2BD6A11</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\manual_screen">
+      <UniqueIdentifier>1912D4CE-D8F6-F8F9-74AE-F12B1817D0B0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\manual_screen">
+      <UniqueIdentifier>4B004C99-7CC6-4942-D3E2-E8ABF65AFBB3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>4B6C97A7-60DA-D6CF-4D8E-AFE31AF2981A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>F6ACA8F5-2720-6B00-1421-836BDA118A2B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\maintenance_screen">
+      <UniqueIdentifier>362EF367-E254-0406-971F-F6037626BCE7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\displaymode_screen">
+      <UniqueIdentifier>78533A91-B5A1-2434-33C1-F9AC5AAC2888</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\maintenance_screen">
+      <UniqueIdentifier>E5C3B908-E31B-9F11-5C0A-F2479BF7983B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\timeanddatesetting_screen">
+      <UniqueIdentifier>C53A9519-D655-1187-8F00-1128E0F16AA0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\displaymode_screen">
+      <UniqueIdentifier>504665EB-AD30-C9E8-79B9-6FBA0721119B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\log_screen">
+      <UniqueIdentifier>574DCE50-F67E-05B9-01CD-F847FD559F02</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\timeanddatesetting_screen">
+      <UniqueIdentifier>1F2B7366-DE79-732D-8568-52769201F053</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\log_screen">
+      <UniqueIdentifier>66DC705A-D9C9-9BF9-B37A-EE99727B27DA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\druglibrary_screen">
+      <UniqueIdentifier>DFBE2D31-242A-A696-F40F-309B2B032E18</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\druglibrary_screen">
+      <UniqueIdentifier>80822DC1-F056-C6E5-C5DA-71F36E608417</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\language_screen">
+      <UniqueIdentifier>1336C71F-5EFE-0D87-41E3-04C0057B146D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\language_screen">
+      <UniqueIdentifier>EDFA1BB1-26D1-D320-224E-AF2905C744B8</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\keyboard_screen">
+      <UniqueIdentifier>49B03068-9FE1-2EAB-4624-4F0ECA957220</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\keyboard_screen">
+      <UniqueIdentifier>B4030ED6-F7FA-D4A4-94C8-7CAF3D718F65</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\keyboardnb_screen">
+      <UniqueIdentifier>56787A6E-2900-1918-B7CF-6F9B462E80DB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\keyboardnb_screen">
+      <UniqueIdentifier>C0B6479F-4642-C93E-4C50-04140AA0C165</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\transitions_screen">
+      <UniqueIdentifier>8BF801F5-4545-CB8E-856C-719B2DC5C6E7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator\include\simulator">
+      <UniqueIdentifier>79F4346D-555C-DA2C-3DA2-452186EF9A82</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator\include\simulator\video">
+      <UniqueIdentifier>548DFF6D-24F9-B44A-45BD-87330727C3D7</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -213,23 +585,320 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1Presenter.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\containers\ActiveAlarms.cpp">
+      <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ActiveAlarmsBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\activealarms_screen\ActiveAlarmsPresenter.cpp">
+      <Filter>Source Files\gui\activealarms_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenPresenter.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
+    <ClCompile Include="..\..\gui\src\activealarms_screen\ActiveAlarmsView.cpp">
+      <Filter>Source Files\gui\activealarms_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenView.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\activealarms_screen\ActiveAlarmsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\activealarms_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen_screen\screenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen_screen</Filter>
+    <ClCompile Include="..\..\gui\src\alarmandeventconfig_screen\AlarmAndEventConfigPresenter.cpp">
+      <Filter>Source Files\gui\alarmandeventconfig_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\alarmandeventconfig_screen\AlarmAndEventConfigView.cpp">
+      <Filter>Source Files\gui\alarmandeventconfig_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\alarmandeventconfig_screen\AlarmAndEventConfigViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\alarmandeventconfig_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\battery_screen\BatteryPresenter.cpp">
+      <Filter>Source Files\gui\battery_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\battery_screen\BatteryView.cpp">
+      <Filter>Source Files\gui\battery_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\battery_screen\BatteryViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\battery_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\configuration_screen\ConfigurationPresenter.cpp">
+      <Filter>Source Files\gui\configuration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\configuration_screen\ConfigurationView.cpp">
+      <Filter>Source Files\gui\configuration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\configuration_screen\ConfigurationViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\configuration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\CustomKeyboard.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\departements_screen\DepartementsPresenter.cpp">
+      <Filter>Source Files\gui\departements_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\departements_screen\DepartementsView.cpp">
+      <Filter>Source Files\gui\departements_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\departements_screen\DepartementsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\departements_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\diagnostic_screen\DiagnosticPresenter.cpp">
+      <Filter>Source Files\gui\diagnostic_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\diagnostic_screen\DiagnosticView.cpp">
+      <Filter>Source Files\gui\diagnostic_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\diagnostic_screen\DiagnosticViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\diagnostic_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\displaymode_screen\DisplayModePresenter.cpp">
+      <Filter>Source Files\gui\displaymode_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\displaymode_screen\DisplayModeView.cpp">
+      <Filter>Source Files\gui\displaymode_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\displaymode_screen\DisplayModeViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\displaymode_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\druglibrary_screen\DrugLibraryPresenter.cpp">
+      <Filter>Source Files\gui\druglibrary_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\druglibrary_screen\DrugLibraryView.cpp">
+      <Filter>Source Files\gui\druglibrary_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\druglibrary_screen\DrugLibraryViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\druglibrary_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\genderchoice_screen\GenderChoicePresenter.cpp">
+      <Filter>Source Files\gui\genderchoice_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\genderchoice_screen\GenderChoiceView.cpp">
+      <Filter>Source Files\gui\genderchoice_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\genderchoice_screen\GenderChoiceViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\genderchoice_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\home_screen\HomePresenter.cpp">
+      <Filter>Source Files\gui\home_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\home_screen\HomeView.cpp">
+      <Filter>Source Files\gui\home_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\home_screen\HomeViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\home_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\keyboardnb_screen\KeyboardNbPresenter.cpp">
+      <Filter>Source Files\gui\keyboardnb_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\keyboardnb_screen\KeyboardNbView.cpp">
+      <Filter>Source Files\gui\keyboardnb_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\keyboardnb_screen\KeyboardNbViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\keyboardnb_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\keyboard_screen\KeyboardPresenter.cpp">
+      <Filter>Source Files\gui\keyboard_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\keyboard_screen\KeyboardView.cpp">
+      <Filter>Source Files\gui\keyboard_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\keyboard_screen\KeyboardViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\keyboard_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\language_screen\LanguagePresenter.cpp">
+      <Filter>Source Files\gui\language_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\language_screen\LanguageView.cpp">
+      <Filter>Source Files\gui\language_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\language_screen\LanguageViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\language_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\LogDisplay.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\LogDisplayBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\log_screen\LogPresenter.cpp">
+      <Filter>Source Files\gui\log_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\log_screen\LogView.cpp">
+      <Filter>Source Files\gui\log_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\log_screen\LogViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\log_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\maintenance_screen\MaintenancePresenter.cpp">
+      <Filter>Source Files\gui\maintenance_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\maintenance_screen\MaintenanceView.cpp">
+      <Filter>Source Files\gui\maintenance_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\maintenance_screen\MaintenanceViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\maintenance_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainView.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\main_screen\MainViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\manual_screen\ManualPresenter.cpp">
+      <Filter>Source Files\gui\manual_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\manual_screen\ManualView.cpp">
+      <Filter>Source Files\gui\manual_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\manual_screen\ManualViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\manual_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\newpatient_screen\NewPatientPresenter.cpp">
+      <Filter>Source Files\gui\newpatient_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\newpatient_screen\NewPatientView.cpp">
+      <Filter>Source Files\gui\newpatient_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\newpatient_screen\NewPatientViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\newpatient_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\oclusionthresholds_screen\OclusionThresholdsPresenter.cpp">
+      <Filter>Source Files\gui\oclusionthresholds_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\oclusionthresholds_screen\OclusionThresholdsView.cpp">
+      <Filter>Source Files\gui\oclusionthresholds_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\oclusionthresholds_screen\OclusionThresholdsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\oclusionthresholds_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\password_screen\PasswordPresenter.cpp">
+      <Filter>Source Files\gui\password_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\password_screen\PasswordView.cpp">
+      <Filter>Source Files\gui\password_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\password_screen\PasswordViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\password_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\patientdatabase_screen\PatientDatabasePresenter.cpp">
+      <Filter>Source Files\gui\patientdatabase_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\patientdatabase_screen\PatientDatabaseView.cpp">
+      <Filter>Source Files\gui\patientdatabase_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\patientdatabase_screen\PatientDatabaseViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\patientdatabase_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\perfusiontimesetting_screen\PerfusionTimeSettingPresenter.cpp">
+      <Filter>Source Files\gui\perfusiontimesetting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\perfusiontimesetting_screen\PerfusionTimeSettingView.cpp">
+      <Filter>Source Files\gui\perfusiontimesetting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\perfusiontimesetting_screen\PerfusionTimeSettingViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\perfusiontimesetting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\samepatient_screen\SamePatientPresenter.cpp">
+      <Filter>Source Files\gui\samepatient_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\samepatient_screen\SamePatientView.cpp">
+      <Filter>Source Files\gui\samepatient_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\samepatient_screen\SamePatientViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\samepatient_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\ScreenBorder.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ScreenBorderBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settings_screen\SettingsPresenter.cpp">
+      <Filter>Source Files\gui\settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settings_screen\SettingsView.cpp">
+      <Filter>Source Files\gui\settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\settings_screen\SettingsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\Slide.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\SlideBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
+      <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\sound_screen\SoundPresenter.cpp">
+      <Filter>Source Files\gui\sound_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\sound_screen\SoundView.cpp">
+      <Filter>Source Files\gui\sound_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\sound_screen\SoundViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\sound_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\specialmodes_screen\SpecialModesPresenter.cpp">
+      <Filter>Source Files\gui\specialmodes_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\specialmodes_screen\SpecialModesView.cpp">
+      <Filter>Source Files\gui\specialmodes_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\specialmodes_screen\SpecialModesViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\specialmodes_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\startup_screen\StartUpPresenter.cpp">
+      <Filter>Source Files\gui\startup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\startup_screen\StartUpView.cpp">
+      <Filter>Source Files\gui\startup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\startup_screen\StartUpViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\startup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\syringelibrary_screen\SyringeLibraryPresenter.cpp">
+      <Filter>Source Files\gui\syringelibrary_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\syringelibrary_screen\SyringeLibraryView.cpp">
+      <Filter>Source Files\gui\syringelibrary_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\syringelibrary_screen\SyringeLibraryViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\syringelibrary_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\syringeselection_screen\SyringeSelectionPresenter.cpp">
+      <Filter>Source Files\gui\syringeselection_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\syringeselection_screen\SyringeSelectionView.cpp">
+      <Filter>Source Files\gui\syringeselection_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\syringeselection_screen\SyringeSelectionViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\syringeselection_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\textbubble.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\textbubbleBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\timeanddatesetting_screen\TimeAndDateSettingPresenter.cpp">
+      <Filter>Source Files\gui\timeanddatesetting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\timeanddatesetting_screen\TimeAndDateSettingView.cpp">
+      <Filter>Source Files\gui\timeanddatesetting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\timeanddatesetting_screen\TimeAndDateSettingViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\timeanddatesetting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\transitions_screen\transitionsPresenter.cpp">
+      <Filter>Source Files\gui\transitions_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\transitions_screen\transitionsView.cpp">
+      <Filter>Source Files\gui\transitions_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\transitions_screen\transitionsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\transitions_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -661,26 +1330,335 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
       <Filter>Header Files\gui\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1Presenter.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenPresenter.hpp">
-      <Filter>Header Files\gui\screen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenView.hpp">
-      <Filter>Header Files\gui\screen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_screen\screenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\ActiveAlarms.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ActiveAlarmsBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\activealarms_screen\ActiveAlarmsPresenter.hpp">
+      <Filter>Header Files\gui\activealarms_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\activealarms_screen\ActiveAlarmsView.hpp">
+      <Filter>Header Files\gui\activealarms_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\activealarms_screen\ActiveAlarmsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\activealarms_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\alarmandeventconfig_screen\AlarmAndEventConfigPresenter.hpp">
+      <Filter>Header Files\gui\alarmandeventconfig_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\alarmandeventconfig_screen\AlarmAndEventConfigView.hpp">
+      <Filter>Header Files\gui\alarmandeventconfig_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\alarmandeventconfig_screen\AlarmAndEventConfigViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\alarmandeventconfig_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\battery_screen\BatteryPresenter.hpp">
+      <Filter>Header Files\gui\battery_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\battery_screen\BatteryView.hpp">
+      <Filter>Header Files\gui\battery_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\battery_screen\BatteryViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\battery_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\configuration_screen\ConfigurationPresenter.hpp">
+      <Filter>Header Files\gui\configuration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\configuration_screen\ConfigurationView.hpp">
+      <Filter>Header Files\gui\configuration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\configuration_screen\ConfigurationViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\configuration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\CustomKeyboard.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\departements_screen\DepartementsPresenter.hpp">
+      <Filter>Header Files\gui\departements_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\departements_screen\DepartementsView.hpp">
+      <Filter>Header Files\gui\departements_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\departements_screen\DepartementsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\departements_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\diagnostic_screen\DiagnosticPresenter.hpp">
+      <Filter>Header Files\gui\diagnostic_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\diagnostic_screen\DiagnosticView.hpp">
+      <Filter>Header Files\gui\diagnostic_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnostic_screen\DiagnosticViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\diagnostic_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\DirectFrameBufferVideoController.hpp">
+      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\displaymode_screen\DisplayModePresenter.hpp">
+      <Filter>Header Files\gui\displaymode_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\displaymode_screen\DisplayModeView.hpp">
+      <Filter>Header Files\gui\displaymode_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\displaymode_screen\DisplayModeViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\displaymode_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\druglibrary_screen\DrugLibraryPresenter.hpp">
+      <Filter>Header Files\gui\druglibrary_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\druglibrary_screen\DrugLibraryView.hpp">
+      <Filter>Header Files\gui\druglibrary_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\druglibrary_screen\DrugLibraryViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\druglibrary_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\genderchoice_screen\GenderChoicePresenter.hpp">
+      <Filter>Header Files\gui\genderchoice_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\genderchoice_screen\GenderChoiceView.hpp">
+      <Filter>Header Files\gui\genderchoice_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\genderchoice_screen\GenderChoiceViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\genderchoice_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\home_screen\HomePresenter.hpp">
+      <Filter>Header Files\gui\home_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\home_screen\HomeView.hpp">
+      <Filter>Header Files\gui\home_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\home_screen\HomeViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\home_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\KeyboardKeyMapping.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\KeyboardLayout.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\keyboardnb_screen\KeyboardNbPresenter.hpp">
+      <Filter>Header Files\gui\keyboardnb_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\keyboardnb_screen\KeyboardNbView.hpp">
+      <Filter>Header Files\gui\keyboardnb_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\keyboardnb_screen\KeyboardNbViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\keyboardnb_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\keyboard_screen\KeyboardPresenter.hpp">
+      <Filter>Header Files\gui\keyboard_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\keyboard_screen\KeyboardView.hpp">
+      <Filter>Header Files\gui\keyboard_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\keyboard_screen\KeyboardViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\keyboard_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\language_screen\LanguagePresenter.hpp">
+      <Filter>Header Files\gui\language_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\language_screen\LanguageView.hpp">
+      <Filter>Header Files\gui\language_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\language_screen\LanguageViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\language_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\LogDisplay.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\LogDisplayBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\log_screen\LogPresenter.hpp">
+      <Filter>Header Files\gui\log_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\log_screen\LogView.hpp">
+      <Filter>Header Files\gui\log_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\log_screen\LogViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\log_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\maintenance_screen\MaintenancePresenter.hpp">
+      <Filter>Header Files\gui\maintenance_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\maintenance_screen\MaintenanceView.hpp">
+      <Filter>Header Files\gui\maintenance_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\maintenance_screen\MaintenanceViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\maintenance_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainView.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\MainViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\manual_screen\ManualPresenter.hpp">
+      <Filter>Header Files\gui\manual_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\manual_screen\ManualView.hpp">
+      <Filter>Header Files\gui\manual_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\manual_screen\ManualViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\manual_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp">
+      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\newpatient_screen\NewPatientPresenter.hpp">
+      <Filter>Header Files\gui\newpatient_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\newpatient_screen\NewPatientView.hpp">
+      <Filter>Header Files\gui\newpatient_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\newpatient_screen\NewPatientViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\newpatient_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\oclusionthresholds_screen\OclusionThresholdsPresenter.hpp">
+      <Filter>Header Files\gui\oclusionthresholds_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\oclusionthresholds_screen\OclusionThresholdsView.hpp">
+      <Filter>Header Files\gui\oclusionthresholds_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\oclusionthresholds_screen\OclusionThresholdsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\oclusionthresholds_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\password_screen\PasswordPresenter.hpp">
+      <Filter>Header Files\gui\password_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\password_screen\PasswordView.hpp">
+      <Filter>Header Files\gui\password_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\password_screen\PasswordViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\password_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\patientdatabase_screen\PatientDatabasePresenter.hpp">
+      <Filter>Header Files\gui\patientdatabase_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\patientdatabase_screen\PatientDatabaseView.hpp">
+      <Filter>Header Files\gui\patientdatabase_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\patientdatabase_screen\PatientDatabaseViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\patientdatabase_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\perfusiontimesetting_screen\PerfusionTimeSettingPresenter.hpp">
+      <Filter>Header Files\gui\perfusiontimesetting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\perfusiontimesetting_screen\PerfusionTimeSettingView.hpp">
+      <Filter>Header Files\gui\perfusiontimesetting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\perfusiontimesetting_screen\PerfusionTimeSettingViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\perfusiontimesetting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\samepatient_screen\SamePatientPresenter.hpp">
+      <Filter>Header Files\gui\samepatient_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\samepatient_screen\SamePatientView.hpp">
+      <Filter>Header Files\gui\samepatient_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\samepatient_screen\SamePatientViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\samepatient_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\ScreenBorder.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ScreenBorderBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settings_screen\SettingsPresenter.hpp">
+      <Filter>Header Files\gui\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settings_screen\SettingsView.hpp">
+      <Filter>Header Files\gui\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settings_screen\SettingsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\Slide.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SlideBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
+      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\sound_screen\SoundPresenter.hpp">
+      <Filter>Header Files\gui\sound_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\sound_screen\SoundView.hpp">
+      <Filter>Header Files\gui\sound_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\sound_screen\SoundViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\sound_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\specialmodes_screen\SpecialModesPresenter.hpp">
+      <Filter>Header Files\gui\specialmodes_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\specialmodes_screen\SpecialModesView.hpp">
+      <Filter>Header Files\gui\specialmodes_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\specialmodes_screen\SpecialModesViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\specialmodes_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\startup_screen\StartUpPresenter.hpp">
+      <Filter>Header Files\gui\startup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\startup_screen\StartUpView.hpp">
+      <Filter>Header Files\gui\startup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\startup_screen\StartUpViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\startup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\syringelibrary_screen\SyringeLibraryPresenter.hpp">
+      <Filter>Header Files\gui\syringelibrary_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\syringelibrary_screen\SyringeLibraryView.hpp">
+      <Filter>Header Files\gui\syringelibrary_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\syringelibrary_screen\SyringeLibraryViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\syringelibrary_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\syringeselection_screen\SyringeSelectionPresenter.hpp">
+      <Filter>Header Files\gui\syringeselection_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\syringeselection_screen\SyringeSelectionView.hpp">
+      <Filter>Header Files\gui\syringeselection_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\syringeselection_screen\SyringeSelectionViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\syringeselection_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\textbubble.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\textbubbleBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\timeanddatesetting_screen\TimeAndDateSettingPresenter.hpp">
+      <Filter>Header Files\gui\timeanddatesetting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\timeanddatesetting_screen\TimeAndDateSettingView.hpp">
+      <Filter>Header Files\gui\timeanddatesetting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timeanddatesetting_screen\TimeAndDateSettingViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\timeanddatesetting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\transitions_screen\transitionsPresenter.hpp">
+      <Filter>Header Files\gui\transitions_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\transitions_screen\transitionsView.hpp">
+      <Filter>Header Files\gui\transitions_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\transitions_screen\transitionsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\transitions_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

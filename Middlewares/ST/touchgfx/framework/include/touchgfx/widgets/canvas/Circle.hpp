@@ -1,31 +1,25 @@
-/**
-  ******************************************************************************
-  * This file is part of the TouchGFX 4.16.1 distribution.
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+/******************************************************************************
+* Copyright (c) 2018(-2022) STMicroelectronics.
+* All rights reserved.
+*
+* This file is part of the TouchGFX 4.19.1 distribution.
+*
+* This software is licensed under terms that can be found in the LICENSE file in
+* the root directory of this software component.
+* If no LICENSE file comes with this software, it is provided AS-IS.
+*
+*******************************************************************************/
 
 /**
  * @file touchgfx/widgets/canvas/Circle.hpp
  *
  * Declares the touchgfx::Circle class.
  */
-#ifndef CIRCLE_HPP
-#define CIRCLE_HPP
+#ifndef TOUCHGFX_CIRCLE_HPP
+#define TOUCHGFX_CIRCLE_HPP
 
-#include <touchgfx/Bitmap.hpp>
-#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/hal/Types.hpp>
-#include <touchgfx/lcd/LCD.hpp>
-#include <touchgfx/widgets/Widget.hpp>
+#include <touchgfx/widgets/canvas/CWRUtil.hpp>
 #include <touchgfx/widgets/canvas/Canvas.hpp>
 #include <touchgfx/widgets/canvas/CanvasWidget.hpp>
 
@@ -183,17 +177,18 @@ public:
     }
 
     /**
-     * Sets the start and end angles in degrees of the Circle arc. 0 degrees is straight up
-     * (12 o'clock) and 90 degrees is to the left (3 o'clock). Any positive or negative
-     * degrees can be used to specify the part of the Circle to draw.
+     * Sets the start and end angles in degrees of the Circle arc. 0 degrees is straight up (12
+     * o'clock) and 90 degrees is to the left (3 o'clock). Any positive or negative degrees can be
+     * used to specify the part of the Circle to draw.
      *
-     * @tparam T Generic type parameter, either int or float.
-     * @param  startAngle The start degrees.
-     * @param  endAngle   The end degrees.
+     * @tparam  T   Generic type parameter, either int or float.
+     * @param   startAngle  The start degrees.
+     * @param   endAngle    The end degrees.
      *
      * @see getArc, updateArcStart, updateArcEnd, updateArc
      *
-     * @note The area containing the Circle is not invalidated.
+     * @note    The area containing the Circle is not invalidated.
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     template <typename T>
     void setArc(const T startAngle, const T endAngle)
@@ -203,16 +198,17 @@ public:
     }
 
     /**
-     * Sets the start and end angles in degrees of the Circle arc. 0 degrees is straight up
-     * (12 o'clock) and 90 degrees is to the left (3 o'clock). Any positive or negative
-     * degrees can be used to specify the part of the Circle to draw.
+     * Sets the start and end angles in degrees of the Circle arc. 0 degrees is straight up (12
+     * o'clock) and 90 degrees is to the left (3 o'clock). Any positive or negative degrees can be
+     * used to specify the part of the Circle to draw.
      *
-     * @param  startAngle The start degrees.
-     * @param  endAngle   The end degrees.
+     * @param   startAngle  The start degrees.
+     * @param   endAngle    The end degrees.
      *
      * @see getArc, updateArcStart, updateArcEnd, updateArc
      *
-     * @note The area containing the Circle is not invalidated.
+     * @note    The area containing the Circle is not invalidated.
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     void setArc(const int16_t startAngle, const int16_t endAngle)
     {
@@ -222,11 +218,13 @@ public:
     /**
      * Gets the start and end angles in degrees for the circle arc.
      *
-     * @tparam T Generic type parameter, either int or float.
-     * @param [out] startAngle The start angle rounded down to the precision of T.
-     * @param [out] endAngle   The end angle rounded down to the precision of T.
+     * @tparam  T   Generic type parameter, either int or float.
+     * @param [out] startAngle  The start angle rounded down to the precision of T.
+     * @param [out] endAngle    The end angle rounded down to the precision of T.
      *
      * @see setArc
+     *
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     template <typename T>
     void getArc(T& startAngle, T& endAngle) const
@@ -238,9 +236,11 @@ public:
     /**
      * Gets the start angle in degrees for the arc.
      *
-     * @return The starting angle for the arc rounded down to an integer.
+     * @return  The starting angle for the arc rounded down to an integer.
      *
      * @see getArc, setArc
+     *
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     int16_t getArcStart() const
     {
@@ -250,10 +250,12 @@ public:
     /**
      * Gets the start angle in degrees for the arc.
      *
-     * @tparam T Generic type parameter, either int or float.
-     * @param [out] angle The starting angle rounded down to the precision of T.
+     * @tparam  T   Generic type parameter, either int or float.
+     * @param [out] angle   The starting angle rounded down to the precision of T.
      *
      * @see getArc, setArc
+     *
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     template <typename T>
     void getArcStart(T& angle) const
@@ -264,9 +266,11 @@ public:
     /**
      * Gets the end angle in degrees for the arc.
      *
-     * @return The end angle for the arc rounded down to an integer.
+     * @return  The end angle for the arc rounded down to an integer.
      *
      * @see getArc, setArc
+     *
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     int16_t getArcEnd() const
     {
@@ -276,8 +280,10 @@ public:
     /**
      * Gets the end angle in degrees for the arc.
      *
-     * @tparam T Generic type parameter, either int or float.
-     * @param [out] angle The end angle rounded down to the precision of T.
+     * @tparam  T   Generic type parameter, either int or float.
+     * @param [out] angle   The end angle rounded down to the precision of T.
+     *
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     template <typename T>
     void getArcEnd(T& angle) const
@@ -288,12 +294,13 @@ public:
     /**
      * Updates the start angle in degrees for this Circle arc.
      *
-     * @tparam T Generic type parameter, either int or float.
-     * @param  startAngle The start angle in degrees.
+     * @tparam  T   Generic type parameter, either int or float.
+     * @param   startAngle  The start angle in degrees.
      *
      * @see setArc, updateArcEnd, updateArc
      *
-     * @note The area containing the updated Circle arc is invalidated.
+     * @note    The area containing the updated Circle arc is invalidated.
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     template <typename T>
     void updateArcStart(const T startAngle)
@@ -314,12 +321,13 @@ public:
     /**
      * Updates the end angle in degrees for this Circle arc.
      *
-     * @tparam T Generic type parameter, either int or float.
-     * @param  endAngle The end angle in degrees.
+     * @tparam  T   Generic type parameter, either int or float.
+     * @param   endAngle    The end angle in degrees.
      *
      * @see setArc, updateArcStart, updateArc
      *
-     * @note The area containing the updated Circle arc is invalidated.
+     * @note    The area containing the updated Circle arc is invalidated.
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     template <typename T>
     void updateArcEnd(const T endAngle)
@@ -340,14 +348,15 @@ public:
     /**
      * Updates the start and end angle in degrees for this Circle arc.
      *
-     * @tparam T Generic type parameter, either int or float.
-     * @param  startAngle The new start angle in degrees.
-     * @param  endAngle   The new end angle in degrees.
+     * @tparam  T   Generic type parameter, either int or float.
+     * @param   startAngle  The new start angle in degrees.
+     * @param   endAngle    The new end angle in degrees.
      *
      * @see setArc, getArc, updateArcStart, updateArcEnd
      *
-     * @note The areas containing the updated Circle arcs are invalidated. As little as possible
-     *       will be invalidated for best performance.
+     * @note    The areas containing the updated Circle arcs are invalidated. As little as possible
+     *          will be invalidated for best performance.
+     * @note    Angles are given in degrees, so a full circle is 360.
      */
     template <typename T>
     void updateArc(const T startAngle, const T endAngle)
@@ -494,4 +503,4 @@ private:
 
 } // namespace touchgfx
 
-#endif // CIRCLE_HPP
+#endif // TOUCHGFX_CIRCLE_HPP

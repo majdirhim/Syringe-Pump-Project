@@ -9,15 +9,73 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
-#include <touchgfx/transitions/SlideTransition.hpp>
+#include <touchgfx/transitions/WipeTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen_screen/screenView.hpp>
-#include <gui/screen_screen/screenPresenter.hpp>
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/startup_screen/StartUpView.hpp>
+#include <gui/startup_screen/StartUpPresenter.hpp>
+#include <gui/home_screen/HomeView.hpp>
+#include <gui/home_screen/HomePresenter.hpp>
+#include <gui/newpatient_screen/NewPatientView.hpp>
+#include <gui/newpatient_screen/NewPatientPresenter.hpp>
+#include <gui/samepatient_screen/SamePatientView.hpp>
+#include <gui/samepatient_screen/SamePatientPresenter.hpp>
+#include <gui/specialmodes_screen/SpecialModesView.hpp>
+#include <gui/specialmodes_screen/SpecialModesPresenter.hpp>
+#include <gui/patientdatabase_screen/PatientDatabaseView.hpp>
+#include <gui/patientdatabase_screen/PatientDatabasePresenter.hpp>
+#include <gui/genderchoice_screen/GenderChoiceView.hpp>
+#include <gui/genderchoice_screen/GenderChoicePresenter.hpp>
+#include <gui/keyboard_screen/KeyboardView.hpp>
+#include <gui/keyboard_screen/KeyboardPresenter.hpp>
+#include <gui/keyboardnb_screen/KeyboardNbView.hpp>
+#include <gui/keyboardnb_screen/KeyboardNbPresenter.hpp>
+#include <gui/main_screen/MainView.hpp>
+#include <gui/main_screen/MainPresenter.hpp>
+#include <gui/activealarms_screen/ActiveAlarmsView.hpp>
+#include <gui/activealarms_screen/ActiveAlarmsPresenter.hpp>
+#include <gui/configuration_screen/ConfigurationView.hpp>
+#include <gui/configuration_screen/ConfigurationPresenter.hpp>
+#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp>
+#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp>
+#include <gui/oclusionthresholds_screen/OclusionThresholdsView.hpp>
+#include <gui/oclusionthresholds_screen/OclusionThresholdsPresenter.hpp>
+#include <gui/settings_screen/SettingsView.hpp>
+#include <gui/settings_screen/SettingsPresenter.hpp>
+#include <gui/displaymode_screen/DisplayModeView.hpp>
+#include <gui/displaymode_screen/DisplayModePresenter.hpp>
+#include <gui/departements_screen/DepartementsView.hpp>
+#include <gui/departements_screen/DepartementsPresenter.hpp>
+#include <gui/battery_screen/BatteryView.hpp>
+#include <gui/battery_screen/BatteryPresenter.hpp>
+#include <gui/sound_screen/SoundView.hpp>
+#include <gui/sound_screen/SoundPresenter.hpp>
+#include <gui/language_screen/LanguageView.hpp>
+#include <gui/language_screen/LanguagePresenter.hpp>
+#include <gui/manual_screen/ManualView.hpp>
+#include <gui/manual_screen/ManualPresenter.hpp>
+#include <gui/log_screen/LogView.hpp>
+#include <gui/log_screen/LogPresenter.hpp>
+#include <gui/password_screen/PasswordView.hpp>
+#include <gui/password_screen/PasswordPresenter.hpp>
+#include <gui/druglibrary_screen/DrugLibraryView.hpp>
+#include <gui/druglibrary_screen/DrugLibraryPresenter.hpp>
+#include <gui/syringelibrary_screen/SyringeLibraryView.hpp>
+#include <gui/syringelibrary_screen/SyringeLibraryPresenter.hpp>
+#include <gui/syringeselection_screen/SyringeSelectionView.hpp>
+#include <gui/syringeselection_screen/SyringeSelectionPresenter.hpp>
+#include <gui/timeanddatesetting_screen/TimeAndDateSettingView.hpp>
+#include <gui/timeanddatesetting_screen/TimeAndDateSettingPresenter.hpp>
+#include <gui/maintenance_screen/MaintenanceView.hpp>
+#include <gui/maintenance_screen/MaintenancePresenter.hpp>
+#include <gui/diagnostic_screen/DiagnosticView.hpp>
+#include <gui/diagnostic_screen/DiagnosticPresenter.hpp>
+#include <gui/alarmandeventconfig_screen/AlarmAndEventConfigView.hpp>
+#include <gui/alarmandeventconfig_screen/AlarmAndEventConfigPresenter.hpp>
+#include <gui/transitions_screen/transitionsView.hpp>
+#include <gui/transitions_screen/transitionsPresenter.hpp>
 
 
 /**
@@ -40,9 +98,38 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screenView,
-            touchgfx::meta::TypeList< Screen1View,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< StartUpView,
+            touchgfx::meta::TypeList< HomeView,
+            touchgfx::meta::TypeList< NewPatientView,
+            touchgfx::meta::TypeList< SamePatientView,
+            touchgfx::meta::TypeList< SpecialModesView,
+            touchgfx::meta::TypeList< PatientDatabaseView,
+            touchgfx::meta::TypeList< GenderChoiceView,
+            touchgfx::meta::TypeList< KeyboardView,
+            touchgfx::meta::TypeList< KeyboardNbView,
+            touchgfx::meta::TypeList< MainView,
+            touchgfx::meta::TypeList< ActiveAlarmsView,
+            touchgfx::meta::TypeList< ConfigurationView,
+            touchgfx::meta::TypeList< PerfusionTimeSettingView,
+            touchgfx::meta::TypeList< OclusionThresholdsView,
+            touchgfx::meta::TypeList< SettingsView,
+            touchgfx::meta::TypeList< DisplayModeView,
+            touchgfx::meta::TypeList< DepartementsView,
+            touchgfx::meta::TypeList< BatteryView,
+            touchgfx::meta::TypeList< SoundView,
+            touchgfx::meta::TypeList< LanguageView,
+            touchgfx::meta::TypeList< ManualView,
+            touchgfx::meta::TypeList< LogView,
+            touchgfx::meta::TypeList< PasswordView,
+            touchgfx::meta::TypeList< DrugLibraryView,
+            touchgfx::meta::TypeList< SyringeLibraryView,
+            touchgfx::meta::TypeList< SyringeSelectionView,
+            touchgfx::meta::TypeList< TimeAndDateSettingView,
+            touchgfx::meta::TypeList< MaintenanceView,
+            touchgfx::meta::TypeList< DiagnosticView,
+            touchgfx::meta::TypeList< AlarmAndEventConfigView,
+            touchgfx::meta::TypeList< transitionsView,
+            touchgfx::meta::Nil > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -54,9 +141,38 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< screenPresenter,
-            touchgfx::meta::TypeList< Screen1Presenter,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< StartUpPresenter,
+            touchgfx::meta::TypeList< HomePresenter,
+            touchgfx::meta::TypeList< NewPatientPresenter,
+            touchgfx::meta::TypeList< SamePatientPresenter,
+            touchgfx::meta::TypeList< SpecialModesPresenter,
+            touchgfx::meta::TypeList< PatientDatabasePresenter,
+            touchgfx::meta::TypeList< GenderChoicePresenter,
+            touchgfx::meta::TypeList< KeyboardPresenter,
+            touchgfx::meta::TypeList< KeyboardNbPresenter,
+            touchgfx::meta::TypeList< MainPresenter,
+            touchgfx::meta::TypeList< ActiveAlarmsPresenter,
+            touchgfx::meta::TypeList< ConfigurationPresenter,
+            touchgfx::meta::TypeList< PerfusionTimeSettingPresenter,
+            touchgfx::meta::TypeList< OclusionThresholdsPresenter,
+            touchgfx::meta::TypeList< SettingsPresenter,
+            touchgfx::meta::TypeList< DisplayModePresenter,
+            touchgfx::meta::TypeList< DepartementsPresenter,
+            touchgfx::meta::TypeList< BatteryPresenter,
+            touchgfx::meta::TypeList< SoundPresenter,
+            touchgfx::meta::TypeList< LanguagePresenter,
+            touchgfx::meta::TypeList< ManualPresenter,
+            touchgfx::meta::TypeList< LogPresenter,
+            touchgfx::meta::TypeList< PasswordPresenter,
+            touchgfx::meta::TypeList< DrugLibraryPresenter,
+            touchgfx::meta::TypeList< SyringeLibraryPresenter,
+            touchgfx::meta::TypeList< SyringeSelectionPresenter,
+            touchgfx::meta::TypeList< TimeAndDateSettingPresenter,
+            touchgfx::meta::TypeList< MaintenancePresenter,
+            touchgfx::meta::TypeList< DiagnosticPresenter,
+            touchgfx::meta::TypeList< AlarmAndEventConfigPresenter,
+            touchgfx::meta::TypeList< transitionsPresenter,
+            touchgfx::meta::Nil > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -69,8 +185,11 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< WipeTransition<EAST>,
+            touchgfx::meta::TypeList< WipeTransition<WEST>,
+            touchgfx::meta::TypeList< WipeTransition<SOUTH>,
+            touchgfx::meta::TypeList< WipeTransition<NORTH>,
+            touchgfx::meta::Nil > > > >
             > GeneratedTransitionTypes;
 
     /**
@@ -80,7 +199,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoscreenScreenNoTransition();
+        app.gotoStartUpScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

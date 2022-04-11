@@ -15,22 +15,151 @@ public:
     FrontendApplicationBase(Model& m, FrontendHeap& heap);
     virtual ~FrontendApplicationBase() { }
 
-    // screen
-    void gotoscreenScreenNoTransition();
+    virtual void changeToStartScreen()
+    {
+        gotoStartUpScreenNoTransition();
+    }
 
-    // Screen1
-    void gotoScreen1ScreenSlideTransitionEast();
+    // StartUp
+    void gotoStartUpScreenNoTransition();
+
+    // Home
+    void gotoHomeScreenNoTransition();
+
+    void gotoHomeScreenWipeTransitionWest();
+
+    // NewPatient
+    void gotoNewPatientScreenWipeTransitionEast();
+
+    void gotoNewPatientScreenWipeTransitionNorth();
+
+    // SamePatient
+    void gotoSamePatientScreenWipeTransitionEast();
+
+    // SpecialModes
+    void gotoSpecialModesScreenWipeTransitionEast();
+
+    // PatientDatabase
+    void gotoPatientDatabaseScreenWipeTransitionEast();
+
+    void gotoPatientDatabaseScreenWipeTransitionNorth();
+
+    // GenderChoice
+    void gotoGenderChoiceScreenWipeTransitionSouth();
+
+    // Keyboard
+    void gotoKeyboardScreenWipeTransitionSouth();
+
+    // KeyboardNb
+    void gotoKeyboardNbScreenWipeTransitionSouth();
+
+    // Main
+    void gotoMainScreenWipeTransitionEast();
+
+    void gotoMainScreenWipeTransitionWest();
+
+    void gotoMainScreenWipeTransitionNorth();
+
+    void gotoMainScreenNoTransition();
+
+    // ActiveAlarms
+    void gotoActiveAlarmsScreenWipeTransitionEast();
+
+    // Configuration
+    void gotoConfigurationScreenWipeTransitionSouth();
+
+    void gotoConfigurationScreenWipeTransitionNorth();
+
+    // PerfusionTimeSetting
+    void gotoPerfusionTimeSettingScreenWipeTransitionSouth();
+
+    // OclusionThresholds
+    void gotoOclusionThresholdsScreenWipeTransitionSouth();
+
+    // Settings
+    void gotoSettingsScreenWipeTransitionEast();
+
+    // Manual
+    void gotoManualScreenWipeTransitionSouth();
+
+    // DrugLibrary
+    void gotoDrugLibraryScreenWipeTransitionSouth();
+
+    // SyringeSelection
+    void gotoSyringeSelectionScreenWipeTransitionSouth();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // screen
-    void gotoscreenScreenNoTransitionImpl();
+    // StartUp
+    void gotoStartUpScreenNoTransitionImpl();
 
-    // Screen1
-    void gotoScreen1ScreenSlideTransitionEastImpl();
+    // Home
+    void gotoHomeScreenNoTransitionImpl();
+
+    void gotoHomeScreenWipeTransitionWestImpl();
+
+    // NewPatient
+    void gotoNewPatientScreenWipeTransitionEastImpl();
+
+    void gotoNewPatientScreenWipeTransitionNorthImpl();
+
+    // SamePatient
+    void gotoSamePatientScreenWipeTransitionEastImpl();
+
+    // SpecialModes
+    void gotoSpecialModesScreenWipeTransitionEastImpl();
+
+    // PatientDatabase
+    void gotoPatientDatabaseScreenWipeTransitionEastImpl();
+
+    void gotoPatientDatabaseScreenWipeTransitionNorthImpl();
+
+    // GenderChoice
+    void gotoGenderChoiceScreenWipeTransitionSouthImpl();
+
+    // Keyboard
+    void gotoKeyboardScreenWipeTransitionSouthImpl();
+
+    // KeyboardNb
+    void gotoKeyboardNbScreenWipeTransitionSouthImpl();
+
+    // Main
+    void gotoMainScreenWipeTransitionEastImpl();
+
+    void gotoMainScreenWipeTransitionWestImpl();
+
+    void gotoMainScreenWipeTransitionNorthImpl();
+
+    void gotoMainScreenNoTransitionImpl();
+
+    // ActiveAlarms
+    void gotoActiveAlarmsScreenWipeTransitionEastImpl();
+
+    // Configuration
+    void gotoConfigurationScreenWipeTransitionSouthImpl();
+
+    void gotoConfigurationScreenWipeTransitionNorthImpl();
+
+    // PerfusionTimeSetting
+    void gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl();
+
+    // OclusionThresholds
+    void gotoOclusionThresholdsScreenWipeTransitionSouthImpl();
+
+    // Settings
+    void gotoSettingsScreenWipeTransitionEastImpl();
+
+    // Manual
+    void gotoManualScreenWipeTransitionSouthImpl();
+
+    // DrugLibrary
+    void gotoDrugLibraryScreenWipeTransitionSouthImpl();
+
+    // SyringeSelection
+    void gotoSyringeSelectionScreenWipeTransitionSouthImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

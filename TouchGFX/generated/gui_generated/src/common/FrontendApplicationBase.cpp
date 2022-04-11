@@ -9,10 +9,68 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#include <gui/screen_screen/screenView.hpp>
-#include <gui/screen_screen/screenPresenter.hpp>
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/startup_screen/StartUpView.hpp>
+#include <gui/startup_screen/StartUpPresenter.hpp>
+#include <gui/home_screen/HomeView.hpp>
+#include <gui/home_screen/HomePresenter.hpp>
+#include <gui/newpatient_screen/NewPatientView.hpp>
+#include <gui/newpatient_screen/NewPatientPresenter.hpp>
+#include <gui/samepatient_screen/SamePatientView.hpp>
+#include <gui/samepatient_screen/SamePatientPresenter.hpp>
+#include <gui/specialmodes_screen/SpecialModesView.hpp>
+#include <gui/specialmodes_screen/SpecialModesPresenter.hpp>
+#include <gui/patientdatabase_screen/PatientDatabaseView.hpp>
+#include <gui/patientdatabase_screen/PatientDatabasePresenter.hpp>
+#include <gui/genderchoice_screen/GenderChoiceView.hpp>
+#include <gui/genderchoice_screen/GenderChoicePresenter.hpp>
+#include <gui/keyboard_screen/KeyboardView.hpp>
+#include <gui/keyboard_screen/KeyboardPresenter.hpp>
+#include <gui/keyboardnb_screen/KeyboardNbView.hpp>
+#include <gui/keyboardnb_screen/KeyboardNbPresenter.hpp>
+#include <gui/main_screen/MainView.hpp>
+#include <gui/main_screen/MainPresenter.hpp>
+#include <gui/activealarms_screen/ActiveAlarmsView.hpp>
+#include <gui/activealarms_screen/ActiveAlarmsPresenter.hpp>
+#include <gui/configuration_screen/ConfigurationView.hpp>
+#include <gui/configuration_screen/ConfigurationPresenter.hpp>
+#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp>
+#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp>
+#include <gui/oclusionthresholds_screen/OclusionThresholdsView.hpp>
+#include <gui/oclusionthresholds_screen/OclusionThresholdsPresenter.hpp>
+#include <gui/settings_screen/SettingsView.hpp>
+#include <gui/settings_screen/SettingsPresenter.hpp>
+#include <gui/displaymode_screen/DisplayModeView.hpp>
+#include <gui/displaymode_screen/DisplayModePresenter.hpp>
+#include <gui/departements_screen/DepartementsView.hpp>
+#include <gui/departements_screen/DepartementsPresenter.hpp>
+#include <gui/battery_screen/BatteryView.hpp>
+#include <gui/battery_screen/BatteryPresenter.hpp>
+#include <gui/sound_screen/SoundView.hpp>
+#include <gui/sound_screen/SoundPresenter.hpp>
+#include <gui/language_screen/LanguageView.hpp>
+#include <gui/language_screen/LanguagePresenter.hpp>
+#include <gui/manual_screen/ManualView.hpp>
+#include <gui/manual_screen/ManualPresenter.hpp>
+#include <gui/log_screen/LogView.hpp>
+#include <gui/log_screen/LogPresenter.hpp>
+#include <gui/password_screen/PasswordView.hpp>
+#include <gui/password_screen/PasswordPresenter.hpp>
+#include <gui/druglibrary_screen/DrugLibraryView.hpp>
+#include <gui/druglibrary_screen/DrugLibraryPresenter.hpp>
+#include <gui/syringelibrary_screen/SyringeLibraryView.hpp>
+#include <gui/syringelibrary_screen/SyringeLibraryPresenter.hpp>
+#include <gui/syringeselection_screen/SyringeSelectionView.hpp>
+#include <gui/syringeselection_screen/SyringeSelectionPresenter.hpp>
+#include <gui/timeanddatesetting_screen/TimeAndDateSettingView.hpp>
+#include <gui/timeanddatesetting_screen/TimeAndDateSettingPresenter.hpp>
+#include <gui/maintenance_screen/MaintenanceView.hpp>
+#include <gui/maintenance_screen/MaintenancePresenter.hpp>
+#include <gui/diagnostic_screen/DiagnosticView.hpp>
+#include <gui/diagnostic_screen/DiagnosticPresenter.hpp>
+#include <gui/alarmandeventconfig_screen/AlarmAndEventConfigView.hpp>
+#include <gui/alarmandeventconfig_screen/AlarmAndEventConfigPresenter.hpp>
+#include <gui/transitions_screen/transitionsView.hpp>
+#include <gui/transitions_screen/transitionsPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -31,28 +89,313 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// screen
+// StartUp
 
-void FrontendApplicationBase::gotoscreenScreenNoTransition()
+void FrontendApplicationBase::gotoStartUpScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoscreenScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoStartUpScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoscreenScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoStartUpScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<screenView, screenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<StartUpView, StartUpPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// Screen1
+// Home
 
-void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionEast()
+void FrontendApplicationBase::gotoHomeScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreen1ScreenSlideTransitionEastImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoHomeScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoScreen1ScreenSlideTransitionEastImpl()
+void FrontendApplicationBase::gotoHomeScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<HomeView, HomePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoHomeScreenWipeTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoHomeScreenWipeTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoHomeScreenWipeTransitionWestImpl()
+{
+    touchgfx::makeTransition<HomeView, HomePresenter, touchgfx::WipeTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// NewPatient
+
+void FrontendApplicationBase::gotoNewPatientScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoNewPatientScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoNewPatientScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<NewPatientView, NewPatientPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoNewPatientScreenWipeTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoNewPatientScreenWipeTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoNewPatientScreenWipeTransitionNorthImpl()
+{
+    touchgfx::makeTransition<NewPatientView, NewPatientPresenter, touchgfx::WipeTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// SamePatient
+
+void FrontendApplicationBase::gotoSamePatientScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSamePatientScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSamePatientScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<SamePatientView, SamePatientPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// SpecialModes
+
+void FrontendApplicationBase::gotoSpecialModesScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSpecialModesScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSpecialModesScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<SpecialModesView, SpecialModesPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// PatientDatabase
+
+void FrontendApplicationBase::gotoPatientDatabaseScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoPatientDatabaseScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoPatientDatabaseScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<PatientDatabaseView, PatientDatabasePresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoPatientDatabaseScreenWipeTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoPatientDatabaseScreenWipeTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoPatientDatabaseScreenWipeTransitionNorthImpl()
+{
+    touchgfx::makeTransition<PatientDatabaseView, PatientDatabasePresenter, touchgfx::WipeTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// GenderChoice
+
+void FrontendApplicationBase::gotoGenderChoiceScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoGenderChoiceScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoGenderChoiceScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<GenderChoiceView, GenderChoicePresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Keyboard
+
+void FrontendApplicationBase::gotoKeyboardScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoKeyboardScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoKeyboardScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<KeyboardView, KeyboardPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// KeyboardNb
+
+void FrontendApplicationBase::gotoKeyboardNbScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoKeyboardNbScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoKeyboardNbScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<KeyboardNbView, KeyboardNbPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Main
+
+void FrontendApplicationBase::gotoMainScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenWipeTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()
+{
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenWipeTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()
+{
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoMainScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// ActiveAlarms
+
+void FrontendApplicationBase::gotoActiveAlarmsScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoActiveAlarmsScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoActiveAlarmsScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<ActiveAlarmsView, ActiveAlarmsPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Configuration
+
+void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoConfigurationScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<ConfigurationView, ConfigurationPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoConfigurationScreenWipeTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionNorthImpl()
+{
+    touchgfx::makeTransition<ConfigurationView, ConfigurationPresenter, touchgfx::WipeTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// PerfusionTimeSetting
+
+void FrontendApplicationBase::gotoPerfusionTimeSettingScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<PerfusionTimeSettingView, PerfusionTimeSettingPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// OclusionThresholds
+
+void FrontendApplicationBase::gotoOclusionThresholdsScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoOclusionThresholdsScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoOclusionThresholdsScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<OclusionThresholdsView, OclusionThresholdsPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Settings
+
+void FrontendApplicationBase::gotoSettingsScreenWipeTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSettingsScreenWipeTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSettingsScreenWipeTransitionEastImpl()
+{
+    touchgfx::makeTransition<SettingsView, SettingsPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Manual
+
+void FrontendApplicationBase::gotoManualScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoManualScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoManualScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<ManualView, ManualPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// DrugLibrary
+
+void FrontendApplicationBase::gotoDrugLibraryScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoDrugLibraryScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDrugLibraryScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<DrugLibraryView, DrugLibraryPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// SyringeSelection
+
+void FrontendApplicationBase::gotoSyringeSelectionScreenWipeTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSyringeSelectionScreenWipeTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSyringeSelectionScreenWipeTransitionSouthImpl()
+{
+    touchgfx::makeTransition<SyringeSelectionView, SyringeSelectionPresenter, touchgfx::WipeTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

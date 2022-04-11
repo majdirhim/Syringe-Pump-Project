@@ -10,6 +10,16 @@ public:
     
     virtual ~ModelListener() {}
 
+    virtual void AlarmOrEvent(void) {}
+
+    virtual void batteryUpdated(void) {}
+
+    virtual void currentTimeUpdated(void) {}
+
+    virtual void syringeUpdated(void) {}
+
+    virtual void motorStatusUpdated(void) {}
+
     void bind(Model* m)
     {
         model = m;

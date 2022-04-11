@@ -1,18 +1,17 @@
-/**
-  ******************************************************************************
-  * This file is part of the TouchGFX 4.16.1 distribution.
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+/******************************************************************************
+* Copyright (c) 2018(-2022) STMicroelectronics.
+* All rights reserved.
+*
+* This file is part of the TouchGFX 4.19.1 distribution.
+*
+* This software is licensed under terms that can be found in the LICENSE file in
+* the root directory of this software component.
+* If no LICENSE file comes with this software, it is provided AS-IS.
+*
+*******************************************************************************/
 
+#include <touchgfx/Drawable.hpp>
+#include <touchgfx/widgets/canvas/Canvas.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 
 namespace touchgfx
@@ -22,6 +21,7 @@ Line::Line()
       startX(0), startY(0), endX(0), endY(0),
       lineWidth(CWRUtil::toQ5<int>(1)),
       lineEnding(BUTT_CAP_ENDING),
+      minimalRect(),
       lineCapArcIncrement(18)
 {
     Drawable::setWidthHeight(0, 0);
@@ -47,16 +47,14 @@ void Line::updateStart(CWRUtil::Q5 xQ5, CWRUtil::Q5 yQ5)
         return;
     }
 
-    Rect rectBefore = getMinimalRect();
+    invalidateContent();
 
     startX = xQ5;
     startY = yQ5;
 
     updateCachedShape();
 
-    Rect rectAfter = getMinimalRect();
-    rectBefore.expandToFit(rectAfter);
-    invalidateRect(rectBefore);
+    invalidateContent();
 }
 
 void Line::setEnd(CWRUtil::Q5 xQ5, CWRUtil::Q5 yQ5)
@@ -79,16 +77,14 @@ void Line::updateEnd(CWRUtil::Q5 xQ5, CWRUtil::Q5 yQ5)
         return;
     }
 
-    Rect rectBefore = getMinimalRect();
+    invalidateContent();
 
     endX = xQ5;
     endY = yQ5;
 
     updateCachedShape();
 
-    Rect rectAfter = getMinimalRect();
-    rectBefore.expandToFit(rectAfter);
-    invalidateRect(rectBefore);
+    invalidateContent();
 }
 
 void Line::setLineEndingStyle(Line::LINE_ENDING_STYLE lineEndingStyle)
@@ -120,29 +116,29 @@ bool Line::drawCanvasWidget(const Rect& invalidatedArea) const
     Canvas canvas(this, invalidatedArea);
 
     CWRUtil::Q5 radius;
-    int angleInDegrees = CWRUtil::angle(xCorner[0] - startX, yCorner[0] - startY, radius);
-
-    canvas.moveTo(xCorner[0], yCorner[0]);
-    canvas.lineTo(xCorner[1], yCorner[1]);
     if (lineEnding == ROUND_CAP_ENDING)
     {
-        // Fixed 10 steps (steps 0 and 9 are at Corner[1] and [2])
+        const int angleInDegrees = CWRUtil::angle(xCorner[0] - startX, yCorner[0] - startY, radius);
+        canvas.moveTo(xCorner[0], yCorner[0]);
+        canvas.lineTo(xCorner[1], yCorner[1]);
         for (int i = lineCapArcIncrement; i < 180; i += lineCapArcIncrement)
         {
             canvas.lineTo(endX + radius * CWRUtil::sine(angleInDegrees - i), endY - radius * CWRUtil::cosine(angleInDegrees - i));
         }
-    }
-    canvas.lineTo(xCorner[2], yCorner[2]);
-    canvas.lineTo(xCorner[3], yCorner[3]);
-    if (lineEnding == ROUND_CAP_ENDING)
-    {
-        // Fixed 10 steps (steps 0 and 9 are at Corner[3] and [0])
+        canvas.lineTo(xCorner[2], yCorner[2]);
+        canvas.lineTo(xCorner[3], yCorner[3]);
         for (int i = 180 - lineCapArcIncrement; i > 0; i -= lineCapArcIncrement)
         {
             canvas.lineTo(startX + radius * CWRUtil::sine(angleInDegrees + i), startY - radius * CWRUtil::cosine(angleInDegrees + i));
         }
     }
-
+    else
+    {
+        canvas.moveTo(xCorner[0], yCorner[0]);
+        canvas.lineTo(xCorner[1], yCorner[1]);
+        canvas.lineTo(xCorner[2], yCorner[2]);
+        canvas.lineTo(xCorner[3], yCorner[3]);
+    }
     return canvas.render();
 }
 
@@ -197,7 +193,7 @@ void Line::updateCachedShape()
             dx = CWRUtil::Q5((int32_t)dx / divi);
             dy = CWRUtil::Q5((int32_t)dy / divi);
         }
-        d = CWRUtil::sqrtQ10(dy * dy + dx * dx);
+        d = CWRUtil::length(dx, dy);
     }
 
     dy = CWRUtil::muldivQ5(lineWidth, dy, d) / 2;
@@ -216,18 +212,18 @@ void Line::updateCachedShape()
         yCorner[3] = startY - dx;
         break;
     case ROUND_CAP_ENDING:
-    // Nothing cached, calculated on each draw, but extremes are same as SQUARE_CAP_ENDING, so
-    // Fall Through (for calculations)
+        // Nothing cached, calculated on each draw, but extremes are same as SQUARE_CAP_ENDING, so
+        // Fall Through (for calculations)
     default:
     case SQUARE_CAP_ENDING:
-        xCorner[0] = startX - dy - dx;
-        yCorner[0] = startY + dx - dy;
-        xCorner[1] = endX - dy + dx;
-        yCorner[1] = endY + dx + dy;
-        xCorner[2] = endX + dy + dx;
-        yCorner[2] = endY - dx + dy;
-        xCorner[3] = startX + dy - dx;
-        yCorner[3] = startY - dx - dy;
+        xCorner[0] = (startX - dy) - dx;
+        yCorner[0] = (startY + dx) - dy;
+        xCorner[1] = (endX - dy) + dx;
+        yCorner[1] = (endY + dx) + dy;
+        xCorner[2] = (endX + dy) + dx;
+        yCorner[2] = (endY - dx) + dy;
+        xCorner[3] = (startX + dy) - dx;
+        yCorner[3] = (startY - dx) - dy;
         break;
     }
 
@@ -254,11 +250,11 @@ void Line::updateCachedShape()
             yMax = yCorner[i];
         }
     }
-    int16_t minX = xMin.to<int>();
-    int16_t minY = yMin.to<int>();
-    int16_t maxX = xMax.to<int>();
-    int16_t maxY = yMax.to<int>();
-    minimalRect = Rect(minX, minY, maxX - minX + 1, maxY - minY + 1);
+    int16_t minX = xMin.floor();
+    int16_t minY = yMin.floor();
+    int16_t maxX = xMax.ceil();
+    int16_t maxY = yMax.ceil();
+    minimalRect = Rect(minX, minY, maxX - minX, maxY - minY);
 
     if (lineEnding == ROUND_CAP_ENDING)
     {
@@ -273,6 +269,17 @@ void Line::updateCachedShape()
     }
 }
 
+touchgfx::Rect Line::rectContainingPoints(const Rect& fullRect, CWRUtil::Q5 x0, CWRUtil::Q5 y0, CWRUtil::Q5 x1, CWRUtil::Q5 y1, CWRUtil::Q5 x2, CWRUtil::Q5 y2) const
+{
+    const int16_t minX = MIN(MIN(x0, x1), x2).floor();
+    const int16_t minY = MIN(MIN(y0, y1), y2).floor();
+    const int16_t maxX = MAX(MAX(x0, x1), x2).ceil();
+    const int16_t maxY = MAX(MAX(y0, y1), y2).ceil();
+    Rect r(minX, minY, maxX - minX, maxY - minY);
+    r &= fullRect;
+    return r;
+}
+
 Rect Line::getMinimalRect() const
 {
     return minimalRect;
@@ -282,4 +289,71 @@ void Line::updateLengthAndAngle(CWRUtil::Q5 length, CWRUtil::Q5 angle)
 {
     updateEnd(startX + length * CWRUtil::sine(angle), startY - length * CWRUtil::cosine(angle));
 }
+
+void Line::invalidateContent() const
+{
+    if (alpha == 0)
+    {
+        return;
+    }
+    Rect smallRect = getMinimalRect();
+    if (abs(startX.to<int>() - endX.to<int>()) < lineWidth.to<int>() * 2 ||
+        abs(startY.to<int>() - endY.to<int>()) < lineWidth.to<int>() * 2)
+    {
+        invalidateRect(smallRect);
+        return;
+    }
+
+    int16_t center_x = ((startX + endX) / 2).to<int16_t>();
+    int16_t center_y = ((startY + endY) / 2).to<int16_t>();
+    // The following should be "lineWidth/sqrt(2)" but to speed up we take the slightly larger "lineWidth/1.3333"="(lineWidth*3)/4"
+    int16_t extra_width = ((CWRUtil::Q5)(((int)(lineWidth)*3 + 3) >> 2)).ceil();
+#define same_sign(x, y) (((x) < 0 && (y) < 0) || ((x) > 0 && (y) > 0))
+    if (smallRect.width < smallRect.height)
+    {
+        const int16_t left_x = center_x - extra_width;
+        const int16_t right_x = center_x + extra_width;
+        // "vertical" line
+        if (same_sign(endX - startX, endY - startY))
+        {
+            // From top-left to bottom-right
+            Rect topLeftRect(smallRect.x, smallRect.y, right_x - smallRect.x, center_y - smallRect.y);
+            Rect bottomRightRect(left_x, center_y, smallRect.right() - left_x, smallRect.bottom() - center_y);
+            invalidateRect(topLeftRect);
+            invalidateRect(bottomRightRect);
+        }
+        else
+        {
+            // From top-right to bottom-left
+            Rect topRightRect(left_x, smallRect.y, smallRect.right() - left_x, center_y - smallRect.y);
+            Rect bottomLeftRect(smallRect.x, center_y, right_x - smallRect.x, smallRect.bottom() - center_y);
+            invalidateRect(topRightRect);
+            invalidateRect(bottomLeftRect);
+        }
+    }
+    else
+    {
+        const int16_t top_y = center_y - extra_width;
+        const int16_t bottom_y = center_y + extra_width;
+        // "horizontal" line
+        if (same_sign(endX - startX, endY - startY))
+        {
+            // From top-left to bottom-right
+            Rect topLeftRect(smallRect.x, smallRect.y, center_x - smallRect.x, bottom_y - smallRect.y);
+            Rect bottomRightRect(center_x, top_y, smallRect.right() - center_x, smallRect.bottom() - top_y);
+            invalidateRect(topLeftRect);
+            invalidateRect(bottomRightRect);
+        }
+        else
+        {
+            // From top-right to bottom-left
+            Rect bottomLeftRect(smallRect.x, top_y, center_x - smallRect.x, smallRect.bottom() - top_y);
+            Rect topRightRect(center_x, smallRect.y, smallRect.right() - center_x, bottom_y - smallRect.y);
+            invalidateRect(bottomLeftRect);
+            invalidateRect(topRightRect);
+        }
+    }
+#undef same_sign
+}
+
 } // namespace touchgfx

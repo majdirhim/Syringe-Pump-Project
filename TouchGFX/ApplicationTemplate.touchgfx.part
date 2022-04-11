@@ -8,14 +8,20 @@
     {
       "16": "LCD16bpp"
     },
-    "AvailableResolutions" : [
+    "AvailableResolutions": [
       {
         "Width": 480,
         "Height": 272
       }
     ],
-    "PostGenerateTargetCommand" : "touchgfx update_project --project-file=../openh7.ioc --platform=m7",
-    "Family" : "STM32H7"
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H743/753",
+    "Platform": "m7",
+    "ProjectFile": "../openh7.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [
+    ]
   },
-  "Version": "4.16.1"
+  "Version": "4.19.1"
 }

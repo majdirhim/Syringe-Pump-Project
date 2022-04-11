@@ -1,17 +1,16 @@
-##############################################################################
-# This file is part of the TouchGFX 4.16.1 distribution.
+# Copyright (c) 2018(-2022) STMicroelectronics.
+# All rights reserved.
 #
-# <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-# All rights reserved.</center></h2>
+# This file is part of the TouchGFX 4.19.1 distribution.
 #
-# This software component is licensed by ST under Ultimate Liberty license
-# SLA0044, the "License"; You may not use this file except in compliance with
-# the License. You may obtain a copy of the License at:
-#                             www.st.com/SLA0044
+# This software is licensed under terms that can be found in the LICENSE file in
+# the root directory of this software component.
+# If no LICENSE file comes with this software, it is provided AS-IS.
 #
-##############################################################################
-
+###############################################################################/
 $:.unshift File.dirname(__FILE__)
+
+require 'lib/version'
 
 WINDOWS_LINE_ENDINGS = "\r\n"
 UNIX_LINE_ENDINGS = "\n"
@@ -24,23 +23,41 @@ def root_dir
 end
 
 class Main
+
   def self.banner
     <<-BANNER
-Create binary and cpp text files from excel translations
+Create binary and cpp text files from Text Database
 
-Usage: #{File.basename($0)} file.xlsx path/to/fontconvert.out path/to/fonts_output_dir path/to/localization_output_dir path/to/font/asset calling_path {remap|yes|no} {A1|A2|A4|A8} {binary_translations} {binary_fonts} {RGB565|RGB888|BW|GRAY2|GRAY4|ARGB2222|ABGR2222|RGBA2222|BGRA2222}
+Usage: #{File.basename($0)} file.xml path/to/fontconvert.out path/to/fonts_output_dir path/to/localization_output_dir path/to/font/asset calling_path {remap|yes|no} {A1|A2|A4|A8} {binary_translations} {binary_fonts} {RGB565|RGB888|BW|GRAY2|GRAY4|ARGB2222|ABGR2222|RGBA2222|BGRA2222}
+
 Where 'remap'/'yes' will map identical texts to the same memory area to save space
       'A1'/'A2'/'A4'/'A8' will generate fonts in the given format
       'binary_translations' will generate binary translations instead of cpp files
       'binary_fonts' will generate binary font files instead of cpp files
       last argument is the framebuffer format (used to limit the bit depth of the generated fonts)
-      Configuration specified in the application.config file take precedence over the commandline arguments
+      Configuration specified in the application.config file take precedence over the command line arguments
 BANNER
+  end
+
+  def self.upgrade
+    <<-UPGRADE
+
+---------------------------------------------------------------------------
+Your TouchGFX Environment is using an old Ruby version (#{RUBY_VERSION}).
+TouchGFX #{TOUCHGFX_VERSION} uses Ruby version 3.
+Please use the new TouchGFX Environment.
+---------------------------------------------------------------------------
+
+UPGRADE
   end
 
   def self.missing_files
     return !File.exists?("#{@fonts_output_path}/include/fonts/ApplicationFontProvider.hpp") ||
            !File.exists?("#{@localization_output_path}/include/texts/TextKeysAndLanguages.hpp")
+  end
+
+  if Integer(RUBY_VERSION.match(/\d+/)[0]) < 3 && !RUBY_PLATFORM.match(/linux/)
+    puts self.upgrade
   end
 
   if __FILE__ == $0
@@ -58,6 +75,7 @@ BANNER
 
     #optional arguments
     remap_identical_texts = ARGV.include?("yes") || ARGV.include?("remap") ? "yes" : "no"
+    autohint_setting = "default"
 
     data_format_a1 = ARGV.include?("A1") ? "A1" : ""
     data_format_a2 = ARGV.include?("A2") ? "A2" : ""
@@ -74,11 +92,9 @@ BANNER
       end
     end
 
-    require 'fileutils'
-    require 'json'
-    require 'lib/file_io'
-
     generate_font_format = "0" # 0 = normal font format, 1 = unmapped_flash_font_format
+
+    require 'json'
 
     application_config = File.join($calling_path, "application.config")
     if File.file?(application_config)
@@ -87,6 +103,11 @@ BANNER
       remap = text_conf["remap"]
       if !remap.nil?
         remap_identical_texts = remap == "yes" ? "yes" : "no"
+      end
+
+      autohint = text_conf["autohint"]
+      if !autohint.nil?
+        autohint_setting = (autohint == "no" || autohint == "force") ? autohint : "default"
       end
 
       a1 = text_conf["a1"]
@@ -139,12 +160,28 @@ BANNER
     end
 
     begin
+      # 0. check text database file extension. Allow texts.xlsx as parameter, but require a texts.xml to be present
       # 1. if text_converter is newer than compile_time.cache, remove all files under generated/texts and generated/fonts
       # 1b if generated/fonts/include/fonts/ApplicationFontProvider.hpp is missing, force generation of TextKeysAndLanguages.hpp
       # 1c if generated/texts/cache/options.cache contents differ from supplies arguments, force run
-      # 2. if generated/texts/cache/compile_time.cache is newer than excel sheet and fonts/ApplicationFontProvider.hpp exists then stop now
+      # 2. if generated/texts/cache/compile_time.cache is newer than xml file and fonts/ApplicationFontProvider.hpp exists then stop now
       # 3. remove UnicodeList*.txt and CharSizes*.csv
       # 4. create #{@localization_output_path}/include/texts/ and #{@fonts_output_path}/include/fonts/
+
+      require 'fileutils'
+
+      # 0:
+      if file_name.match(/\.xlsx$/)
+        xml_file_name = file_name.gsub(/\.xlsx$/, '.xml')
+        if File.exists?(xml_file_name)
+          if File.exists?(file_name)
+            puts "WARNING: Using \"#{xml_file_name}\" instead of \"#{file_name}\""
+          end
+        else
+          fail "ERROR: #{xml_file_name} not found"
+        end
+        file_name = xml_file_name
+      end
 
       # 1:
       text_converter_time = [File.mtime( __FILE__), File.ctime( __FILE__ )].max;
@@ -171,6 +208,7 @@ BANNER
       options = File.exists?(options_file) && File.read(options_file)
 
       new_options = { :remap => remap_identical_texts,
+                      :autohint => autohint_setting,
                       :data_format => data_format,
                       :binary_translations => generate_binary_translations,
                       :binary_fonts => generate_binary_fonts,
@@ -179,13 +217,14 @@ BANNER
 
       if (options != new_options)
         force_run = true
+        require 'lib/file_io'
         FileIO.write_file_silent(options_file, new_options)
       end
 
       # 2:
       if File.exists?("#{@localization_output_path}/cache/compile_time.cache") && !self.missing_files && !force_run
-        excel_mod_time = [File.mtime(file_name), File.ctime(file_name)].max
-        if excel_mod_time < File.mtime("#{@localization_output_path}/cache/compile_time.cache")
+        mod_time = [File.mtime(file_name), File.ctime(file_name)].max
+        if mod_time < File.mtime("#{@localization_output_path}/cache/compile_time.cache")
           exit
         end
       end
@@ -202,11 +241,10 @@ BANNER
       FileUtils.mkdir_p("#{@localization_output_path}/include/texts/")
       FileUtils.mkdir_p("#{@fonts_output_path}/include/fonts")
 
-      require 'rubygems'
-      require 'lib/generator'
       require 'lib/emitters/fonts_cpp'
+      require 'lib/generator'
       FontsCpp.font_convert = font_convert_path
-      Generator.new.run(file_name, @fonts_output_path, @localization_output_path, font_asset_path, data_format, remap_identical_texts, generate_binary_translations, generate_binary_fonts, framebuffer_bpp, generate_font_format)
+      Generator.new.run(file_name, @fonts_output_path, @localization_output_path, font_asset_path, data_format, remap_identical_texts, autohint_setting, generate_binary_translations, generate_binary_fonts, framebuffer_bpp, generate_font_format)
       #touch the cache compile time that we rely on in the makefile
       FileUtils.touch "#{@localization_output_path}/cache/compile_time.cache"
 
@@ -214,7 +252,7 @@ BANNER
 
     rescue Exception => e
       STDERR.puts e
-      abort "an error occurred in converting texts:\r\n#{e}"
+      abort "An error occurred during text convertion"
     end
   end
 end
