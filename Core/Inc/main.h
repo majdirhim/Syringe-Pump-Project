@@ -65,8 +65,6 @@ void MyFlagInterruptHandler(void);// stepper motor driver flags handler ( under_
 #define FLAG_GPIO_Port GPIOH
 #define DIR1_Pin GPIO_PIN_3
 #define DIR1_GPIO_Port GPIOI
-#define LED1_Pin GPIO_PIN_6
-#define LED1_GPIO_Port GPIOB
 #define LED2_Pin GPIO_PIN_7
 #define LED2_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */

@@ -45,16 +45,19 @@ void TouchGFXGeneratedHAL::initialize()
 
 void TouchGFXGeneratedHAL::configureInterrupts()
 {
+    NVIC_SetPriority(DMA2D_IRQn, 9);
     NVIC_SetPriority(LTDC_IRQn, 9);
 }
 
 void TouchGFXGeneratedHAL::enableInterrupts()
 {
+    NVIC_EnableIRQ(DMA2D_IRQn);
     NVIC_EnableIRQ(LTDC_IRQn);
 }
 
 void TouchGFXGeneratedHAL::disableInterrupts()
 {
+    NVIC_DisableIRQ(DMA2D_IRQn);
     NVIC_DisableIRQ(LTDC_IRQn);
 }
 

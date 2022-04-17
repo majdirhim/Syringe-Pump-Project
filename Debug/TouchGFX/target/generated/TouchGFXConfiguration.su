@@ -27,10 +27,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:179:13:virtual touchgfx::GenericCallback<void>::~GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:touchgfx::TouchController::~TouchController()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:virtual touchgfx::TouchController::~TouchController()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:61:13:touchgfx::DMA_Queue::~DMA_Queue()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:61:13:virtual touchgfx::DMA_Queue::~DMA_Queue()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:218:13:touchgfx::DMA_Interface::~DMA_Interface()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:218:13:virtual touchgfx::DMA_Interface::~DMA_Interface()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:36:9:touchgfx::Gestures::DragState::DragState()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:60:5:touchgfx::Gestures::Gestures()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:55:5:touchgfx::HAL::HAL(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, uint16_t, uint16_t)	24	static
@@ -82,10 +78,6 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:49:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:39:7:touchgfx::LCD16bpp::~LCD16bpp()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:39:7:virtual touchgfx::LCD16bpp::~LCD16bpp()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:87:7:touchgfx::LockFreeDMA_Queue::~LockFreeDMA_Queue()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:87:7:virtual touchgfx::LockFreeDMA_Queue::~LockFreeDMA_Queue()	16	static
-../TouchGFX/target/generated/STM32DMA.hpp:32:7:STM32DMA::~STM32DMA()	16	static
-../TouchGFX/target/generated/STM32DMA.hpp:32:7:virtual STM32DMA::~STM32DMA()	16	static
 ../TouchGFX/target/STM32TouchController.hpp:37:7:STM32TouchController::~STM32TouchController()	16	static
 ../TouchGFX/target/STM32TouchController.hpp:37:7:virtual STM32TouchController::~STM32TouchController()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static

@@ -25,11 +25,10 @@
 #include "dma2d.h"
 #include "i2c.h"
 #include "ltdc.h"
+#include "quadspi.h"
 #include "spi.h"
 #include "tim.h"
-#include "usart.h"
 #include "gpio.h"
-#include "fmc.h"
 #include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -132,13 +131,12 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI2_Init();
   MX_ADC3_Init();
-  MX_UART5_Init();
   MX_I2C1_SMBUS_Init();
   MX_DMA2D_Init();
   MX_LTDC_Init();
   MX_CRC_Init();
   MX_TIM2_Init();
-  MX_FMC_Init();
+  MX_QUADSPI_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
@@ -298,18 +296,18 @@ void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	// do something in case of analog watchdog interrupts
 }
 
-// returns the speed of Screws needed for a given flow_rate (mm/h) and syringe radius(mm)
+// returns the speed of Screws (mm/s) needed for a given flow_rate (mm/h) and syringe radius(mm)
 uint8_t Screws_Speed_From_FlowRate(uint8_t flow_rate , uint8_t radius ){
 	radius = radius*0.001;
 	uint8_t section = radius*radius*3.14159;
 	flow_rate = (flow_rate * 0.001) / 3600;
 	return flow_rate/section ;
 }
-// returns the speed of Screws needed for a given fluid volume , time and radius
+// returns the speed of Screws needed for a given fluid volume , time(hours) and radius
 uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius){
 	return Screws_Speed_From_FlowRate(volume/time,radius) ;
 }
-// returns the motor speed needed
+// returns the motor speed needed (rps)
 uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed){
 	return screwspeed / screwstep;
 }

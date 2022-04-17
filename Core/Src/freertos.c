@@ -29,6 +29,7 @@
 #include "l6474.h"
 #include "adc.h"
 #include "usart.h"
+#include "SW_common.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,7 +49,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-int tCelsius ; // cpu_temp
+
 /* USER CODE END Variables */
 /* Definitions for battery_manage */
 osThreadId_t battery_manageHandle;
@@ -84,6 +85,11 @@ const osThreadAttr_t IHM_attributes = {
   .name = "IHM",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal1,
+};
+/* Definitions for InfusionQ */
+osMessageQueueId_t InfusionQHandle;
+const osMessageQueueAttr_t InfusionQ_attributes = {
+  .name = "InfusionQ"
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -129,6 +135,10 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
+
+  /* Create the queue(s) */
+  /* creation of InfusionQ */
+  InfusionQHandle = osMessageQueueNew (16, sizeof(Infusion_paramT), &InfusionQ_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -189,17 +199,19 @@ void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
 	BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
+	Infusion_paramT msgPerfusionParameters;
+	uint8_t screwspeed , motorspeed;
   /* Infinite loop */
   for(;;)
   {
-	L6474_SetMaxSpeed(0, 1000);
-	L6474_SetMinSpeed(0, 1000);
-	L6474_Move(0, BACKWARD, 16000);
-	L6474_WaitWhileActive(0);
-	osDelay(1000);
-	L6474_Move(0, FORWARD, 16000);
-	L6474_WaitWhileActive(0);
-	osDelay(1000);
+	if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,1,100)==osOK){
+		screwspeed = Screws_Speed_From_FlowRate(msgPerfusionParameters.Flowrate,10);//radius 10 (exp)
+		motorspeed = Motor_Speed(1.5,screwspeed);// step (1.5) exp
+		L6474_SetMaxSpeed(0, motorspeed);
+		L6474_SetMinSpeed(0, motorspeed);
+		L6474_Move(0, BACKWARD, motorspeed*200);
+	}
+
   }
   /* USER CODE END Stepper_motor */
 }
@@ -232,7 +244,7 @@ void Cloud_Connectivity(void *argument)
 void Sensors_measurements(void *argument)
 {
   /* USER CODE BEGIN Sensors_measurements */
-	uint16_t readValue;
+	uint16_t readValue, tCelsius;
   /* Infinite loop */
   for(;;)
   {

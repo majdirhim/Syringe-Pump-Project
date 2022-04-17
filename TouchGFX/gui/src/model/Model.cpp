@@ -1,5 +1,11 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
+#ifndef SIMULATOR
+#include <cmsis_os.h> // FreeRtos V2
+extern osMessageQueueId_t FlowRateQHandle;
+extern osMessageQueueId_t VolumeQHandle;
+extern osMessageQueueId_t TimeQHandle;
+#endif
 
 Model::Model() : modelListener(0),
 LatestEventReceived({ 0, 0, 0, ALARM_FLASH_PERIOD }),
@@ -220,7 +226,6 @@ void Model::saveFlowaRate(SW_float value)
 	float temp = (float)value.BeforeComma;
 	temp = temp + (float)value.AfterComma / 10.0;
 	PerfusionParameters.Flowrate = temp;
-
 	calculateThirdParameter(CALLER_FLOWRATE);
 	saveInfusionData();
 }
