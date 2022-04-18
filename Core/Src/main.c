@@ -26,8 +26,10 @@
 #include "i2c.h"
 #include "ltdc.h"
 #include "quadspi.h"
+#include "sdmmc.h"
 #include "spi.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 #include "app_touchgfx.h"
 
@@ -137,6 +139,8 @@ int main(void)
   MX_CRC_Init();
   MX_TIM2_Init();
   MX_QUADSPI_Init();
+  MX_SDMMC1_SD_Init();
+  MX_USART3_UART_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
