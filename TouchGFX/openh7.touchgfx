@@ -6056,10 +6056,10 @@
               "TriggerComponent": "TimeBtn"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "South",
-              "ActionComponent": "PerfusionTimeSetting"
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call Main InitKeyboard",
+              "ParameterValue": "14",
+              "ActionComponent": "Main"
             }
           },
           {
@@ -6602,7 +6602,7 @@
             "X": 65,
             "Y": 134,
             "Width": 20,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_C4R9",
             "TextRotation": "0",
             "Color": {
@@ -6652,7 +6652,7 @@
             "X": 161,
             "Y": 134,
             "Width": 52,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_83NG",
             "TextRotation": "0",
             "Color": {
@@ -6707,7 +6707,7 @@
             "X": 273,
             "Y": 134,
             "Width": 54,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_3O68",
             "TextRotation": "0",
             "Color": {
@@ -6757,7 +6757,7 @@
             "X": 65,
             "Y": 177,
             "Width": 18,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_8ABY",
             "TextRotation": "0",
             "Color": {
@@ -6807,7 +6807,7 @@
             "X": 169,
             "Y": 177,
             "Width": 37,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_12OE",
             "TextRotation": "0",
             "Color": {
@@ -6857,7 +6857,7 @@
             "X": 280,
             "Y": 177,
             "Width": 43,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_ILFS",
             "TextRotation": "0",
             "Color": {
@@ -6873,7 +6873,7 @@
             "X": 65,
             "Y": 219,
             "Width": 16,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_MLFD",
             "TextRotation": "0",
             "Color": {
@@ -6889,7 +6889,7 @@
             "X": 169,
             "Y": 220,
             "Width": 31,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_6LQ4",
             "TextRotation": "0",
             "Color": {
@@ -6905,7 +6905,7 @@
             "X": 291,
             "Y": 218,
             "Width": 18,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_45FE",
             "TextRotation": "0",
             "Color": {

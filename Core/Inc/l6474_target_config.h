@@ -150,7 +150,7 @@
                                              L6474_ALARM_EN_WRONG_NPERF_CMD)
 
 /// Step selection settings for device 0 (STEP_SEL field of STEP_MODE register)
-#define L6474_CONF_PARAM_STEP_SEL_DEVICE_0  (L6474_STEP_SEL_1_16)
+#define L6474_CONF_PARAM_STEP_SEL_DEVICE_0  (L6474_STEP_SEL_1)
 /// Step selection settings for device 1 (STEP_SEL field of STEP_MODE register)
 #define L6474_CONF_PARAM_STEP_SEL_DEVICE_1  (L6474_STEP_SEL_1_16)
 /// Step selection settings for device 2 (STEP_SEL field of STEP_MODE register)

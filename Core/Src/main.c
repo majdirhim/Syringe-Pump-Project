@@ -46,6 +46,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define SCREWSTEP 1.5
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -61,6 +62,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void PeriphCommonClock_Config(void);
 void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 
@@ -125,6 +127,9 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 
+/* Configure the peripherals common clocks */
+  PeriphCommonClock_Config();
+
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
@@ -141,6 +146,7 @@ int main(void)
   MX_QUADSPI_Init();
   MX_SDMMC1_SD_Init();
   MX_USART3_UART_Init();
+  MX_ADC1_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
@@ -223,6 +229,32 @@ void SystemClock_Config(void)
   }
 }
 
+/**
+  * @brief Peripherals Common Clock Configuration
+  * @retval None
+  */
+void PeriphCommonClock_Config(void)
+{
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+
+  /** Initializes the peripherals clock
+  */
+  PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+  PeriphClkInitStruct.PLL2.PLL2M = 1;
+  PeriphClkInitStruct.PLL2.PLL2N = 18;
+  PeriphClkInitStruct.PLL2.PLL2P = 2;
+  PeriphClkInitStruct.PLL2.PLL2Q = 2;
+  PeriphClkInitStruct.PLL2.PLL2R = 2;
+  PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_3;
+  PeriphClkInitStruct.PLL2.PLL2VCOSEL = RCC_PLL2VCOMEDIUM;
+  PeriphClkInitStruct.PLL2.PLL2FRACN = 6144;
+  PeriphClkInitStruct.AdcClockSelection = RCC_ADCCLKSOURCE_PLL2;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
 /* USER CODE BEGIN 4 */
 //stepper driver interrupt
 void MyFlagInterruptHandler(void)
@@ -298,24 +330,54 @@ void MyFlagInterruptHandler(void)
 // cpu temp interrupt
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	// do something in case of analog watchdog interrupts
+	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+	HAL_ADC_Stop_IT(&hadc3);
 }
 
 // returns the speed of Screws (mm/s) needed for a given flow_rate (mm/h) and syringe radius(mm)
-uint8_t Screws_Speed_From_FlowRate(uint8_t flow_rate , uint8_t radius ){
+uint16_t Screws_Speed_From_FlowRate(uint16_t flow_rate , uint8_t radius ){
 	radius = radius*0.001;
 	uint8_t section = radius*radius*3.14159;
 	flow_rate = (flow_rate * 0.001) / 3600;
 	return flow_rate/section ;
 }
 // returns the speed of Screws needed for a given fluid volume , time(hours) and radius
-uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius){
+uint16_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius){
 	return Screws_Speed_From_FlowRate(volume/time,radius) ;
 }
 // returns the motor speed needed (rps)
-uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed){
-	return screwspeed / screwstep;
+uint16_t Motor_Speed(uint16_t screwspeed){
+	return screwspeed / SCREWSTEP;
+}
+//return number of seconds to finish the injection
+int Time_Needed(uint16_t flow_rate, uint16_t volume_to_inject){
+	return volume_to_inject/flow_rate;
 }
 
+void SyringeMove(uint16_t FlowRate , uint8_t radius,int timeneeded){
+	uint16_t screwspeed , motorspeed;
+	int pps;
+	screwspeed = Screws_Speed_From_FlowRate(FlowRate,radius);
+	motorspeed = Motor_Speed(screwspeed);
+	pps=motorspeed*200;
+	BSP_MotorControl_SetMaxSpeed(0,pps);
+	BSP_MotorControl_SetMinSpeed(0, pps);
+	BSP_MotorControl_Move(0, FORWARD,pps*timeneeded);
+}
+
+uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+uint8_t calculate_volume_left(int laststep , uint8_t flowrate ,uint8_t volume_to_inject ){
+	uint16_t readValue,traveled_steps ;
+	uint8_t injectedVolume;
+	HAL_ADC_Start(&hadc1);
+	HAL_ADC_PollForConversion(&hadc1, 100);
+	readValue = HAL_ADC_GetValue(&hadc1);
+	traveled_steps=map(readValue, 0, 65535,0 ,laststep );
+	injectedVolume = (traveled_steps / BSP_MotorControl_GetMaxSpeed(0))*flowrate;
+	return volume_to_inject-injectedVolume;
+}
 /* USER CODE END 4 */
 
  /**

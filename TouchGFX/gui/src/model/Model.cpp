@@ -2,9 +2,7 @@
 #include <gui/model/ModelListener.hpp>
 #ifndef SIMULATOR
 #include <cmsis_os.h> // FreeRtos V2
-extern osMessageQueueId_t FlowRateQHandle;
-extern osMessageQueueId_t VolumeQHandle;
-extern osMessageQueueId_t TimeQHandle;
+extern osMessageQueueId_t InfusionQHandle;
 #endif
 
 Model::Model() : modelListener(0),
@@ -417,6 +415,9 @@ void Model::saveInfusionData(void)
 {
 #ifndef SIMULATOR
 	// RTOS
+	if(PerfusionParameters.Flowrate!=0 || (PerfusionParameters.InfousionVolume!=0 )){
+		osMessageQueuePut(InfusionQHandle,&PerfusionParameters,1,100);
+	}
 #endif
 }
 

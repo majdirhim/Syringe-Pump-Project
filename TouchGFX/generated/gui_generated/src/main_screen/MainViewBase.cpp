@@ -873,9 +873,9 @@ void MainViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonConta
     else if (&src == &TimeBtn)
     {
         //GotoPerfusiontime
-        //When TimeBtn clicked change screen to PerfusionTimeSetting
-        //Go to PerfusionTimeSetting with screen transition towards South
-        application().gotoPerfusionTimeSettingScreenWipeTransitionSouth();
+        //When TimeBtn clicked call InitKeyboard on Main
+        //Call InitKeyboard
+        InitKeyboard(14);
     }
     else if (&src == &RateBtn)
     {

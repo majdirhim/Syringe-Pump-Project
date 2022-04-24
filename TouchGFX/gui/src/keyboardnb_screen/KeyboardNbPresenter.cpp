@@ -84,3 +84,4 @@ void KeyboardNbPresenter::savePressureThresholdHigh(uint16_t value)
 {
 	model->savePressureThresholdHigh(value);
 }
+

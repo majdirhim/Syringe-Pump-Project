@@ -63,7 +63,7 @@ osThreadId_t StepperHandle;
 const osThreadAttr_t Stepper_attributes = {
   .name = "Stepper",
   .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Connectivity */
 osThreadId_t ConnectivityHandle;
@@ -91,6 +91,26 @@ osMessageQueueId_t InfusionQHandle;
 const osMessageQueueAttr_t InfusionQ_attributes = {
   .name = "InfusionQ"
 };
+/* Definitions for VolumeQ */
+osMessageQueueId_t VolumeQHandle;
+const osMessageQueueAttr_t VolumeQ_attributes = {
+  .name = "VolumeQ"
+};
+/* Definitions for FlowRateQ */
+osMessageQueueId_t FlowRateQHandle;
+const osMessageQueueAttr_t FlowRateQ_attributes = {
+  .name = "FlowRateQ"
+};
+/* Definitions for TimeQ */
+osMessageQueueId_t TimeQHandle;
+const osMessageQueueAttr_t TimeQ_attributes = {
+  .name = "TimeQ"
+};
+/* Definitions for LastStepQ */
+osMessageQueueId_t LastStepQHandle;
+const osMessageQueueAttr_t LastStepQ_attributes = {
+  .name = "LastStepQ"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -104,6 +124,14 @@ uint8_t Screws_Speed_From_FlowRate(uint8_t flow_rate , uint8_t radius );
 uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius);
 // returns the motor speed needed
 uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed);
+//Move the Syringe
+void SyringeMove(uint8_t FlowRate , uint8_t radius,int timeneeded);
+// mapping values
+uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
+// return number of seconds to finish the injection
+int Time_Needed(uint8_t flow_rate, uint8_t volume_to_inject);
+// calculate volume left
+uint8_t calculate_volume_left(int laststep , uint8_t flowrate ,uint8_t volume_to_inject );
 /* USER CODE END FunctionPrototypes */
 
 void StartBatteryManage(void *argument);
@@ -139,6 +167,18 @@ void MX_FREERTOS_Init(void) {
   /* Create the queue(s) */
   /* creation of InfusionQ */
   InfusionQHandle = osMessageQueueNew (16, sizeof(Infusion_paramT), &InfusionQ_attributes);
+
+  /* creation of VolumeQ */
+  VolumeQHandle = osMessageQueueNew (8, sizeof(float), &VolumeQ_attributes);
+
+  /* creation of FlowRateQ */
+  FlowRateQHandle = osMessageQueueNew (8, sizeof(float), &FlowRateQ_attributes);
+
+  /* creation of TimeQ */
+  TimeQHandle = osMessageQueueNew (8, sizeof(float), &TimeQ_attributes);
+
+  /* creation of LastStepQ */
+  LastStepQHandle = osMessageQueueNew (2, sizeof(uint16_t), &LastStepQ_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -199,19 +239,18 @@ void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
 	BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
-	Infusion_paramT msgPerfusionParameters;
-	uint8_t screwspeed , motorspeed;
+	float Flowrate , radius ,volume_to_inject ;
+	int timeneeded;
+	uint16_t laststep;
   /* Infinite loop */
   for(;;)
   {
-	if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,1,100)==osOK){
-		screwspeed = Screws_Speed_From_FlowRate(msgPerfusionParameters.Flowrate,10);//radius 10 (exp)
-		motorspeed = Motor_Speed(1.5,screwspeed);// step (1.5) exp
-		L6474_SetMaxSpeed(0, motorspeed);
-		L6474_SetMinSpeed(0, motorspeed);
-		L6474_Move(0, BACKWARD, motorspeed*200);
+	if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 2, 100)==osOK &&osMessageQueueGet(VolumeQHandle,&volume_to_inject , 2, 100)==osOK){
+		timeneeded= Time_Needed(Flowrate, volume_to_inject);
+		laststep = timeneeded*BSP_MotorControl_GetMaxSpeed(0);
+		osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
 	}
-
+	SyringeMove(Flowrate,radius,timeneeded);
   }
   /* USER CODE END Stepper_motor */
 }
@@ -244,14 +283,23 @@ void Cloud_Connectivity(void *argument)
 void Sensors_measurements(void *argument)
 {
   /* USER CODE BEGIN Sensors_measurements */
-	uint16_t readValue, tCelsius;
+	int volumeleft , timeleft ;
+	uint16_t  laststep ;
+	float Flowrate,volume_to_inject ;
+	HAL_ADC_Start_IT(&hadc3);
   /* Infinite loop */
   for(;;)
   {
-	  HAL_ADC_Start(&hadc3); // temp
-	  HAL_ADC_PollForConversion(&hadc3, 10000);
-	  readValue = HAL_ADC_GetValue(&hadc3);
-	  tCelsius = 357.558 - 0.187364 * readValue;
+	 osMessageQueueGet(FlowRateQHandle,&Flowrate , 1, 100);
+	 osMessageQueueGet(VolumeQHandle,&volume_to_inject , 1, 100);
+	 osMessageQueueGet(LastStepQHandle, &laststep, 1, 100);
+	 if(Flowrate!=0 && laststep!=0){
+		 volumeleft=calculate_volume_left(laststep,Flowrate,volume_to_inject);
+		 timeleft=volumeleft/Flowrate;
+		 osMessageQueuePut(VolumeQHandle,  &volumeleft, 1, 100);
+		 osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);
+	 }
+
 	  osDelay(1000);
   }
   /* USER CODE END Sensors_measurements */
@@ -267,9 +315,15 @@ void Sensors_measurements(void *argument)
 void Interface(void *argument)
 {
   /* USER CODE BEGIN Interface */
+	Infusion_paramT msgPerfusionParameters;
   /* Infinite loop */
   for(;;)
   {
+	  if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,1,100)==osOK){
+		  osMessageQueuePut(FlowRateQHandle,&msgPerfusionParameters.Flowrate , 1, 100);
+		  osMessageQueuePut(VolumeQHandle,&msgPerfusionParameters.InfousionVolume , 1, 100);
+	  }
+
 	  osDelay(1);
   }
   /* USER CODE END Interface */
