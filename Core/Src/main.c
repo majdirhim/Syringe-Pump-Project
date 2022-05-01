@@ -150,7 +150,7 @@ int main(void)
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
-  BSP_MotorControl_Init(BSP_MOTOR_CONTROL_BOARD_ID_L6474,NULL);
+  L6474_Init(NULL);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -260,7 +260,7 @@ void PeriphCommonClock_Config(void)
 void MyFlagInterruptHandler(void)
 {
   /* Get the value of the status register via the L6474 command GET_STATUS */
-  uint16_t statusRegister = BSP_MotorControl_CmdGetStatus(0);
+  uint16_t statusRegister =L6474_CmdGetStatus(0);
 
   /* Check HIZ flag: if set, power brigdes are disabled */
   if ((statusRegister & L6474_STATUS_HIZ) == L6474_STATUS_HIZ)
@@ -341,13 +341,13 @@ uint16_t Screws_Speed_From_FlowRate(uint16_t flow_rate , uint8_t radius ){
 	flow_rate = (flow_rate * 0.001) / 3600;
 	return flow_rate/section ;
 }
-// returns the speed of Screws needed for a given fluid volume , time(hours) and radius
+// returns the speed of Screws needed for a given fluid volume(m^3) , time(seconds) and radius
 uint16_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius){
 	return Screws_Speed_From_FlowRate(volume/time,radius) ;
 }
 // returns the motor speed needed (rps)
 uint16_t Motor_Speed(uint16_t screwspeed){
-	return screwspeed / SCREWSTEP;
+	return screwspeed / (SCREWSTEP*0.001);
 }
 //return number of seconds to finish the injection
 int Time_Needed(uint16_t flow_rate, uint16_t volume_to_inject){
@@ -360,9 +360,9 @@ void SyringeMove(uint16_t FlowRate , uint8_t radius,int timeneeded){
 	screwspeed = Screws_Speed_From_FlowRate(FlowRate,radius);
 	motorspeed = Motor_Speed(screwspeed);
 	pps=motorspeed*200;
-	BSP_MotorControl_SetMaxSpeed(0,pps);
-	BSP_MotorControl_SetMinSpeed(0, pps);
-	BSP_MotorControl_Move(0, FORWARD,pps*timeneeded);
+	L6474_SetMaxSpeed(0,pps);
+	L6474_SetMinSpeed(0, pps);
+	L6474_Move(0, FORWARD,pps*timeneeded);
 }
 
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
@@ -375,8 +375,8 @@ uint8_t calculate_volume_left(int laststep , uint8_t flowrate ,uint8_t volume_to
 	HAL_ADC_PollForConversion(&hadc1, 100);
 	readValue = HAL_ADC_GetValue(&hadc1);
 	traveled_steps=map(readValue, 0, 65535,0 ,laststep );
-	injectedVolume = (traveled_steps / BSP_MotorControl_GetMaxSpeed(0))*flowrate;
-	return volume_to_inject-injectedVolume;
+	injectedVolume = (traveled_steps / L6474_GetMaxSpeed(0))*flowrate;
+	return (volume_to_inject-injectedVolume);
 }
 /* USER CODE END 4 */
 
