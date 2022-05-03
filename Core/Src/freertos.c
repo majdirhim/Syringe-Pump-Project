@@ -111,6 +111,16 @@ osMessageQueueId_t LastStepQHandle;
 const osMessageQueueAttr_t LastStepQ_attributes = {
   .name = "LastStepQ"
 };
+/* Definitions for RadiusQ */
+osMessageQueueId_t RadiusQHandle;
+const osMessageQueueAttr_t RadiusQ_attributes = {
+  .name = "RadiusQ"
+};
+/* Definitions for VolumeLeftQ */
+osMessageQueueId_t VolumeLeftQHandle;
+const osMessageQueueAttr_t VolumeLeftQ_attributes = {
+  .name = "VolumeLeftQ"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -179,6 +189,12 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of LastStepQ */
   LastStepQHandle = osMessageQueueNew (2, sizeof(uint16_t), &LastStepQ_attributes);
+
+  /* creation of RadiusQ */
+  RadiusQHandle = osMessageQueueNew (8, sizeof(uint8_t), &RadiusQ_attributes);
+
+  /* creation of VolumeLeftQ */
+  VolumeLeftQHandle = osMessageQueueNew (8, sizeof(float), &VolumeLeftQ_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -283,7 +299,7 @@ void Cloud_Connectivity(void *argument)
 void Sensors_measurements(void *argument)
 {
   /* USER CODE BEGIN Sensors_measurements */
-	int volumeleft , timeleft ;
+	float volumeleft , timeleft ;
 	uint16_t  laststep ;
 	float Flowrate,volume_to_inject ;
 	HAL_ADC_Start_IT(&hadc3);
@@ -296,7 +312,7 @@ void Sensors_measurements(void *argument)
 	 if(Flowrate!=0 && laststep!=0){
 		 volumeleft=calculate_volume_left(laststep,Flowrate,volume_to_inject);
 		 timeleft=volumeleft/Flowrate;
-		 osMessageQueuePut(VolumeQHandle,  &volumeleft, 1, 100);
+		 osMessageQueuePut(VolumeLeftQHandle,  &volumeleft, 1, 100);
 		 osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);
 	 }
 

@@ -53,7 +53,7 @@
 * @{
 */   
 /// Interrupt line used for L6474 FLAG
-#define EXTI_MCU_LINE_IRQn           (EXTI15_10_IRQn)
+#define EXTI_MCU_LINE_IRQn           (EXTI4_IRQn)
 
 /// Timer used for PWM1
 #define BSP_MOTOR_CONTROL_BOARD_TIMER_PWM1      (TIM2)
@@ -163,7 +163,7 @@
 #define BSP_MOTOR_CONTROL_BOARD_PWM_3_PORT  (GPIOB)
 
 /// GPIO Pin used for the L6474 direction pin of device 0
-#define BSP_MOTOR_CONTROL_BOARD_DIR_1_PIN  (GPIO_PIN_13)
+#define BSP_MOTOR_CONTROL_BOARD_DIR_1_PIN  (GPIO_PIN_3)
 /// GPIO port used for the L6474 direction pin of device 0
 #define BSP_MOTOR_CONTROL_BOARD_DIR_1_PORT  (GPIOI)
 

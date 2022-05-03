@@ -144,7 +144,7 @@ int main(void)
   MX_CRC_Init();
   MX_TIM2_Init();
   MX_QUADSPI_Init();
-  MX_SDMMC1_SD_Init();
+  //MX_SDMMC1_SD_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
   MX_TouchGFX_Init();
