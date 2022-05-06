@@ -35,7 +35,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "l6474.h"
+//#include "l6474.h"
+#include "drv8825.h"
 // #include "stdio.h" // used for Send function (sprintf) ( --- we will not be using it ---- )
 /* USER CODE END Includes */
 
@@ -149,8 +150,13 @@ int main(void)
   MX_ADC1_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  L6474_SetNbDevices(1);
-  L6474_Init(NULL);
+  /*L6474_SetNbDevices(1);
+  L6474_Init(NULL);*/
+  // drv8825 structure creation
+  	drv8825 drv;
+  	// drv8825 structure initialization
+  	drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,
+  			En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -256,20 +262,20 @@ void PeriphCommonClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-//stepper driver interrupt
+/*//stepper driver interrupt
 void MyFlagInterruptHandler(void)
 {
-  /* Get the value of the status register via the L6474 command GET_STATUS */
+   Get the value of the status register via the L6474 command GET_STATUS
   uint16_t statusRegister =L6474_CmdGetStatus(0);
 
-  /* Check HIZ flag: if set, power brigdes are disabled */
+   Check HIZ flag: if set, power brigdes are disabled
   if ((statusRegister & L6474_STATUS_HIZ) == L6474_STATUS_HIZ)
   {
     // HIZ state
     // Action to be customized
   }
 
-  /* Check direction bit */
+   Check direction bit
   if ((statusRegister & L6474_STATUS_DIR) == L6474_STATUS_DIR)
   {
     // Forward direction is set
@@ -281,37 +287,37 @@ void MyFlagInterruptHandler(void)
     // Action to be customized
   }
 
-  /* Check NOTPERF_CMD flag: if set, the command received by SPI can't be performed */
-  /* This often occures when a command is sent to the L6474 */
-  /* while it is in HIZ state */
+   Check NOTPERF_CMD flag: if set, the command received by SPI can't be performed
+   This often occures when a command is sent to the L6474
+   while it is in HIZ state
   if ((statusRegister & L6474_STATUS_NOTPERF_CMD) == L6474_STATUS_NOTPERF_CMD)
   {
       // Command received by SPI can't be performed
      // Action to be customized
   }
 
-  /* Check WRONG_CMD flag: if set, the command does not exist */
+   Check WRONG_CMD flag: if set, the command does not exist
   if ((statusRegister & L6474_STATUS_WRONG_CMD) == L6474_STATUS_WRONG_CMD)
   {
      //command received by SPI does not exist
      // Action to be customized
   }
 
-  /* Check UVLO flag: if not set, there is an undervoltage lock-out */
+   Check UVLO flag: if not set, there is an undervoltage lock-out
   if ((statusRegister & L6474_STATUS_UVLO) == 0)
   {
      //undervoltage lock-out
      // Action to be customized
   }
 
-  /* Check TH_WRN flag: if not set, the thermal warning threshold is reached */
+   Check TH_WRN flag: if not set, the thermal warning threshold is reached
   if ((statusRegister & L6474_STATUS_TH_WRN) == 0)
   {
     //thermal warning threshold is reached
     // Action to be customized
   }
 
-  /* Check TH_SHD flag: if not set, the thermal shut down threshold is reached */
+   Check TH_SHD flag: if not set, the thermal shut down threshold is reached
   if ((statusRegister & L6474_STATUS_TH_SD) == 0)
   {
     //thermal shut down threshold is reached
@@ -319,14 +325,14 @@ void MyFlagInterruptHandler(void)
 
   }
 
-  /* Check OCD  flag: if not set, there is an overcurrent detection */
+   Check OCD  flag: if not set, there is an overcurrent detection
   if ((statusRegister & L6474_STATUS_OCD) == 0)
   {
     //overcurrent detection
     // Action to be customized
   }
 
-}
+}*/
 // cpu temp interrupt
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	// do something in case of analog watchdog interrupts
@@ -334,48 +340,51 @@ void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	HAL_ADC_Stop_IT(&hadc3);
 }
 
-// returns the speed of Screws (mm/s) needed for a given flow_rate (mm/h) and syringe radius(mm)
-uint16_t Screws_Speed_From_FlowRate(uint16_t flow_rate , uint8_t radius ){
+// returns the speed of Screws (m/s) needed for a given flow_rate (mm^3/h) and syringe radius(mm)
+float Screws_Speed_From_FlowRate(float flow_rate , uint8_t radius ){
 	radius = radius*0.001;
 	uint8_t section = radius*radius*3.14159;
 	flow_rate = (flow_rate * 0.001) / 3600;
-	return flow_rate/section ;
+	return flow_rate/section;
 }
 // returns the speed of Screws needed for a given fluid volume(m^3) , time(seconds) and radius
-uint16_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius){
+float Screws_Speed_From_Time_And_Volume(float time , float volume,uint8_t radius){
 	return Screws_Speed_From_FlowRate(volume/time,radius) ;
 }
 // returns the motor speed needed (rps)
-uint16_t Motor_Speed(uint16_t screwspeed){
+float Motor_Speed(float screwspeed){
 	return screwspeed / (SCREWSTEP*0.001);
 }
 //return number of seconds to finish the injection
-int Time_Needed(uint16_t flow_rate, uint16_t volume_to_inject){
-	return volume_to_inject/flow_rate;
+float Time_Needed(float flow_rate, float volume_to_inject){
+	flow_rate = flow_rate  / 3600;
+	return (volume_to_inject/flow_rate);
 }
 
-void SyringeMove(uint16_t FlowRate , uint8_t radius,int timeneeded){
-	uint16_t screwspeed , motorspeed;
+void SyringeMove(drv8825* drv8825 ,uint16_t FlowRate , uint8_t radius,int timeneeded){
+	float screwspeed , motorspeed;
 	int pps;
 	screwspeed = Screws_Speed_From_FlowRate(FlowRate,radius);
 	motorspeed = Motor_Speed(screwspeed);
-	pps=motorspeed*200;
+	/*pps=motorspeed*200;
 	L6474_SetMaxSpeed(0,pps);
 	L6474_SetMinSpeed(0, pps);
-	L6474_Move(0, FORWARD,pps*timeneeded);
+	L6474_Move(0, FORWARD,pps*timeneeded);*/
+	drv8825_setSpeedRPM(drv8825, motorspeed*60);
+	drv8825_setEn(drv8825, EN_START);
 }
 
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
-uint8_t calculate_volume_left(int laststep , uint8_t flowrate ,uint8_t volume_to_inject ){
+float calculate_volume_left(drv8825* drv8825 ,int laststep , float flowrate ,float volume_to_inject ){
 	uint16_t readValue,traveled_steps ;
 	uint8_t injectedVolume;
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_PollForConversion(&hadc1, 100);
 	readValue = HAL_ADC_GetValue(&hadc1);
 	traveled_steps=map(readValue, 0, 65535,0 ,laststep );
-	injectedVolume = (traveled_steps / L6474_GetMaxSpeed(0))*flowrate;
+	injectedVolume = (traveled_steps / drv8825_getSpeedPPS(drv8825))*flowrate;
 	return (volume_to_inject-injectedVolume);
 }
 /* USER CODE END 4 */
