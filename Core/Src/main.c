@@ -145,7 +145,7 @@ int main(void)
   MX_CRC_Init();
   MX_TIM2_Init();
   MX_QUADSPI_Init();
-  //MX_SDMMC1_SD_Init();
+  MX_SDMMC1_SD_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
   MX_TouchGFX_Init();
@@ -372,6 +372,9 @@ void SyringeMove(drv8825* drv8825 ,uint16_t FlowRate , uint8_t radius,int timene
 	L6474_Move(0, FORWARD,pps*timeneeded);*/
 	drv8825_setSpeedRPM(drv8825, motorspeed*60);
 	drv8825_setEn(drv8825, EN_START);
+}
+void SyringeStop(drv8825* drv8825){
+		drv8825_setEn(drv8825, EN_STOP);
 }
 
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {

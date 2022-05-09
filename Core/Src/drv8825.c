@@ -41,7 +41,7 @@ void drv8825_init(drv8825 *drv8825,
 	drv8825->Timer_Channel = channel;
 
 	// Default configuration
-	drv8825_setMode(drv8825, MS_RES_32);
+	drv8825_setMode(drv8825, MS_RES_1);
 	drv8825_setDir(drv8825, DIR_FORWARD);
 	drv8825_setEn(drv8825, EN_STOP);
 }

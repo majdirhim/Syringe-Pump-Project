@@ -30,6 +30,7 @@
 #include "adc.h"
 #include "usart.h"
 #include "SW_common.h"
+#include "drv8825.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -121,6 +122,11 @@ osMessageQueueId_t VolumeLeftQHandle;
 const osMessageQueueAttr_t VolumeLeftQ_attributes = {
   .name = "VolumeLeftQ"
 };
+/* Definitions for ModeQ */
+osMessageQueueId_t ModeQHandle;
+const osMessageQueueAttr_t ModeQ_attributes = {
+  .name = "ModeQ"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -196,6 +202,9 @@ void MX_FREERTOS_Init(void) {
   /* creation of VolumeLeftQ */
   VolumeLeftQHandle = osMessageQueueNew (8, sizeof(float), &VolumeLeftQ_attributes);
 
+  /* creation of ModeQ */
+  ModeQHandle = osMessageQueueNew (4, sizeof(uint8_t), &ModeQ_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
@@ -254,20 +263,29 @@ void StartBatteryManage(void *argument)
 void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
-	BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
+	//BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
+	// drv8825 structure creation
+	 drv8825 drv;
+	 // drv8825 structure initialization
+	 drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
 	float Flowrate , radius ,volume_to_inject ;
 	int timeneeded;
+	uint8_t mode=0;
 	uint16_t laststep;
 
   /* Infinite loop */
   for(;;)
   {
-	if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 2, 100)==osOK &&osMessageQueueGet(VolumeQHandle,&volume_to_inject , 2, 100)==osOK){
+	if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 2, 100)==osOK && osMessageQueueGet(VolumeQHandle,&volume_to_inject , 2, 100)==osOK ){
 		timeneeded= Time_Needed(Flowrate, volume_to_inject);
-		laststep = timeneeded*BSP_MotorControl_GetMaxSpeed(0);
+		laststep = timeneeded*drv8825_getSpeedPPS(drv);
 		osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
 	}
-	SyringeMove(Flowrate,radius,timeneeded);
+	// ***** 0 => StopMode , 8=> PauseMode *******
+	if(osMessageQueueGet(ModeQHandle, &mode, 10, 10)==osOK && (mode==0 || mode == 8)){
+		SyringeStop(drv);
+	}
+	SyringeMove(drv,Flowrate,radius,timeneeded);
   }
   /* USER CODE END Stepper_motor */
 }
@@ -336,9 +354,13 @@ void Interface(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,1,100)==osOK){
+	  // ***** 0 => StopMode , 8=> PauseMode *******
+	  if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10,100)==osOK && msgPerfusionParameters.Mode!=0
+			  &&  msgPerfusionParameters.Mode!=8  ){
 		  osMessageQueuePut(FlowRateQHandle,&msgPerfusionParameters.Flowrate , 1, 100);
 		  osMessageQueuePut(VolumeQHandle,&msgPerfusionParameters.InfousionVolume , 1, 100);
+	  }else{
+		  osMessageQueuePut(ModeQHandle,&msgPerfusionParameters.Mode , 10, 100);
 	  }
 
 	  osDelay(1);

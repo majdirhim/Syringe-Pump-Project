@@ -415,7 +415,11 @@ void Model::saveInfusionData(void)
 {
 #ifndef SIMULATOR
 	// RTOS
-	if(PerfusionParameters.Flowrate!=0 || (PerfusionParameters.InfousionVolume!=0 )){
+	float prvFlow , prvInfuVol ;
+	if((PerfusionParameters.Flowrate!=0 || PerfusionParameters.InfousionVolume!=0)
+			&& (prvFlow!=PerfusionParameters.Flowrate && prvInfuVol!=PerfusionParameters.InfousionVolume )){
+		prvFlow = PerfusionParameters.Flowrate;
+		prvInfuVol = PerfusionParameters.InfousionVolume;
 		osMessageQueuePut(InfusionQHandle,&PerfusionParameters,1,100);
 	}
 #endif
