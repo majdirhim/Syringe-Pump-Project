@@ -37,7 +37,10 @@
 #include "tim.h"
 
 /* Exported types -----------------------------------------------------------*/
-
+typedef struct drv8825state{
+	float currentspeed ;
+	uint8_t  currentdir;
+}drv8825state;
 typedef struct drv8825 {
 	// GPIO Dir
     GPIO_TypeDef * Dir_GPIOx;
@@ -58,10 +61,7 @@ typedef struct drv8825 {
     //motor state
     drv8825state state;
 } drv8825;
-typedef struct drv8825state{
-	uint16_t currentspeed ;
-	uint8_t  currentdir;
-}drv8825state;
+
 /* End of exported types ----------------------------------------------------*/
 
 /* Exported macros ----------------------------------------------------------*/
@@ -89,7 +89,7 @@ typedef struct drv8825state{
 
 
 /* Exported functions -------------------------------------------------------*/
-void drv8825_init(drv8825 *drv8825,
+void drv8825_init(drv8825* drv8825,
 		GPIO_TypeDef* Dir_GPIOx, uint16_t Dir_GPIO_Pin,
 		GPIO_TypeDef * En_GPIOx, uint16_t En_GPIO_Pin,
 		TIM_HandleTypeDef* Timer_Handle, uint32_t Timer_Channel);
@@ -97,7 +97,7 @@ uint8_t drv8825_setMode(drv8825 *drv8825, uint8_t mode);
 void drv8825_setDir(drv8825* drv8825, uint8_t dir);
 void drv8825_setEn(drv8825* drv8825, uint8_t enable);
 void drv8825_setSpeedRPM(drv8825* drv8825, uint8_t rpm);
-uint16_t drv8825_getSpeedPPS(drv8825* drv8825);
+float drv8825_getSpeedPPS(drv8825* drv8825);
 uint8_t drv8825_getdir(drv8825* drv8825);
 
 /* End of exported functions ------------------------------------------------*/

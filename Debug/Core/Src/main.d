@@ -62,9 +62,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/dma2d.h ../Core/Inc/i2c.h ../Core/Inc/ltdc.h \
  ../Core/Inc/quadspi.h ../Core/Inc/sdmmc.h ../Core/Inc/spi.h \
  ../Core/Inc/tim.h ../Core/Inc/usart.h ../Core/Inc/gpio.h \
- ../TouchGFX/App/app_touchgfx.h ../Core/Inc/l6474.h \
- ../Core/Inc/l6474_target_config.h ../Core/Inc/motor.h \
- ../Core/Inc/motorcontrol.h
+ ../TouchGFX/App/app_touchgfx.h ../Core/Inc/drv8825.h ../Core/Inc/tim.h
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -138,7 +136,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/usart.h:
 ../Core/Inc/gpio.h:
 ../TouchGFX/App/app_touchgfx.h:
-../Core/Inc/l6474.h:
-../Core/Inc/l6474_target_config.h:
-../Core/Inc/motor.h:
-../Core/Inc/motorcontrol.h:
+../Core/Inc/drv8825.h:
+../Core/Inc/tim.h:

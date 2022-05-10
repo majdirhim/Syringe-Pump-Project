@@ -145,7 +145,7 @@ int main(void)
   MX_CRC_Init();
   MX_TIM2_Init();
   MX_QUADSPI_Init();
-  MX_SDMMC1_SD_Init();
+  //MX_SDMMC1_SD_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
   MX_TouchGFX_Init();
@@ -153,10 +153,10 @@ int main(void)
   /*L6474_SetNbDevices(1);
   L6474_Init(NULL);*/
   // drv8825 structure creation
-  	drv8825 drv;
+
   	// drv8825 structure initialization
-  	drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,
-  			En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
+  /*	drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,
+  			En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);*/
   /* USER CODE END 2 */
 
   /* Init scheduler */

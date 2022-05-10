@@ -50,7 +50,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-
+drv8825* drv;
 /* USER CODE END Variables */
 /* Definitions for battery_manage */
 osThreadId_t battery_manageHandle;
@@ -141,7 +141,7 @@ uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radi
 // returns the motor speed needed
 uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed);
 //Move the Syringe
-void SyringeMove(uint8_t FlowRate , uint8_t radius,int timeneeded);
+void SyringeMove(drv8825* drv8825 , uint8_t FlowRate , uint8_t radius,int timeneeded);
 // mapping values
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 // return number of seconds to finish the injection
@@ -265,9 +265,9 @@ void Stepper_motor(void *argument)
   /* USER CODE BEGIN Stepper_motor */
 	//BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
 	// drv8825 structure creation
-	 drv8825 drv;
+
 	 // drv8825 structure initialization
-	 drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
+	 //drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
 	float Flowrate , radius ,volume_to_inject ;
 	int timeneeded;
 	uint8_t mode=0;

@@ -89,7 +89,7 @@ uint8_t drv8825_setMode(drv8825 *drv8825, uint8_t mode)
  */
 void drv8825_setDir(drv8825* drv8825, uint8_t dir_state){
 	HAL_GPIO_WritePin(drv8825->Dir_GPIOx, drv8825->Dir_GPIO_Pin, dir_state);
-	drv8825->state->currentdir=dir_state;
+	drv8825->state.currentdir=dir_state;
 }
 
 /**
@@ -110,21 +110,21 @@ void drv8825_setSpeedRPM(drv8825* drv8825, uint8_t rpm){
 	float rps = (float)rpm / 60;
 	uint16_t freq = STEPS_PER_REV * drv8825->mode * rps;
 	_drv8825_setStepFrequency(drv8825, freq);
-	drv8825->state->currentspeed=freq;
+	drv8825->state.currentspeed=freq;
 }
 /*
  * @param drv8825 drv8825 structure
  * returns the current speed(pps) in pulse per seconds( or steps/s )
  */
-uint16_t drv8825_getSpeedPPS(drv8825* drv8825){
-	return drv8825->state->currentspeed;
+float drv8825_getSpeedPPS(drv8825* drv8825){
+	return drv8825->state.currentspeed;
 }
 /*
  * @param drv8825 drv8825 structure7
  * returns the current direction
  */
 uint8_t drv8825_getdir(drv8825* drv8825){
-	return drv8825->state->currentdir;
+	return drv8825->state.currentdir;
 }
 /**
  * _drv8825_setStepFrequency

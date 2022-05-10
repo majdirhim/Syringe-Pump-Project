@@ -55,7 +55,6 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 void MyFlagInterruptHandler(void);// stepper motor driver flags handler ( under_voltage / thermal warning ...)
-//void Send(char *obj , int16_t value);  // used for uart communication with the Nextion display.( we will not be using it )
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
