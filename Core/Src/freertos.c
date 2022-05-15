@@ -27,6 +27,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "l6474.h"
+#include "tim.h"
 #include "adc.h"
 #include "usart.h"
 #include "SW_common.h"
@@ -147,7 +148,9 @@ uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uin
 // return number of seconds to finish the injection
 int Time_Needed(uint8_t flow_rate, uint8_t volume_to_inject);
 // calculate volume left
-uint8_t calculate_volume_left(int laststep , uint8_t flowrate ,uint8_t volume_to_inject );
+float calculate_volume_left(drv8825* drv8825,uint16_t traveled_steps ,float flowrate ,float volume_to_inject );
+// stepper position
+uint16_t position();
 /* USER CODE END FunctionPrototypes */
 
 void StartBatteryManage(void *argument);
@@ -318,24 +321,27 @@ void Cloud_Connectivity(void *argument)
 void Sensors_measurements(void *argument)
 {
   /* USER CODE BEGIN Sensors_measurements */
-	float volumeleft , timeleft ;
-	uint16_t  laststep ;
-	float Flowrate,volume_to_inject ;
+	float volumeleft=0 , timeleft=0 ;
+	uint16_t  laststep=0, traveled_steps=0 ;
+	float Flowrate=0,volume_to_inject=0 ;
 	HAL_ADC_Start_IT(&hadc3);
   /* Infinite loop */
   for(;;)
   {
-	 osMessageQueueGet(FlowRateQHandle,&Flowrate , 1, 100);
-	 osMessageQueueGet(VolumeQHandle,&volume_to_inject , 1, 100);
-	 osMessageQueueGet(LastStepQHandle, &laststep, 1, 100);
-	 if(Flowrate!=0 && laststep!=0){
-		 volumeleft=calculate_volume_left(laststep,Flowrate,volume_to_inject);
-		 timeleft=volumeleft/Flowrate;
-		 osMessageQueuePut(VolumeLeftQHandle,  &volumeleft, 1, 100);
-		 osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);
+	osMessageQueueGet(FlowRateQHandle,&Flowrate , 1, 100);
+	osMessageQueueGet(VolumeQHandle,&volume_to_inject , 1, 100);
+	osMessageQueueGet(LastStepQHandle, &laststep, 1, 100);
+	if(Flowrate!=0 && volume_to_inject && laststep!=0){
+		traveled_steps= position();
+		if(traveled_steps>=laststep)
+			osMessageQueuePut(ModeQHandle,0, 10, 100); // ***** 0 => StopMode , 8=> PauseMode *******
+	volumeleft=calculate_volume_left(drv,traveled_steps,Flowrate,volume_to_inject);
+	timeleft=volumeleft/Flowrate;
+	osMessageQueuePut(VolumeLeftQHandle,  &volumeleft, 1, 100);
+	osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);
 	 }
 
-	  osDelay(1000);
+	  osDelay(10);
   }
   /* USER CODE END Sensors_measurements */
 }

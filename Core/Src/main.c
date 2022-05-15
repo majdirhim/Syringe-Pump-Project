@@ -25,7 +25,7 @@
 #include "dma2d.h"
 #include "i2c.h"
 #include "ltdc.h"
-#include "quadspi.h"
+//#include "quadspi.h"
 #include "sdmmc.h"
 #include "spi.h"
 #include "tim.h"
@@ -144,7 +144,7 @@ int main(void)
   MX_LTDC_Init();
   MX_CRC_Init();
   MX_TIM2_Init();
-  MX_QUADSPI_Init();
+  //MX_QUADSPI_Init();
   //MX_SDMMC1_SD_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
@@ -363,7 +363,7 @@ float Time_Needed(float flow_rate, float volume_to_inject){
 
 void SyringeMove(drv8825* drv8825 ,uint16_t FlowRate , uint8_t radius,int timeneeded){
 	float screwspeed , motorspeed;
-	int pps;
+	//int pps;
 	screwspeed = Screws_Speed_From_FlowRate(FlowRate,radius);
 	motorspeed = Motor_Speed(screwspeed);
 	/*pps=motorspeed*200;
@@ -380,13 +380,18 @@ void SyringeStop(drv8825* drv8825){
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
-float calculate_volume_left(drv8825* drv8825 ,int laststep , float flowrate ,float volume_to_inject ){
-	uint16_t readValue,traveled_steps ;
-	uint8_t injectedVolume;
+uint16_t position(){
+	uint16_t readValue,traveled_steps,count=0 ;
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_PollForConversion(&hadc1, 100);
 	readValue = HAL_ADC_GetValue(&hadc1);
-	traveled_steps=map(readValue, 0, 65535,0 ,laststep );
+	traveled_steps=map(readValue, 0, 65535,0 ,2000 )+(count*2000); // 10tours * 200steps
+	if(traveled_steps%2000==0)
+		count++;
+	return traveled_steps;
+}
+float calculate_volume_left(drv8825* drv8825,uint16_t traveled_steps ,float flowrate ,float volume_to_inject ){
+	float injectedVolume;
 	injectedVolume = (traveled_steps / drv8825_getSpeedPPS(drv8825))*flowrate;
 	return (volume_to_inject-injectedVolume);
 }
