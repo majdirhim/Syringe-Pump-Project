@@ -128,8 +128,8 @@ void MX_ADC3_Init(void)
   AnalogWDGConfig.WatchdogMode = ADC_ANALOGWATCHDOG_SINGLE_REG;
   AnalogWDGConfig.Channel = ADC_CHANNEL_TEMPSENSOR;
   AnalogWDGConfig.ITMode = ENABLE;
-  AnalogWDGConfig.HighThreshold = 1374;
-  AnalogWDGConfig.LowThreshold = 0;
+  AnalogWDGConfig.HighThreshold = 15896;
+  AnalogWDGConfig.LowThreshold = 10881;
   if (HAL_ADC_AnalogWDGConfig(&hadc3, &AnalogWDGConfig) != HAL_OK)
   {
     Error_Handler();

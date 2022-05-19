@@ -200,13 +200,13 @@ void MX_FREERTOS_Init(void) {
   LastStepQHandle = osMessageQueueNew (2, sizeof(uint16_t), &LastStepQ_attributes);
 
   /* creation of RadiusQ */
-  RadiusQHandle = osMessageQueueNew (8, sizeof(uint8_t), &RadiusQ_attributes);
+  RadiusQHandle = osMessageQueueNew (2, sizeof(uint8_t), &RadiusQ_attributes);
 
   /* creation of VolumeLeftQ */
   VolumeLeftQHandle = osMessageQueueNew (8, sizeof(float), &VolumeLeftQ_attributes);
 
   /* creation of ModeQ */
-  ModeQHandle = osMessageQueueNew (4, sizeof(uint8_t), &ModeQ_attributes);
+  ModeQHandle = osMessageQueueNew (8, sizeof(uint8_t), &ModeQ_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -271,8 +271,8 @@ void Stepper_motor(void *argument)
 
 	 // drv8825 structure initialization
 	 //drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
-	float Flowrate , radius ,volume_to_inject ;
-	int timeneeded;
+	float Flowrate , radius ,volume_to_inject , volumeleft=0 ;
+	int timeneeded=0,timeleft=0;
 	uint8_t mode=0;
 	uint16_t laststep;
 
@@ -331,14 +331,14 @@ void Sensors_measurements(void *argument)
 	osMessageQueueGet(FlowRateQHandle,&Flowrate , 1, 100);
 	osMessageQueueGet(VolumeQHandle,&volume_to_inject , 1, 100);
 	osMessageQueueGet(LastStepQHandle, &laststep, 1, 100);
-	if(Flowrate!=0 && volume_to_inject && laststep!=0){
+	if(Flowrate!=0 && volume_to_inject!=0 && laststep!=0){
 		traveled_steps= position();
-		if(traveled_steps>=laststep)
-			osMessageQueuePut(ModeQHandle,0, 10, 100); // ***** 0 => StopMode , 8=> PauseMode *******
-	volumeleft=calculate_volume_left(drv,traveled_steps,Flowrate,volume_to_inject);
-	timeleft=volumeleft/Flowrate;
-	osMessageQueuePut(VolumeLeftQHandle,  &volumeleft, 1, 100);
-	osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);
+		volumeleft=calculate_volume_left(drv,traveled_steps,Flowrate,volume_to_inject); //mm^3
+		timeleft=volumeleft/Flowrate; // seconds
+		osMessageQueuePut(VolumeLeftQHandle,  &volumeleft, 1, 100);
+		osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);
+		if(traveled_steps>=laststep || volumeleft<=0 || timeleft <=0)
+			osMessageQueuePut(ModeQHandle,0, 10, 100); // ***** 0 => StopMode , 8=> PauseMode ******
 	 }
 
 	  osDelay(10);

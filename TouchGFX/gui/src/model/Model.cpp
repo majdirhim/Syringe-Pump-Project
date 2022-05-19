@@ -415,7 +415,7 @@ void Model::saveInfusionData(void)
 {
 #ifndef SIMULATOR
 	// RTOS
-	float prvFlow , prvInfuVol ;
+	float prvFlow=0 , prvInfuVol=0 ;
 	if((PerfusionParameters.Flowrate!=0 || PerfusionParameters.InfousionVolume!=0)
 			&& (prvFlow!=PerfusionParameters.Flowrate && prvInfuVol!=PerfusionParameters.InfousionVolume )){
 		prvFlow = PerfusionParameters.Flowrate;

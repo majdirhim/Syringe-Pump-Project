@@ -25,8 +25,7 @@
 #include "dma2d.h"
 #include "i2c.h"
 #include "ltdc.h"
-//#include "quadspi.h"
-#include "sdmmc.h"
+#include "quadspi.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -144,8 +143,7 @@ int main(void)
   MX_LTDC_Init();
   MX_CRC_Init();
   MX_TIM2_Init();
-  //MX_QUADSPI_Init();
-  //MX_SDMMC1_SD_Init();
+  MX_QUADSPI_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
   MX_TouchGFX_Init();
@@ -337,7 +335,7 @@ void MyFlagInterruptHandler(void)
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	// do something in case of analog watchdog interrupts
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
-	HAL_ADC_Stop_IT(&hadc3);
+	HAL_ADC_Stop_IT(hadc);
 }
 
 // returns the speed of Screws (m/s) needed for a given flow_rate (mm^3/h) and syringe radius(mm)
@@ -392,7 +390,7 @@ uint16_t position(){
 }
 float calculate_volume_left(drv8825* drv8825,uint16_t traveled_steps ,float flowrate ,float volume_to_inject ){
 	float injectedVolume;
-	injectedVolume = (traveled_steps / drv8825_getSpeedPPS(drv8825))*flowrate;
+	injectedVolume = (traveled_steps / drv8825_getSpeedPPS(drv8825))*(flowrate/3600);
 	return (volume_to_inject-injectedVolume);
 }
 /* USER CODE END 4 */
