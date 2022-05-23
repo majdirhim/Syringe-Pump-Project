@@ -50,7 +50,7 @@ MEMORY
   RAM_D2 (xrw)   : ORIGIN = 0x30000000, LENGTH = 288K
   RAM_D3 (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
   ITCMRAM (xrw)  : ORIGIN = 0x00000000, LENGTH = 64K
-  QUADSPI (xrw)  : ORIGIN = 0x90000000, LENGTH = 16M
+  QSPI 	(r)  	 : ORIGIN = 0x90000000, LENGTH = 128M
 }
 
 /* Define output sections */
@@ -172,12 +172,26 @@ SECTIONS
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
   
+  FontFlashSection :
+  {
+    *(FontFlashSection FontFlashSection.*)
+    *(.gnu.linkonce.r.*)
+    . = ALIGN(0x4);
+  } >QSPI
+
+  TextFlashSection :
+  {
+    *(TextFlashSection TextFlashSection.*)
+    *(.gnu.linkonce.r.*)
+    . = ALIGN(0x4);
+  } >QSPI
+
   ExtFlashSection :
   {
     *(ExtFlashSection ExtFlashSection.*)
     *(.gnu.linkonce.r.*)
     . = ALIGN(0x4);
-  } >QUADSPI
+  } >QSPI
 }
 
 

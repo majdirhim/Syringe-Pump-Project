@@ -232,7 +232,7 @@ main-build: openh7.elf secondary-outputs
 
 # Tool invocations
 openh7.elf openh7.map: $(OBJS) $(USER_OBJS) D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\STM32H743IITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "openh7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\STM32H743IITX_FLASH.ld" -Wl,-Map="openh7.map" -Wl,--gc-sections -static -L"D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "openh7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\STM32H743IITX_FLASH.ld" -Wl,-Map="openh7.map" -Wl,--gc-sections -static -L"D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
