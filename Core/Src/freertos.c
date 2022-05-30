@@ -26,7 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "l6474.h"
+//#include "l6474.h"
 #include "tim.h"
 #include "adc.h"
 #include "usart.h"
@@ -51,7 +51,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+
 drv8825* drv;
+
 /* USER CODE END Variables */
 /* Definitions for battery_manage */
 osThreadId_t battery_manageHandle;
@@ -64,7 +66,7 @@ const osThreadAttr_t battery_manage_attributes = {
 osThreadId_t StepperHandle;
 const osThreadAttr_t Stepper_attributes = {
   .name = "Stepper",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Connectivity */
@@ -78,7 +80,7 @@ const osThreadAttr_t Connectivity_attributes = {
 osThreadId_t SensorsHandle;
 const osThreadAttr_t Sensors_attributes = {
   .name = "Sensors",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for IHM */
@@ -87,6 +89,13 @@ const osThreadAttr_t IHM_attributes = {
   .name = "IHM",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal1,
+};
+/* Definitions for DataStorage */
+osThreadId_t DataStorageHandle;
+const osThreadAttr_t DataStorage_attributes = {
+  .name = "DataStorage",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for InfusionQ */
 osMessageQueueId_t InfusionQHandle;
@@ -160,6 +169,7 @@ void Stepper_motor(void *argument);
 void Cloud_Connectivity(void *argument);
 void Sensors_measurements(void *argument);
 void Interface(void *argument);
+void StartDataStorage(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -230,6 +240,9 @@ void MX_FREERTOS_Init(void) {
   /* creation of IHM */
   IHMHandle = osThreadNew(Interface, NULL, &IHM_attributes);
 
+  /* creation of DataStorage */
+  DataStorageHandle = osThreadNew(StartDataStorage, NULL, &DataStorage_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -269,10 +282,9 @@ void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
 	//BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
-	// drv8825 structure creation
 
-	 // drv8825 structure initialization
-	 //drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
+	// drv8825 structure initialization
+	drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
 	float Flowrate , radius=10 ,volume_to_inject  ;
 	int timeneeded=0;
 	uint8_t mode=0;
@@ -397,6 +409,24 @@ void Interface(void *argument)
 	  osDelay(1);
   }
   /* USER CODE END Interface */
+}
+
+/* USER CODE BEGIN Header_StartDataStorage */
+/**
+* @brief Function implementing the DataStorage thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartDataStorage */
+void StartDataStorage(void *argument)
+{
+  /* USER CODE BEGIN StartDataStorage */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartDataStorage */
 }
 
 /* Private application code --------------------------------------------------*/

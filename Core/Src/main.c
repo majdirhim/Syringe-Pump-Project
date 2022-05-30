@@ -26,6 +26,7 @@
 #include "i2c.h"
 #include "ltdc.h"
 #include "quadspi.h"
+#include "sdmmc.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -36,7 +37,7 @@
 /* USER CODE BEGIN Includes */
 //#include "l6474.h"
 #include "drv8825.h"
-// #include "stdio.h" // used for Send function (sprintf) ( --- we will not be using it ---- )
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -146,15 +147,10 @@ int main(void)
   MX_QUADSPI_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
+  MX_SDMMC1_SD_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  /*L6474_SetNbDevices(1);
-  L6474_Init(NULL);*/
-  // drv8825 structure creation
 
-  	// drv8825 structure initialization
-  /*	drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,
-  			En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);*/
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -383,7 +379,7 @@ uint16_t position(){
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_PollForConversion(&hadc1, 100);
 	readValue = HAL_ADC_GetValue(&hadc1);
-	traveled_steps=map(readValue, 0, 65535,0 ,2000 )+(count*2000); // 10tours * 200steps
+	traveled_steps=map(readValue, 0, 65535,0 ,2000)+(count*2000); // 10tours * 200steps
 	if(traveled_steps%2000==0)
 		count++;
 	return traveled_steps;
