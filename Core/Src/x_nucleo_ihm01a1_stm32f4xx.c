@@ -334,7 +334,7 @@ void L6474_Board_PwmStop(uint8_t deviceId)
  **********************************************************/
 void L6474_Board_ReleaseReset(uint8_t deviceId)
 { 
-  HAL_GPIO_WritePin(BSP_MOTOR_CONTROL_BOARD_RESET_PORT, BSP_MOTOR_CONTROL_BOARD_RESET_PIN, GPIO_PIN_SET); 
+  HAL_GPIO_WritePin(GPIOI, GPIO_PIN_8, GPIO_PIN_SET);
 }
 
 /******************************************************//**
@@ -344,7 +344,7 @@ void L6474_Board_ReleaseReset(uint8_t deviceId)
  **********************************************************/
 void L6474_Board_Reset(uint8_t deviceId)
 {
-  HAL_GPIO_WritePin(BSP_MOTOR_CONTROL_BOARD_RESET_PORT, BSP_MOTOR_CONTROL_BOARD_RESET_PIN, GPIO_PIN_RESET); 
+  HAL_GPIO_WritePin(GPIOI, GPIO_PIN_8, GPIO_PIN_RESET);
 }
 
 /******************************************************//**
@@ -438,3 +438,4 @@ uint8_t L6474_Board_SpiWriteBytes(uint8_t *pByteToTransmit, uint8_t *pReceivedBy
   */ 
     
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+

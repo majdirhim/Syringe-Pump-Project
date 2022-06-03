@@ -26,12 +26,13 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-//#include "l6474.h"
+#include "l6474.h"
 #include "tim.h"
 #include "adc.h"
 #include "usart.h"
 #include "SW_common.h"
-#include "drv8825.h"
+#include "stdio.h"
+//#include "drv8825.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -52,7 +53,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 
-drv8825* drv;
+//drv8825* drv;
 
 /* USER CODE END Variables */
 /* Definitions for battery_manage */
@@ -151,17 +152,17 @@ uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radi
 // returns the motor speed needed
 uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed);
 //Move the Syringe
-void SyringeMove(drv8825* drv8825 , uint8_t FlowRate , uint8_t radius,int timeneeded);
+void SyringeMove(uint16_t FlowRate , uint8_t radius);
 // mapping values
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 // return number of seconds to finish the injection
 int Time_Needed(uint8_t flow_rate, uint8_t volume_to_inject);
 // calculate volume left
-float calculate_volume_left(drv8825* drv8825,uint16_t traveled_steps ,float flowrate ,float volume_to_inject );
+float calculate_volume_left(uint16_t traveled_steps ,float flowrate ,float volume_to_inject );
 // stepper position
 uint16_t position();
 //stop syringe
-void SyringeStop(drv8825* drv8825);
+void SyringeStop();
 /* USER CODE END FunctionPrototypes */
 
 void StartBatteryManage(void *argument);
@@ -281,10 +282,9 @@ void StartBatteryManage(void *argument)
 void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
-	//BSP_MotorControl_AttachFlagInterrupt(MyFlagInterruptHandler);
 
 	// drv8825 structure initialization
-	drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
+	//drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
 	float Flowrate , radius=10 ,volume_to_inject  ;
 	int timeneeded=0;
 	uint8_t mode=0;
@@ -295,14 +295,14 @@ void Stepper_motor(void *argument)
   {
 	if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 10U, 100)==osOK && osMessageQueueGet(VolumeQHandle,&volume_to_inject , 10U, 100)==osOK ){
 		timeneeded= Time_Needed(Flowrate, volume_to_inject);
-		laststep = timeneeded*drv8825_getSpeedPPS(drv);
+		laststep = timeneeded*L6474_GetCurrentSpeed(0);
 		osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
 	}
 	// ***** 0 => StopMode , 8=> PauseMode *******
 	if(osMessageQueueGet(ModeQHandle, &mode, 10U, 10U)==osOK && (mode==0 || mode == 8)){
-		SyringeStop(drv);
+		SyringeStop();
 	}
-	SyringeMove(drv,Flowrate,radius,timeneeded);
+	SyringeMove(Flowrate,radius);
   }
   /* USER CODE END Stepper_motor */
 }
@@ -370,7 +370,7 @@ void Sensors_measurements(void *argument)
 	osMessageQueueGet(LastStepQHandle, &laststep, 1U, 100);
 	if(Flowrate!=0 && volume_to_inject!=0 && laststep!=0){
 		traveled_steps= position();
-		volumeleft=calculate_volume_left(drv,traveled_steps,Flowrate,volume_to_inject); //mm^3
+		volumeleft=calculate_volume_left(traveled_steps,Flowrate,volume_to_inject); //mm^3
 		timeleft=volumeleft/Flowrate; // seconds
 		osMessageQueuePut(VolumeLeftQHandle,  &volumeleft, 1, 100);
 		osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);

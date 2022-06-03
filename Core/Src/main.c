@@ -35,8 +35,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-//#include "l6474.h"
-#include "drv8825.h"
+#include "l6474.h"
+//#include "drv8825.h"
 
 /* USER CODE END Includes */
 
@@ -147,10 +147,13 @@ int main(void)
   MX_QUADSPI_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
-  MX_SDMMC1_SD_Init();
+  //MX_SDMMC1_SD_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-
+  L6474_SetNbDevices(1);
+  L6474_Init(NULL);
+  L6474_SelectStepMode(0, STEP_MODE_1_16);
+  L6474_AttachFlagInterrupt(MyFlagInterruptHandler);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -256,77 +259,96 @@ void PeriphCommonClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-/*//stepper driver interrupt
+//stepper driver interrupt
 void MyFlagInterruptHandler(void)
 {
-   Get the value of the status register via the L6474 command GET_STATUS
-  uint16_t statusRegister =L6474_CmdGetStatus(0);
+  /* Get the value of the status register via the L6474 command GET_STATUS */
+  uint16_t statusRegister = L6474_CmdGetStatus(0);
 
-   Check HIZ flag: if set, power brigdes are disabled
+  /* Check HIZ flag: if set, power brigdes are disabled */
   if ((statusRegister & L6474_STATUS_HIZ) == L6474_STATUS_HIZ)
   {
     // HIZ state
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  	  HAL_Delay(1000);
+
     // Action to be customized
   }
 
-   Check direction bit
+  /* Check direction bit */
   if ((statusRegister & L6474_STATUS_DIR) == L6474_STATUS_DIR)
   {
     // Forward direction is set
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  HAL_Delay(1000);
     // Action to be customized
   }
   else
   {
     // Backward direction is set
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  	  HAL_Delay(1000);
     // Action to be customized
   }
 
-   Check NOTPERF_CMD flag: if set, the command received by SPI can't be performed
-   This often occures when a command is sent to the L6474
-   while it is in HIZ state
+  /* Check NOTPERF_CMD flag: if set, the command received by SPI can't be performed */
+  /* This often occures when a command is sent to the L6474 */
+  /* while it is in HIZ state */
   if ((statusRegister & L6474_STATUS_NOTPERF_CMD) == L6474_STATUS_NOTPERF_CMD)
   {
       // Command received by SPI can't be performed
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  HAL_Delay(1000);
      // Action to be customized
   }
 
-   Check WRONG_CMD flag: if set, the command does not exist
+  /* Check WRONG_CMD flag: if set, the command does not exist */
   if ((statusRegister & L6474_STATUS_WRONG_CMD) == L6474_STATUS_WRONG_CMD)
   {
      //command received by SPI does not exist
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  HAL_Delay(1000);
      // Action to be customized
   }
 
-   Check UVLO flag: if not set, there is an undervoltage lock-out
+  /* Check UVLO flag: if not set, there is an undervoltage lock-out */
   if ((statusRegister & L6474_STATUS_UVLO) == 0)
   {
      //undervoltage lock-out
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  HAL_Delay(1000);
      // Action to be customized
   }
 
-   Check TH_WRN flag: if not set, the thermal warning threshold is reached
+  /* Check TH_WRN flag: if not set, the thermal warning threshold is reached */
   if ((statusRegister & L6474_STATUS_TH_WRN) == 0)
   {
     //thermal warning threshold is reached
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  	  HAL_Delay(1000);
     // Action to be customized
   }
 
-   Check TH_SHD flag: if not set, the thermal shut down threshold is reached
+  /* Check TH_SHD flag: if not set, the thermal shut down threshold is reached */
   if ((statusRegister & L6474_STATUS_TH_SD) == 0)
   {
     //thermal shut down threshold is reached
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  HAL_Delay(1000);
     // Action to be customized
 
   }
 
-   Check OCD  flag: if not set, there is an overcurrent detection
+  /* Check OCD  flag: if not set, there is an overcurrent detection */
   if ((statusRegister & L6474_STATUS_OCD) == 0)
   {
     //overcurrent detection
+	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	  HAL_Delay(1000);
     // Action to be customized
   }
 
-}*/
+}
 // cpu temp interrupt
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	// do something in case of analog watchdog interrupts
@@ -355,20 +377,21 @@ float Time_Needed(float flow_rate, float volume_to_inject){
 	return (volume_to_inject/flow_rate);
 }
 
-void SyringeMove(drv8825* drv8825 ,uint16_t FlowRate , uint8_t radius,int timeneeded){
+void SyringeMove(uint16_t FlowRate , uint8_t radius){
 	float screwspeed , motorspeed;
-	//int pps;
+	int pps;
 	screwspeed = Screws_Speed_From_FlowRate(FlowRate,radius);
 	motorspeed = Motor_Speed(screwspeed);
-	/*pps=motorspeed*200;
+	pps=motorspeed*200*16; // 1/16 microstep
 	L6474_SetMaxSpeed(0,pps);
 	L6474_SetMinSpeed(0, pps);
-	L6474_Move(0, FORWARD,pps*timeneeded);*/
-	drv8825_setSpeedRPM(drv8825, motorspeed*60);
-	drv8825_setEn(drv8825, EN_START);
+	L6474_Run(0, FORWARD);
+	/*drv8825_setSpeedRPM(drv8825, motorspeed*60);
+	drv8825_setEn(drv8825, EN_START);*/
 }
-void SyringeStop(drv8825* drv8825){
-		drv8825_setEn(drv8825, EN_STOP);
+void SyringeStop(){
+		//drv8825_setEn(drv8825, EN_STOP);
+	L6474_HardStop(0);
 }
 
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
@@ -384,9 +407,9 @@ uint16_t position(){
 		count++;
 	return traveled_steps;
 }
-float calculate_volume_left(drv8825* drv8825,uint16_t traveled_steps ,float flowrate ,float volume_to_inject ){
+float calculate_volume_left(uint16_t traveled_steps ,float flowrate ,float volume_to_inject ){
 	float injectedVolume;
-	injectedVolume = (traveled_steps / drv8825_getSpeedPPS(drv8825))*(flowrate/3600);
+	injectedVolume = (traveled_steps / L6474_GetCurrentSpeed(0))*(flowrate/3600);
 	return (volume_to_inject-injectedVolume);
 }
 /* USER CODE END 4 */

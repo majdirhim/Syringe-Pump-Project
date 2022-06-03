@@ -1,8 +1,0 @@
-../Core/Src/drv8825.c:26:6:drv8825_init	24	static
-../Core/Src/drv8825.c:55:9:drv8825_setMode	16	static
-../Core/Src/drv8825.c:90:6:drv8825_setDir	16	static
-../Core/Src/drv8825.c:100:6:drv8825_setEn	16	static
-../Core/Src/drv8825.c:109:6:drv8825_setSpeedRPM	24	static
-../Core/Src/drv8825.c:119:7:drv8825_getSpeedPPS	16	static
-../Core/Src/drv8825.c:126:9:drv8825_getdir	16	static
-../Core/Src/drv8825.c:134:6:_drv8825_setStepFrequency	24	static
