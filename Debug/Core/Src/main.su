@@ -3,7 +3,7 @@
 ../Core/Src/main.c:239:6:PeriphCommonClock_Config	200	static
 ../Core/Src/main.c:263:6:MyFlagInterruptHandler	16	static
 ../Core/Src/main.c:353:6:HAL_ADC_LevelOutOfWindowCallback	16	static
-../Core/Src/main.c:360:7:Screws_Speed_From_FlowRate	32	static
+../Core/Src/main.c:360:7:Screws_Speed_From_FlowRate	24	static
 ../Core/Src/main.c:367:7:Screws_Speed_From_Time_And_Volume	24	static
 ../Core/Src/main.c:371:7:Motor_Speed	16	static
 ../Core/Src/main.c:375:7:Time_Needed	16	static

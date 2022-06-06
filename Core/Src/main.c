@@ -148,7 +148,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_ADC1_Init();
   //MX_SDMMC1_SD_Init();
-  MX_TouchGFX_Init();
+  //MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
   L6474_Init(NULL);
@@ -357,9 +357,9 @@ void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 }
 
 // returns the speed of Screws (m/s) needed for a given flow_rate (mm^3/h) and syringe radius(mm)
-float Screws_Speed_From_FlowRate(float flow_rate , uint8_t radius ){
+float Screws_Speed_From_FlowRate(float flow_rate , float radius ){
 	radius = radius*0.001;
-	uint8_t section = radius*radius*3.14159;
+	float section = radius*radius*3.14159;
 	flow_rate = (flow_rate * 0.001) / 3600;
 	return flow_rate/section;
 }

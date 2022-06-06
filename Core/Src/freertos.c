@@ -285,7 +285,7 @@ void Stepper_motor(void *argument)
 
 	// drv8825 structure initialization
 	//drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
-	float Flowrate , radius=10 ,volume_to_inject  ;
+	float Flowrate=50 , radius=17.7,volume_to_inject=50 ;
 	int timeneeded=0;
 	uint8_t mode=0;
 	uint16_t laststep;
@@ -293,7 +293,13 @@ void Stepper_motor(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	  SyringeMove(Flowrate,radius);
+	  timeneeded= Time_Needed(Flowrate, volume_to_inject);
+	  int speedd = L6474_GetCurrentSpeed(0);
+	  laststep = timeneeded*L6474_GetMaxSpeed(0);
+	  osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
 	if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 10U, 100)==osOK && osMessageQueueGet(VolumeQHandle,&volume_to_inject , 10U, 100)==osOK ){
+		SyringeMove(Flowrate,radius);
 		timeneeded= Time_Needed(Flowrate, volume_to_inject);
 		laststep = timeneeded*L6474_GetCurrentSpeed(0);
 		osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
@@ -302,7 +308,7 @@ void Stepper_motor(void *argument)
 	if(osMessageQueueGet(ModeQHandle, &mode, 10U, 10U)==osOK && (mode==0 || mode == 8)){
 		SyringeStop();
 	}
-	SyringeMove(Flowrate,radius);
+
   }
   /* USER CODE END Stepper_motor */
 }
@@ -320,6 +326,17 @@ void Cloud_Connectivity(void *argument)
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET); // UART clock
 	float Flowrate=0 , Timeleft=0, Volumeleft=0;
 	char flowbuff[10], timebuff[10] , volumebuff[10];
+
+	/********** UNIQUE ID ***********/
+	uint32_t (*unique_id_1) = (uint32_t*)(0x1FF1E800); // BASE address (reference manual stm32h743)
+	uint32_t (*unique_id_2) = (uint32_t*)(0x1FF1E804); // BASE address + 0x04 offset
+	uint32_t (*unique_id_3) = (uint32_t*)(0x1FF1E808); // BASE address + 0x08 offset
+	char Id[85];
+	int n =sprintf(Id,"%lu%lu%lu",*unique_id_1,*unique_id_2,*unique_id_3);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
+	HAL_UART_Transmit(&huart3,Id ,n , 100);
+	osDelay(10);
+	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
   /* Infinite loop */
 	// ***** f==> flowrate t==> timeleft v==>volumeleft *****
   for(;;)
@@ -394,19 +411,22 @@ void Interface(void *argument)
 {
   /* USER CODE BEGIN Interface */
 	Infusion_paramT msgPerfusionParameters;
+	float flow = 100 , vol = 50;
   /* Infinite loop */
   for(;;)
   {
 	  // ***** 0 => StopMode , 8=> PauseMode *******
-	  if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
+	 // osMessageQueuePut(FlowRateQHandle,&flow , 1U, 100U);
+	  //osMessageQueuePut(VolumeQHandle,&vol , 1U, 100U);
+	 /* if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
 			  &&  msgPerfusionParameters.Mode!=8  ){
 		  osMessageQueuePut(FlowRateQHandle,&msgPerfusionParameters.Flowrate , 1U, 100U);
 		  osMessageQueuePut(VolumeQHandle,&msgPerfusionParameters.InfousionVolume , 1U, 100U);
 	  }else{
 		  osMessageQueuePut(ModeQHandle,&msgPerfusionParameters.Mode , 10U, 100U);
-	  }
+	  }*/
 
-	  osDelay(1);
+	  osDelay(1000);
   }
   /* USER CODE END Interface */
 }
