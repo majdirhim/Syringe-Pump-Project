@@ -152,7 +152,7 @@ uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radi
 // returns the motor speed needed
 uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed);
 //Move the Syringe
-void SyringeMove(uint16_t FlowRate , uint8_t radius);
+void SyringeMove(float FlowRate , uint8_t radius);
 // mapping values
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 // return number of seconds to finish the injection
@@ -285,7 +285,8 @@ void Stepper_motor(void *argument)
 
 	// drv8825 structure initialization
 	//drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
-	float Flowrate=50 , radius=17.7,volume_to_inject=50 ;
+	float Flowrate , radius=1;
+	float volume_to_inject ;
 	int timeneeded=0;
 	uint8_t mode=0;
 	uint16_t laststep;
@@ -293,14 +294,10 @@ void Stepper_motor(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  SyringeMove(Flowrate,radius);
-	  timeneeded= Time_Needed(Flowrate, volume_to_inject);
-	  int speedd = L6474_GetCurrentSpeed(0);
-	  laststep = timeneeded*L6474_GetMaxSpeed(0);
-	  osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
 	if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 10U, 100)==osOK && osMessageQueueGet(VolumeQHandle,&volume_to_inject , 10U, 100)==osOK ){
 		SyringeMove(Flowrate,radius);
-		timeneeded= Time_Needed(Flowrate, volume_to_inject);
+		//timeneeded= Time_Needed(Flowrate, volume_to_inject);
+		timeneeded = volume_to_inject/(Flowrate/3600);
 		laststep = timeneeded*L6474_GetCurrentSpeed(0);
 		osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
 	}
@@ -382,8 +379,8 @@ void Sensors_measurements(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	osMessageQueueGet(FlowRateQHandle,&Flowrate , 1U, 100);
-	osMessageQueueGet(VolumeQHandle,&volume_to_inject , 1U, 100);
+osStatus_t a = osMessageQueueGet(FlowRateQHandle,&Flowrate , 15U, osWaitForever);
+osStatus_t b =osMessageQueueGet(VolumeQHandle,&volume_to_inject , 10U, 100);
 	osMessageQueueGet(LastStepQHandle, &laststep, 1U, 100);
 	if(Flowrate!=0 && volume_to_inject!=0 && laststep!=0){
 		traveled_steps= position();
@@ -411,20 +408,18 @@ void Interface(void *argument)
 {
   /* USER CODE BEGIN Interface */
 	Infusion_paramT msgPerfusionParameters;
-	float flow = 100 , vol = 50;
   /* Infinite loop */
   for(;;)
   {
 	  // ***** 0 => StopMode , 8=> PauseMode *******
-	 // osMessageQueuePut(FlowRateQHandle,&flow , 1U, 100U);
-	  //osMessageQueuePut(VolumeQHandle,&vol , 1U, 100U);
-	 /* if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
+
+	  if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
 			  &&  msgPerfusionParameters.Mode!=8  ){
 		  osMessageQueuePut(FlowRateQHandle,&msgPerfusionParameters.Flowrate , 1U, 100U);
 		  osMessageQueuePut(VolumeQHandle,&msgPerfusionParameters.InfousionVolume , 1U, 100U);
 	  }else{
 		  osMessageQueuePut(ModeQHandle,&msgPerfusionParameters.Mode , 10U, 100U);
-	  }*/
+	  }
 
 	  osDelay(1000);
   }
@@ -441,10 +436,14 @@ void Interface(void *argument)
 void StartDataStorage(void *argument)
 {
   /* USER CODE BEGIN StartDataStorage */
+	Infusion_paramT msgPerfusionParameters;
+	msgPerfusionParameters.Flowrate=3000; // 3000ml/h ==> 50ml/min
+	msgPerfusionParameters.InfousionVolume=50;
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  osMessageQueuePut(InfusionQHandle,&msgPerfusionParameters , 1U, 100U);
+	  osDelay(1000);
   }
   /* USER CODE END StartDataStorage */
 }

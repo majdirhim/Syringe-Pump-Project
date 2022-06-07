@@ -356,11 +356,10 @@ void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	HAL_ADC_Stop_IT(hadc);
 }
 
-// returns the speed of Screws (m/s) needed for a given flow_rate (mm^3/h) and syringe radius(mm)
+// returns the speed of Screws (mm/s) needed for a given flow_rate (mm^3/h) and syringe radius(mm)
 float Screws_Speed_From_FlowRate(float flow_rate , float radius ){
-	radius = radius*0.001;
 	float section = radius*radius*3.14159;
-	flow_rate = (flow_rate * 0.001) / 3600;
+	flow_rate = flow_rate/3600;
 	return flow_rate/section;
 }
 // returns the speed of Screws needed for a given fluid volume(m^3) , time(seconds) and radius
@@ -369,15 +368,15 @@ float Screws_Speed_From_Time_And_Volume(float time , float volume,uint8_t radius
 }
 // returns the motor speed needed (rps)
 float Motor_Speed(float screwspeed){
-	return screwspeed / (SCREWSTEP*0.001);
+	return screwspeed / (SCREWSTEP);
 }
 //return number of seconds to finish the injection
 float Time_Needed(float flow_rate, float volume_to_inject){
-	flow_rate = flow_rate  / 3600;
+	flow_rate = flow_rate/3600;
 	return (volume_to_inject/flow_rate);
 }
 
-void SyringeMove(uint16_t FlowRate , uint8_t radius){
+void SyringeMove(float FlowRate , uint8_t radius){
 	float screwspeed , motorspeed;
 	int pps;
 	screwspeed = Screws_Speed_From_FlowRate(FlowRate,radius);
