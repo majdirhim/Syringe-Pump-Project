@@ -27,6 +27,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "l6474.h"
+#include "fatfs.h"
 #include "tim.h"
 #include "adc.h"
 #include "usart.h"
@@ -146,17 +147,17 @@ void MyFlagInterruptHandler(void);
 // cpu temp interrupts
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc);
 // returns the speed of Screws needed for a given flow_rate (mm/h) and syringe radius(mm)
-uint8_t Screws_Speed_From_FlowRate(uint8_t flow_rate , uint8_t radius );
+float Screws_Speed_From_FlowRate(float flow_rate , float radius );
 // returns the speed of Screws needed for a given fluid volume , time and radius
-uint8_t Screws_Speed_From_Time_And_Volume(int time , uint8_t volume,uint8_t radius);
+float Screws_Speed_From_Time_And_Volume(float time , float volume,uint8_t radius);
 // returns the motor speed needed
-uint8_t Motor_Speed(uint8_t screwstep,uint8_t screwspeed);
+float Motor_Speed(float screwspeed);
 //Move the Syringe
 void SyringeMove(float FlowRate , uint8_t radius);
 // mapping values
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 // return number of seconds to finish the injection
-int Time_Needed(uint8_t flow_rate, uint8_t volume_to_inject);
+float Time_Needed(float flow_rate, float volume_to_inject);
 // calculate volume left
 float calculate_volume_left(uint16_t traveled_steps ,float flowrate ,float volume_to_inject );
 // stepper position
@@ -305,7 +306,7 @@ void Stepper_motor(void *argument)
 	if(osMessageQueueGet(ModeQHandle, &mode, 10U, 10U)==osOK && (mode==0 || mode == 8)){
 		SyringeStop();
 	}
-
+osDelay(100);
   }
   /* USER CODE END Stepper_motor */
 }
@@ -356,7 +357,7 @@ void Cloud_Connectivity(void *argument)
             	HAL_UART_Transmit(&huart3, (uint8_t *)volumebuff, nvol, 10);
             	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
             }
-    osDelay(100);
+    osDelay(1);
 
   }
   /* USER CODE END Cloud_Connectivity */
@@ -392,7 +393,7 @@ osStatus_t b =osMessageQueueGet(VolumeQHandle,&volume_to_inject , 10U, 100);
 			osMessageQueuePut(ModeQHandle,0, 10U, 100U); // ***** 0 => StopMode , 8=> PauseMode ******
 	 }
 
-	  osDelay(10);
+	  osDelay(1);
   }
   /* USER CODE END Sensors_measurements */
 }
@@ -439,11 +440,52 @@ void StartDataStorage(void *argument)
 	Infusion_paramT msgPerfusionParameters;
 	msgPerfusionParameters.Flowrate=3000; // 3000ml/h ==> 50ml/min
 	msgPerfusionParameters.InfousionVolume=50;
+
+	FRESULT res; /* FatFs function common result code */
+	uint32_t byteswritten; /* File write/read counts */
+	uint8_t wtext[] = ""; /* File write buffer */
+	uint8_t rtext[_MAX_SS];/* File read buffer */
   /* Infinite loop */
   for(;;)
   {
 	  osMessageQueuePut(InfusionQHandle,&msgPerfusionParameters , 1U, 100U);
-	  osDelay(1000);
+
+	  sprintf((uint8_t *)wtext,"Flow Rate = %d",msgPerfusionParameters.Flowrate);
+	  if(f_mount(&SDFatFS, (TCHAR const*)SDPath, 0) != FR_OK)
+	    {
+	        Error_Handler();
+	    }
+	    else
+	    {
+	        if(f_mkfs((TCHAR const*)SDPath, FM_ANY, 0, rtext, sizeof(rtext)) != FR_OK)
+	        {
+	            Error_Handler();
+	        }
+	        else
+	        {
+	            //Open file for writing (Create)
+	            if(f_open(&SDFile, "STM32.TXT", FA_CREATE_ALWAYS | FA_WRITE) != FR_OK)
+	            {
+	                Error_Handler();
+	            }
+	            else
+	            {
+	                //Write to the text file
+	                res = f_write(&SDFile, wtext, strlen((char *)wtext), (void *)&byteswritten);
+	                if((byteswritten == 0) || (res != FR_OK))
+	                {
+	                    Error_Handler();
+	                }
+	                else
+	                {
+
+	                    f_close(&SDFile);
+	                }
+	            }
+	        }
+	    }
+	    f_mount(&SDFatFS, (TCHAR const*)NULL, 0);
+	    osDelay(1000);
   }
   /* USER CODE END StartDataStorage */
 }

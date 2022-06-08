@@ -59,9 +59,15 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Core/Inc/l6474.h ../Core/Inc/l6474_target_config.h \
- ../Core/Inc/motor.h ../Core/Inc/motorcontrol.h ../Core/Inc/tim.h \
- ../Core/Inc/main.h ../Core/Inc/adc.h ../Core/Inc/usart.h \
- ../Core/Inc/SW_common.h
+ ../Core/Inc/motor.h ../Core/Inc/motorcontrol.h ../FATFS/App/fatfs.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h \
+ ../Middlewares/Third_Party/FatFs/src/integer.h ../FATFS/Target/ffconf.h \
+ ../FATFS/Target/bsp_driver_sd.h ../FATFS/Target/fatfs_platform.h \
+ ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
+ ../Middlewares/Third_Party/FatFs/src/diskio.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
+ ../Core/Inc/tim.h ../Core/Inc/main.h ../Core/Inc/adc.h \
+ ../Core/Inc/usart.h ../Core/Inc/SW_common.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -126,6 +132,16 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/l6474_target_config.h:
 ../Core/Inc/motor.h:
 ../Core/Inc/motorcontrol.h:
+../FATFS/App/fatfs.h:
+../Middlewares/Third_Party/FatFs/src/ff.h:
+../Middlewares/Third_Party/FatFs/src/integer.h:
+../FATFS/Target/ffconf.h:
+../FATFS/Target/bsp_driver_sd.h:
+../FATFS/Target/fatfs_platform.h:
+../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
+../Middlewares/Third_Party/FatFs/src/diskio.h:
+../Middlewares/Third_Party/FatFs/src/ff.h:
+../FATFS/Target/sd_diskio.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
 ../Core/Inc/adc.h:

@@ -23,6 +23,7 @@
 #include "adc.h"
 #include "crc.h"
 #include "dma2d.h"
+#include "fatfs.h"
 #include "i2c.h"
 #include "ltdc.h"
 #include "quadspi.h"
@@ -147,7 +148,8 @@ int main(void)
   MX_QUADSPI_Init();
   MX_USART3_UART_Init();
   MX_ADC1_Init();
-  //MX_SDMMC1_SD_Init();
+  MX_SDMMC1_SD_Init();
+  MX_FATFS_Init();
   //MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);

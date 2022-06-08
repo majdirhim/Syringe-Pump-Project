@@ -59,12 +59,18 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/crc.h \
- ../Core/Inc/dma2d.h ../Core/Inc/i2c.h ../Core/Inc/ltdc.h \
- ../Core/Inc/quadspi.h ../Core/Inc/sdmmc.h ../Core/Inc/spi.h \
- ../Core/Inc/tim.h ../Core/Inc/usart.h ../Core/Inc/gpio.h \
- ../TouchGFX/App/app_touchgfx.h ../Core/Inc/l6474.h \
- ../Core/Inc/l6474_target_config.h ../Core/Inc/motor.h \
- ../Core/Inc/motorcontrol.h
+ ../Core/Inc/dma2d.h ../FATFS/App/fatfs.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h \
+ ../Middlewares/Third_Party/FatFs/src/integer.h ../FATFS/Target/ffconf.h \
+ ../FATFS/Target/bsp_driver_sd.h ../FATFS/Target/fatfs_platform.h \
+ ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
+ ../Middlewares/Third_Party/FatFs/src/diskio.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
+ ../Core/Inc/i2c.h ../Core/Inc/ltdc.h ../Core/Inc/quadspi.h \
+ ../Core/Inc/sdmmc.h ../Core/Inc/spi.h ../Core/Inc/tim.h \
+ ../Core/Inc/usart.h ../Core/Inc/gpio.h ../TouchGFX/App/app_touchgfx.h \
+ ../Core/Inc/l6474.h ../Core/Inc/l6474_target_config.h \
+ ../Core/Inc/motor.h ../Core/Inc/motorcontrol.h
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -129,6 +135,16 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/main.h:
 ../Core/Inc/crc.h:
 ../Core/Inc/dma2d.h:
+../FATFS/App/fatfs.h:
+../Middlewares/Third_Party/FatFs/src/ff.h:
+../Middlewares/Third_Party/FatFs/src/integer.h:
+../FATFS/Target/ffconf.h:
+../FATFS/Target/bsp_driver_sd.h:
+../FATFS/Target/fatfs_platform.h:
+../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
+../Middlewares/Third_Party/FatFs/src/diskio.h:
+../Middlewares/Third_Party/FatFs/src/ff.h:
+../FATFS/Target/sd_diskio.h:
 ../Core/Inc/i2c.h:
 ../Core/Inc/ltdc.h:
 ../Core/Inc/quadspi.h:
