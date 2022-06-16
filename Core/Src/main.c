@@ -37,6 +37,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "l6474.h"
+#include "SW_common.h"
 //#include "drv8825.h"
 
 /* USER CODE END Includes */
@@ -49,6 +50,8 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define SCREWSTEP 1.5
+#define DMOTOR 15
+#define	DSHAFT 35
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -72,6 +75,7 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 
 /*L6474_Init_t gL6474InitParams =
   {
@@ -150,12 +154,15 @@ int main(void)
   MX_ADC1_Init();
   MX_SDMMC1_SD_Init();
   MX_FATFS_Init();
+  MX_SPI1_Init();
   //MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
   L6474_Init(NULL);
   L6474_SelectStepMode(0, STEP_MODE_1_16);
   L6474_AttachFlagInterrupt(MyFlagInterruptHandler);
+
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7,GPIO_PIN_SET );
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -364,13 +371,18 @@ float Screws_Speed_From_FlowRate(float flow_rate , float radius ){
 	flow_rate = flow_rate/3600;
 	return flow_rate/section;
 }
-// returns the speed of Screws needed for a given fluid volume(m^3) , time(seconds) and radius
+// returns the speed of Screws needed for a given fluid volume(mm^3) , time(seconds) and radius
 float Screws_Speed_From_Time_And_Volume(float time , float volume,uint8_t radius){
 	return Screws_Speed_From_FlowRate(volume/time,radius) ;
 }
-// returns the motor speed needed (rps)
-float Motor_Speed(float screwspeed){
+// returns the shaft speed needed (rps) to drive the screws
+float Shaft_speed (float screwspeed){
 	return screwspeed / (SCREWSTEP);
+}
+// returns the motor speed needed (rps) to drive the shaft
+float Motor_Speed(float shaftspeed){
+
+	return (DSHAFT*shaftspeed)/DMOTOR;
 }
 //return number of seconds to finish the injection
 float Time_Needed(float flow_rate, float volume_to_inject){
@@ -379,20 +391,22 @@ float Time_Needed(float flow_rate, float volume_to_inject){
 }
 
 void SyringeMove(float FlowRate , uint8_t radius){
-	float screwspeed , motorspeed;
+	float screwspeed , motorspeed,shaftspeed;
 	int pps;
 	screwspeed = Screws_Speed_From_FlowRate(FlowRate,radius);
-	motorspeed = Motor_Speed(screwspeed);
+	shaftspeed =Shaft_speed(screwspeed);
+	motorspeed = Motor_Speed(shaftspeed);
 	pps=motorspeed*200*16; // 1/16 microstep
 	L6474_SetMaxSpeed(0,pps);
 	L6474_SetMinSpeed(0, pps);
-	L6474_Run(0, FORWARD);
+	L6474_Run(0, BACKWARD);
 	/*drv8825_setSpeedRPM(drv8825, motorspeed*60);
 	drv8825_setEn(drv8825, EN_START);*/
 }
 void SyringeStop(){
 		//drv8825_setEn(drv8825, EN_STOP);
 	L6474_HardStop(0);
+	L6474_HizStop(0);
 }
 
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
@@ -409,10 +423,11 @@ uint16_t position(){
 	return traveled_steps;
 }
 float calculate_volume_left(uint16_t traveled_steps ,float flowrate ,float volume_to_inject ){
-	float injectedVolume;
-	injectedVolume = (traveled_steps / L6474_GetCurrentSpeed(0))*(flowrate/3600);
+	float injectedVolume , speed =(L6474_GetCurrentSpeed(0)/16);
+	injectedVolume = (traveled_steps / speed)*(flowrate/3600);
 	return (volume_to_inject-injectedVolume);
 }
+
 /* USER CODE END 4 */
 
  /**

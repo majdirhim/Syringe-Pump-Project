@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * File Name          : freertos.c
-  * Description        : Code for freertos applications
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * File Name          : freertos.c
+ * Description        : Code for freertos applications
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under Ultimate Liberty license
+ * SLA0044, the "License"; You may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at:
+ *                             www.st.com/SLA0044
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -33,6 +33,7 @@
 #include "usart.h"
 #include "SW_common.h"
 #include "stdio.h"
+#include "spi.h"
 //#include "drv8825.h"
 /* USER CODE END Includes */
 
@@ -75,7 +76,7 @@ const osThreadAttr_t Stepper_attributes = {
 osThreadId_t ConnectivityHandle;
 const osThreadAttr_t Connectivity_attributes = {
   .name = "Connectivity",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for Sensors */
@@ -89,14 +90,14 @@ const osThreadAttr_t Sensors_attributes = {
 osThreadId_t IHMHandle;
 const osThreadAttr_t IHM_attributes = {
   .name = "IHM",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityNormal1,
 };
 /* Definitions for DataStorage */
 osThreadId_t DataStorageHandle;
 const osThreadAttr_t DataStorage_attributes = {
   .name = "DataStorage",
-  .stack_size = 128 * 4,
+  .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for InfusionQ */
@@ -147,19 +148,24 @@ void MyFlagInterruptHandler(void);
 // cpu temp interrupts
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc);
 // returns the speed of Screws needed for a given flow_rate (mm/h) and syringe radius(mm)
-float Screws_Speed_From_FlowRate(float flow_rate , float radius );
+float Screws_Speed_From_FlowRate(float flow_rate, float radius);
 // returns the speed of Screws needed for a given fluid volume , time and radius
-float Screws_Speed_From_Time_And_Volume(float time , float volume,uint8_t radius);
+float Screws_Speed_From_Time_And_Volume(float time, float volume,
+		uint8_t radius);
 // returns the motor speed needed
-float Motor_Speed(float screwspeed);
+float Motor_Speed(float shaftspeed);
+//returns the shaft speed
+float Shaft_speed (float screwspeed);
 //Move the Syringe
-void SyringeMove(float FlowRate , uint8_t radius);
+void SyringeMove(float FlowRate, uint8_t radius);
 // mapping values
-uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
+uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min,
+		uint16_t out_max);
 // return number of seconds to finish the injection
 float Time_Needed(float flow_rate, float volume_to_inject);
 // calculate volume left
-float calculate_volume_left(uint16_t traveled_steps ,float flowrate ,float volume_to_inject );
+float calculate_volume_left(uint16_t traveled_steps, float flowrate,
+		float volume_to_inject);
 // stepper position
 uint16_t position();
 //stop syringe
@@ -186,15 +192,15 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
+	/* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
+	/* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
+	/* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
   /* Create the queue(s) */
@@ -223,7 +229,7 @@ void MX_FREERTOS_Init(void) {
   ModeQHandle = osMessageQueueNew (8, sizeof(uint8_t), &ModeQ_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
+	/* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -246,247 +252,302 @@ void MX_FREERTOS_Init(void) {
   DataStorageHandle = osThreadNew(StartDataStorage, NULL, &DataStorage_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+	/* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
+	/* add events, ... */
   /* USER CODE END RTOS_EVENTS */
 
 }
 
 /* USER CODE BEGIN Header_StartBatteryManage */
 /**
-  * @brief  Function implementing the battery_manage thread.
-  * @param  argument: Not used
-  * @retval None
-  */
+ * @brief  Function implementing the battery_manage thread.
+ * @param  argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_StartBatteryManage */
 void StartBatteryManage(void *argument)
 {
   /* USER CODE BEGIN StartBatteryManage */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+	/* Infinite loop */
+	for (;;) {
+		osDelay(1000);
+	}
   /* USER CODE END StartBatteryManage */
 }
 
 /* USER CODE BEGIN Header_Stepper_motor */
 /**
-* @brief Function implementing the Stepper thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the Stepper thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_Stepper_motor */
 void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
-
-	// drv8825 structure initialization
-	//drv8825_init(&drv, Dir_G_GPIO_Port, Dir_G_Pin,En_G_GPIO_Port, En_G_Pin, &htim2, TIM_CHANNEL_1);
-	float Flowrate , radius=1;
-	float volume_to_inject ;
-	int timeneeded=0;
+	float Flowrate=0, radius = 7;
+	float volume_to_inject=0;
+	int timeneeded = 0;
 	uint8_t mode=0;
 	uint16_t laststep;
-
-  /* Infinite loop */
-  for(;;)
-  {
-	if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 10U, 100)==osOK && osMessageQueueGet(VolumeQHandle,&volume_to_inject , 10U, 100)==osOK ){
-		SyringeMove(Flowrate,radius);
-		//timeneeded= Time_Needed(Flowrate, volume_to_inject);
-		timeneeded = volume_to_inject/(Flowrate/3600);
-		laststep = timeneeded*L6474_GetCurrentSpeed(0);
-		osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
+	/* Infinite loop */
+	for (;;) {
+		osMessageQueueGet(FlowRateQHandle, &Flowrate, 10U, 100);
+		osMessageQueueGet(VolumeQHandle, &volume_to_inject, 10U,100);
+		if ( Flowrate!=0 && volume_to_inject!=0 &&(osMessageQueueGet(ModeQHandle, &mode, 10U, 100U)==osOK && mode==1)){
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7,GPIO_PIN_RESET );
+			timeneeded = Time_Needed(Flowrate, volume_to_inject);
+			laststep = timeneeded * (L6474_GetCurrentSpeed(0) / 16); //1/16 microstep
+			osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
+			SyringeMove(Flowrate, radius);
+		}
+		// ***** 0 => StopMode , 8=> PauseMode *******
+		if((mode==0 || mode == 8)){
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7,GPIO_PIN_SET );
+		 SyringeStop();
+		 }
+		osDelay(10);
 	}
-	// ***** 0 => StopMode , 8=> PauseMode *******
-	if(osMessageQueueGet(ModeQHandle, &mode, 10U, 10U)==osOK && (mode==0 || mode == 8)){
-		SyringeStop();
-	}
-osDelay(100);
-  }
   /* USER CODE END Stepper_motor */
 }
 
 /* USER CODE BEGIN Header_Cloud_Connectivity */
 /**
-* @brief Function implementing the Connectivity thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the Connectivity thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_Cloud_Connectivity */
 void Cloud_Connectivity(void *argument)
 {
   /* USER CODE BEGIN Cloud_Connectivity */
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET); // UART clock
-	float Flowrate=0 , Timeleft=0, Volumeleft=0;
-	char flowbuff[10], timebuff[10] , volumebuff[10];
+	float Flowrate = 0, Timeleft = 0, Volumeleft = 0;
+	char flowbuff[10], timebuff[10], volumebuff[10];
 
 	/********** UNIQUE ID ***********/
-	uint32_t (*unique_id_1) = (uint32_t*)(0x1FF1E800); // BASE address (reference manual stm32h743)
-	uint32_t (*unique_id_2) = (uint32_t*)(0x1FF1E804); // BASE address + 0x04 offset
-	uint32_t (*unique_id_3) = (uint32_t*)(0x1FF1E808); // BASE address + 0x08 offset
+	uint32_t (*unique_id_1) = (uint32_t*) (0x1FF1E800); // BASE address (reference manual stm32h743)
+	uint32_t (*unique_id_2) = (uint32_t*) (0x1FF1E804); // BASE address + 0x04 offset
+	uint32_t (*unique_id_3) = (uint32_t*) (0x1FF1E808); // BASE address + 0x08 offset
 	char Id[85];
-	int n =sprintf(Id,"%lu%lu%lu",*unique_id_1,*unique_id_2,*unique_id_3);
+	int n = sprintf(Id, "%lu%lu%lu", *unique_id_1, *unique_id_2, *unique_id_3);
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-	HAL_UART_Transmit(&huart3,Id ,n , 100);
-	osDelay(10);
+	HAL_UART_Transmit(&huart3, Id, n, 100);
+	//osDelay(10);
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
-  /* Infinite loop */
+	/* Infinite loop */
 	// ***** f==> flowrate t==> timeleft v==>volumeleft *****
-  for(;;)
-  {
-    if(osMessageQueueGet(FlowRateQHandle,&Flowrate , 1U, 100U)==osOK){
-    	int nflow =sprintf((uint8_t *)flowbuff,"f%.3f",Flowrate);
-    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-    	HAL_UART_Transmit(&huart3, (uint8_t *)flowbuff, nflow, 10);
-    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
-    }
-    if(osMessageQueueGet(TimeQHandle,&Timeleft , 1U, 100U)==osOK){
-        	int ntime =sprintf((uint8_t *)timebuff,"t%f",Timeleft);
-        	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-        	HAL_UART_Transmit(&huart3, (uint8_t *)timebuff, ntime, 10);
-        	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
-        }
-    if(osMessageQueueGet(VolumeLeftQHandle,&Volumeleft , 1, 100U)==osOK){
-            	int nvol =sprintf((uint8_t *)volumebuff,"v%.3f",Volumeleft);
-            	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-            	HAL_UART_Transmit(&huart3, (uint8_t *)volumebuff, nvol, 10);
-            	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
-            }
-    osDelay(1);
+	for (;;) {
+		if (osMessageQueueGet(FlowRateQHandle, &Flowrate, 1U, 100U) == osOK) {
+			int nflow = sprintf((uint8_t*) flowbuff, "f%.3f", Flowrate);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
+			HAL_UART_Transmit(&huart3, (uint8_t*) flowbuff, nflow, 10);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
+		}
+		if (osMessageQueueGet(TimeQHandle, &Timeleft, 1U, 100U) == osOK) {
+			int ntime = sprintf((uint8_t*) timebuff, "t%f", Timeleft);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
+			HAL_UART_Transmit(&huart3, (uint8_t*) timebuff, ntime, 10);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
+		}
+		if (osMessageQueueGet(VolumeLeftQHandle, &Volumeleft, 1U, 100U)
+				== osOK) {
+			int nvol = sprintf((uint8_t*) volumebuff, "v%.3f", Volumeleft);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
+			HAL_UART_Transmit(&huart3, (uint8_t*) volumebuff, nvol, 10);
+			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
+		}
+		osDelay(10);
 
-  }
+	}
   /* USER CODE END Cloud_Connectivity */
 }
 
 /* USER CODE BEGIN Header_Sensors_measurements */
 /**
-* @brief Function implementing the Sensors thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the Sensors thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_Sensors_measurements */
 void Sensors_measurements(void *argument)
 {
   /* USER CODE BEGIN Sensors_measurements */
-	float volumeleft=0 , timeleft=0 ;
-	uint16_t  laststep=0, traveled_steps=0 ;
-	float Flowrate=0,volume_to_inject=0 ;
+	float volumeleft = 0, timeleft = 0;
+	uint16_t laststep = 0, traveled_steps = 0;
+	float Flowrate = 0, volume_to_inject = 0;
 	HAL_ADC_Start_IT(&hadc3);
-  /* Infinite loop */
-  for(;;)
-  {
-osStatus_t a = osMessageQueueGet(FlowRateQHandle,&Flowrate , 15U, osWaitForever);
-osStatus_t b =osMessageQueueGet(VolumeQHandle,&volume_to_inject , 10U, 100);
-	osMessageQueueGet(LastStepQHandle, &laststep, 1U, 100);
-	if(Flowrate!=0 && volume_to_inject!=0 && laststep!=0){
-		traveled_steps= position();
-		volumeleft=calculate_volume_left(traveled_steps,Flowrate,volume_to_inject); //mm^3
-		timeleft=volumeleft/Flowrate; // seconds
-		osMessageQueuePut(VolumeLeftQHandle,  &volumeleft, 1, 100);
-		osMessageQueuePut(TimeQHandle,  &timeleft, 1, 100);
-		if(traveled_steps>=laststep || volumeleft<=0 || timeleft <=0)
-			osMessageQueuePut(ModeQHandle,0, 10U, 100U); // ***** 0 => StopMode , 8=> PauseMode ******
-	 }
+	/* Infinite loop */
+	for (;;) {
+		osMessageQueueGet(FlowRateQHandle, &Flowrate, 5U,100);
+		osMessageQueueGet(VolumeQHandle, &volume_to_inject, 5U,100);
+		osMessageQueueGet(LastStepQHandle, &laststep, 1U, 100);
+		if (Flowrate != 0 && volume_to_inject != 0  && laststep != 0) {
+			traveled_steps = position();
+			volumeleft = calculate_volume_left(traveled_steps, Flowrate,volume_to_inject); //mm^3
+			timeleft = volumeleft / Flowrate; // seconds
+			osMessageQueuePut(VolumeLeftQHandle, &volumeleft, 1, 100);
+			osMessageQueuePut(TimeQHandle, &timeleft, 1, 100);
+			//volumeleft=-1;
+			if (traveled_steps >= laststep || volumeleft <= 0 || timeleft <= 0)
+				osMessageQueuePut(ModeQHandle, 0, 10U, 100U); // ***** 0 => StopMode , 8=> PauseMode ******
+		}
 
-	  osDelay(1);
-  }
+		osDelay(10);
+	}
   /* USER CODE END Sensors_measurements */
 }
 
 /* USER CODE BEGIN Header_Interface */
 /**
-* @brief Function implementing the IHM thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the IHM thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_Interface */
 void Interface(void *argument)
 {
   /* USER CODE BEGIN Interface */
 	Infusion_paramT msgPerfusionParameters;
-  /* Infinite loop */
-  for(;;)
-  {
-	  // ***** 0 => StopMode , 8=> PauseMode *******
+	char check[10];
+	msgPerfusionParameters.Mode=0;
+	int num;
+	/* Infinite loop */
+	for (;;) {
+		// ***** 0 => StopMode , 8=> PauseMode *******
+		HAL_UART_Receive(&huart3, (uint8_t*) check, sizeof(check), 100);
+		num =atoi(check);
+			switch(num){
+			case 1 :
+				msgPerfusionParameters.Flowrate=50*1000;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
+				}
+				break;
+			case 2 :
+				msgPerfusionParameters.Flowrate=3000*1000;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
+				}
+				break;
+			case 3 :
+				msgPerfusionParameters.Flowrate=100*1000;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
+				}
+				break;
+			case 4 :
+				msgPerfusionParameters.Flowrate=6000*1000;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
+				}
+				break;
+			case 5 :
+				msgPerfusionParameters.InfousionVolume=10*1000;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(VolumeQHandle, &msgPerfusionParameters.InfousionVolume, 10U,100);
+				}
+				break;
+			case 6 :
+				msgPerfusionParameters.InfousionVolume=50*1000;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(VolumeQHandle, &msgPerfusionParameters.InfousionVolume, 10U,100);
+				}
+				break;
+			case 7 :
+				msgPerfusionParameters.InfousionVolume=100*1000;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(VolumeQHandle, &msgPerfusionParameters.InfousionVolume, 10U,100);
+				}
+				break;
+			case 8 :
+				msgPerfusionParameters.Mode=1;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 10U,100U);
+				}
+				break;
+			case 9 :
+				msgPerfusionParameters.Mode=0;
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 10U,100U);
+				}
+				break;
+			default :
+				for(int i= 0; i<3;i++){
+				osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 10U,100U);
+				}
+				break;
+			}
+		/*if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
+		 &&  msgPerfusionParameters.Mode!=8  ){
+		 msgPerfusionParameters.Flowrate = msgPerfusionParameters.Flowrate*1000; // cm^3/h ==> mm^3/h*/
 
-	  if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
-			  &&  msgPerfusionParameters.Mode!=8  ){
-		  osMessageQueuePut(FlowRateQHandle,&msgPerfusionParameters.Flowrate , 1U, 100U);
-		  osMessageQueuePut(VolumeQHandle,&msgPerfusionParameters.InfousionVolume , 1U, 100U);
-	  }else{
-		  osMessageQueuePut(ModeQHandle,&msgPerfusionParameters.Mode , 10U, 100U);
-	  }
-
-	  osDelay(1000);
-  }
+		osDelay(10);
+	}
   /* USER CODE END Interface */
 }
 
 /* USER CODE BEGIN Header_StartDataStorage */
 /**
-* @brief Function implementing the DataStorage thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the DataStorage thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_StartDataStorage */
 void StartDataStorage(void *argument)
 {
   /* USER CODE BEGIN StartDataStorage */
 	Infusion_paramT msgPerfusionParameters;
-	msgPerfusionParameters.Flowrate=3000; // 3000ml/h ==> 50ml/min
-	msgPerfusionParameters.InfousionVolume=50;
-
+	//char check[10] ;
+	//HAL_UART_Receive_IT(&huart3,(uint8_t*) check, sizeof(check));
 	FRESULT res; /* FatFs function common result code */
 	uint32_t byteswritten; /* File write/read counts */
-	uint8_t wtext[] = ""; /* File write buffer */
+	uint8_t wtext[50] = ""; /* File write buffer */
 	uint8_t rtext[_MAX_SS];/* File read buffer */
-  /* Infinite loop */
-  for(;;)
-  {
-	  osMessageQueuePut(InfusionQHandle,&msgPerfusionParameters , 1U, 100U);
+	/* Infinite loop */
+	for (;;) {
 
-	  sprintf((uint8_t *)wtext,"Flow Rate = %d",msgPerfusionParameters.Flowrate);
-	  if(f_mount(&SDFatFS, (TCHAR const*)SDPath, 0) != FR_OK)
-	    {
-	        Error_Handler();
-	    }
-	    else
-	    {
-	        if(f_mkfs((TCHAR const*)SDPath, FM_ANY, 0, rtext, sizeof(rtext)) != FR_OK)
-	        {
-	            Error_Handler();
-	        }
-	        else
-	        {
-	            //Open file for writing (Create)
-	            if(f_open(&SDFile, "STM32.TXT", FA_CREATE_ALWAYS | FA_WRITE) != FR_OK)
-	            {
-	                Error_Handler();
-	            }
-	            else
-	            {
-	                //Write to the text file
-	                res = f_write(&SDFile, wtext, strlen((char *)wtext), (void *)&byteswritten);
-	                if((byteswritten == 0) || (res != FR_OK))
-	                {
-	                    Error_Handler();
-	                }
-	                else
-	                {
+		 osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters , 1U, 100U);
+		 sprintf((uint8_t *)wtext,"Flow Rate = %d",msgPerfusionParameters.Flowrate);
+		 if(f_mount(&SDFatFS, (TCHAR const*)SDPath, 0) != FR_OK)
+		 {
+		 Error_Handler();
+		 }
+		 else
+		 {
+		 if(f_mkfs((TCHAR const*)SDPath, FM_ANY, 0, rtext, sizeof(rtext)) != FR_OK)
+		 {
+		 Error_Handler();
+		 }
+		 else
+		 {
+		 //Open file for writing (Create)
+		 if(f_open(&SDFile, "SWlog.TXT", FA_CREATE_ALWAYS | FA_WRITE) != FR_OK)
+		 {
+		 Error_Handler();
+		 }
+		 else
+		 {
+		 //Write to the text file
+		 res = f_write(&SDFile, wtext, strlen((char *)wtext), (void *)&byteswritten);
+		 if((byteswritten == 0) || (res != FR_OK))
+		 {
+		 Error_Handler();
+		 }
+		 else
+		 {
 
-	                    f_close(&SDFile);
-	                }
-	            }
-	        }
-	    }
-	    f_mount(&SDFatFS, (TCHAR const*)NULL, 0);
-	    osDelay(1000);
-  }
+		 f_close(&SDFile);
+		 }
+		 }
+		 }
+		 }
+		 f_mount(&SDFatFS, (TCHAR const*)NULL, 0);
+		osDelay(1000);
+	}
   /* USER CODE END StartDataStorage */
 }
 
