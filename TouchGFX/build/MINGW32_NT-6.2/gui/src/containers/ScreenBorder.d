@@ -41,9 +41,9 @@ build/MINGW32_NT-6.2/gui/src/containers/ScreenBorder.o: \
  gui/include/../../../Core/Inc/SW_common.h \
  gui/include/../../../Core/Inc/Runtime_language.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
@@ -140,11 +140,11 @@ gui/include/../../../Core/Inc/Runtime_language.h:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
 

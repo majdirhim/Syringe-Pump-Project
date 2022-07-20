@@ -32,12 +32,15 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
+#include "fmc.h"
 #include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "l6474.h"
 #include "SW_common.h"
+#include "stdio.h"
+#include "stm32746g_qspi.h"
 //#include "drv8825.h"
 
 /* USER CODE END Includes */
@@ -51,7 +54,7 @@
 /* USER CODE BEGIN PD */
 #define SCREWSTEP 1.5
 #define DMOTOR 15
-#define	DSHAFT 35
+#define	DSHAFT 45
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -62,7 +65,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-//uint8_t END_CMD[3] = {0xFF , 0XFF , 0XFF}; // "End Command" for nextion display (we will not be using it)
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -76,7 +79,14 @@ void MX_FREERTOS_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
+int _write(int file, char *ptr, int len)
+{
+  /* Implement your write code here, this is used by puts and printf for example */
+  int i=0;
+  for(i=0 ; i<len ; i++)
+    ITM_SendChar((*ptr++));
+  return len;
+}
 /*L6474_Init_t gL6474InitParams =
   {
       1,                               /// Acceleration rate in step/s2. Range: (0..+inf).
@@ -112,6 +122,7 @@ void MX_FREERTOS_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	uint16_t* framebuffer = (uint16_t*)0xC0000000;  //16 bpp framebuffer
 
   /* USER CODE END 1 */
 
@@ -150,18 +161,18 @@ int main(void)
   MX_CRC_Init();
   MX_TIM2_Init();
   MX_QUADSPI_Init();
-  MX_USART3_UART_Init();
   MX_ADC1_Init();
   MX_SDMMC1_SD_Init();
   MX_FATFS_Init();
-  MX_SPI1_Init();
-  //MX_TouchGFX_Init();
+  MX_FMC_Init();
+  MX_USART1_UART_Init();
+  MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
   L6474_Init(NULL);
   L6474_SelectStepMode(0, STEP_MODE_1_16);
   L6474_AttachFlagInterrupt(MyFlagInterruptHandler);
-
+  HAL_LTDC_SetAddress(&hltdc, framebuffer, LTDC_LAYER_1);
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7,GPIO_PIN_SET );
   /* USER CODE END 2 */
 
@@ -417,10 +428,11 @@ uint16_t position(){
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_PollForConversion(&hadc1, 100);
 	readValue = HAL_ADC_GetValue(&hadc1);
-	traveled_steps=map(readValue, 0, 65535,0 ,2000)+(count*2000); // 10tours * 200steps
+	/*traveled_steps=map(readValue, 0, 65535,0 ,2000)+(count*2000); // 10tours * 200steps
 	if(traveled_steps%2000==0)
-		count++;
-	return traveled_steps;
+		count++;*/
+	printf("%u",(unsigned int)readValue);
+	return readValue;
 }
 float calculate_volume_left(uint16_t traveled_steps ,float flowrate ,float volume_to_inject ){
 	float injectedVolume , speed =(L6474_GetCurrentSpeed(0)/16);

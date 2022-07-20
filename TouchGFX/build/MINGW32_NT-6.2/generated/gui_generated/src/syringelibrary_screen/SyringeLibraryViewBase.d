@@ -40,6 +40,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/syringelibrary_screen/SyringeLi
  gui/include/../../../Core/Inc/SW_common.h \
  gui/include/../../../Core/Inc/Runtime_language.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  gui/include/gui/syringelibrary_screen/SyringeLibraryPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
@@ -47,8 +48,16 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/syringelibrary_screen/SyringeLi
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- generated/images/include/BitmapDatabase.hpp
+ generated/images/include/BitmapDatabase.hpp \
+ generated/texts/include/texts/TextKeysAndLanguages.hpp
 
 generated/gui_generated/include/gui_generated/syringelibrary_screen/SyringeLibraryViewBase.hpp:
 
@@ -130,6 +139,8 @@ gui/include/../../../Core/Inc/Runtime_language.h:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
 gui/include/gui/syringelibrary_screen/SyringeLibraryPresenter.hpp:
@@ -144,6 +155,22 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
+
+generated/texts/include/texts/TextKeysAndLanguages.hpp:

@@ -1,5 +1,6 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
+Core/Src/main.o: ../Core/Src/main.c \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
@@ -11,6 +12,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Include/mpu_armv7.h \
  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
@@ -40,6 +42,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
@@ -47,6 +51,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
+ ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
@@ -68,11 +77,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
  ../Core/Inc/i2c.h ../Core/Inc/ltdc.h ../Core/Inc/quadspi.h \
  ../Core/Inc/sdmmc.h ../Core/Inc/spi.h ../Core/Inc/tim.h \
- ../Core/Inc/usart.h ../Core/Inc/gpio.h ../TouchGFX/App/app_touchgfx.h \
- ../Core/Inc/l6474.h ../Core/Inc/l6474_target_config.h \
- ../Core/Inc/motor.h ../Core/Inc/motorcontrol.h ../Core/Inc/SW_common.h
-../Core/Inc/main.h:
-../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
+ ../Core/Inc/usart.h ../Core/Inc/gpio.h ../Core/Inc/fmc.h \
+ ../TouchGFX/App/app_touchgfx.h ../Core/Inc/l6474.h \
+ ../Core/Inc/l6474_target_config.h ../Core/Inc/motor.h \
+ ../Core/Inc/motorcontrol.h ../Core/Inc/SW_common.h \
+ ../Core/Inc/stm32746g_qspi.h
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:
@@ -84,6 +95,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Include/mpu_armv7.h:
 ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h:
@@ -113,6 +125,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
@@ -120,6 +134,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
+../Core/Inc/main.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -153,9 +172,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/tim.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/gpio.h:
+../Core/Inc/fmc.h:
 ../TouchGFX/App/app_touchgfx.h:
 ../Core/Inc/l6474.h:
 ../Core/Inc/l6474_target_config.h:
 ../Core/Inc/motor.h:
 ../Core/Inc/motorcontrol.h:
 ../Core/Inc/SW_common.h:
+../Core/Inc/stm32746g_qspi.h:

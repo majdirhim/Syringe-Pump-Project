@@ -9,6 +9,8 @@
 #include <gui/druglibrary_screen/DrugLibraryPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class DrugLibraryViewBase : public touchgfx::View<DrugLibraryPresenter>
 {
@@ -29,8 +31,24 @@ protected:
     touchgfx::ScalableImage ChildrenBackground;
     touchgfx::ScalableImage DarkBackground;
     touchgfx::ScalableImage DefaultBackground;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  backbutton;
+    touchgfx::ScalableImage BackArrow;
+    touchgfx::Box box1;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButton10;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButton11;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<DrugLibraryViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

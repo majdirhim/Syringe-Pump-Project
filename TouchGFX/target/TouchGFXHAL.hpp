@@ -91,6 +91,10 @@ public:
      */
     virtual void enableLCDControllerInterrupt();
 
+    virtual bool beginFrame();
+
+    virtual void endFrame();
+
     /**
      * @fn virtual void TouchGFXHAL::flushFrameBuffer();
      *

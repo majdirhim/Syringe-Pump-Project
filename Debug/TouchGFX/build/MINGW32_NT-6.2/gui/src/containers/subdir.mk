@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/ActiveAlarms.o \
+../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/CustomContainer1.o \
 ../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/LogDisplay.o \
 ../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/ScreenBorder.o \
 ../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/Slide.o \

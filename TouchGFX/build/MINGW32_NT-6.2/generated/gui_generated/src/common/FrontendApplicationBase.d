@@ -38,6 +38,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/../../../Core/Inc/SW_common.h \
  gui/include/../../../Core/Inc/Runtime_language.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  gui/include/gui/common/FrontendHeap.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/common/Meta.hpp \
@@ -61,7 +62,6 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
@@ -97,6 +97,8 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  gui/include/gui/newpatient_screen/NewPatientView.hpp \
  generated/gui_generated/include/gui_generated/newpatient_screen/NewPatientViewBase.hpp \
  gui/include/gui/newpatient_screen/NewPatientPresenter.hpp \
@@ -142,24 +144,24 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  gui/include/gui/containers/Slide.hpp \
  generated/gui_generated/include/gui_generated/containers/SlideBase.hpp \
+ gui/include/gui/configuration_screen/ConfigurationView.hpp \
+ generated/gui_generated/include/gui_generated/configuration_screen/ConfigurationViewBase.hpp \
+ gui/include/gui/configuration_screen/ConfigurationPresenter.hpp \
  gui/include/gui/activealarms_screen/ActiveAlarmsView.hpp \
  generated/gui_generated/include/gui_generated/activealarms_screen/ActiveAlarmsViewBase.hpp \
  gui/include/gui/activealarms_screen/ActiveAlarmsPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  gui/include/gui/containers/ActiveAlarms.hpp \
  generated/gui_generated/include/gui_generated/containers/ActiveAlarmsBase.hpp \
- gui/include/gui/configuration_screen/ConfigurationView.hpp \
- generated/gui_generated/include/gui_generated/configuration_screen/ConfigurationViewBase.hpp \
- gui/include/gui/configuration_screen/ConfigurationPresenter.hpp \
- gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp \
- generated/gui_generated/include/gui_generated/perfusiontimesetting_screen/PerfusionTimeSettingViewBase.hpp \
- gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp \
  gui/include/gui/oclusionthresholds_screen/OclusionThresholdsView.hpp \
  generated/gui_generated/include/gui_generated/oclusionthresholds_screen/OclusionThresholdsViewBase.hpp \
  gui/include/gui/oclusionthresholds_screen/OclusionThresholdsPresenter.hpp \
  gui/include/gui/settings_screen/SettingsView.hpp \
  generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp \
  gui/include/gui/settings_screen/SettingsPresenter.hpp \
+ gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp \
+ generated/gui_generated/include/gui_generated/perfusiontimesetting_screen/PerfusionTimeSettingViewBase.hpp \
+ gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp \
  gui/include/gui/displaymode_screen/DisplayModeView.hpp \
  generated/gui_generated/include/gui_generated/displaymode_screen/DisplayModeViewBase.hpp \
  gui/include/gui/displaymode_screen/DisplayModePresenter.hpp \
@@ -178,9 +180,9 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/gui/manual_screen/ManualView.hpp \
  generated/gui_generated/include/gui_generated/manual_screen/ManualViewBase.hpp \
  gui/include/gui/manual_screen/ManualPresenter.hpp \
- gui/include/gui/log_screen/LogView.hpp \
- generated/gui_generated/include/gui_generated/log_screen/LogViewBase.hpp \
- gui/include/gui/log_screen/LogPresenter.hpp \
+ gui/include/gui/lockscreen_screen/LockScreenView.hpp \
+ generated/gui_generated/include/gui_generated/lockscreen_screen/LockScreenViewBase.hpp \
+ gui/include/gui/lockscreen_screen/LockScreenPresenter.hpp \
  gui/include/gui/password_screen/PasswordView.hpp \
  generated/gui_generated/include/gui_generated/password_screen/PasswordViewBase.hpp \
  gui/include/gui/password_screen/PasswordPresenter.hpp \
@@ -190,12 +192,16 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/gui/syringelibrary_screen/SyringeLibraryView.hpp \
  generated/gui_generated/include/gui_generated/syringelibrary_screen/SyringeLibraryViewBase.hpp \
  gui/include/gui/syringelibrary_screen/SyringeLibraryPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
  gui/include/gui/syringeselection_screen/SyringeSelectionView.hpp \
  generated/gui_generated/include/gui_generated/syringeselection_screen/SyringeSelectionViewBase.hpp \
  gui/include/gui/syringeselection_screen/SyringeSelectionPresenter.hpp \
- gui/include/gui/timeanddatesetting_screen/TimeAndDateSettingView.hpp \
- generated/gui_generated/include/gui_generated/timeanddatesetting_screen/TimeAndDateSettingViewBase.hpp \
- gui/include/gui/timeanddatesetting_screen/TimeAndDateSettingPresenter.hpp \
+ gui/include/gui/settings_time_date_screen/Settings_Time_DateView.hpp \
+ generated/gui_generated/include/gui_generated/settings_time_date_screen/Settings_Time_DateViewBase.hpp \
+ gui/include/gui/settings_time_date_screen/Settings_Time_DatePresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  gui/include/gui/maintenance_screen/MaintenanceView.hpp \
  generated/gui_generated/include/gui_generated/maintenance_screen/MaintenanceViewBase.hpp \
  gui/include/gui/maintenance_screen/MaintenancePresenter.hpp \
@@ -208,8 +214,6 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/gui/transitions_screen/transitionsView.hpp \
  generated/gui_generated/include/gui_generated/transitions_screen/transitionsViewBase.hpp \
  gui/include/gui/transitions_screen/transitionsPresenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
 
@@ -289,6 +293,8 @@ gui/include/../../../Core/Inc/Runtime_language.h:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
 gui/include/gui/common/FrontendHeap.hpp:
 
 generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
@@ -334,8 +340,6 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
 
@@ -406,6 +410,10 @@ gui/include/gui/home_screen/HomePresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
 gui/include/gui/newpatient_screen/NewPatientView.hpp:
 
@@ -497,6 +505,12 @@ gui/include/gui/containers/Slide.hpp:
 
 generated/gui_generated/include/gui_generated/containers/SlideBase.hpp:
 
+gui/include/gui/configuration_screen/ConfigurationView.hpp:
+
+generated/gui_generated/include/gui_generated/configuration_screen/ConfigurationViewBase.hpp:
+
+gui/include/gui/configuration_screen/ConfigurationPresenter.hpp:
+
 gui/include/gui/activealarms_screen/ActiveAlarmsView.hpp:
 
 generated/gui_generated/include/gui_generated/activealarms_screen/ActiveAlarmsViewBase.hpp:
@@ -509,18 +523,6 @@ gui/include/gui/containers/ActiveAlarms.hpp:
 
 generated/gui_generated/include/gui_generated/containers/ActiveAlarmsBase.hpp:
 
-gui/include/gui/configuration_screen/ConfigurationView.hpp:
-
-generated/gui_generated/include/gui_generated/configuration_screen/ConfigurationViewBase.hpp:
-
-gui/include/gui/configuration_screen/ConfigurationPresenter.hpp:
-
-gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp:
-
-generated/gui_generated/include/gui_generated/perfusiontimesetting_screen/PerfusionTimeSettingViewBase.hpp:
-
-gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp:
-
 gui/include/gui/oclusionthresholds_screen/OclusionThresholdsView.hpp:
 
 generated/gui_generated/include/gui_generated/oclusionthresholds_screen/OclusionThresholdsViewBase.hpp:
@@ -532,6 +534,12 @@ gui/include/gui/settings_screen/SettingsView.hpp:
 generated/gui_generated/include/gui_generated/settings_screen/SettingsViewBase.hpp:
 
 gui/include/gui/settings_screen/SettingsPresenter.hpp:
+
+gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp:
+
+generated/gui_generated/include/gui_generated/perfusiontimesetting_screen/PerfusionTimeSettingViewBase.hpp:
+
+gui/include/gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp:
 
 gui/include/gui/displaymode_screen/DisplayModeView.hpp:
 
@@ -569,11 +577,11 @@ generated/gui_generated/include/gui_generated/manual_screen/ManualViewBase.hpp:
 
 gui/include/gui/manual_screen/ManualPresenter.hpp:
 
-gui/include/gui/log_screen/LogView.hpp:
+gui/include/gui/lockscreen_screen/LockScreenView.hpp:
 
-generated/gui_generated/include/gui_generated/log_screen/LogViewBase.hpp:
+generated/gui_generated/include/gui_generated/lockscreen_screen/LockScreenViewBase.hpp:
 
-gui/include/gui/log_screen/LogPresenter.hpp:
+gui/include/gui/lockscreen_screen/LockScreenPresenter.hpp:
 
 gui/include/gui/password_screen/PasswordView.hpp:
 
@@ -593,17 +601,25 @@ generated/gui_generated/include/gui_generated/syringelibrary_screen/SyringeLibra
 
 gui/include/gui/syringelibrary_screen/SyringeLibraryPresenter.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
+
 gui/include/gui/syringeselection_screen/SyringeSelectionView.hpp:
 
 generated/gui_generated/include/gui_generated/syringeselection_screen/SyringeSelectionViewBase.hpp:
 
 gui/include/gui/syringeselection_screen/SyringeSelectionPresenter.hpp:
 
-gui/include/gui/timeanddatesetting_screen/TimeAndDateSettingView.hpp:
+gui/include/gui/settings_time_date_screen/Settings_Time_DateView.hpp:
 
-generated/gui_generated/include/gui_generated/timeanddatesetting_screen/TimeAndDateSettingViewBase.hpp:
+generated/gui_generated/include/gui_generated/settings_time_date_screen/Settings_Time_DateViewBase.hpp:
 
-gui/include/gui/timeanddatesetting_screen/TimeAndDateSettingPresenter.hpp:
+gui/include/gui/settings_time_date_screen/Settings_Time_DatePresenter.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
 gui/include/gui/maintenance_screen/MaintenanceView.hpp:
 
@@ -628,10 +644,6 @@ gui/include/gui/transitions_screen/transitionsView.hpp:
 generated/gui_generated/include/gui_generated/transitions_screen/transitionsViewBase.hpp:
 
 gui/include/gui/transitions_screen/transitionsPresenter.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 

@@ -27,10 +27,14 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::~Widget()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<SyringeLibraryPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<SyringeLibraryPresenter>::~View()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/syringelibrary_screen/SyringeLibraryViewBase.hpp:17:13:SyringeLibraryViewBase::~SyringeLibraryViewBase()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/syringelibrary_screen/SyringeLibraryViewBase.hpp:17:13:virtual SyringeLibraryViewBase::~SyringeLibraryViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/syringelibrary_screen/SyringeLibraryViewBase.hpp:20:13:SyringeLibraryViewBase::~SyringeLibraryViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/syringelibrary_screen/SyringeLibraryViewBase.hpp:20:13:virtual SyringeLibraryViewBase::~SyringeLibraryViewBase()	16	static
 ../TouchGFX/gui/include/gui/syringelibrary_screen/SyringeLibraryView.hpp:11:13:SyringeLibraryView::~SyringeLibraryView()	16	static
 ../TouchGFX/gui/include/gui/syringelibrary_screen/SyringeLibraryView.hpp:11:13:virtual SyringeLibraryView::~SyringeLibraryView()	16	static
 ../TouchGFX/gui/src/syringelibrary_screen/SyringeLibraryView.cpp:3:1:SyringeLibraryView::SyringeLibraryView()	16	static
@@ -40,7 +44,15 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:virtual touchgfx::Container::~Container()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:35:7:touchgfx::ScalableImage::~ScalableImage()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:35:7:virtual touchgfx::ScalableImage::~ScalableImage()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:virtual touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:29:7:touchgfx::AbstractDirectionProgress::~AbstractDirectionProgress()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:29:7:virtual touchgfx::AbstractDirectionProgress::~AbstractDirectionProgress()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:33:7:touchgfx::TiledImage::~TiledImage()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:33:7:virtual touchgfx::TiledImage::~TiledImage()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp:34:7:touchgfx::ImageProgress::~ImageProgress()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/ImageProgress.hpp:34:7:virtual touchgfx::ImageProgress::~ImageProgress()	16	static

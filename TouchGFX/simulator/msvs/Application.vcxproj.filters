@@ -193,12 +193,6 @@
     <Filter Include="Header Files\gui\containers">
       <UniqueIdentifier>D0FD6578-3081-73C2-17AF-8559D74FD7DB</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\timeanddatesetting_screen">
-      <UniqueIdentifier>99CE2EAF-7974-1585-5E99-BAF4048C2101</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\timeanddatesetting_screen">
-      <UniqueIdentifier>FF2D68A3-0108-FB3F-9600-13B27F72C9B6</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\gui\patientdatabase_screen">
       <UniqueIdentifier>B4BCF222-919E-BBEF-1600-9226D80ED377</UniqueIdentifier>
     </Filter>
@@ -262,17 +256,11 @@
     <Filter Include="Header Files\gui\syringeselection_screen">
       <UniqueIdentifier>1BB4702C-B33C-416D-DF31-B83D488B8A0A</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\log_screen">
-      <UniqueIdentifier>9C0556EF-CD43-7450-25ED-64D830E9C6F6</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\gui\settings_screen">
       <UniqueIdentifier>745C321B-146A-9F7A-38FF-647ED6F9ECCE</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\configuration_screen">
       <UniqueIdentifier>B7C30B71-0900-371E-94E6-BAD4D9BBE43B</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\log_screen">
-      <UniqueIdentifier>D341975E-0513-8E02-50A0-7E2E51299C86</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\gui\settings_screen">
       <UniqueIdentifier>00899293-98D6-A2F4-017E-79BF37ECAD5D</UniqueIdentifier>
@@ -508,20 +496,8 @@
     <Filter Include="Source Files\generated\gui_generated\maintenance_screen">
       <UniqueIdentifier>E5C3B908-E31B-9F11-5C0A-F2479BF7983B</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\timeanddatesetting_screen">
-      <UniqueIdentifier>C53A9519-D655-1187-8F00-1128E0F16AA0</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated\displaymode_screen">
       <UniqueIdentifier>504665EB-AD30-C9E8-79B9-6FBA0721119B</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\log_screen">
-      <UniqueIdentifier>574DCE50-F67E-05B9-01CD-F847FD559F02</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\timeanddatesetting_screen">
-      <UniqueIdentifier>1F2B7366-DE79-732D-8568-52769201F053</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\log_screen">
-      <UniqueIdentifier>66DC705A-D9C9-9BF9-B37A-EE99727B27DA</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\generated\gui_generated\druglibrary_screen">
       <UniqueIdentifier>DFBE2D31-242A-A696-F40F-309B2B032E18</UniqueIdentifier>
@@ -555,6 +531,30 @@
     </Filter>
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>548DFF6D-24F9-B44A-45BD-87330727C3D7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\settings_time_date_screen">
+      <UniqueIdentifier>927260FE-5D69-CAD0-8F84-AF5AA500703B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\settings_time_date_screen">
+      <UniqueIdentifier>A1E48A57-C88F-4B04-FFAD-9ECB569D09C6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\lockscreen_screen">
+      <UniqueIdentifier>5579FC8C-8C6C-88FB-C569-96B161CEE20B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\lockscreen_screen">
+      <UniqueIdentifier>F70BDA28-F324-0670-0B36-7C1A6DB57529</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\lockscreen_screen">
+      <UniqueIdentifier>4AF2D58F-C311-8DA9-92FA-588C5B381222</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\lockscreen_screen">
+      <UniqueIdentifier>8B7B53F7-DC6F-CA33-84DA-AEEDC0DD918A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\settings_time_date_screen">
+      <UniqueIdentifier>12E3348A-C56F-6AB7-70C2-6B3A03C64688</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\settings_time_date_screen">
+      <UniqueIdentifier>FD4C5CF4-3DF9-B745-0597-4DE918036DBF</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -717,15 +717,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\LogDisplayBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\log_screen\LogPresenter.cpp">
-      <Filter>Source Files\gui\log_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\log_screen\LogView.cpp">
-      <Filter>Source Files\gui\log_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\log_screen\LogViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\log_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp">
       <Filter>Source Files\gui\main_screen</Filter>
     </ClCompile>
@@ -882,15 +873,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\textbubbleBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\timeanddatesetting_screen\TimeAndDateSettingPresenter.cpp">
-      <Filter>Source Files\gui\timeanddatesetting_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\timeanddatesetting_screen\TimeAndDateSettingView.cpp">
-      <Filter>Source Files\gui\timeanddatesetting_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\timeanddatesetting_screen\TimeAndDateSettingViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\timeanddatesetting_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gui\src\transitions_screen\transitionsPresenter.cpp">
       <Filter>Source Files\gui\transitions_screen</Filter>
     </ClCompile>
@@ -899,6 +881,30 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\transitions_screen\transitionsViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\transitions_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\CustomContainer1.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainer1Base.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\lockscreen_screen\LockScreenPresenter.cpp">
+      <Filter>Source Files\gui\lockscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\lockscreen_screen\LockScreenView.cpp">
+      <Filter>Source Files\gui\lockscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\lockscreen_screen\LockScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\lockscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settings_time_date_screen\Settings_Time_DatePresenter.cpp">
+      <Filter>Source Files\gui\settings_time_date_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settings_time_date_screen\Settings_Time_DateView.cpp">
+      <Filter>Source Files\gui\settings_time_date_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\settings_time_date_screen\Settings_Time_DateViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\settings_time_date_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1474,15 +1480,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\LogDisplayBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\log_screen\LogPresenter.hpp">
-      <Filter>Header Files\gui\log_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\log_screen\LogView.hpp">
-      <Filter>Header Files\gui\log_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\log_screen\LogViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\log_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp">
       <Filter>Header Files\gui\main_screen</Filter>
     </ClInclude>
@@ -1642,15 +1639,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\textbubbleBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\timeanddatesetting_screen\TimeAndDateSettingPresenter.hpp">
-      <Filter>Header Files\gui\timeanddatesetting_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\timeanddatesetting_screen\TimeAndDateSettingView.hpp">
-      <Filter>Header Files\gui\timeanddatesetting_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timeanddatesetting_screen\TimeAndDateSettingViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\timeanddatesetting_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\transitions_screen\transitionsPresenter.hpp">
       <Filter>Header Files\gui\transitions_screen</Filter>
     </ClInclude>
@@ -1659,6 +1647,30 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\transitions_screen\transitionsViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\transitions_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainer1.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainer1Base.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\lockscreen_screen\LockScreenPresenter.hpp">
+      <Filter>Header Files\gui\lockscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\lockscreen_screen\LockScreenView.hpp">
+      <Filter>Header Files\gui\lockscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\lockscreen_screen\LockScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\lockscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settings_time_date_screen\Settings_Time_DatePresenter.hpp">
+      <Filter>Header Files\gui\settings_time_date_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settings_time_date_screen\Settings_Time_DateView.hpp">
+      <Filter>Header Files\gui\settings_time_date_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settings_time_date_screen\Settings_Time_DateViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\settings_time_date_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

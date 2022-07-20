@@ -40,6 +40,7 @@ TouchGFX/generated/gui_generated/src/home_screen/HomeViewBase.o: \
  d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\sw_common.h \
  d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\runtime_language.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/home_screen/HomePresenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -67,6 +68,8 @@ TouchGFX/generated/gui_generated/src/home_screen/HomeViewBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
@@ -110,6 +113,7 @@ TouchGFX/generated/gui_generated/src/home_screen/HomeViewBase.o: \
 d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\sw_common.h:
 d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\runtime_language.h:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/home_screen/HomePresenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
@@ -137,6 +141,8 @@ d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\runtime_language.h:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

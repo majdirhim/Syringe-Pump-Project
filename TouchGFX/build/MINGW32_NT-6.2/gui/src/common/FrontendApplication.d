@@ -38,7 +38,8 @@ build/MINGW32_NT-6.2/gui/src/common/FrontendApplication.o: \
  gui/include/gui/model/Model.hpp \
  gui/include/../../../Core/Inc/SW_common.h \
  gui/include/../../../Core/Inc/Runtime_language.h \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp
 
 gui/include/gui/common/FrontendApplication.hpp:
 
@@ -117,3 +118,5 @@ gui/include/../../../Core/Inc/SW_common.h:
 gui/include/../../../Core/Inc/Runtime_language.h:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:

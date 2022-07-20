@@ -68,7 +68,8 @@ KEEP extern const touchgfx::GlyphNode glyphs_AGENCYB_TTF_30_4bpp[] FONT_TABLE_LO
     {  7206, 0x0077,  16,  15,  15,   0,  16,   0,   0, 0x00 },
     {  7326, 0x0078,  11,  15,  15,   0,  11,   0,   0, 0x00 },
     {  7416, 0x0079,  12,  20,  15,   0,  12,   0,   0, 0x00 },
-    {  7536, 0x007A,  10,  15,  15,   0,  10,   0,   0, 0x00 }
+    {  7536, 0x007A,  10,  15,  15,   0,  10,   0,   0, 0x00 },
+    {  7611, 0x007C,   4,  28,  23,   1,   6,   0,   0, 0x00 }
 };
 
 // AGENCYB_TTF_30_4bpp
@@ -86,6 +87,6 @@ touchgfx::GeneratedFont& getFont_AGENCYB_TTF_30_4bpp();
 
 touchgfx::GeneratedFont& getFont_AGENCYB_TTF_30_4bpp()
 {
-    static touchgfx::GeneratedFont AGENCYB_TTF_30_4bpp(glyphs_AGENCYB_TTF_30_4bpp, 65, 30, 5, 4, 1, 1, 0, unicodes_AGENCYB_TTF_30_4bpp, kerning_AGENCYB_TTF_30_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont AGENCYB_TTF_30_4bpp(glyphs_AGENCYB_TTF_30_4bpp, 66, 30, 5, 4, 1, 1, 0, unicodes_AGENCYB_TTF_30_4bpp, kerning_AGENCYB_TTF_30_4bpp, 63, 0, 0, 0);
     return AGENCYB_TTF_30_4bpp;
 }

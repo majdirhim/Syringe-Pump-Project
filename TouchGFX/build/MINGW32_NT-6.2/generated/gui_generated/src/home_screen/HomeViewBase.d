@@ -40,6 +40,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/home_screen/HomeViewBase.o: \
  gui/include/../../../Core/Inc/SW_common.h \
  gui/include/../../../Core/Inc/Runtime_language.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  gui/include/gui/home_screen/HomePresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
@@ -67,6 +68,8 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/home_screen/HomeViewBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp
@@ -151,6 +154,8 @@ gui/include/../../../Core/Inc/Runtime_language.h:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
 gui/include/gui/home_screen/HomePresenter.hpp:
@@ -204,6 +209,10 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 

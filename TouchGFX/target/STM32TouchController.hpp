@@ -25,6 +25,7 @@
 #define STM32TOUCHCONTROLLER_HPP
 
 #include <platform/driver/touch/TouchController.hpp>
+//#include "ft5x06.h"
 
 /**
  * @class STM32TouchController

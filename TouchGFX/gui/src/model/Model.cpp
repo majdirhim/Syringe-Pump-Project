@@ -55,6 +55,7 @@ void Model::tick()
 		motorStatusUpdated();
 	}
 }
+
 /*===========================Model Listener==========================*/
 void Model::AlarmOrEvent(void)
 {
@@ -95,6 +96,7 @@ void Model::motorStatusUpdated(void)
 		modelListener->motorStatusUpdated();
 	}
 }
+
 /*==========================Alarms And Event===========================*/
 uint8_t Model::getActiveEvents(uint8_t index)
 {
@@ -130,6 +132,18 @@ void Model::savePendingEventStatus(void)
 	// RTOS
 #endif
 }
+// void Model::SaveCurrentTime(time_ps time)
+//{
+    //current_time = time;
+// #ifndef SIMULATOR
+    //------------------------------------------------------------------------
+     // osMessageQueuePut(TimeDataQueue_handle, &time, 0, 0);
+//#endif
+// }
+time_ps Model::getcurrenttime()
+{
+    return current_time;
+}
 
 void Model::saveMuteStatus(void)
 {
@@ -141,20 +155,55 @@ void Model::saveMuteStatus(void)
 	// RTOS
 #endif
 }
-
-/*=========================INIT PARAMETERS==============================*/
-uint8_t Model::getDisplayMode(void)
+uint16_t Model::getpassword(void)
 {
-	return InitialisationParameters.DisplayMode;
+    return InitParam.password;
 }
-
-void Model::saveDisplayMode(uint8_t value)
+void   Model::savepassword(uint16_t pwd)
 {
-	InitialisationParameters.DisplayMode = value;
+    InitParam.password = pwd;
 #ifndef SIMULATOR
-	// RTOS
+    //osMessageQueuePut(SystemInitParam_handle, &InitParam, 0, 0);
 #endif
 }
+
+void Model::SaveLock(uint8_t state)
+{
+	Lock = state;
+
+}
+uint8_t Model::GetLock(void)
+{
+	return Lock;
+}
+uint8_t Model::getscreenlock(void)
+{
+	return screenlock;
+}
+uint16_t Model::getpwdtech(void)
+{
+	return technicianpassword;
+}
+
+void Model::savepwdtech(uint16_t screen)
+{
+	technicianpassword = screen;
+}
+
+
+/*=========================INIT PARAMETERS==============================*/
+ uint8_t Model::getDisplayMode(void)
+{
+	  return InitialisationParameters.DisplayMode;
+}
+
+ void Model::saveDisplayMode(uint8_t value)
+{
+	InitialisationParameters.DisplayMode = value;
+ #ifndef SIMULATOR
+	// RTOS
+ #endif
+ }
 
 uint8_t Model::getInitStatus(void)
 {

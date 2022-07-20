@@ -9,6 +9,8 @@
 #include <gui/settings_screen/SettingsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class SettingsViewBase : public touchgfx::View<SettingsPresenter>
 {
@@ -16,6 +18,14 @@ public:
     SettingsViewBase();
     virtual ~SettingsViewBase() {}
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void function1()
+    {
+        // Override and implement this function in Settings
+    }
 
 protected:
     FrontendApplication& application() {
@@ -29,8 +39,50 @@ protected:
     touchgfx::ScalableImage ChildrenBackground;
     touchgfx::ScalableImage DarkBackground;
     touchgfx::ScalableImage DefaultBackground;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  autoDiagbutton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  DisplayModebutton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  timedatabutton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  LanguageButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  SoundButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  ManualButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  DrugLibraryButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  DepartementButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  HistoryButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  BatteryButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  LockButton;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  MaintenanceButton;
+    touchgfx::Box box1;
+    touchgfx::Box box2;
+    touchgfx::Box box3;
+    touchgfx::Box box4;
+    touchgfx::ScalableImage scalableImage1;
+    touchgfx::ScalableImage scalableImage1_1;
+    touchgfx::ScalableImage scalableImage1_2;
+    touchgfx::ScalableImage scalableImage1_2_1;
+    touchgfx::ScalableImage scalableImage1_2_1_1;
+    touchgfx::ScalableImage scalableImage1_2_2;
+    touchgfx::ScalableImage scalableImage1_2_2_1;
+    touchgfx::ScalableImage scalableImage1_2_2_1_1;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1;
+    touchgfx::ScalableImage BackArrow;
+    touchgfx::Box box5;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  SettingButton;
+    touchgfx::Box box6;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  StartButt;
+    touchgfx::Box box7;
+    touchgfx::TextArea textArea1;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<SettingsViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

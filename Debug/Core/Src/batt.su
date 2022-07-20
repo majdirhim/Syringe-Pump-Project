@@ -1,0 +1,9 @@
+../Core/Src/batt.c:4:10:readWord	32	static
+../Core/Src/batt.c:26:10:voltage	8	static
+../Core/Src/batt.c:30:10:current	8	static
+../Core/Src/batt.c:34:10:fullChargeCapacity	8	static
+../Core/Src/batt.c:38:10:designCapacity	8	static
+../Core/Src/batt.c:42:10:relativeStateOfCharge	8	static
+../Core/Src/batt.c:46:10:batteryStatus	8	static
+../Core/Src/batt.c:50:10:serialNumber	8	static
+../Core/Src/batt.c:54:7:temperature	8	static

@@ -6,6 +6,8 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
@@ -25,6 +27,8 @@ d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\runtime_language.h:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:

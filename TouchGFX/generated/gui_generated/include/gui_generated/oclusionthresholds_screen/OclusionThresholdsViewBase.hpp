@@ -9,6 +9,8 @@
 #include <gui/oclusionthresholds_screen/OclusionThresholdsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class OclusionThresholdsViewBase : public touchgfx::View<OclusionThresholdsPresenter>
 {
@@ -29,6 +31,16 @@ protected:
     touchgfx::ScalableImage ChildrenBackground;
     touchgfx::ScalableImage DarkBackground;
     touchgfx::ScalableImage DefaultBackground;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButton1;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButton2;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButton3;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  flexButton4;
+    touchgfx::ScalableImage BackArrow;
+    touchgfx::Box box1;
+    touchgfx::TextArea textArea2;
+    touchgfx::TextArea textArea3;
+    touchgfx::TextArea textArea4;
 
 private:
 

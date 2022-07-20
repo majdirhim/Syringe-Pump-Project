@@ -102,30 +102,42 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:237:6:void FrontendApplicationBase::gotoKeyboardNbScreenWipeTransitionSouthImpl()	24	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:244:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionEast()	48	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:250:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionEastImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:255:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:261:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:266:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:272:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:255:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:261:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:266:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:272:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()	24	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:277:6:void FrontendApplicationBase::gotoMainScreenNoTransition()	48	static
 ../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:283:6:void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:290:6:void FrontendApplicationBase::gotoActiveAlarmsScreenWipeTransitionEast()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:296:6:void FrontendApplicationBase::gotoActiveAlarmsScreenWipeTransitionEastImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:303:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionSouth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:309:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionSouthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:314:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionNorth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:320:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionNorthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:327:6:void FrontendApplicationBase::gotoPerfusionTimeSettingScreenWipeTransitionSouth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:333:6:void FrontendApplicationBase::gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:340:6:void FrontendApplicationBase::gotoOclusionThresholdsScreenWipeTransitionSouth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:346:6:void FrontendApplicationBase::gotoOclusionThresholdsScreenWipeTransitionSouthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:353:6:void FrontendApplicationBase::gotoSettingsScreenWipeTransitionEast()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:359:6:void FrontendApplicationBase::gotoSettingsScreenWipeTransitionEastImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:366:6:void FrontendApplicationBase::gotoManualScreenWipeTransitionSouth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:372:6:void FrontendApplicationBase::gotoManualScreenWipeTransitionSouthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:379:6:void FrontendApplicationBase::gotoDrugLibraryScreenWipeTransitionSouth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:385:6:void FrontendApplicationBase::gotoDrugLibraryScreenWipeTransitionSouthImpl()	24	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:392:6:void FrontendApplicationBase::gotoSyringeSelectionScreenWipeTransitionSouth()	48	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:398:6:void FrontendApplicationBase::gotoSyringeSelectionScreenWipeTransitionSouthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:290:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionSouth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:296:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionSouthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:301:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionNorth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:307:6:void FrontendApplicationBase::gotoConfigurationScreenWipeTransitionNorthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:314:6:void FrontendApplicationBase::gotoActiveAlarmsScreenWipeTransitionEast()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:320:6:void FrontendApplicationBase::gotoActiveAlarmsScreenWipeTransitionEastImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:327:6:void FrontendApplicationBase::gotoOclusionThresholdsScreenWipeTransitionSouth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:333:6:void FrontendApplicationBase::gotoOclusionThresholdsScreenWipeTransitionSouthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:340:6:void FrontendApplicationBase::gotoSettingsScreenWipeTransitionEast()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:346:6:void FrontendApplicationBase::gotoSettingsScreenWipeTransitionEastImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:351:6:void FrontendApplicationBase::gotoSettingsScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:357:6:void FrontendApplicationBase::gotoSettingsScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:364:6:void FrontendApplicationBase::gotoPerfusionTimeSettingScreenWipeTransitionSouth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:370:6:void FrontendApplicationBase::gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:377:6:void FrontendApplicationBase::gotoDepartementsScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:383:6:void FrontendApplicationBase::gotoDepartementsScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:390:6:void FrontendApplicationBase::gotoBatteryScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:396:6:void FrontendApplicationBase::gotoBatteryScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:403:6:void FrontendApplicationBase::gotoManualScreenWipeTransitionSouth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:409:6:void FrontendApplicationBase::gotoManualScreenWipeTransitionSouthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:416:6:void FrontendApplicationBase::gotoLockScreenScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:422:6:void FrontendApplicationBase::gotoLockScreenScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:429:6:void FrontendApplicationBase::gotoDrugLibraryScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:435:6:void FrontendApplicationBase::gotoDrugLibraryScreenNoTransitionImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:440:6:void FrontendApplicationBase::gotoDrugLibraryScreenWipeTransitionSouth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:446:6:void FrontendApplicationBase::gotoDrugLibraryScreenWipeTransitionSouthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:453:6:void FrontendApplicationBase::gotoSyringeSelectionScreenWipeTransitionSouth()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:459:6:void FrontendApplicationBase::gotoSyringeSelectionScreenWipeTransitionSouthImpl()	24	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:466:6:void FrontendApplicationBase::gotoSettings_Time_DateScreenNoTransition()	48	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:472:6:void FrontendApplicationBase::gotoSettings_Time_DateScreenNoTransitionImpl()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:427:5:touchgfx::Callback<dest_type, void, void, void>::Callback() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:440:5:touchgfx::Callback<dest_type, void, void, void>::Callback(dest_type*, void (dest_type::*)()) [with dest_type = FrontendApplicationBase]	24	static
@@ -143,18 +155,24 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = KeyboardView; PresenterType = KeyboardPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = KeyboardNbView; PresenterType = KeyboardNbPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::WipeTransition<touchgfx::EAST>; ModelType = Model]	72	static
-../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::WipeTransition<touchgfx::WEST>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::WipeTransition<touchgfx::NORTH>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::WipeTransition<touchgfx::WEST>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
-../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ActiveAlarmsView; PresenterType = ActiveAlarmsPresenter; TransType = touchgfx::WipeTransition<touchgfx::EAST>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ConfigurationView; PresenterType = ConfigurationPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ConfigurationView; PresenterType = ConfigurationPresenter; TransType = touchgfx::WipeTransition<touchgfx::NORTH>; ModelType = Model]	72	static
-../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = PerfusionTimeSettingView; PresenterType = PerfusionTimeSettingPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ActiveAlarmsView; PresenterType = ActiveAlarmsPresenter; TransType = touchgfx::WipeTransition<touchgfx::EAST>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = OclusionThresholdsView; PresenterType = OclusionThresholdsPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = SettingsView; PresenterType = SettingsPresenter; TransType = touchgfx::WipeTransition<touchgfx::EAST>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = SettingsView; PresenterType = SettingsPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = PerfusionTimeSettingView; PresenterType = PerfusionTimeSettingPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = DepartementsView; PresenterType = DepartementsPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = BatteryView; PresenterType = BatteryPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = ManualView; PresenterType = ManualPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = LockScreenView; PresenterType = LockScreenPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = DrugLibraryView; PresenterType = DrugLibraryPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = DrugLibraryView; PresenterType = DrugLibraryPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = SyringeSelectionView; PresenterType = SyringeSelectionPresenter; TransType = touchgfx::WipeTransition<touchgfx::SOUTH>; ModelType = Model]	72	static
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = Settings_Time_DateView; PresenterType = Settings_Time_DatePresenter; TransType = touchgfx::NoTransition; ModelType = Model]	72	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = StartUpView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = StartUpPresenter]	16	static
@@ -206,30 +224,42 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = MainView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = MainPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = MainPresenter]	16	static
-../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ActiveAlarmsView]	16	static
-../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ActiveAlarmsPresenter]	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = ActiveAlarmsPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ConfigurationView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ConfigurationPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = ConfigurationPresenter]	16	static
-../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = PerfusionTimeSettingView]	16	static
-../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = PerfusionTimeSettingPresenter]	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = PerfusionTimeSettingPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ActiveAlarmsView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ActiveAlarmsPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = ActiveAlarmsPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = OclusionThresholdsView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = OclusionThresholdsPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = OclusionThresholdsPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SettingsView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SettingsPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = SettingsPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = PerfusionTimeSettingView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = PerfusionTimeSettingPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = PerfusionTimeSettingPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = DepartementsView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = DepartementsPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = DepartementsPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = BatteryView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = BatteryPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = BatteryPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ManualView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = ManualPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = ManualPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = LockScreenView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = LockScreenPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = LockScreenPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = DrugLibraryView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = DrugLibraryPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = DrugLibraryPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SyringeSelectionView]	16	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = SyringeSelectionPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = SyringeSelectionPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = Settings_Time_DateView]	16	static
+../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = Settings_Time_DatePresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:50:10:void touchgfx::View<T>::bind(T&) [with T = Settings_Time_DatePresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:touchgfx::WipeTransition<touchgfx::EAST>::~WipeTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:virtual touchgfx::WipeTransition<touchgfx::EAST>::~WipeTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:38:7:touchgfx::WipeTransition<touchgfx::WEST>::~WipeTransition()	16	static
@@ -243,7 +273,7 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:401:1:void __static_initialization_and_destruction_0(int, int)	32	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:475:1:void __static_initialization_and_destruction_0(int, int)	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:93:18:void touchgfx::WipeTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::EAST]	88	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:205:18:void touchgfx::WipeTransition<templateDirection>::tearDown() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:210:18:void touchgfx::WipeTransition<templateDirection>::init() [with touchgfx::Direction templateDirection = touchgfx::EAST]	16	static
@@ -270,5 +300,5 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:47:22:touchgfx::Rect touchgfx::WipeTransition<templateDirection>::FullSolidRect::getSolidRect() const [with touchgfx::Direction templateDirection = touchgfx::SOUTH]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplicationBase]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplicationBase]	16	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:401:1:cpp)	8	static
-../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:401:1:cpp)	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:475:1:cpp)	8	static
+../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp:475:1:cpp)	8	static

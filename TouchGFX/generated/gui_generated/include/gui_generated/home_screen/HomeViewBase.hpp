@@ -11,6 +11,7 @@
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Button.hpp>
 
 class HomeViewBase : public touchgfx::View<HomePresenter>
 {
@@ -44,17 +45,22 @@ protected:
     touchgfx::TextArea SyriWave;
     touchgfx::ScalableImage Arc;
     touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  AnonymousPatientBtn;
+    touchgfx::Button button1;
+    touchgfx::Button button2;
+    touchgfx::Button button3;
 
 private:
 
     /*
      * Callback Declarations
      */
+    touchgfx::Callback<HomeViewBase, const touchgfx::AbstractButton&> buttonCallback;
     touchgfx::Callback<HomeViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };

@@ -4,6 +4,7 @@
 #include <gui_generated/oclusionthresholds_screen/OclusionThresholdsViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 OclusionThresholdsViewBase::OclusionThresholdsViewBase()
 {
@@ -24,11 +25,82 @@ OclusionThresholdsViewBase::OclusionThresholdsViewBase()
     DefaultBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND2_ID));
     DefaultBackground.setPosition(0, 0, 480, 272);
     DefaultBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    DefaultBackground.setAlpha(228);
+
+    flexButton1.setBoxWithBorderPosition(0, 0, 342, 50);
+    flexButton1.setBorderSize(5);
+    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton1.setWildcardText(TypedText(T___SINGLEUSE_TZIN));
+    flexButton1.setWildcardTextBuffer(TypedText(T___SINGLEUSE_3CO7).getText());
+    flexButton1.setWildcardTextPosition(0, 4, 342, 50);
+    flexButton1.setWildcardTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    flexButton1.setPosition(55, 80, 342, 50);
+
+    flexButton2.setBoxWithBorderPosition(0, 0, 342, 50);
+    flexButton2.setBorderSize(5);
+    flexButton2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton2.setWildcardText(TypedText(T___SINGLEUSE_I0JO));
+    flexButton2.setWildcardTextBuffer(TypedText(T___SINGLEUSE_F23Q).getText());
+    flexButton2.setWildcardTextPosition(0, 4, 342, 50);
+    flexButton2.setWildcardTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    flexButton2.setPosition(55, 136, 342, 50);
+
+    flexButton3.setBoxWithBorderPosition(0, 0, 342, 50);
+    flexButton3.setBorderSize(5);
+    flexButton3.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    flexButton3.setWildcardText(TypedText(T___SINGLEUSE_PD38));
+    flexButton3.setWildcardTextBuffer(TypedText(T___SINGLEUSE_L2V7).getText());
+    flexButton3.setWildcardTextPosition(0, 4, 342, 50);
+    flexButton3.setWildcardTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    flexButton3.setPosition(55, 194, 342, 50);
+
+    textArea1.setXY(140, 32);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_45OJ));
+
+    flexButton4.setText(TypedText(T___SINGLEUSE_NS2E));
+    flexButton4.setTextPosition(-6, 6, 88, 33);
+    flexButton4.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    flexButton4.setPosition(375, 8, 88, 33);
+
+    BackArrow.setBitmap(touchgfx::Bitmap(BITMAP_GROUPE49_ID));
+    BackArrow.setPosition(388, 21, 18, 11);
+    BackArrow.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    box1.setPosition(375, 8, 88, 33);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(90);
+
+    textArea2.setXY(67, 85);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(227, 16, 16));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FUJ6));
+
+    textArea3.setXY(67, 140);
+    textArea3.setColor(touchgfx::Color::getColorFromRGB(230, 212, 14));
+    textArea3.setLinespacing(0);
+    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_18YZ));
+
+    textArea4.setXY(67, 199);
+    textArea4.setColor(touchgfx::Color::getColorFromRGB(17, 199, 4));
+    textArea4.setLinespacing(0);
+    textArea4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9G21));
 
     add(__background);
     add(ChildrenBackground);
     add(DarkBackground);
     add(DefaultBackground);
+    add(flexButton1);
+    add(flexButton2);
+    add(flexButton3);
+    add(textArea1);
+    add(flexButton4);
+    add(BackArrow);
+    add(box1);
+    add(textArea2);
+    add(textArea3);
+    add(textArea4);
 }
 
 void OclusionThresholdsViewBase::setupScreen()

@@ -1,5 +1,8 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:78:5:touchgfx::colortype::colortype()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:127:5:touchgfx::Rect::Rect()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:113:20:touchgfx::ClickEvent::ClickEventType touchgfx::ClickEvent::getType() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:123:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:62:13:touchgfx::Drawable::~Drawable()	16	static
@@ -7,6 +10,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:293:13:int16_t touchgfx::Drawable::getWidth() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:303:13:int16_t touchgfx::Drawable::getHeight() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
@@ -16,14 +21,18 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:400:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:411:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:450:10:void touchgfx::Drawable::setWidthHeight(const touchgfx::Drawable&)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:488:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:498:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:512:10:void touchgfx::Drawable::setVisible(bool)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:522:10:void touchgfx::Drawable::setTouchable(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:534:10:bool touchgfx::Drawable::isVisible() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:546:10:bool touchgfx::Drawable::isTouchable() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:585:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:622:10:void touchgfx::Drawable::resetDrawChainCache()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:700:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:43:5:touchgfx::Container::Container()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:46:13:touchgfx::Screen::~Screen()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:46:13:virtual touchgfx::Screen::~Screen()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:93:18:virtual void touchgfx::Screen::setupScreen()	16	static
@@ -39,18 +48,69 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:63:10:void touchgfx::Box::setColor(touchgfx::colortype)	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DepartementsPresenter>::~View()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DepartementsPresenter>::~View()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/departements_screen/DepartementsViewBase.hpp:17:13:DepartementsViewBase::~DepartementsViewBase()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/departements_screen/DepartementsViewBase.hpp:17:13:virtual DepartementsViewBase::~DepartementsViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/departements_screen/DepartementsViewBase.cpp:8:1:DepartementsViewBase::DepartementsViewBase()	64	static
-../TouchGFX/generated/gui_generated/src/departements_screen/DepartementsViewBase.cpp:34:6:virtual void DepartementsViewBase::setupScreen()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = DepartementsPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:83:10:void touchgfx::Box::setAlpha(uint8_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:14:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:89:18:virtual void touchgfx::TextArea::setAlpha(uint8_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:429:9:touchgfx::TextArea::BoundingArea::BoundingArea()	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:touchgfx::Container::~Container()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:virtual touchgfx::Container::~Container()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:37:5:touchgfx::AbstractButtonContainer::AbstractButtonContainer()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:51:10:void touchgfx::AbstractButtonContainer::setPressed(bool)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:64:10:bool touchgfx::AbstractButtonContainer::getPressed()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:77:13:uint8_t touchgfx::AbstractButtonContainer::getAlpha() const	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:114:18:virtual void touchgfx::AbstractButtonContainer::handlePressedUpdated()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:34:5:touchgfx::BoxWithBorder::BoxWithBorder()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:62:10:void touchgfx::BoxWithBorder::setBorderColor(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:86:10:void touchgfx::BoxWithBorder::setBorderSize(uint16_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DepartementsPresenter>::~View()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DepartementsPresenter>::~View()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/departements_screen/DepartementsViewBase.hpp:19:13:DepartementsViewBase::~DepartementsViewBase()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/departements_screen/DepartementsViewBase.hpp:19:13:virtual DepartementsViewBase::~DepartementsViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/departements_screen/DepartementsViewBase.cpp:9:1:DepartementsViewBase::DepartementsViewBase()	368	static
+../TouchGFX/generated/gui_generated/src/departements_screen/DepartementsViewBase.cpp:126:6:virtual void DepartementsViewBase::setupScreen()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = DepartementsPresenter]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:virtual touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:46:5:touchgfx::TextButtonStyle<T>::TextButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:46:5:touchgfx::TextButtonStyle<T>::TextButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:61:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderPosition(int16_t, int16_t, int16_t, int16_t) [with T = touchgfx::ClickButtonTrigger]	40	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:110:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBorderSize(uint8_t) [with T = touchgfx::ClickButtonTrigger]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:57:10:void touchgfx::TextButtonStyle<T>::setText(touchgfx::TypedText) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:103:10:void touchgfx::TextButtonStyle<T>::setTextPosition(int16_t, int16_t, int16_t, int16_t) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	40	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:124:10:void touchgfx::TextButtonStyle<T>::setTextColors(touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:57:10:void touchgfx::TextButtonStyle<T>::setText(touchgfx::TypedText) [with T = touchgfx::ClickButtonTrigger]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:103:10:void touchgfx::TextButtonStyle<T>::setTextPosition(int16_t, int16_t, int16_t, int16_t) [with T = touchgfx::ClickButtonTrigger]	40	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:124:10:void touchgfx::TextButtonStyle<T>::setTextColors(touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:138:18:void touchgfx::TextButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	32	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:138:18:void touchgfx::TextButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	32	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:43:7:touchgfx::TextButtonStyle<touchgfx::ClickButtonTrigger>::~TextButtonStyle()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:43:7:virtual touchgfx::TextButtonStyle<touchgfx::ClickButtonTrigger>::~TextButtonStyle()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:43:7:touchgfx::TextButtonStyle<touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger> >::~TextButtonStyle()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:43:7:virtual touchgfx::TextButtonStyle<touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger> >::~TextButtonStyle()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:35:7:touchgfx::ScalableImage::~ScalableImage()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:35:7:virtual touchgfx::ScalableImage::~ScalableImage()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:145:18:void touchgfx::TextButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:145:18:void touchgfx::TextButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:131:18:void touchgfx::BoxWithBorderButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static

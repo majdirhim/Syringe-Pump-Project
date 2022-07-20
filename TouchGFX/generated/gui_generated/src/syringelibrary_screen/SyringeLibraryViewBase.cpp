@@ -4,6 +4,7 @@
 #include <gui_generated/syringelibrary_screen/SyringeLibraryViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 SyringeLibraryViewBase::SyringeLibraryViewBase()
 {
@@ -25,10 +26,42 @@ SyringeLibraryViewBase::SyringeLibraryViewBase()
     DefaultBackground.setPosition(0, 0, 480, 272);
     DefaultBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
+    image2.setXY(213, 106);
+    image2.setBitmap(touchgfx::Bitmap(BITMAP_MINI_TRACE99_ID));
+
+    textArea1.setXY(144, 176);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TREB));
+
+    textArea2.setXY(144, 209);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_50N1));
+
+    textArea3.setXY(144, 241);
+    textArea3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea3.setLinespacing(0);
+    textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FV99));
+
+    imageProgress1.setXY(118, 24);
+    imageProgress1.setProgressIndicatorPosition(54, 27, 270, 23);
+    imageProgress1.setRange(0, 100, 100, 0);
+    imageProgress1.setDirection(touchgfx::AbstractDirectionProgress::RIGHT);
+    imageProgress1.setBackground(touchgfx::Bitmap(BITMAP_GROUPE10_ID));
+    imageProgress1.setBitmap(BITMAP_BLUE_PROGRESSINDICATORS_FILL_TILING_PROGRESS_INDICATOR_FILL_GRADIENT_NORMAL_VERTICAL_ID);
+    imageProgress1.setValue(0);
+    imageProgress1.setAnchorAtZero(false);
+
     add(__background);
     add(ChildrenBackground);
     add(DarkBackground);
     add(DefaultBackground);
+    add(image2);
+    add(textArea1);
+    add(textArea2);
+    add(textArea3);
+    add(imageProgress1);
 }
 
 void SyringeLibraryViewBase::setupScreen()

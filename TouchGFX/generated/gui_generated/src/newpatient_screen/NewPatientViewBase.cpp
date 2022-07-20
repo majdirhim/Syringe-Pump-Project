@@ -37,7 +37,7 @@ NewPatientViewBase::NewPatientViewBase() :
     BackBtnBox.setAlpha(90);
 
     BackBtn.setText(TypedText(T___SINGLEUSE_0ZXQ));
-    BackBtn.setTextPosition(-6, 7, 95, 32);
+    BackBtn.setTextPosition(-6, 5, 95, 32);
     BackBtn.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(133, 133, 133));
     BackBtn.setPosition(371, 3, 95, 32);
     BackBtn.setAction(flexButtonCallback);

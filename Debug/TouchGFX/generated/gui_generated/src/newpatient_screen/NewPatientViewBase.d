@@ -40,6 +40,7 @@ TouchGFX/generated/gui_generated/src/newpatient_screen/NewPatientViewBase.o: \
  d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\sw_common.h \
  d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\runtime_language.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/newpatient_screen/NewPatientPresenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -110,6 +111,7 @@ TouchGFX/generated/gui_generated/src/newpatient_screen/NewPatientViewBase.o: \
 d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\sw_common.h:
 d:\stm32cubeide_1.6.1\stm32cubeide\openh7\core\inc\runtime_language.h:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/newpatient_screen/NewPatientPresenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:

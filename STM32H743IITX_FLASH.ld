@@ -49,9 +49,13 @@ MEMORY
   RAM_D1 (xrw)   : ORIGIN = 0x24000000, LENGTH = 512K
   RAM_D2 (xrw)   : ORIGIN = 0x30000000, LENGTH = 288K
   RAM_D3 (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
-  ITCMRAM (xrw)  : ORIGIN = 0x00000000, LENGTH = 64K
   
+  ITCMRAM (xrw)  : ORIGIN = 0x00000000, LENGTH = 64K
+  QSPI (rx) 	 : ORIGIN = 0x90000000, LENGTH = 128M
 }
+/**/
+/*SDRAM  (xrw)   : ORIGIN = 0xC0000000, LENGTH = 8M*/
+
 /*QSPI 	(r)  	 : ORIGIN = 0x90000000, LENGTH = 128M*/
 /* Define output sections */
 SECTIONS
@@ -177,21 +181,26 @@ SECTIONS
     *(FontFlashSection FontFlashSection.*)
     *(.gnu.linkonce.r.*)
     . = ALIGN(0x4);
-  } >QSPI
+  } >QSPI*/
 
-  TextFlashSection :
+  /*TextFlashSection :
   {
     *(TextFlashSection TextFlashSection.*)
     *(.gnu.linkonce.r.*)
     . = ALIGN(0x4);
-  } >QSPI
+  } >QSPI*/
 
   ExtFlashSection :
   {
     *(ExtFlashSection ExtFlashSection.*)
     *(.gnu.linkonce.r.*)
     . = ALIGN(0x4);
-  } >QSPI*/
+  } >QSPI
+  
+  /*BmpCacheSection (NOLOAD) : { *(BmpCacheSection) } >SDRAM*/
+  /*TouchGFX_Framebuffer (NOLOAD) : { *(TouchGFX_Framebuffer) } >SDRAM*/
+  /*TouchGFX_Framebuffer1 (NOLOAD) : { *(TouchGFX_Framebuffer1) } >RAM_D2*/
+  /*TouchGFX_Framebuffer2 (NOLOAD) : { *(TouchGFX_Framebuffer2) } >RAM_D2*/
 }
 
 

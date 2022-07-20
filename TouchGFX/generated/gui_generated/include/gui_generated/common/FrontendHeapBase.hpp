@@ -34,16 +34,16 @@
 #include <gui/keyboardnb_screen/KeyboardNbPresenter.hpp>
 #include <gui/main_screen/MainView.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
-#include <gui/activealarms_screen/ActiveAlarmsView.hpp>
-#include <gui/activealarms_screen/ActiveAlarmsPresenter.hpp>
 #include <gui/configuration_screen/ConfigurationView.hpp>
 #include <gui/configuration_screen/ConfigurationPresenter.hpp>
-#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp>
-#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp>
+#include <gui/activealarms_screen/ActiveAlarmsView.hpp>
+#include <gui/activealarms_screen/ActiveAlarmsPresenter.hpp>
 #include <gui/oclusionthresholds_screen/OclusionThresholdsView.hpp>
 #include <gui/oclusionthresholds_screen/OclusionThresholdsPresenter.hpp>
 #include <gui/settings_screen/SettingsView.hpp>
 #include <gui/settings_screen/SettingsPresenter.hpp>
+#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingView.hpp>
+#include <gui/perfusiontimesetting_screen/PerfusionTimeSettingPresenter.hpp>
 #include <gui/displaymode_screen/DisplayModeView.hpp>
 #include <gui/displaymode_screen/DisplayModePresenter.hpp>
 #include <gui/departements_screen/DepartementsView.hpp>
@@ -56,8 +56,8 @@
 #include <gui/language_screen/LanguagePresenter.hpp>
 #include <gui/manual_screen/ManualView.hpp>
 #include <gui/manual_screen/ManualPresenter.hpp>
-#include <gui/log_screen/LogView.hpp>
-#include <gui/log_screen/LogPresenter.hpp>
+#include <gui/lockscreen_screen/LockScreenView.hpp>
+#include <gui/lockscreen_screen/LockScreenPresenter.hpp>
 #include <gui/password_screen/PasswordView.hpp>
 #include <gui/password_screen/PasswordPresenter.hpp>
 #include <gui/druglibrary_screen/DrugLibraryView.hpp>
@@ -66,8 +66,8 @@
 #include <gui/syringelibrary_screen/SyringeLibraryPresenter.hpp>
 #include <gui/syringeselection_screen/SyringeSelectionView.hpp>
 #include <gui/syringeselection_screen/SyringeSelectionPresenter.hpp>
-#include <gui/timeanddatesetting_screen/TimeAndDateSettingView.hpp>
-#include <gui/timeanddatesetting_screen/TimeAndDateSettingPresenter.hpp>
+#include <gui/settings_time_date_screen/Settings_Time_DateView.hpp>
+#include <gui/settings_time_date_screen/Settings_Time_DatePresenter.hpp>
 #include <gui/maintenance_screen/MaintenanceView.hpp>
 #include <gui/maintenance_screen/MaintenancePresenter.hpp>
 #include <gui/diagnostic_screen/DiagnosticView.hpp>
@@ -108,23 +108,23 @@ public:
             touchgfx::meta::TypeList< KeyboardView,
             touchgfx::meta::TypeList< KeyboardNbView,
             touchgfx::meta::TypeList< MainView,
-            touchgfx::meta::TypeList< ActiveAlarmsView,
             touchgfx::meta::TypeList< ConfigurationView,
-            touchgfx::meta::TypeList< PerfusionTimeSettingView,
+            touchgfx::meta::TypeList< ActiveAlarmsView,
             touchgfx::meta::TypeList< OclusionThresholdsView,
             touchgfx::meta::TypeList< SettingsView,
+            touchgfx::meta::TypeList< PerfusionTimeSettingView,
             touchgfx::meta::TypeList< DisplayModeView,
             touchgfx::meta::TypeList< DepartementsView,
             touchgfx::meta::TypeList< BatteryView,
             touchgfx::meta::TypeList< SoundView,
             touchgfx::meta::TypeList< LanguageView,
             touchgfx::meta::TypeList< ManualView,
-            touchgfx::meta::TypeList< LogView,
+            touchgfx::meta::TypeList< LockScreenView,
             touchgfx::meta::TypeList< PasswordView,
             touchgfx::meta::TypeList< DrugLibraryView,
             touchgfx::meta::TypeList< SyringeLibraryView,
             touchgfx::meta::TypeList< SyringeSelectionView,
-            touchgfx::meta::TypeList< TimeAndDateSettingView,
+            touchgfx::meta::TypeList< Settings_Time_DateView,
             touchgfx::meta::TypeList< MaintenanceView,
             touchgfx::meta::TypeList< DiagnosticView,
             touchgfx::meta::TypeList< AlarmAndEventConfigView,
@@ -151,23 +151,23 @@ public:
             touchgfx::meta::TypeList< KeyboardPresenter,
             touchgfx::meta::TypeList< KeyboardNbPresenter,
             touchgfx::meta::TypeList< MainPresenter,
-            touchgfx::meta::TypeList< ActiveAlarmsPresenter,
             touchgfx::meta::TypeList< ConfigurationPresenter,
-            touchgfx::meta::TypeList< PerfusionTimeSettingPresenter,
+            touchgfx::meta::TypeList< ActiveAlarmsPresenter,
             touchgfx::meta::TypeList< OclusionThresholdsPresenter,
             touchgfx::meta::TypeList< SettingsPresenter,
+            touchgfx::meta::TypeList< PerfusionTimeSettingPresenter,
             touchgfx::meta::TypeList< DisplayModePresenter,
             touchgfx::meta::TypeList< DepartementsPresenter,
             touchgfx::meta::TypeList< BatteryPresenter,
             touchgfx::meta::TypeList< SoundPresenter,
             touchgfx::meta::TypeList< LanguagePresenter,
             touchgfx::meta::TypeList< ManualPresenter,
-            touchgfx::meta::TypeList< LogPresenter,
+            touchgfx::meta::TypeList< LockScreenPresenter,
             touchgfx::meta::TypeList< PasswordPresenter,
             touchgfx::meta::TypeList< DrugLibraryPresenter,
             touchgfx::meta::TypeList< SyringeLibraryPresenter,
             touchgfx::meta::TypeList< SyringeSelectionPresenter,
-            touchgfx::meta::TypeList< TimeAndDateSettingPresenter,
+            touchgfx::meta::TypeList< Settings_Time_DatePresenter,
             touchgfx::meta::TypeList< MaintenancePresenter,
             touchgfx::meta::TypeList< DiagnosticPresenter,
             touchgfx::meta::TypeList< AlarmAndEventConfigPresenter,

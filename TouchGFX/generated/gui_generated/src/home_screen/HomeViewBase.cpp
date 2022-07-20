@@ -7,6 +7,7 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 HomeViewBase::HomeViewBase() :
+    buttonCallback(this, &HomeViewBase::buttonCallbackHandler),
     flexButtonCallback(this, &HomeViewBase::flexButtonCallbackHandler)
 {
 
@@ -98,6 +99,18 @@ HomeViewBase::HomeViewBase() :
     AnonymousPatientBtn.setPosition(401, 116, 53, 53);
     AnonymousPatientBtn.setAction(flexButtonCallback);
 
+    button1.setXY(220, 209);
+    button1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    button1.setAction(buttonCallback);
+
+    button2.setXY(231, 75);
+    button2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    button2.setAction(buttonCallback);
+
+    button3.setXY(22, 212);
+    button3.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    button3.setAction(buttonCallback);
+
     add(__background);
     add(ChildrenBackground);
     add(DarkBackground);
@@ -115,11 +128,39 @@ HomeViewBase::HomeViewBase() :
     add(SyriWave);
     add(Arc);
     add(AnonymousPatientBtn);
+    add(button1);
+    add(button2);
+    add(button3);
 }
 
 void HomeViewBase::setupScreen()
 {
 
+}
+
+void HomeViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &button1)
+    {
+        //Interaction1
+        //When button1 clicked change screen to DrugLibrary
+        //Go to DrugLibrary with no screen transition
+        application().gotoDrugLibraryScreenNoTransition();
+    }
+    else if (&src == &button2)
+    {
+        //Interaction2
+        //When button2 clicked change screen to LockScreen
+        //Go to LockScreen with no screen transition
+        application().gotoLockScreenScreenNoTransition();
+    }
+    else if (&src == &button3)
+    {
+        //Interaction4
+        //When button3 clicked change screen to Settings_Time_Date
+        //Go to Settings_Time_Date with no screen transition
+        application().gotoSettings_Time_DateScreenNoTransition();
+    }
 }
 
 void HomeViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

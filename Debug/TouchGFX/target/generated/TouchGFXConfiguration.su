@@ -60,7 +60,7 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:31:7:virtual TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
 ../TouchGFX/target/TouchGFXHAL.hpp:51:5:TouchGFXHAL::TouchGFXHAL(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, uint16_t, uint16_t)	32	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:26:7:constexpr touchgfx::TouchController::TouchController()	16	static
-../TouchGFX/target/STM32TouchController.hpp:41:5:STM32TouchController::STM32TouchController()	16	static
+../TouchGFX/target/STM32TouchController.hpp:42:5:STM32TouchController::STM32TouchController()	16	static
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp:43:6:void touchgfx_init()	32	static
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp:63:6:void touchgfx_components_init()	4	static
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp:67:6:void touchgfx_taskEntry()	8	static
@@ -74,12 +74,12 @@ d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltool
 ../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:42:7:virtual touchgfx::Partition<touchgfx::meta::TypeList<transitionsPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	16	static
 ../TouchGFX/target/TouchGFXHAL.hpp:35:7:TouchGFXHAL::~TouchGFXHAL()	16	static
 ../TouchGFX/target/TouchGFXHAL.hpp:35:7:virtual TouchGFXHAL::~TouchGFXHAL()	16	static
-../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:49:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
-../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:49:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
+../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:53:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
+../TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:53:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:39:7:touchgfx::LCD16bpp::~LCD16bpp()	16	static
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:39:7:virtual touchgfx::LCD16bpp::~LCD16bpp()	16	static
-../TouchGFX/target/STM32TouchController.hpp:37:7:STM32TouchController::~STM32TouchController()	16	static
-../TouchGFX/target/STM32TouchController.hpp:37:7:virtual STM32TouchController::~STM32TouchController()	16	static
+../TouchGFX/target/STM32TouchController.hpp:38:7:STM32TouchController::~STM32TouchController()	16	static
+../TouchGFX/target/STM32TouchController.hpp:38:7:virtual STM32TouchController::~STM32TouchController()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp:76:1:void __static_initialization_and_destruction_0(int, int)	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<FrontendApplicationBase>::~Callback()	16	static

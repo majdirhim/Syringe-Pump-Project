@@ -56,22 +56,19 @@ public:
     // Main
     void gotoMainScreenWipeTransitionEast();
 
-    void gotoMainScreenWipeTransitionWest();
-
     void gotoMainScreenWipeTransitionNorth();
 
-    void gotoMainScreenNoTransition();
+    void gotoMainScreenWipeTransitionWest();
 
-    // ActiveAlarms
-    void gotoActiveAlarmsScreenWipeTransitionEast();
+    void gotoMainScreenNoTransition();
 
     // Configuration
     void gotoConfigurationScreenWipeTransitionSouth();
 
     void gotoConfigurationScreenWipeTransitionNorth();
 
-    // PerfusionTimeSetting
-    void gotoPerfusionTimeSettingScreenWipeTransitionSouth();
+    // ActiveAlarms
+    void gotoActiveAlarmsScreenWipeTransitionEast();
 
     // OclusionThresholds
     void gotoOclusionThresholdsScreenWipeTransitionSouth();
@@ -79,14 +76,33 @@ public:
     // Settings
     void gotoSettingsScreenWipeTransitionEast();
 
+    void gotoSettingsScreenNoTransition();
+
+    // PerfusionTimeSetting
+    void gotoPerfusionTimeSettingScreenWipeTransitionSouth();
+
+    // Departements
+    void gotoDepartementsScreenNoTransition();
+
+    // Battery
+    void gotoBatteryScreenNoTransition();
+
     // Manual
     void gotoManualScreenWipeTransitionSouth();
 
+    // LockScreen
+    void gotoLockScreenScreenNoTransition();
+
     // DrugLibrary
+    void gotoDrugLibraryScreenNoTransition();
+
     void gotoDrugLibraryScreenWipeTransitionSouth();
 
     // SyringeSelection
     void gotoSyringeSelectionScreenWipeTransitionSouth();
+
+    // Settings_Time_Date
+    void gotoSettings_Time_DateScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -129,22 +145,19 @@ protected:
     // Main
     void gotoMainScreenWipeTransitionEastImpl();
 
-    void gotoMainScreenWipeTransitionWestImpl();
-
     void gotoMainScreenWipeTransitionNorthImpl();
 
-    void gotoMainScreenNoTransitionImpl();
+    void gotoMainScreenWipeTransitionWestImpl();
 
-    // ActiveAlarms
-    void gotoActiveAlarmsScreenWipeTransitionEastImpl();
+    void gotoMainScreenNoTransitionImpl();
 
     // Configuration
     void gotoConfigurationScreenWipeTransitionSouthImpl();
 
     void gotoConfigurationScreenWipeTransitionNorthImpl();
 
-    // PerfusionTimeSetting
-    void gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl();
+    // ActiveAlarms
+    void gotoActiveAlarmsScreenWipeTransitionEastImpl();
 
     // OclusionThresholds
     void gotoOclusionThresholdsScreenWipeTransitionSouthImpl();
@@ -152,14 +165,33 @@ protected:
     // Settings
     void gotoSettingsScreenWipeTransitionEastImpl();
 
+    void gotoSettingsScreenNoTransitionImpl();
+
+    // PerfusionTimeSetting
+    void gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl();
+
+    // Departements
+    void gotoDepartementsScreenNoTransitionImpl();
+
+    // Battery
+    void gotoBatteryScreenNoTransitionImpl();
+
     // Manual
     void gotoManualScreenWipeTransitionSouthImpl();
 
+    // LockScreen
+    void gotoLockScreenScreenNoTransitionImpl();
+
     // DrugLibrary
+    void gotoDrugLibraryScreenNoTransitionImpl();
+
     void gotoDrugLibraryScreenWipeTransitionSouthImpl();
 
     // SyringeSelection
     void gotoSyringeSelectionScreenWipeTransitionSouthImpl();
+
+    // Settings_Time_Date
+    void gotoSettings_Time_DateScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

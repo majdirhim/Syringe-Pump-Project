@@ -9,6 +9,8 @@
 #include <gui/departements_screen/DepartementsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class DepartementsViewBase : public touchgfx::View<DepartementsPresenter>
 {
@@ -29,6 +31,22 @@ protected:
     touchgfx::ScalableImage ChildrenBackground;
     touchgfx::ScalableImage DarkBackground;
     touchgfx::ScalableImage DefaultBackground;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Backbutton;
+    touchgfx::ScalableImage BackArrow;
+    touchgfx::Box box1;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Btn_pediatrics;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Btn_Emergency;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Btn_neonatal;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Btn_icu;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Btn_maternity;
+    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Btn_other;
+    touchgfx::ScalableImage scalableImage1_2_2_1_1;
+    touchgfx::Box box2;
+    touchgfx::Box box3;
+    touchgfx::ScalableImage scalableImage1_2_2_1_1_1;
+    touchgfx::ScalableImage scalableImage1_2_2_1_1_2;
+    touchgfx::ScalableImage scalableImage1_2_2_1_1_5;
 
 private:
 

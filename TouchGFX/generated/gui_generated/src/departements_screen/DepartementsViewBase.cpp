@@ -4,6 +4,7 @@
 #include <gui_generated/departements_screen/DepartementsViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 DepartementsViewBase::DepartementsViewBase()
 {
@@ -25,10 +26,101 @@ DepartementsViewBase::DepartementsViewBase()
     DefaultBackground.setPosition(0, 0, 480, 272);
     DefaultBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
+    textArea1.setXY(102, 15);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4HY1));
+
+    Backbutton.setBoxWithBorderPosition(0, 0, 80, 34);
+    Backbutton.setBorderSize(1);
+    Backbutton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Backbutton.setText(TypedText(T___SINGLEUSE_VSQ5));
+    Backbutton.setTextPosition(21, 5, 80, 34);
+    Backbutton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Backbutton.setPosition(389, 6, 80, 34);
+
+    BackArrow.setBitmap(touchgfx::Bitmap(BITMAP_GROUPE49_ID));
+    BackArrow.setPosition(395, 17, 23, 11);
+    BackArrow.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    box1.setPosition(389, 6, 80, 34);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(90);
+
+    Btn_pediatrics.setText(TypedText(T___SINGLEUSE_MXAU));
+    Btn_pediatrics.setTextPosition(1, 4, 110, 39);
+    Btn_pediatrics.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Btn_pediatrics.setPosition(65, 126, 110, 39);
+
+    Btn_Emergency.setText(TypedText(T___SINGLEUSE_ELEQ));
+    Btn_Emergency.setTextPosition(0, 3, 110, 39);
+    Btn_Emergency.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Btn_Emergency.setPosition(175, 126, 110, 39);
+
+    Btn_neonatal.setText(TypedText(T___SINGLEUSE_8QYX));
+    Btn_neonatal.setTextPosition(1, 4, 110, 39);
+    Btn_neonatal.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Btn_neonatal.setPosition(285, 126, 110, 39);
+
+    Btn_icu.setText(TypedText(T___SINGLEUSE_MKXQ));
+    Btn_icu.setTextPosition(0, 3, 110, 39);
+    Btn_icu.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Btn_icu.setPosition(65, 181, 110, 39);
+
+    Btn_maternity.setText(TypedText(T___SINGLEUSE_1MV9));
+    Btn_maternity.setTextPosition(2, 4, 110, 39);
+    Btn_maternity.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Btn_maternity.setPosition(175, 181, 110, 39);
+
+    Btn_other.setText(TypedText(T___SINGLEUSE_V8R5));
+    Btn_other.setTextPosition(0, 3, 110, 39);
+    Btn_other.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Btn_other.setPosition(285, 181, 110, 39);
+
+    scalableImage1_2_2_1_1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_2_1_1.setPosition(174, 127, 4, 37);
+    scalableImage1_2_2_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    box2.setPosition(65, 126, 330, 39);
+    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box2.setAlpha(90);
+
+    box3.setPosition(65, 181, 330, 39);
+    box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box3.setAlpha(90);
+
+    scalableImage1_2_2_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_2_1_1_1.setPosition(174, 181, 4, 38);
+    scalableImage1_2_2_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2_2_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_2_1_1_2.setPosition(285, 182, 4, 38);
+    scalableImage1_2_2_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2_2_1_1_5.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_2_1_1_5.setPosition(283, 127, 4, 38);
+    scalableImage1_2_2_1_1_5.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
     add(__background);
     add(ChildrenBackground);
     add(DarkBackground);
     add(DefaultBackground);
+    add(textArea1);
+    add(Backbutton);
+    add(BackArrow);
+    add(box1);
+    add(Btn_pediatrics);
+    add(Btn_Emergency);
+    add(Btn_neonatal);
+    add(Btn_icu);
+    add(Btn_maternity);
+    add(Btn_other);
+    add(scalableImage1_2_2_1_1);
+    add(box2);
+    add(box3);
+    add(scalableImage1_2_2_1_1_1);
+    add(scalableImage1_2_2_1_1_2);
+    add(scalableImage1_2_2_1_1_5);
 }
 
 void DepartementsViewBase::setupScreen()

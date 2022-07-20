@@ -41,6 +41,7 @@ build/MINGW32_NT-6.2/gui/src/activealarms_screen/ActiveAlarmsView.o: \
  gui/include/../../../Core/Inc/SW_common.h \
  gui/include/../../../Core/Inc/Runtime_language.h \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  gui/include/gui/activealarms_screen/ActiveAlarmsPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
@@ -154,6 +155,8 @@ gui/include/../../../Core/Inc/SW_common.h:
 gui/include/../../../Core/Inc/Runtime_language.h:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 

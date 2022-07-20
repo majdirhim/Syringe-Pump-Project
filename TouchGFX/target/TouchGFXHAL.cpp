@@ -23,8 +23,6 @@
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
 
-#include "stm32h7xx.h"
-
 using namespace touchgfx;
 
 void TouchGFXHAL::initialize()
@@ -83,6 +81,9 @@ void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
     // and implemented needed functionality here.
     // Please note, HAL::flushFrameBuffer(const touchgfx::Rect& rect) must
     // be called to notify the touchgfx framework that flush has been performed.
+    // To calculate he start adress of rect,
+    // use advanceFrameBufferToRect(uint8_t* fbPtr, const touchgfx::Rect& rect)
+    // defined in TouchGFXGeneratedHAL.cpp
 
     TouchGFXGeneratedHAL::flushFrameBuffer(rect);
 }
@@ -144,6 +145,16 @@ void TouchGFXHAL::enableLCDControllerInterrupt()
     // and implemented needed functionality here.
 
     TouchGFXGeneratedHAL::enableLCDControllerInterrupt();
+}
+
+bool TouchGFXHAL::beginFrame()
+{
+    return TouchGFXGeneratedHAL::beginFrame();
+}
+
+void TouchGFXHAL::endFrame()
+{
+    TouchGFXGeneratedHAL::endFrame();
 }
 
 /* USER CODE END TouchGFXHAL.cpp */

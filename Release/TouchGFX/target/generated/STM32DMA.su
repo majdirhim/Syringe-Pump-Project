@@ -1,0 +1,13 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp:138:18:virtual void touchgfx::DMA_Interface::flush()	0	static
+../TouchGFX/target/generated/STM32DMA.hpp:73:31:virtual touchgfx::DMAType STM32DMA::getDMAType()	0	static
+../TouchGFX/target/generated/STM32DMA.hpp:109:18:virtual void STM32DMA::signalDMAInterrupt()	0	static
+../TouchGFX/target/generated/STM32DMA.cpp:151:16:virtual touchgfx::BlitOperations STM32DMA::getBlitCaps()	0	static
+../TouchGFX/target/generated/STM32DMA.cpp:71:6:virtual void STM32DMA::initialize()	16	static
+../TouchGFX/target/generated/STM32DMA.cpp:65:1:STM32DMA::~STM32DMA()	0	static,ignoring_inline_asm
+../TouchGFX/target/generated/STM32DMA.cpp:65:1:virtual STM32DMA::~STM32DMA()	8	static
+../TouchGFX/target/generated/STM32DMA.cpp:40:17:void DMA2D_IRQHandler()	0	static
+../TouchGFX/target/generated/STM32DMA.cpp:60:1:STM32DMA::STM32DMA()	16	static
+../TouchGFX/target/generated/STM32DMA.cpp:83:17:uint32_t STM32DMA::getChromARTInputFormat(touchgfx::Bitmap::BitmapFormat)	8	static
+../TouchGFX/target/generated/STM32DMA.cpp:118:17:uint32_t STM32DMA::getChromARTOutputFormat(touchgfx::Bitmap::BitmapFormat)	8	static
+../TouchGFX/target/generated/STM32DMA.cpp:174:6:virtual void STM32DMA::setupDataCopy(const touchgfx::BlitOp&)	32	static
+../TouchGFX/target/generated/STM32DMA.cpp:343:6:virtual void STM32DMA::setupDataFill(const touchgfx::BlitOp&)	16	static

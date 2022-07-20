@@ -1,10 +1,7 @@
 Middlewares/Third_Party/FatFs/src/diskio.o: \
  ../Middlewares/Third_Party/FatFs/src/diskio.c \
- ../Middlewares/Third_Party/FatFs/src/diskio.h \
- ../Middlewares/Third_Party/FatFs/src/integer.h \
- ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
- ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h \
- ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
@@ -16,6 +13,7 @@ Middlewares/Third_Party/FatFs/src/diskio.o: \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Include/mpu_armv7.h \
  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
@@ -45,6 +43,8 @@ Middlewares/Third_Party/FatFs/src/diskio.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
@@ -52,7 +52,16 @@ Middlewares/Third_Party/FatFs/src/diskio.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h \
- ../FATFS/Target/bsp_driver_sd.h ../FATFS/Target/fatfs_platform.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
+ ../Middlewares/Third_Party/FatFs/src/diskio.h \
+ ../Middlewares/Third_Party/FatFs/src/integer.h \
+ ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
+ ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h \
+ ../Core/Inc/main.h ../FATFS/Target/bsp_driver_sd.h \
+ ../FATFS/Target/fatfs_platform.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
@@ -64,13 +73,8 @@ Middlewares/Third_Party/FatFs/src/diskio.o: \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
-../Middlewares/Third_Party/FatFs/src/diskio.h:
-../Middlewares/Third_Party/FatFs/src/integer.h:
-../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
-../Middlewares/Third_Party/FatFs/src/ff.h:
-../FATFS/Target/ffconf.h:
-../Core/Inc/main.h:
-../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:
@@ -82,6 +86,7 @@ Middlewares/Third_Party/FatFs/src/diskio.o: \
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Include/mpu_armv7.h:
 ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h:
@@ -111,6 +116,8 @@ Middlewares/Third_Party/FatFs/src/diskio.o: \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
@@ -118,6 +125,16 @@ Middlewares/Third_Party/FatFs/src/diskio.o: \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
+../Middlewares/Third_Party/FatFs/src/diskio.h:
+../Middlewares/Third_Party/FatFs/src/integer.h:
+../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
+../Middlewares/Third_Party/FatFs/src/ff.h:
+../FATFS/Target/ffconf.h:
+../Core/Inc/main.h:
 ../FATFS/Target/bsp_driver_sd.h:
 ../FATFS/Target/fatfs_platform.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:

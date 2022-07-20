@@ -22,13 +22,15 @@
 /* USER CODE BEGIN STM32TouchController */
 
 #include <STM32TouchController.hpp>
-
+#include "ft5x06.h"
+static TS_StateTypeDef TS_State;
 void STM32TouchController::init()
 {
     /**
      * Initialize touch controller and driver
      *
      */
+	ft5x06_Init();
 }
 
 bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
@@ -43,6 +45,14 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
      * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
      *
      */
+
+	ft5x06_TS_GetState(&TS_State);
+	if (TS_State.touchDetected)
+	    {
+	        x = (int32_t)TS_State.touchX[0];
+	        y = (int32_t)TS_State.touchY[0];
+	        return true;
+	    }
     return false;
 }
 

@@ -12,12 +12,12 @@ RM := rm -rf
 -include TouchGFX/target/generated/subdir.mk
 -include TouchGFX/target/subdir.mk
 -include TouchGFX/gui/src/transitions_screen/subdir.mk
--include TouchGFX/gui/src/timeanddatesetting_screen/subdir.mk
 -include TouchGFX/gui/src/syringeselection_screen/subdir.mk
 -include TouchGFX/gui/src/syringelibrary_screen/subdir.mk
 -include TouchGFX/gui/src/startup_screen/subdir.mk
 -include TouchGFX/gui/src/specialmodes_screen/subdir.mk
 -include TouchGFX/gui/src/sound_screen/subdir.mk
+-include TouchGFX/gui/src/settings_time_date_screen/subdir.mk
 -include TouchGFX/gui/src/settings_screen/subdir.mk
 -include TouchGFX/gui/src/samepatient_screen/subdir.mk
 -include TouchGFX/gui/src/perfusiontimesetting_screen/subdir.mk
@@ -29,7 +29,7 @@ RM := rm -rf
 -include TouchGFX/gui/src/manual_screen/subdir.mk
 -include TouchGFX/gui/src/maintenance_screen/subdir.mk
 -include TouchGFX/gui/src/main_screen/subdir.mk
--include TouchGFX/gui/src/log_screen/subdir.mk
+-include TouchGFX/gui/src/lockscreen_screen/subdir.mk
 -include TouchGFX/gui/src/language_screen/subdir.mk
 -include TouchGFX/gui/src/keyboardnb_screen/subdir.mk
 -include TouchGFX/gui/src/keyboard_screen/subdir.mk
@@ -50,12 +50,12 @@ RM := rm -rf
 -include TouchGFX/generated/images/src/__designer/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
 -include TouchGFX/generated/gui_generated/src/transitions_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/timeanddatesetting_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/syringeselection_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/syringelibrary_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/startup_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/specialmodes_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/sound_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/settings_time_date_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/settings_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/samepatient_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/perfusiontimesetting_screen/subdir.mk
@@ -66,7 +66,7 @@ RM := rm -rf
 -include TouchGFX/generated/gui_generated/src/manual_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/maintenance_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/main_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/log_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/lockscreen_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/language_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/keyboardnb_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/keyboard_screen/subdir.mk
@@ -93,6 +93,7 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/startup_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/specialmodes_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/sound_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/settings_time_date_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/settings_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/samepatient_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/perfusiontimesetting_screen/subdir.mk
@@ -105,6 +106,7 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/maintenance_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/main_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/log_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/lockscreen_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/language_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/keyboardnb_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/keyboard_screen/subdir.mk
@@ -133,6 +135,7 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/startup_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/specialmodes_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/sound_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/settings_time_date_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/settings_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/samepatient_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/perfusiontimesetting_screen/subdir.mk
@@ -144,6 +147,7 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/maintenance_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/main_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/log_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/lockscreen_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/language_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/keyboardnb_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/keyboard_screen/subdir.mk

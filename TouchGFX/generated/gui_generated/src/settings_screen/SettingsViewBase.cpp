@@ -4,8 +4,10 @@
 #include <gui_generated/settings_screen/SettingsViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
-SettingsViewBase::SettingsViewBase()
+SettingsViewBase::SettingsViewBase() :
+    flexButtonCallback(this, &SettingsViewBase::flexButtonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 480, 272);
@@ -22,16 +24,238 @@ SettingsViewBase::SettingsViewBase()
     DarkBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
     DefaultBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND2_ID));
-    DefaultBackground.setPosition(0, 0, 480, 272);
+    DefaultBackground.setPosition(0, 0, 480, 273);
     DefaultBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    autoDiagbutton.setText(TypedText(T___SINGLEUSE_RIMM));
+    autoDiagbutton.setTextPosition(-2, 5, 108, 39);
+    autoDiagbutton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    autoDiagbutton.setPosition(33, 72, 108, 39);
+
+    DisplayModebutton.setText(TypedText(T___SINGLEUSE_Y36A));
+    DisplayModebutton.setTextPosition(4, 5, 108, 39);
+    DisplayModebutton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DisplayModebutton.setPosition(141, 72, 108, 39);
+
+    timedatabutton.setText(TypedText(T___SINGLEUSE_JCAK));
+    timedatabutton.setTextPosition(0, 5, 109, 39);
+    timedatabutton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    timedatabutton.setPosition(249, 72, 109, 39);
+
+    LanguageButton.setText(TypedText(T___SINGLEUSE_5HCX));
+    LanguageButton.setTextPosition(0, 0, 108, 39);
+    LanguageButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    LanguageButton.setPosition(33, 117, 108, 39);
+
+    SoundButton.setText(TypedText(T___SINGLEUSE_T2J3));
+    SoundButton.setTextPosition(-1, 4, 108, 39);
+    SoundButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    SoundButton.setPosition(141, 116, 108, 39);
+
+    ManualButton.setText(TypedText(T___SINGLEUSE_PCMY));
+    ManualButton.setTextPosition(1, 3, 108, 39);
+    ManualButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ManualButton.setPosition(250, 116, 108, 39);
+
+    DrugLibraryButton.setText(TypedText(T___SINGLEUSE_GYDD));
+    DrugLibraryButton.setTextPosition(1, 3, 108, 39);
+    DrugLibraryButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DrugLibraryButton.setPosition(33, 164, 108, 39);
+    DrugLibraryButton.setAction(flexButtonCallback);
+
+    DepartementButton.setText(TypedText(T___SINGLEUSE_YJJ3));
+    DepartementButton.setTextPosition(1, 4, 108, 39);
+    DepartementButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(252, 252, 252));
+    DepartementButton.setPosition(141, 164, 108, 39);
+    DepartementButton.setAction(flexButtonCallback);
+
+    HistoryButton.setText(TypedText(T___SINGLEUSE_TK12));
+    HistoryButton.setTextPosition(0, 0, 108, 39);
+    HistoryButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    HistoryButton.setPosition(253, 164, 108, 39);
+
+    BatteryButton.setText(TypedText(T___SINGLEUSE_SMCB));
+    BatteryButton.setTextPosition(1, 3, 108, 39);
+    BatteryButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    BatteryButton.setPosition(33, 209, 108, 39);
+    BatteryButton.setAction(flexButtonCallback);
+
+    LockButton.setText(TypedText(T___SINGLEUSE_ISTM));
+    LockButton.setTextPosition(3, 4, 108, 39);
+    LockButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    LockButton.setPosition(141, 209, 108, 39);
+    LockButton.setAction(flexButtonCallback);
+
+    MaintenanceButton.setText(TypedText(T___SINGLEUSE_K7GG));
+    MaintenanceButton.setTextPosition(1, 4, 104, 39);
+    MaintenanceButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    MaintenanceButton.setPosition(257, 209, 104, 39);
+
+    box1.setPosition(33, 72, 325, 39);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(90);
+
+    box2.setPosition(33, 117, 325, 39);
+    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box2.setAlpha(90);
+
+    box3.setPosition(33, 164, 325, 39);
+    box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box3.setAlpha(90);
+
+    box4.setPosition(33, 209, 325, 39);
+    box4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box4.setAlpha(90);
+
+    scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1.setPosition(141, 72, 4, 39);
+    scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_1.setPosition(248, 72, 4, 39);
+    scalableImage1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2.setPosition(141, 117, 4, 39);
+    scalableImage1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2_1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_1.setPosition(141, 164, 4, 39);
+    scalableImage1_2_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2_1_1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_1_1.setPosition(141, 209, 4, 39);
+    scalableImage1_2_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2_2.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_2.setPosition(248, 117, 4, 39);
+    scalableImage1_2_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2_2_1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_2_1.setPosition(248, 164, 4, 39);
+    scalableImage1_2_2_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    scalableImage1_2_2_1_1.setBitmap(touchgfx::Bitmap(BITMAP_TRA107_ID));
+    scalableImage1_2_2_1_1.setPosition(248, 209, 4, 39);
+    scalableImage1_2_2_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    flexButton1.setText(TypedText(T___SINGLEUSE_XP7J));
+    flexButton1.setTextPosition(-6, 5, 92, 36);
+    flexButton1.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    flexButton1.setPosition(361, 10, 92, 36);
+
+    BackArrow.setBitmap(touchgfx::Bitmap(BITMAP_GROUPE49_ID));
+    BackArrow.setPosition(376, 23, 18, 11);
+    BackArrow.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+
+    box5.setPosition(361, 10, 92, 36);
+    box5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box5.setAlpha(90);
+
+    SettingButton.setIconBitmaps(Bitmap(BITMAP_SETTING_ID), Bitmap(BITMAP_SETTING_ID));
+    SettingButton.setIconXY(27, 21);
+    SettingButton.setText(TypedText(T___SINGLEUSE_NIFO));
+    SettingButton.setTextPosition(4, 0, 87, 51);
+    SettingButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    SettingButton.setPosition(376, 158, 87, 51);
+
+    box6.setPosition(376, 158, 87, 51);
+    box6.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box6.setAlpha(90);
+
+    StartButt.setText(TypedText(T___SINGLEUSE_3G1V));
+    StartButt.setTextPosition(2, 11, 87, 51);
+    StartButt.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    StartButt.setPosition(376, 209, 87, 51);
+    StartButt.setAction(flexButtonCallback);
+
+    box7.setPosition(376, 210, 87, 50);
+    box7.setColor(touchgfx::Color::getColorFromRGB(123, 250, 85));
+    box7.setAlpha(90);
+
+    textArea1.setXY(154, 10);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QJFH));
 
     add(__background);
     add(ChildrenBackground);
     add(DarkBackground);
     add(DefaultBackground);
+    add(autoDiagbutton);
+    add(DisplayModebutton);
+    add(timedatabutton);
+    add(LanguageButton);
+    add(SoundButton);
+    add(ManualButton);
+    add(DrugLibraryButton);
+    add(DepartementButton);
+    add(HistoryButton);
+    add(BatteryButton);
+    add(LockButton);
+    add(MaintenanceButton);
+    add(box1);
+    add(box2);
+    add(box3);
+    add(box4);
+    add(scalableImage1);
+    add(scalableImage1_1);
+    add(scalableImage1_2);
+    add(scalableImage1_2_1);
+    add(scalableImage1_2_1_1);
+    add(scalableImage1_2_2);
+    add(scalableImage1_2_2_1);
+    add(scalableImage1_2_2_1_1);
+    add(flexButton1);
+    add(BackArrow);
+    add(box5);
+    add(SettingButton);
+    add(box6);
+    add(StartButt);
+    add(box7);
+    add(textArea1);
 }
 
 void SettingsViewBase::setupScreen()
 {
 
+}
+
+void SettingsViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &DrugLibraryButton)
+    {
+        //Interaction4
+        //When DrugLibraryButton clicked change screen to DrugLibrary
+        //Go to DrugLibrary with no screen transition
+        application().gotoDrugLibraryScreenNoTransition();
+    }
+    else if (&src == &DepartementButton)
+    {
+        //Interaction5
+        //When DepartementButton clicked change screen to Departements
+        //Go to Departements with no screen transition
+        application().gotoDepartementsScreenNoTransition();
+    }
+    else if (&src == &BatteryButton)
+    {
+        //Interaction2
+        //When BatteryButton clicked change screen to Battery
+        //Go to Battery with no screen transition
+        application().gotoBatteryScreenNoTransition();
+    }
+    else if (&src == &LockButton)
+    {
+        //Interaction1
+        //When LockButton clicked change screen to LockScreen
+        //Go to LockScreen with no screen transition
+        application().gotoLockScreenScreenNoTransition();
+    }
+    else if (&src == &StartButt)
+    {
+        //Interaction3
+        //When StartButt clicked call virtual function
+        //Call function1
+        function1();
+    }
 }

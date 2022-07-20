@@ -1,0 +1,4 @@
+../Core/Src/ft5x06.c:77:6:ft5x06_Init	8	static
+../Core/Src/ft5x06.c:95:10:ft5x06_ReadID	16	static
+../Core/Src/ft5x06.c:104:6:ft5x06_TS_GetState	24	static
+../Core/Src/ft5x06.c:153:6:HAL_GPIO_EXTI_Callback	16	static

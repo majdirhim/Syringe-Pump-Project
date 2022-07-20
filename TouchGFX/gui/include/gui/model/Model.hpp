@@ -6,7 +6,7 @@
 #include "../../../Core/Inc/SW_common.h"
 #include "../../../Core/Inc/Runtime_language.h"
 #include <touchgfx/Texts.hpp>
-
+#include "touchgfx/Utils.hpp"
 enum {
     FIRST_CALL,
     CALLER_FLOWRATE,
@@ -41,6 +41,19 @@ public:
     uint8_t getPendingEventStatus();
     void savePendingEventStatus(void);
     void saveMuteStatus(void);
+    uint16_t getpwdtech(void);
+       void savepwdtech(uint16_t screen);
+    uint8_t getscreenlock(void);
+       void savescreenlock(uint8_t screen);
+       void SaveLock(uint8_t);
+        uint8_t GetLock(void);
+        uint16_t getpassword(void);
+       void   savepassword(uint16_t);
+        uint8_t GetDisplayMode(void);
+             void   SaveDisplayMode(uint8_t);
+             void saveCurrentTime(time_ps time);
+            time_ps getcurrenttime();
+
     /*====================== Initialisation =============================================*/
     uint8_t getInitStatus(void);
     uint8_t getDisplayMode(void);
@@ -104,6 +117,7 @@ protected:
     uint8_t PendingEventStatus;
     uint8_t MuteStatus = 0;
     uint8_t InitStatus;
+    System_init_paramT InitParam;
     System_init_paramT InitialisationParameters;
     Patient_dataT Patient = { "", 0, 0, 0, 0 };
     uint8_t PatientDataArrivedAck;
@@ -113,9 +127,13 @@ protected:
     uint8_t PreviousCaller = FIRST_CALL;
     Motor_StatusT MotorStatus;
     SW_time Timeleft;
+    time_ps current_time;
     Pressure_thresholdsT PressureThresholds;
     float CurrentPressure;
     uint8_t SyringeState;
+    uint8_t screenlock;
+    uint16_t technicianpassword;
+    uint8_t Lock;
     SyringeT Syringe = { 0, "", ML50, 0 };
     SW_time CurrentTime;
     BatteryT Battery;

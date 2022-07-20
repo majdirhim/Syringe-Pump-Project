@@ -76,7 +76,7 @@ const osThreadAttr_t Stepper_attributes = {
 osThreadId_t ConnectivityHandle;
 const osThreadAttr_t Connectivity_attributes = {
   .name = "Connectivity",
-  .stack_size = 256 * 4,
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for Sensors */
@@ -90,7 +90,7 @@ const osThreadAttr_t Sensors_attributes = {
 osThreadId_t IHMHandle;
 const osThreadAttr_t IHM_attributes = {
   .name = "IHM",
-  .stack_size = 256 * 4,
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal1,
 };
 /* Definitions for DataStorage */
@@ -99,6 +99,13 @@ const osThreadAttr_t DataStorage_attributes = {
   .name = "DataStorage",
   .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityBelowNormal,
+};
+/* Definitions for TouchGFXTask */
+osThreadId_t TouchGFXTaskHandle;
+const osThreadAttr_t TouchGFXTask_attributes = {
+  .name = "TouchGFXTask",
+  .stack_size = 4096 * 4,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for InfusionQ */
 osMessageQueueId_t InfusionQHandle;
@@ -178,6 +185,7 @@ void Cloud_Connectivity(void *argument);
 void Sensors_measurements(void *argument);
 void Interface(void *argument);
 void StartDataStorage(void *argument);
+extern void TouchGFX_Task(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -251,6 +259,9 @@ void MX_FREERTOS_Init(void) {
   /* creation of DataStorage */
   DataStorageHandle = osThreadNew(StartDataStorage, NULL, &DataStorage_attributes);
 
+  /* creation of TouchGFXTask */
+  TouchGFXTaskHandle = osThreadNew(TouchGFX_Task, NULL, &TouchGFXTask_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
 	/* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -288,7 +299,7 @@ void StartBatteryManage(void *argument)
 void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
-	float Flowrate=0, radius = 7;
+	float Flowrate=0, radius = 17;
 	float volume_to_inject=0;
 	int timeneeded = 0;
 	uint8_t mode=0;
@@ -333,9 +344,9 @@ void Cloud_Connectivity(void *argument)
 	uint32_t (*unique_id_2) = (uint32_t*) (0x1FF1E804); // BASE address + 0x04 offset
 	uint32_t (*unique_id_3) = (uint32_t*) (0x1FF1E808); // BASE address + 0x08 offset
 	char Id[85];
-	int n = sprintf(Id, "%lu%lu%lu", *unique_id_1, *unique_id_2, *unique_id_3);
+	int n = sprintf(Id, "u%lu%lu%lu\n", *unique_id_1, *unique_id_2, *unique_id_3);
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-	HAL_UART_Transmit(&huart3, Id, n, 100);
+	HAL_UART_Transmit(&huart1, Id, n, 100);
 	//osDelay(10);
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
 	/* Infinite loop */
@@ -344,20 +355,20 @@ void Cloud_Connectivity(void *argument)
 		if (osMessageQueueGet(FlowRateQHandle, &Flowrate, 1U, 100U) == osOK) {
 			int nflow = sprintf((uint8_t*) flowbuff, "f%.3f", Flowrate);
 			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-			HAL_UART_Transmit(&huart3, (uint8_t*) flowbuff, nflow, 10);
+			HAL_UART_Transmit(&huart1, (uint8_t*) flowbuff, nflow, 10);
 			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
 		}
 		if (osMessageQueueGet(TimeQHandle, &Timeleft, 1U, 100U) == osOK) {
 			int ntime = sprintf((uint8_t*) timebuff, "t%f", Timeleft);
 			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-			HAL_UART_Transmit(&huart3, (uint8_t*) timebuff, ntime, 10);
+			HAL_UART_Transmit(&huart1, (uint8_t*) timebuff, ntime, 10);
 			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
 		}
-		if (osMessageQueueGet(VolumeLeftQHandle, &Volumeleft, 1U, 100U)
-				== osOK) {
+		if (osMessageQueueGet(VolumeLeftQHandle, &Volumeleft, 1U, 100U)==osOK)
+				{
 			int nvol = sprintf((uint8_t*) volumebuff, "v%.3f", Volumeleft);
 			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, SET);
-			HAL_UART_Transmit(&huart3, (uint8_t*) volumebuff, nvol, 10);
+			HAL_UART_Transmit(&huart1, (uint8_t*) volumebuff, nvol, 10);
 			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14, RESET);
 		}
 		osDelay(10);
@@ -418,7 +429,7 @@ void Interface(void *argument)
 	/* Infinite loop */
 	for (;;) {
 		// ***** 0 => StopMode , 8=> PauseMode *******
-		HAL_UART_Receive(&huart3, (uint8_t*) check, sizeof(check), 100);
+		HAL_UART_Receive(&huart1, (uint8_t*) check, sizeof(check), 100);
 		num =atoi(check);
 			switch(num){
 			case 1 :
@@ -500,7 +511,7 @@ void Interface(void *argument)
 void StartDataStorage(void *argument)
 {
   /* USER CODE BEGIN StartDataStorage */
-	Infusion_paramT msgPerfusionParameters;
+	//Infusion_paramT msgPerfusionParameters;
 	//char check[10] ;
 	//HAL_UART_Receive_IT(&huart3,(uint8_t*) check, sizeof(check));
 	FRESULT res; /* FatFs function common result code */
@@ -510,7 +521,7 @@ void StartDataStorage(void *argument)
 	/* Infinite loop */
 	for (;;) {
 
-		 osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters , 1U, 100U);
+		 /*osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters , 1U, 100U);
 		 sprintf((uint8_t *)wtext,"Flow Rate = %d",msgPerfusionParameters.Flowrate);
 		 if(f_mount(&SDFatFS, (TCHAR const*)SDPath, 0) != FR_OK)
 		 {
@@ -545,7 +556,7 @@ void StartDataStorage(void *argument)
 		 }
 		 }
 		 }
-		 f_mount(&SDFatFS, (TCHAR const*)NULL, 0);
+		 f_mount(&SDFatFS, (TCHAR const*)NULL, 0);*/
 		osDelay(1000);
 	}
   /* USER CODE END StartDataStorage */

@@ -32,7 +32,7 @@ KeyboardNbViewBase::KeyboardNbViewBase() :
     BackBtnBox.setAlpha(90);
 
     BackBtn.setText(TypedText(T___SINGLEUSE_8W0H));
-    BackBtn.setTextPosition(-6, 7, 95, 32);
+    BackBtn.setTextPosition(-6, 5, 95, 32);
     BackBtn.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(133, 133, 133));
     BackBtn.setPosition(381, 3, 95, 32);
     BackBtn.setAction(flexButtonCallback);
@@ -42,7 +42,7 @@ KeyboardNbViewBase::KeyboardNbViewBase() :
     BackArrow.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
     KeyBoardBackground.setBitmap(touchgfx::Bitmap(BITMAP_RECTANGLE46_ID));
-    KeyBoardBackground.setPosition(70, 88, 305, 187);
+    KeyBoardBackground.setPosition(70, 88, 305, 184);
     KeyBoardBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     KeyBoardBackground.setAlpha(102);
 

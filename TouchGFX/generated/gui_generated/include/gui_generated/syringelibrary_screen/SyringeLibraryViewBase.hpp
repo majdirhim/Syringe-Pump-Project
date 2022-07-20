@@ -9,6 +9,9 @@
 #include <gui/syringelibrary_screen/SyringeLibraryPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/containers/progress_indicators/ImageProgress.hpp>
 
 class SyringeLibraryViewBase : public touchgfx::View<SyringeLibraryPresenter>
 {
@@ -29,6 +32,11 @@ protected:
     touchgfx::ScalableImage ChildrenBackground;
     touchgfx::ScalableImage DarkBackground;
     touchgfx::ScalableImage DefaultBackground;
+    touchgfx::Image image2;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextArea textArea2;
+    touchgfx::TextArea textArea3;
+    touchgfx::ImageProgress imageProgress1;
 
 private:
 

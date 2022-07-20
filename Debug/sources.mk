@@ -59,6 +59,7 @@ TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/home_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/keyboard_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/keyboardnb_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/language_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/lockscreen_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/log_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/main_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/maintenance_screen \
@@ -70,6 +71,7 @@ TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/patientdatabase_screen
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/perfusiontimesetting_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/samepatient_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/settings_screen \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/settings_time_date_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/sound_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/specialmodes_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/startup_screen \
@@ -98,6 +100,7 @@ TouchGFX/build/MINGW32_NT-6.2/gui/src/home_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/keyboard_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/keyboardnb_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/language_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/lockscreen_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/log_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/main_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/maintenance_screen \
@@ -110,6 +113,7 @@ TouchGFX/build/MINGW32_NT-6.2/gui/src/patientdatabase_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/perfusiontimesetting_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/samepatient_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/settings_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/settings_time_date_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/sound_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/specialmodes_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/startup_screen \
@@ -136,7 +140,7 @@ TouchGFX/generated/gui_generated/src/home_screen \
 TouchGFX/generated/gui_generated/src/keyboard_screen \
 TouchGFX/generated/gui_generated/src/keyboardnb_screen \
 TouchGFX/generated/gui_generated/src/language_screen \
-TouchGFX/generated/gui_generated/src/log_screen \
+TouchGFX/generated/gui_generated/src/lockscreen_screen \
 TouchGFX/generated/gui_generated/src/main_screen \
 TouchGFX/generated/gui_generated/src/maintenance_screen \
 TouchGFX/generated/gui_generated/src/manual_screen \
@@ -147,12 +151,12 @@ TouchGFX/generated/gui_generated/src/patientdatabase_screen \
 TouchGFX/generated/gui_generated/src/perfusiontimesetting_screen \
 TouchGFX/generated/gui_generated/src/samepatient_screen \
 TouchGFX/generated/gui_generated/src/settings_screen \
+TouchGFX/generated/gui_generated/src/settings_time_date_screen \
 TouchGFX/generated/gui_generated/src/sound_screen \
 TouchGFX/generated/gui_generated/src/specialmodes_screen \
 TouchGFX/generated/gui_generated/src/startup_screen \
 TouchGFX/generated/gui_generated/src/syringelibrary_screen \
 TouchGFX/generated/gui_generated/src/syringeselection_screen \
-TouchGFX/generated/gui_generated/src/timeanddatesetting_screen \
 TouchGFX/generated/gui_generated/src/transitions_screen \
 TouchGFX/generated/images/src \
 TouchGFX/generated/images/src/__designer \
@@ -173,7 +177,7 @@ TouchGFX/gui/src/home_screen \
 TouchGFX/gui/src/keyboard_screen \
 TouchGFX/gui/src/keyboardnb_screen \
 TouchGFX/gui/src/language_screen \
-TouchGFX/gui/src/log_screen \
+TouchGFX/gui/src/lockscreen_screen \
 TouchGFX/gui/src/main_screen \
 TouchGFX/gui/src/maintenance_screen \
 TouchGFX/gui/src/manual_screen \
@@ -185,12 +189,12 @@ TouchGFX/gui/src/patientdatabase_screen \
 TouchGFX/gui/src/perfusiontimesetting_screen \
 TouchGFX/gui/src/samepatient_screen \
 TouchGFX/gui/src/settings_screen \
+TouchGFX/gui/src/settings_time_date_screen \
 TouchGFX/gui/src/sound_screen \
 TouchGFX/gui/src/specialmodes_screen \
 TouchGFX/gui/src/startup_screen \
 TouchGFX/gui/src/syringelibrary_screen \
 TouchGFX/gui/src/syringeselection_screen \
-TouchGFX/gui/src/timeanddatesetting_screen \
 TouchGFX/gui/src/transitions_screen \
 TouchGFX/target \
 TouchGFX/target/generated \

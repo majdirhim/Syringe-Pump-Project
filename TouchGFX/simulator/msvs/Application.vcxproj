@@ -64,9 +64,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\language_screen\LanguageViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\LogDisplay.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\LogDisplayBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\log_screen\LogPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\log_screen\LogView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\log_screen\LogViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\maintenance_screen\MaintenancePresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\maintenance_screen\MaintenanceView.cpp"/>
@@ -119,12 +116,17 @@
     <ClCompile Include="..\..\generated\gui_generated\src\syringeselection_screen\SyringeSelectionViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\textbubble.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\textbubbleBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\timeanddatesetting_screen\TimeAndDateSettingPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\timeanddatesetting_screen\TimeAndDateSettingView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\timeanddatesetting_screen\TimeAndDateSettingViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\transitions_screen\transitionsPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\transitions_screen\transitionsView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\transitions_screen\transitionsViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\CustomContainer1.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainer1Base.cpp"/>
+    <ClCompile Include="..\..\gui\src\lockscreen_screen\LockScreenPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\lockscreen_screen\LockScreenView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\lockscreen_screen\LockScreenViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\settings_time_date_screen\Settings_Time_DatePresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\settings_time_date_screen\Settings_Time_DateView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\settings_time_date_screen\Settings_Time_DateViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xlsx"/>
@@ -319,9 +321,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\language_screen\LanguageViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\LogDisplay.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\LogDisplayBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\log_screen\LogPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\log_screen\LogView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\log_screen\LogViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\maintenance_screen\MaintenancePresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\maintenance_screen\MaintenanceView.hpp"/>
@@ -375,12 +374,17 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\syringeselection_screen\SyringeSelectionViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\textbubble.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\textbubbleBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\timeanddatesetting_screen\TimeAndDateSettingPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\timeanddatesetting_screen\TimeAndDateSettingView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timeanddatesetting_screen\TimeAndDateSettingViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\transitions_screen\transitionsPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\transitions_screen\transitionsView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\transitions_screen\transitionsViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainer1.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainer1Base.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\lockscreen_screen\LockScreenPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\lockscreen_screen\LockScreenView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\lockscreen_screen\LockScreenViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\settings_time_date_screen\Settings_Time_DatePresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\settings_time_date_screen\Settings_Time_DateView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settings_time_date_screen\Settings_Time_DateViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

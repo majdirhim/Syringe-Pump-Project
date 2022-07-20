@@ -1,0 +1,10 @@
+../Core/Src/stm32746g_qspi.c:118:9:BSP_QSPI_Init	72	static
+../Core/Src/stm32746g_qspi.c:173:9:BSP_QSPI_Read	80	static
+../Core/Src/stm32746g_qspi.c:213:9:BSP_QSPI_Write	96	static
+../Core/Src/stm32746g_qspi.c:293:9:BSP_QSPI_Erase_Block	72	static
+../Core/Src/stm32746g_qspi.c:335:9:BSP_QSPI_Erase_Chip	64	static
+../Core/Src/stm32746g_qspi.c:375:9:BSP_QSPI_GetStatus	72	static
+../Core/Src/stm32746g_qspi.c:420:9:BSP_QSPI_GetInfo	16	static
+../Core/Src/stm32746g_qspi.c:437:16:QSPI_ResetMemory	64	static
+../Core/Src/stm32746g_qspi.c:480:16:QSPI_WriteEnable	88	static
+../Core/Src/stm32746g_qspi.c:527:16:QSPI_AutoPollingMemReady	96	static

@@ -188,7 +188,7 @@ typedef struct {
 typedef struct {
 	uint16_t Id;
 	uint8_t Sound;
-	uint16_t Password;
+	uint16_t password;
 	uint8_t DisplayMode;
 	SW_time Time;
 	uint8_t Departement;
@@ -230,6 +230,12 @@ typedef struct {
 	float MinRate;
 	float MaxRate;
 }DrugT;
+
+typedef struct {
+	uint8_t hours;
+	uint8_t minutes;
+	uint8_t seconds;
+}time_ps;
 
 
 #endif

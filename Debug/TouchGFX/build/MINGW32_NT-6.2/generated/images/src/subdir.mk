@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/BitmapDatabase.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_Groupe10.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_Groupe2.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_Groupe49.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_Groupe7.o \
@@ -53,6 +54,7 @@ O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_medical-history.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_medical.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_medicalbase.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_mini_Trace99.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_mini_mini_new1.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_mini_same1.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/images/src/image_mini_specials.o \

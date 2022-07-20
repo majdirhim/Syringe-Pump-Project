@@ -48,7 +48,7 @@ ConfigurationViewBase::ConfigurationViewBase() :
     ConfigBtn.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(133, 133, 133));
     ConfigBtn.setIconBitmaps(Bitmap(BITMAP_CONFIGURATION_ID), Bitmap(BITMAP_CONFIGURATION_ID));
     ConfigBtn.setIconXY(36, 18);
-    ConfigBtn.setPosition(375, 223, 95, 44);
+    ConfigBtn.setPosition(375, 224, 95, 44);
 
     InfusionBox.setPosition(19, 58, 336, 72);
     InfusionBox.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
