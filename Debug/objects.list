@@ -1,3 +1,4 @@
+"./Core/Src/BSP_SDRAM.o"
 "./Core/Src/DEV_Config.o"
 "./Core/Src/TS_I2C.o"
 "./Core/Src/adc.o"

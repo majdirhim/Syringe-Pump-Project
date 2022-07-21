@@ -5,6 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/BSP_SDRAM.c \
 ../Core/Src/DEV_Config.c \
 ../Core/Src/TS_I2C.c \
 ../Core/Src/adc.c \
@@ -35,6 +36,7 @@ C_SRCS += \
 ../Core/Src/x_nucleo_ihm01a1_stm32f4xx.c 
 
 C_DEPS += \
+./Core/Src/BSP_SDRAM.d \
 ./Core/Src/DEV_Config.d \
 ./Core/Src/TS_I2C.d \
 ./Core/Src/adc.d \
@@ -65,6 +67,7 @@ C_DEPS += \
 ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.d 
 
 OBJS += \
+./Core/Src/BSP_SDRAM.o \
 ./Core/Src/DEV_Config.o \
 ./Core/Src/TS_I2C.o \
 ./Core/Src/adc.o \
@@ -102,7 +105,7 @@ Core/Src/%.o Core/Src/%.su: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/DEV_Config.d ./Core/Src/DEV_Config.o ./Core/Src/DEV_Config.su ./Core/Src/TS_I2C.d ./Core/Src/TS_I2C.o ./Core/Src/TS_I2C.su ./Core/Src/adc.d ./Core/Src/adc.o ./Core/Src/adc.su ./Core/Src/batt.d ./Core/Src/batt.o ./Core/Src/batt.su ./Core/Src/crc.d ./Core/Src/crc.o ./Core/Src/crc.su ./Core/Src/dma2d.d ./Core/Src/dma2d.o ./Core/Src/dma2d.su ./Core/Src/fmc.d ./Core/Src/fmc.o ./Core/Src/fmc.su ./Core/Src/freertos.d ./Core/Src/freertos.o ./Core/Src/freertos.su ./Core/Src/ft5x06.d ./Core/Src/ft5x06.o ./Core/Src/ft5x06.su ./Core/Src/gpio.d ./Core/Src/gpio.o ./Core/Src/gpio.su ./Core/Src/i2c.d ./Core/Src/i2c.o ./Core/Src/i2c.su ./Core/Src/l6474.d ./Core/Src/l6474.o ./Core/Src/l6474.su ./Core/Src/ltdc.d ./Core/Src/ltdc.o ./Core/Src/ltdc.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/motorcontrol.d ./Core/Src/motorcontrol.o ./Core/Src/motorcontrol.su ./Core/Src/quadspi.d ./Core/Src/quadspi.o ./Core/Src/quadspi.su ./Core/Src/sdmmc.d ./Core/Src/sdmmc.o ./Core/Src/sdmmc.su ./Core/Src/spi.d ./Core/Src/spi.o ./Core/Src/spi.su ./Core/Src/stm32746g_qspi.d ./Core/Src/stm32746g_qspi.o ./Core/Src/stm32746g_qspi.su ./Core/Src/stm32h7xx_hal_msp.d ./Core/Src/stm32h7xx_hal_msp.o ./Core/Src/stm32h7xx_hal_msp.su ./Core/Src/stm32h7xx_hal_timebase_tim.d ./Core/Src/stm32h7xx_hal_timebase_tim.o ./Core/Src/stm32h7xx_hal_timebase_tim.su ./Core/Src/stm32h7xx_it.d ./Core/Src/stm32h7xx_it.o ./Core/Src/stm32h7xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32h7xx.d ./Core/Src/system_stm32h7xx.o ./Core/Src/system_stm32h7xx.su ./Core/Src/tim.d ./Core/Src/tim.o ./Core/Src/tim.su ./Core/Src/usart.d ./Core/Src/usart.o ./Core/Src/usart.su ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.d ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.o ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.su
+	-$(RM) ./Core/Src/BSP_SDRAM.d ./Core/Src/BSP_SDRAM.o ./Core/Src/BSP_SDRAM.su ./Core/Src/DEV_Config.d ./Core/Src/DEV_Config.o ./Core/Src/DEV_Config.su ./Core/Src/TS_I2C.d ./Core/Src/TS_I2C.o ./Core/Src/TS_I2C.su ./Core/Src/adc.d ./Core/Src/adc.o ./Core/Src/adc.su ./Core/Src/batt.d ./Core/Src/batt.o ./Core/Src/batt.su ./Core/Src/crc.d ./Core/Src/crc.o ./Core/Src/crc.su ./Core/Src/dma2d.d ./Core/Src/dma2d.o ./Core/Src/dma2d.su ./Core/Src/fmc.d ./Core/Src/fmc.o ./Core/Src/fmc.su ./Core/Src/freertos.d ./Core/Src/freertos.o ./Core/Src/freertos.su ./Core/Src/ft5x06.d ./Core/Src/ft5x06.o ./Core/Src/ft5x06.su ./Core/Src/gpio.d ./Core/Src/gpio.o ./Core/Src/gpio.su ./Core/Src/i2c.d ./Core/Src/i2c.o ./Core/Src/i2c.su ./Core/Src/l6474.d ./Core/Src/l6474.o ./Core/Src/l6474.su ./Core/Src/ltdc.d ./Core/Src/ltdc.o ./Core/Src/ltdc.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/motorcontrol.d ./Core/Src/motorcontrol.o ./Core/Src/motorcontrol.su ./Core/Src/quadspi.d ./Core/Src/quadspi.o ./Core/Src/quadspi.su ./Core/Src/sdmmc.d ./Core/Src/sdmmc.o ./Core/Src/sdmmc.su ./Core/Src/spi.d ./Core/Src/spi.o ./Core/Src/spi.su ./Core/Src/stm32746g_qspi.d ./Core/Src/stm32746g_qspi.o ./Core/Src/stm32746g_qspi.su ./Core/Src/stm32h7xx_hal_msp.d ./Core/Src/stm32h7xx_hal_msp.o ./Core/Src/stm32h7xx_hal_msp.su ./Core/Src/stm32h7xx_hal_timebase_tim.d ./Core/Src/stm32h7xx_hal_timebase_tim.o ./Core/Src/stm32h7xx_hal_timebase_tim.su ./Core/Src/stm32h7xx_it.d ./Core/Src/stm32h7xx_it.o ./Core/Src/stm32h7xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32h7xx.d ./Core/Src/system_stm32h7xx.o ./Core/Src/system_stm32h7xx.su ./Core/Src/tim.d ./Core/Src/tim.o ./Core/Src/tim.su ./Core/Src/usart.d ./Core/Src/usart.o ./Core/Src/usart.su ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.d ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.o ./Core/Src/x_nucleo_ihm01a1_stm32f4xx.su
 
 .PHONY: clean-Core-2f-Src
 

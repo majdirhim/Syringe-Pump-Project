@@ -41,6 +41,7 @@
 #include "SW_common.h"
 #include "stdio.h"
 #include "stm32746g_qspi.h"
+#include "BSP_SDRAM.h"
 //#include "drv8825.h"
 
 /* USER CODE END Includes */
@@ -113,6 +114,8 @@ int _write(int file, char *ptr, int len)
        L6474_ALARM_EN_SW_TURN_ON       |
        L6474_ALARM_EN_WRONG_NPERF_CMD)    /// Alarm (ALARM_EN register).
   };*/
+
+__attribute__((section("TouchGFX_Framebuffer"))) uint16_t framebuffer[480 * 272 * 24/8];
 /* USER CODE END 0 */
 
 /**
@@ -122,7 +125,7 @@ int _write(int file, char *ptr, int len)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint16_t* framebuffer = (uint16_t*)0xC0000000;  //16 bpp framebuffer
+	//uint16_t* framebuffer = (uint16_t*)0xC0000000;  //16 bpp framebuffer
 
   /* USER CODE END 1 */
 
@@ -168,6 +171,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
+  BSP_SDRAM_Init();
   L6474_SetNbDevices(1);
   L6474_Init(NULL);
   L6474_SelectStepMode(0, STEP_MODE_1_16);

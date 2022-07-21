@@ -36,7 +36,8 @@
 ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
-_estack = 0x20020000;    /* end of RAM */
+_estack = 0x30000000;
+/*_estack = 0x20020000;*/    /* end of RAM */
 /* Generate a link error if heap and stack don't fit into RAM */
 _Min_Heap_Size = 0x200 ;      /* required amount of heap  */
 _Min_Stack_Size = 0x400 ; /* required amount of stack */
@@ -49,7 +50,7 @@ MEMORY
   RAM_D1 (xrw)   : ORIGIN = 0x24000000, LENGTH = 512K
   RAM_D2 (xrw)   : ORIGIN = 0x30000000, LENGTH = 288K
   RAM_D3 (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
-  
+  SDRAM  (xrw)   : ORIGIN = 0xD0000000, LENGTH = 8M
   ITCMRAM (xrw)  : ORIGIN = 0x00000000, LENGTH = 64K
   QSPI (rx) 	 : ORIGIN = 0x90000000, LENGTH = 128M
 }
@@ -197,10 +198,10 @@ SECTIONS
     . = ALIGN(0x4);
   } >QSPI
   
-  /*BmpCacheSection (NOLOAD) : { *(BmpCacheSection) } >SDRAM*/
-  /*TouchGFX_Framebuffer (NOLOAD) : { *(TouchGFX_Framebuffer) } >SDRAM*/
-  /*TouchGFX_Framebuffer1 (NOLOAD) : { *(TouchGFX_Framebuffer1) } >RAM_D2*/
-  /*TouchGFX_Framebuffer2 (NOLOAD) : { *(TouchGFX_Framebuffer2) } >RAM_D2*/
+  BmpCacheSection (NOLOAD) : { *(BmpCacheSection) } >SDRAM
+  TouchGFX_Framebuffer (NOLOAD) : { *(TouchGFX_Framebuffer) } >SDRAM
+  /*TouchGFX_Framebuffer1 (NOLOAD) : { *(TouchGFX_Framebuffer1) } >RAM_D1*/
+  /*TouchGFX_Framebuffer2 (NOLOAD) : { *(TouchGFX_Framebuffer2) } >RAM_D1*/
 }
 
 
