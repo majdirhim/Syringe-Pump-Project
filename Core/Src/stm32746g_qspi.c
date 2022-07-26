@@ -87,6 +87,7 @@
   * @{
   */       
 //QSPI_HandleTypeDef QSPIHandle;
+
 #define QSPIHandle hqspi
 /**
   * @}
@@ -554,6 +555,44 @@ static uint8_t QSPI_AutoPollingMemReady(uint32_t Timeout)
 
   return QSPI_OK;
 }
+
+
+uint8_t BSP_QSPI_MemoryMappedMode(void){
+
+	QSPI_CommandTypeDef sCommand;
+	QSPI_MemoryMappedTypeDef sMemMappedCfg;
+
+	/* Enable Memory-Mapped mode-------------------------------------------------- */
+
+	sCommand.InstructionMode = QSPI_INSTRUCTION_1_LINE;
+	sCommand.Instruction = QUAD_OUT_FAST_READ_CMD;
+	sCommand.AddressSize = QSPI_ADDRESS_24_BITS;
+	sCommand.AddressMode = QSPI_ADDRESS_1_LINE;
+	sCommand.Address = 0;
+	sCommand.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;
+	sCommand.DdrMode = QSPI_DDR_MODE_DISABLE;
+	sCommand.DdrHoldHalfCycle = QSPI_DDR_HHC_ANALOG_DELAY;
+	sCommand.SIOOMode = QSPI_SIOO_INST_EVERY_CMD;
+	sCommand.DataMode = QSPI_DATA_4_LINES;
+	sCommand.NbData = 0;
+	sCommand.DummyCycles = 8;
+	sCommand.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;
+	sCommand.AlternateBytes = 0;
+	sCommand.AlternateBytesSize = 0;
+
+	sMemMappedCfg.TimeOutActivation = QSPI_TIMEOUT_COUNTER_DISABLE;
+	sMemMappedCfg.TimeOutPeriod = 0;
+
+	if (HAL_QSPI_MemoryMapped(&hqspi, &sCommand, &sMemMappedCfg) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
+
+
+
+
 /**
   * @}
   */  

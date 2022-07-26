@@ -299,7 +299,7 @@ void StartBatteryManage(void *argument)
 void Stepper_motor(void *argument)
 {
   /* USER CODE BEGIN Stepper_motor */
-	float Flowrate=0, radius = 17;
+	float Flowrate=0,preFlow, radius = 17;
 	float volume_to_inject=0;
 	int timeneeded = 0;
 	uint8_t mode=0;
@@ -308,16 +308,17 @@ void Stepper_motor(void *argument)
 	for (;;) {
 		osMessageQueueGet(FlowRateQHandle, &Flowrate, 10U, 100);
 		osMessageQueueGet(VolumeQHandle, &volume_to_inject, 10U,100);
-		if ( Flowrate!=0 && volume_to_inject!=0 &&(osMessageQueueGet(ModeQHandle, &mode, 10U, 100U)==osOK && mode==1)){
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7,GPIO_PIN_RESET );
+		if ( Flowrate!=0 && volume_to_inject!=0 && (osMessageQueueGet(ModeQHandle, &mode, 10U, 100U)==osOK && mode==1)){
 			timeneeded = Time_Needed(Flowrate, volume_to_inject);
 			laststep = timeneeded * (L6474_GetCurrentSpeed(0) / 16); //1/16 microstep
 			osMessageQueuePut(LastStepQHandle, &laststep, 1, 100);
-			SyringeMove(Flowrate, radius);
+			if(Flowrate!=prevFlow){
+				SyringeMove(Flowrate, radius);
+				prevFlow=Flowrate;
+			}
 		}
 		// ***** 0 => StopMode , 8=> PauseMode *******
 		if((mode==0 || mode == 8)){
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7,GPIO_PIN_SET );
 		 SyringeStop();
 		 }
 		osDelay(10);
@@ -423,79 +424,19 @@ void Interface(void *argument)
 {
   /* USER CODE BEGIN Interface */
 	Infusion_paramT msgPerfusionParameters;
-	char check[10];
 	msgPerfusionParameters.Mode=0;
-	int num;
 	/* Infinite loop */
 	for (;;) {
 		// ***** 0 => StopMode , 8=> PauseMode *******
-		HAL_UART_Receive(&huart1, (uint8_t*) check, sizeof(check), 100);
-		num =atoi(check);
-			switch(num){
-			case 1 :
-				msgPerfusionParameters.Flowrate=50*1000;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
-				}
-				break;
-			case 2 :
-				msgPerfusionParameters.Flowrate=3000*1000;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
-				}
-				break;
-			case 3 :
-				msgPerfusionParameters.Flowrate=100*1000;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
-				}
-				break;
-			case 4 :
-				msgPerfusionParameters.Flowrate=6000*1000;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 10U,100);
-				}
-				break;
-			case 5 :
-				msgPerfusionParameters.InfousionVolume=10*1000;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(VolumeQHandle, &msgPerfusionParameters.InfousionVolume, 10U,100);
-				}
-				break;
-			case 6 :
-				msgPerfusionParameters.InfousionVolume=50*1000;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(VolumeQHandle, &msgPerfusionParameters.InfousionVolume, 10U,100);
-				}
-				break;
-			case 7 :
-				msgPerfusionParameters.InfousionVolume=100*1000;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(VolumeQHandle, &msgPerfusionParameters.InfousionVolume, 10U,100);
-				}
-				break;
-			case 8 :
-				msgPerfusionParameters.Mode=1;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 10U,100U);
-				}
-				break;
-			case 9 :
-				msgPerfusionParameters.Mode=0;
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 10U,100U);
-				}
-				break;
-			default :
-				for(int i= 0; i<3;i++){
-				osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 10U,100U);
-				}
-				break;
-			}
-		/*if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
-		 &&  msgPerfusionParameters.Mode!=8  ){
-		 msgPerfusionParameters.Flowrate = msgPerfusionParameters.Flowrate*1000; // cm^3/h ==> mm^3/h*/
 
+		if(osMessageQueueGet(InfusionQHandle,&msgPerfusionParameters,10U,100)==osOK && msgPerfusionParameters.Mode!=0
+		 &&  msgPerfusionParameters.Mode!=8  ){
+		 msgPerfusionParameters.Flowrate*=1000;// cm^3/h ==> mm^3/h
+		 msgPerfusionParameters.InfousionVolume*=1000; // cm^3 ==> mm^3
+		 osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate, 5, 100);
+		 osMessageQueuePut(VolumeQHandle, &msgPerfusionParameters.InfousionVolume, 5, 100);
+		}else
+			osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 5, 100);
 		osDelay(10);
 	}
   /* USER CODE END Interface */

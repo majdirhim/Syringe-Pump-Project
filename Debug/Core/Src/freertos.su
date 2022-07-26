@@ -3,5 +3,5 @@
 ../Core/Src/freertos.c:299:6:Stepper_motor	40	static
 ../Core/Src/freertos.c:335:6:Cloud_Connectivity	192	static
 ../Core/Src/freertos.c:387:6:Sensors_measurements	40	static
-../Core/Src/freertos.c:422:6:Interface	104	static
-../Core/Src/freertos.c:511:6:StartDataStorage	584	static
+../Core/Src/freertos.c:422:6:Interface	56	static
+../Core/Src/freertos.c:449:6:StartDataStorage	584	static

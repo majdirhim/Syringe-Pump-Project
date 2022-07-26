@@ -40,7 +40,7 @@ void TouchGFXGeneratedHAL::initialize()
     registerEventListener(*(Application::getInstance()));
     registerTaskDelayFunction(&OSWrappers::taskDelay);
     setFrameRefreshStrategy(HAL::REFRESH_STRATEGY_OPTIM_SINGLE_BUFFER_TFT_CTRL);
-    setFrameBufferStartAddresses((void*)0xD0000000, (void*)0, (void*)0);
+    setFrameBufferStartAddresses((void*)0x24000000, (void*)0, (void*)0);
 }
 
 void TouchGFXGeneratedHAL::configureInterrupts()

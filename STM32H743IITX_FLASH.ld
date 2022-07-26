@@ -50,9 +50,8 @@ MEMORY
   RAM_D1 (xrw)   : ORIGIN = 0x24000000, LENGTH = 512K
   RAM_D2 (xrw)   : ORIGIN = 0x30000000, LENGTH = 288K
   RAM_D3 (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
-  SDRAM  (xrw)   : ORIGIN = 0xD0000000, LENGTH = 8M
   ITCMRAM (xrw)  : ORIGIN = 0x00000000, LENGTH = 64K
-  QSPI (rx) 	 : ORIGIN = 0x90000000, LENGTH = 128M
+  QSPI (rx) 	 : ORIGIN = 0x90000000, LENGTH = 16M
 }
 /**/
 /*SDRAM  (xrw)   : ORIGIN = 0xC0000000, LENGTH = 8M*/
@@ -198,8 +197,8 @@ SECTIONS
     . = ALIGN(0x4);
   } >QSPI
   
-  BmpCacheSection (NOLOAD) : { *(BmpCacheSection) } >SDRAM
-  TouchGFX_Framebuffer (NOLOAD) : { *(TouchGFX_Framebuffer) } >SDRAM
+  BmpCacheSection (NOLOAD) : { *(BmpCacheSection) } >RAM_D1
+  TouchGFX_Framebuffer (NOLOAD) : { *(TouchGFX_Framebuffer) } >RAM_D1
   /*TouchGFX_Framebuffer1 (NOLOAD) : { *(TouchGFX_Framebuffer1) } >RAM_D1*/
   /*TouchGFX_Framebuffer2 (NOLOAD) : { *(TouchGFX_Framebuffer2) } >RAM_D1*/
 }

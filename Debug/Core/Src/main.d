@@ -42,8 +42,6 @@ Core/Src/main.o: ../Core/Src/main.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
@@ -77,11 +75,10 @@ Core/Src/main.o: ../Core/Src/main.c \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
  ../Core/Inc/i2c.h ../Core/Inc/ltdc.h ../Core/Inc/quadspi.h \
  ../Core/Inc/sdmmc.h ../Core/Inc/spi.h ../Core/Inc/tim.h \
- ../Core/Inc/usart.h ../Core/Inc/gpio.h ../Core/Inc/fmc.h \
- ../TouchGFX/App/app_touchgfx.h ../Core/Inc/l6474.h \
- ../Core/Inc/l6474_target_config.h ../Core/Inc/motor.h \
- ../Core/Inc/motorcontrol.h ../Core/Inc/SW_common.h \
- ../Core/Inc/stm32746g_qspi.h ../Core/Inc/BSP_SDRAM.h ../Core/Inc/fmc.h
+ ../Core/Inc/usart.h ../Core/Inc/gpio.h ../TouchGFX/App/app_touchgfx.h \
+ ../Core/Inc/l6474.h ../Core/Inc/l6474_target_config.h \
+ ../Core/Inc/motor.h ../Core/Inc/motorcontrol.h ../Core/Inc/SW_common.h \
+ ../Core/Inc/stm32746g_qspi.h
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -125,8 +122,6 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h:
-../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
-../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
@@ -172,7 +167,6 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/gpio.h:
-../Core/Inc/fmc.h:
 ../TouchGFX/App/app_touchgfx.h:
 ../Core/Inc/l6474.h:
 ../Core/Inc/l6474_target_config.h:
@@ -180,5 +174,3 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/motorcontrol.h:
 ../Core/Inc/SW_common.h:
 ../Core/Inc/stm32746g_qspi.h:
-../Core/Inc/BSP_SDRAM.h:
-../Core/Inc/fmc.h:

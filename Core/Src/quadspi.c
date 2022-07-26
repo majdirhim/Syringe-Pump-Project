@@ -19,7 +19,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "quadspi.h"
-
+#include "stm32746g_qspi.h"
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -51,7 +51,13 @@ void MX_QUADSPI_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN QUADSPI_Init 2 */
-
+  if(BSP_QSPI_Init()!=QSPI_OK){
+	  Error_Handler();
+  }
+  if(BSP_QSPI_MemoryMappedMode()!=HAL_OK){
+	  Error_Handler();
+  }
+  HAL_NVIC_DisableIRQ(QUADSPI_IRQn);
   /* USER CODE END QUADSPI_Init 2 */
 
 }
