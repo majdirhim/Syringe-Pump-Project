@@ -52,6 +52,8 @@ Core/Src/x_nucleo_ihm01a1_stm32f4xx.o: \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  ../Core/Inc/x_nucleo_ihm01a1_stm32f4xx.h
@@ -107,6 +109,8 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/x_nucleo_ihm01a1_stm32f4xx.h:

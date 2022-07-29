@@ -28,7 +28,7 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "stm32746g_qspi.h"
 /* USER CODE END Includes */
 
 extern QSPI_HandleTypeDef hqspi;

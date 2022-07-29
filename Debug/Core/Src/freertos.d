@@ -51,6 +51,8 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
@@ -74,7 +76,8 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
  ../Core/Inc/tim.h ../Core/Inc/main.h ../Core/Inc/adc.h \
- ../Core/Inc/usart.h ../Core/Inc/SW_common.h ../Core/Inc/spi.h
+ ../Core/Inc/usart.h ../Core/Inc/SW_common.h ../Core/Inc/spi.h \
+ ../Core/Inc/Sim7600.h ../Core/Inc/batt.h
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -127,6 +130,8 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
@@ -161,3 +166,5 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/SW_common.h:
 ../Core/Inc/spi.h:
+../Core/Inc/Sim7600.h:
+../Core/Inc/batt.h:

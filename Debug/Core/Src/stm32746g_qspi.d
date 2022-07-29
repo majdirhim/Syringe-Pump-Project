@@ -51,10 +51,12 @@ Core/Src/stm32746g_qspi.o: ../Core/Src/stm32746g_qspi.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  ../Core/Inc/stm32746g_qspi.h ../Core/Inc/quadspi.h ../Core/Inc/main.h \
- ../Core/Inc/w25q128fv.h
+ ../Core/Inc/stm32746g_qspi.h ../Core/Inc/w25q128fv.h
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -107,9 +109,12 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/stm32746g_qspi.h:
 ../Core/Inc/quadspi.h:
 ../Core/Inc/main.h:
+../Core/Inc/stm32746g_qspi.h:
 ../Core/Inc/w25q128fv.h:

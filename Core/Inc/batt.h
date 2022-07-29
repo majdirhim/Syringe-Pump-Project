@@ -7,6 +7,9 @@
 #endif
 
 #define BATTADDR 0x0B
+
+
+
 #include "main.h"
 
  /***** enums *****/
@@ -92,12 +95,13 @@
   uint16_t batteryStatus() ;
   // number
   uint16_t serialNumber() ;
+  //time in minutes to empty
+  uint16_t runtimetoempty();
   // Celsius
   float temperature() ;
 
 
-  uint16_t readWord(SBSCommand command);
-
+  //uint16_t readWord(SBSCommand command); /** static in .c file **/
 #ifdef __cplusplus
   }
 #endif

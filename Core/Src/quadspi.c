@@ -19,7 +19,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "quadspi.h"
-#include "stm32746g_qspi.h"
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */

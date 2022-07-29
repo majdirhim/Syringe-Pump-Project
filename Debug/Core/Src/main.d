@@ -51,6 +51,8 @@ Core/Src/main.o: ../Core/Src/main.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h \
+ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  ../Core/Inc/main.h \
@@ -74,10 +76,11 @@ Core/Src/main.o: ../Core/Src/main.c \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h ../FATFS/Target/sd_diskio.h \
  ../Core/Inc/i2c.h ../Core/Inc/ltdc.h ../Core/Inc/quadspi.h \
- ../Core/Inc/sdmmc.h ../Core/Inc/spi.h ../Core/Inc/tim.h \
- ../Core/Inc/usart.h ../Core/Inc/gpio.h ../TouchGFX/App/app_touchgfx.h \
- ../Core/Inc/l6474.h ../Core/Inc/l6474_target_config.h \
- ../Core/Inc/motor.h ../Core/Inc/motorcontrol.h ../Core/Inc/SW_common.h \
+ ../Core/Inc/stm32746g_qspi.h ../Core/Inc/sdmmc.h ../Core/Inc/spi.h \
+ ../Core/Inc/tim.h ../Core/Inc/usart.h ../Core/Inc/gpio.h \
+ ../TouchGFX/App/app_touchgfx.h ../Core/Inc/l6474.h \
+ ../Core/Inc/l6474_target_config.h ../Core/Inc/motor.h \
+ ../Core/Inc/motorcontrol.h ../Core/Inc/SW_common.h \
  ../Core/Inc/stm32746g_qspi.h
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32H7xx_hal.h:
@@ -131,6 +134,8 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h:
+D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/main.h:
@@ -162,6 +167,7 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/i2c.h:
 ../Core/Inc/ltdc.h:
 ../Core/Inc/quadspi.h:
+../Core/Inc/stm32746g_qspi.h:
 ../Core/Inc/sdmmc.h:
 ../Core/Inc/spi.h:
 ../Core/Inc/tim.h:

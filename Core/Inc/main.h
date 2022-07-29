@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "Alarms.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -58,6 +58,10 @@ void MyFlagInterruptHandler(void);// stepper motor driver flags handler ( under_
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define DISP_Pin GPIO_PIN_8
+#define DISP_GPIO_Port GPIOI
+#define Detect_SD_Pin GPIO_PIN_13
+#define Detect_SD_GPIO_Port GPIOC
 #define RST_Pin GPIO_PIN_6
 #define RST_GPIO_Port GPIOF
 #define SCL_Pin GPIO_PIN_7
@@ -66,8 +70,21 @@ void MyFlagInterruptHandler(void);// stepper motor driver flags handler ( under_
 #define SDA_GPIO_Port GPIOF
 #define STBY_RST_Pin GPIO_PIN_0
 #define STBY_RST_GPIO_Port GPIOA
+#define FLAG_PIN_Pin GPIO_PIN_4
+#define FLAG_PIN_GPIO_Port GPIOH
+#define FLAG_PIN_EXTI_IRQn EXTI4_IRQn
+#define LED_RED_Pin GPIO_PIN_11
+#define LED_RED_GPIO_Port GPIOF
+#define LED_GREEN_Pin GPIO_PIN_12
+#define LED_GREEN_GPIO_Port GPIOF
+#define LED_YELLOW_Pin GPIO_PIN_13
+#define LED_YELLOW_GPIO_Port GPIOF
+#define BUZZER_Pin GPIO_PIN_14
+#define BUZZER_GPIO_Port GPIOF
 #define CS_Pin GPIO_PIN_12
 #define CS_GPIO_Port GPIOB
+#define DIR_1_Pin GPIO_PIN_3
+#define DIR_1_GPIO_Port GPIOI
 #define INT_Pin GPIO_PIN_7
 #define INT_GPIO_Port GPIOD
 #define LED2_Pin GPIO_PIN_7

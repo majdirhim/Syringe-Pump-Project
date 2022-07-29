@@ -1,4 +1,6 @@
+"./Core/Src/Alarms.o"
 "./Core/Src/DEV_Config.o"
+"./Core/Src/Sim7600.o"
 "./Core/Src/TS_I2C.o"
 "./Core/Src/adc.o"
 "./Core/Src/batt.o"

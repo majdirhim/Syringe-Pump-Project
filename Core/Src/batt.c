@@ -1,7 +1,7 @@
 #include "batt.h"
 #include "i2c.h"
-
-uint16_t readWord(SBSCommand command){
+/**Private fucntion**/
+static uint16_t readWord(SBSCommand command){
 	uint16_t res;
 	uint8_t buffrx[2]={0,0} ;
 	if(HAL_SMBUS_Master_Transmit_IT(&hsmbus1, (BATTADDR<<1), (uint8_t*)command, 1, SMBUS_FIRST_FRAME)!=HAL_OK){
@@ -22,6 +22,8 @@ uint16_t readWord(SBSCommand command){
 	res|=buffrx[0];
 	return res;
 }
+
+/** To use function**/
 
 uint16_t voltage(){
 	return readWord(Voltage);
@@ -50,7 +52,9 @@ uint16_t batteryStatus(){
 uint16_t serialNumber() {
 	return readWord(SerialNumber);
 }
-
+uint16_t runtimetoempty(){
+	return readWord(RunTimeToEmpty);
+}
 float temperature() {
 	return (readWord(Temperature) * 0.1) - 273.15;
 }

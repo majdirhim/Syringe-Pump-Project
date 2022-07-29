@@ -174,6 +174,7 @@ int main(void)
   L6474_AttachFlagInterrupt(MyFlagInterruptHandler);
   HAL_LTDC_SetAddress(&hltdc, framebuffer, LTDC_LAYER_1);
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7,GPIO_PIN_SET );
+  HAL_GPIO_WritePin (DISP_GPIO_Port, DISP_Pin, GPIO_PIN_SET); // Display
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -289,9 +290,6 @@ void MyFlagInterruptHandler(void)
   if ((statusRegister & L6474_STATUS_HIZ) == L6474_STATUS_HIZ)
   {
     // HIZ state
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  	  HAL_Delay(1000);
-
     // Action to be customized
   }
 
@@ -299,15 +297,11 @@ void MyFlagInterruptHandler(void)
   if ((statusRegister & L6474_STATUS_DIR) == L6474_STATUS_DIR)
   {
     // Forward direction is set
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  HAL_Delay(1000);
     // Action to be customized
   }
   else
   {
     // Backward direction is set
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  	  HAL_Delay(1000);
     // Action to be customized
   }
 
@@ -317,8 +311,12 @@ void MyFlagInterruptHandler(void)
   if ((statusRegister & L6474_STATUS_NOTPERF_CMD) == L6474_STATUS_NOTPERF_CMD)
   {
       // Command received by SPI can't be performed
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  HAL_Delay(1000);
+	  int count=0;
+	  count++;
+	  if(count>=5){
+		  Alarm_Action(MOTOR_DRIVER_NOT_RESPONSDING);
+		  count=0;
+	  }
      // Action to be customized
   }
 
@@ -326,8 +324,6 @@ void MyFlagInterruptHandler(void)
   if ((statusRegister & L6474_STATUS_WRONG_CMD) == L6474_STATUS_WRONG_CMD)
   {
      //command received by SPI does not exist
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  HAL_Delay(1000);
      // Action to be customized
   }
 
@@ -335,27 +331,24 @@ void MyFlagInterruptHandler(void)
   if ((statusRegister & L6474_STATUS_UVLO) == 0)
   {
      //undervoltage lock-out
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  HAL_Delay(1000);
      // Action to be customized
+	  Alarm_Action(MOTOR_UNDERVOLTAGE);
   }
 
   /* Check TH_WRN flag: if not set, the thermal warning threshold is reached */
   if ((statusRegister & L6474_STATUS_TH_WRN) == 0)
   {
     //thermal warning threshold is reached
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  	  HAL_Delay(1000);
     // Action to be customized
+	  Alarm_Action(MOTOR_THERMAL_OVERHEAT);
   }
 
   /* Check TH_SHD flag: if not set, the thermal shut down threshold is reached */
   if ((statusRegister & L6474_STATUS_TH_SD) == 0)
   {
     //thermal shut down threshold is reached
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  HAL_Delay(1000);
     // Action to be customized
+	  Alarm_Action(MOTOR_THERMAL_SHUTDOWN);
 
   }
 
@@ -363,9 +356,8 @@ void MyFlagInterruptHandler(void)
   if ((statusRegister & L6474_STATUS_OCD) == 0)
   {
     //overcurrent detection
-	  HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-	  HAL_Delay(1000);
     // Action to be customized
+	  Alarm_Action(MOTOR_OVERCURRENT);
   }
 
 }
@@ -474,6 +466,7 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+	  Alerts_Action(INTERNAL_SOFTWARE_ERROR);
   }
   /* USER CODE END Error_Handler_Debug */
 }
