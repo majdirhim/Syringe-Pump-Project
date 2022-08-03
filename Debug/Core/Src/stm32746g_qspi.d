@@ -38,6 +38,8 @@ Core/Src/stm32746g_qspi.o: ../Core/Src/stm32746g_qspi.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h \
@@ -53,6 +55,7 @@ Core/Src/stm32746g_qspi.o: ../Core/Src/stm32746g_qspi.c \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h \
  D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h \
  ../Core/Inc/stm32746g_qspi.h ../Core/Inc/quadspi.h ../Core/Inc/main.h \
@@ -96,6 +99,8 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/ft5x06.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
@@ -111,6 +116,7 @@ D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/main.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/Alarms.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/SW_common.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/TS_I2C.h:
 D:/STM32CubeIDE_1.6.1/STM32CubeIDE/openh7/Core/Inc/DEV_Config.h:
 ../Core/Inc/stm32746g_qspi.h:

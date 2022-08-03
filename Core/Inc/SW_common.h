@@ -168,6 +168,7 @@ typedef struct {
 	uint8_t BatteryChargeLevel;
 	uint8_t BatteryChargingState;
 	uint8_t PowerSource;
+	uint8_t TimeToEmpty;
 }BatteryT;
 
 typedef struct {
@@ -236,6 +237,8 @@ typedef struct {
 	uint8_t minutes;
 	uint8_t seconds;
 }time_ps;
-
+typedef struct {
+	char jsondata[500];
+}Log;
 
 #endif

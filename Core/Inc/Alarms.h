@@ -3,7 +3,7 @@
 #endif
 
 #include "SW_common.h"
-
+#include "cmsis_os2.h"
 
  void Alarm_Action(uint8_t event);
 

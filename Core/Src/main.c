@@ -27,6 +27,7 @@
 #include "i2c.h"
 #include "ltdc.h"
 #include "quadspi.h"
+#include "rtc.h"
 #include "sdmmc.h"
 #include "spi.h"
 #include "tim.h"
@@ -166,6 +167,7 @@ int main(void)
   MX_SDMMC1_SD_Init();
   MX_FATFS_Init();
   MX_USART1_UART_Init();
+  MX_RTC_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   L6474_SetNbDevices(1);
@@ -218,8 +220,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 1;
@@ -364,8 +367,9 @@ void MyFlagInterruptHandler(void)
 // cpu temp interrupt
 void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc){
 	// do something in case of analog watchdog interrupts
-	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+	Alarm_Action(MOTOR_THERMAL_OVERHEAT);
 	HAL_ADC_Stop_IT(hadc);
+
 }
 
 // returns the speed of Screws (mm/s) needed for a given flow_rate (mm^3/h) and syringe radius(mm)
@@ -410,6 +414,7 @@ void SyringeStop(){
 		//drv8825_setEn(drv8825, EN_STOP);
 	L6474_HardStop(0);
 	L6474_HizStop(0);
+
 }
 
 uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {

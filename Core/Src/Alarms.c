@@ -1,7 +1,8 @@
 #include "Alarms.h"
 #include "l6474.h"
+extern osMessageQueueId_t AlarmsQHandle;
 
-// Alarm Actions events
+
 void Alarm_Action(uint8_t event){
 	switch(event){
 	case LINE_OCCLUDED_HIGH :
@@ -70,6 +71,7 @@ void Alarm_Action(uint8_t event){
 		break;
 
 	}
+	osMessageQueuePut(AlarmsQHandle, &event, 1, 10);
 }
 
 
@@ -103,6 +105,7 @@ void Alerts_Action (uint8_t event){
 		//
 		break;
 	}
+	osMessageQueuePut(AlarmsQHandle, &event, 1, 10);
 }
 
 
@@ -121,6 +124,7 @@ void Notifs_Action(uint8_t event){
 		//
 		break;
 	}
+	osMessageQueuePut(AlarmsQHandle, &event, 1, 10);
 }
 
 
@@ -148,4 +152,5 @@ void Default_Event_Action(uint8_t event){
 		//
 		break;
 	}
+	osMessageQueuePut(AlarmsQHandle, &event, 1, 10);
 }

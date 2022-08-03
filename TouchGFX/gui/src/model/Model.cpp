@@ -3,6 +3,8 @@
 #ifndef SIMULATOR
 #include <cmsis_os.h> // FreeRtos V2
 extern osMessageQueueId_t InfusionQHandle;
+extern osMessageQueueId_t patientQHandle;
+extern osMessageQueueId_t drugQHandle;
 #endif
 
 Model::Model() : modelListener(0),
@@ -219,29 +221,41 @@ Patient_dataT Model::getPatient(void)
 void Model::savePatientWeight(uint16_t value)
 {
 	Patient.Weight = value;
+#ifndef SIMULATOR
+	osMessageQueuePut(&patientQHandle, &Patient, 1, 5);
+#endif
 }
 
 void Model::savePatientHeight(uint8_t value)
 {
 	Patient.Height = value;
+#ifndef SIMULATOR
+	osMessageQueuePut(&patientQHandle, &Patient, 1, 5);
+#endif
 }
 
 void Model::savePatientName(char * Value)
 {
 	strncpy(Patient.Name, (const char*)Value, strlen(Value));
 #ifndef SIMULATOR
-	// RTOS
+	osMessageQueuePut(&patientQHandle, &Patient, 1, 5);
 #endif
 }
 
 void Model::savePatientAge(uint8_t value)
 {
 	Patient.Age = value;
+#ifndef SIMULATOR
+	osMessageQueuePut(&patientQHandle, &Patient, 1, 5);
+#endif
 }
 
 void Model::savePatientGender(uint8_t value)
 {
 	Patient.Gender = value;
+#ifndef SIMULATOR
+	osMessageQueuePut(&patientQHandle, &Patient, 1, 5);
+#endif
 }
 
 void Model::requestLastPatientData(void)
@@ -471,6 +485,7 @@ void Model::saveInfusionData(void)
 		prvInfuVol = PerfusionParameters.InfousionVolume;
 		osMessageQueuePut(InfusionQHandle,&PerfusionParameters,1,100);
 	}
+
 #endif
 }
 
@@ -584,6 +599,6 @@ void Model::saveDrug(DrugT value)
 {
 	Drug = value;
 #ifndef SIMULATOR
-	// RTOS Maybe
+	osMessageQueuePut(drugQHandle, &Drug, 1, 1);
 #endif
 }

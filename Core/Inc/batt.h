@@ -100,8 +100,7 @@
   // Celsius
   float temperature() ;
 
-
-  //uint16_t readWord(SBSCommand command); /** static in .c file **/
+ //uint16_t readWord(SBSCommand command); /** static in .c file **/
 #ifdef __cplusplus
   }
 #endif
