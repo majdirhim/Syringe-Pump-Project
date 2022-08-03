@@ -13,65 +13,43 @@ DrugLibraryViewBase::DrugLibraryViewBase() :
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
-    ChildrenBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
-    ChildrenBackground.setPosition(0, 0, 480, 272);
-    ChildrenBackground.setVisible(false);
-    ChildrenBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    BackendBlack.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND3_ID));
+    BackendBlack.setPosition(0, 0, 480, 272);
+    BackendBlack.setVisible(false);
+    BackendBlack.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    DarkBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND3_ID));
-    DarkBackground.setPosition(0, 0, 480, 272);
-    DarkBackground.setVisible(false);
-    DarkBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    BackendChildren.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
+    BackendChildren.setPosition(0, 0, 481, 272);
+    BackendChildren.setVisible(false);
+    BackendChildren.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    DefaultBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND2_ID));
-    DefaultBackground.setPosition(0, 0, 480, 272);
-    DefaultBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    backend.setXY(0, 0);
+    backend.setBitmap(touchgfx::Bitmap(BITMAP_MINI_BACKEND2_ID));
 
-    backbutton.setText(TypedText(T___SINGLEUSE_OZDQ));
-    backbutton.setTextPosition(-4, 6, 96, 37);
-    backbutton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(10, 10, 10));
-    backbutton.setPosition(362, 17, 96, 37);
-    backbutton.setAction(flexButtonCallback);
-
-    BackArrow.setBitmap(touchgfx::Bitmap(BITMAP_GROUPE49_ID));
-    BackArrow.setPosition(375, 27, 27, 17);
-    BackArrow.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-
-    box1.setPosition(363, 17, 95, 37);
+    box1.setPosition(376, 8, 95, 32);
     box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     box1.setAlpha(90);
 
-    textArea1.setXY(116, 29);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0HV7));
+    btn_Back.setIconBitmaps(Bitmap(BITMAP_GROUPE49_ID), Bitmap(BITMAP_GROUPE49_ID));
+    btn_Back.setIconXY(16, 9);
+    btn_Back.setText(TypedText(T___SINGLEUSE_188Z));
+    btn_Back.setTextPosition(23, 6, 95, 32);
+    btn_Back.setTextColors(touchgfx::Color::getColorFromRGB(245, 245, 245), touchgfx::Color::getColorFromRGB(242, 242, 242));
+    btn_Back.setPosition(376, 8, 95, 32);
+    btn_Back.setAction(flexButtonCallback);
 
-    flexButton10.setBoxWithBorderPosition(0, 0, 70, 40);
-    flexButton10.setBorderSize(5);
-    flexButton10.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(26, 153, 0), touchgfx::Color::getColorFromRGB(0, 204, 3), touchgfx::Color::getColorFromRGB(15, 102, 0), touchgfx::Color::getColorFromRGB(52, 153, 55));
-    flexButton10.setText(TypedText(T___SINGLEUSE_NKBY));
-    flexButton10.setTextPosition(3, 7, 70, 40);
-    flexButton10.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    flexButton10.setPosition(394, 155, 70, 40);
-
-    flexButton11.setBoxWithBorderPosition(0, 0, 70, 40);
-    flexButton11.setBorderSize(5);
-    flexButton11.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(240, 7, 7), touchgfx::Color::getColorFromRGB(255, 0, 17), touchgfx::Color::getColorFromRGB(181, 22, 22), touchgfx::Color::getColorFromRGB(189, 42, 42));
-    flexButton11.setText(TypedText(T___SINGLEUSE_6E1A));
-    flexButton11.setTextPosition(2, 6, 70, 40);
-    flexButton11.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    flexButton11.setPosition(394, 205, 70, 40);
+    Syringe_PUMP.setXY(138, 8);
+    Syringe_PUMP.setColor(touchgfx::Color::getColorFromRGB(237, 223, 223));
+    Syringe_PUMP.setLinespacing(0);
+    Syringe_PUMP.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L19X));
 
     add(__background);
-    add(ChildrenBackground);
-    add(DarkBackground);
-    add(DefaultBackground);
-    add(backbutton);
-    add(BackArrow);
+    add(BackendBlack);
+    add(BackendChildren);
+    add(backend);
     add(box1);
-    add(textArea1);
-    add(flexButton10);
-    add(flexButton11);
+    add(btn_Back);
+    add(Syringe_PUMP);
 }
 
 void DrugLibraryViewBase::setupScreen()
@@ -81,11 +59,11 @@ void DrugLibraryViewBase::setupScreen()
 
 void DrugLibraryViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &backbutton)
+    if (&src == &btn_Back)
     {
-        //Interaction1
-        //When backbutton clicked change screen to Settings
-        //Go to Settings with no screen transition
-        application().gotoSettingsScreenNoTransition();
+        //Interaction6
+        //When btn_Back clicked change screen to Settings__screen
+        //Go to Settings__screen with no screen transition
+        application().gotoSettings__screenScreenNoTransition();
     }
 }

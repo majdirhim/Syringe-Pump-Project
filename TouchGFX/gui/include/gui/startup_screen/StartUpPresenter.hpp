@@ -6,12 +6,12 @@
 
 using namespace touchgfx;
 
-class StartUpView;
+class startupView;
 
-class StartUpPresenter : public touchgfx::Presenter, public ModelListener
+class startupPresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    StartUpPresenter(StartUpView& v);
+    startupPresenter(startupView& v);
 
     /**
      * The activate function is called automatically when this screen is "switched in"
@@ -25,15 +25,21 @@ public:
      */
     virtual void deactivate();
 
-    virtual ~StartUpPresenter() {};
+    virtual ~startupPresenter() {};
 
-    uint8_t getDisplayMode(void);
-    uint8_t getInitStatus(void);
+    uint8_t GetdisplayMode(void)
+    {
+        return model->GetDisplayMode();
+    }
+
+    virtual void AlarmOrEvent(void);
+
 
 private:
-    StartUpPresenter();
+    startupPresenter();
 
-    StartUpView& view;
+    startupView& view;
 };
 
 #endif // STARTUPPRESENTER_HPP
+

@@ -1,4 +1,4 @@
-../Core/Src/Alarms.c:6:6:Alarm_Action	16	static
-../Core/Src/Alarms.c:78:6:Alerts_Action	16	static
-../Core/Src/Alarms.c:112:6:Notifs_Action	16	static
-../Core/Src/Alarms.c:130:6:Default_Event_Action	16	static
+Alarms.c:6:6:Alarm_Action	16	static
+Alarms.c:78:6:Alerts_Action	16	static
+Alarms.c:112:6:Notifs_Action	16	static
+Alarms.c:131:6:Default_Event_Action	16	static

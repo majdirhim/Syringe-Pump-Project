@@ -73,8 +73,6 @@ static const Keyboard::Layout layout =
     0xFFFF,
 #elif USE_BPP==24
     0xFFFFFF,
-#elif USE_BPP==8
-    0xFF,
 #elif USE_BPP==4
     0xF,
 #elif USE_BPP==2

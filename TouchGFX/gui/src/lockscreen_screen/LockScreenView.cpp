@@ -1,6 +1,5 @@
 #include <gui/lockscreen_screen/LockScreenView.hpp>
 #include <string>
-#include <touchgfx/Utils.hpp>
 LockScreenView::LockScreenView()
 {
 
@@ -17,7 +16,7 @@ void LockScreenView::setupScreen()
     if(presenter->GetLock() == 1)
     {
     	Intro.setVisible(0);
-    	keybord.setVisible(1);
+    	Keyboard.setVisible(1);
     	InsertPassword.setVisible(0);
 		PasswordError.setVisible(0);
 		InsertOldPassword.setVisible(0);
@@ -28,7 +27,7 @@ void LockScreenView::setupScreen()
 		Back.setTouchable(0);
 		Back.invalidate();
     	Intro.invalidate();
-    	keybord.invalidate();
+    	Keyboard.invalidate();
     	InsertPassword.invalidate();
 		PasswordError.invalidate();
 		InsertOldPassword.invalidate();
@@ -41,7 +40,7 @@ void LockScreenView::setupScreen()
     else if(presenter->GetLock() == 2)
     {
     	Intro.setVisible(0);
-    	keybord.setVisible(1);
+    	Keyboard.setVisible(1);
     	InsertPassword.setVisible(1);
 		PasswordError.setVisible(0);
 		InsertOldPassword.setVisible(0);
@@ -52,7 +51,7 @@ void LockScreenView::setupScreen()
 		Back.setTouchable(1);
 		Back.invalidate();
     	Intro.invalidate();
-    	keybord.invalidate();
+    	Keyboard.invalidate();
     	InsertPassword.invalidate();
 		PasswordError.invalidate();
 		InsertOldPassword.invalidate();
@@ -69,31 +68,31 @@ void LockScreenView::tearDownScreen()
     LockScreenViewBase::tearDownScreen();
 }
 
- void LockScreenView::SetupDisplayMode(void)
+void LockScreenView::SetupDisplayMode(void)
 {
-	//if (presenter->GetdisplayMode() == 1)
-	//{
-		// Backend.setVisible(0);
-		// BackendBlack.setVisible(1);
-		//BackendChildren.setVisible(0);
+	if (presenter->GetdisplayMode() == 1)
+	{
+		Backend.setVisible(0);
+		BackendBlack.setVisible(1);
+		BackendChildren.setVisible(0);
 	}
-	//else if (presenter->GetdisplayMode() == 2)
-	//{
-		//Backend.setVisible(0);
-		//BackendBlack.setVisible(0);
-		//BackendChildren.setVisible(2);
-	//}
-	//else
-	//{
-		//Backend.setVisible(1);
-		//BackendBlack.setVisible(0);
-		//BackendChildren.setVisible(0);
-	// }
-// }
+	else if (presenter->GetdisplayMode() == 2)
+	{
+		Backend.setVisible(0);
+		BackendBlack.setVisible(0);
+		BackendChildren.setVisible(2);
+	}
+	else
+	{
+		Backend.setVisible(1);
+		BackendBlack.setVisible(0);
+		BackendChildren.setVisible(0);
+	}
+}
 
 void LockScreenView::AlarmOrEvent(void)
 {
-	// static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
+	static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
 }
 
 void LockScreenView::write0()
@@ -246,6 +245,10 @@ void LockScreenView::savedata()
         		ScreenLocked.setVisible(0);
         		Back.setTouchable(1);
         		Back.invalidate();
+        		Back.setPressed(1);
+        		Back.executeAction();
+
+
         	}
     		ScreenUnlocked.invalidate();
     		ScreenLocked.invalidate();
@@ -338,7 +341,7 @@ void LockScreenView::savedata()
 			InsertNewPassword.invalidate();
 			PasswordChangeSuccess.invalidate();
 			presenter->SaveLock(0);
-			// static_cast<FrontendApplication*>(Application::getInstance())->gotoLogScreenScreenNoTransition();
+			static_cast<FrontendApplication*>(Application::getInstance())->gotoLogScreenScreenNoTransition();
 		}
 		else if(presenter->GetPassword() != UserInput)
 		{
@@ -372,7 +375,7 @@ void LockScreenView::savedata()
 			InsertNewPassword.invalidate();
 			PasswordChangeSuccess.invalidate();
 			presenter->SaveLock(0);
-			// static_cast<FrontendApplication*>(Application::getInstance())->gotoSettings_Time_DateScreenNoTransition();
+			static_cast<FrontendApplication*>(Application::getInstance())->gotoSettings_Time_DateScreenNoTransition();
 		}
 		else if(presenter->GetPassword() != UserInput)
 		{
@@ -406,7 +409,7 @@ void LockScreenView::savedata()
 			InsertNewPassword.invalidate();
 			PasswordChangeSuccess.invalidate();
 			presenter->SaveLock(0);
-			// static_cast<FrontendApplication*>(Application::getInstance())->gotoMaintenanceScreenNoTransition();
+			static_cast<FrontendApplication*>(Application::getInstance())->gotoMaintenanceScreenNoTransition();
 		}
 		else if(presenter->getpwdtech() != UserInput)
 		{
@@ -434,7 +437,7 @@ void LockScreenView::savedata()
 void LockScreenView::ChangePasswordF()
 {
 	Intro.setVisible(0);
-	keybord.setVisible(1);
+	Keyboard.setVisible(1);
 	state = 20;
 	InsertPassword.setVisible(0);
 	PasswordError.setVisible(0);
@@ -451,12 +454,12 @@ void LockScreenView::ChangePasswordF()
 	ScreenUnlocked.invalidate();
 	ScreenLocked.invalidate();
 	Intro.invalidate();
-	keybord.invalidate();
+	Keyboard.invalidate();
 }
 void LockScreenView::LockF()
 {
 	Intro.setVisible(0);
-	keybord.setVisible(1);
+	Keyboard.setVisible(1);
 	state = 1;
 	InsertPassword.setVisible(1);
 	PasswordError.setVisible(0);
@@ -473,6 +476,5 @@ void LockScreenView::LockF()
 	ScreenUnlocked.invalidate();
 	ScreenLocked.invalidate();
 	Intro.invalidate();
-	keybord.invalidate();
+	Keyboard.invalidate();
 }
-

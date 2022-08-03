@@ -6,24 +6,32 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
-#include <gui/genderchoice_screen/GenderChoicePresenter.hpp>
+#include <gui/genderchoice_screen/genderchoicePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
-class GenderChoiceViewBase : public touchgfx::View<GenderChoicePresenter>
+class genderchoiceViewBase : public touchgfx::View<genderchoicePresenter>
 {
 public:
-    GenderChoiceViewBase();
-    virtual ~GenderChoiceViewBase() {}
+    genderchoiceViewBase();
+    virtual ~genderchoiceViewBase() {}
     virtual void setupScreen();
 
     /*
      * Custom Actions
      */
-    virtual void ChooseGender(uint8_t value);
+    virtual void gendervaar(int8_t value);
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void gendersave(int8_t value)
+    {
+        // Override and implement this function in genderchoice
+    }
 
 protected:
     FrontendApplication& application() {
@@ -34,30 +42,26 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage ChildrenBackground;
-    touchgfx::ScalableImage DarkBackground;
-    touchgfx::ScalableImage DefaultBackground;
-    touchgfx::Box FemaleBtnBox;
-    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  FemaleBtn;
-    touchgfx::Box MaleBtnBox;
-    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  MaleBtn;
-    touchgfx::TextArea Title;
-    touchgfx::Box BackBtnBox;
-    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  BackBtn;
-    touchgfx::ScalableImage BackArrow;
-    touchgfx::Image FemaleIcon;
-    touchgfx::Image MaleIcon;
+    touchgfx::ScalableImage BackendBlack;
+    touchgfx::ScalableImage BackendChildren;
+    touchgfx::Image backend;
+    touchgfx::ButtonWithLabel buttonWithmale;
+    touchgfx::ButtonWithLabel buttonWithfemale;
+    touchgfx::Box box1;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  Back;
 
 private:
 
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<GenderChoiceViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+    touchgfx::Callback<genderchoiceViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<genderchoiceViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };

@@ -1,50 +1,49 @@
-#include <gui/genderchoice_screen/GenderChoiceView.hpp>
+#include <gui/genderchoice_screen/genderchoiceView.hpp>
 
-GenderChoiceView::GenderChoiceView()
+genderchoiceView::genderchoiceView()
 {
 
 }
 
-void GenderChoiceView::setupScreen()
+void genderchoiceView::setupScreen()
 {
-	setupDisplayMode();
-    GenderChoiceViewBase::setupScreen();
+	SetupDisplayMode();
+    genderchoiceViewBase::setupScreen();
 }
 
-void GenderChoiceView::tearDownScreen()
+void genderchoiceView::tearDownScreen()
 {
-    GenderChoiceViewBase::tearDownScreen();
+    genderchoiceViewBase::tearDownScreen();
 }
 
-void GenderChoiceView::setupDisplayMode(void)
+void genderchoiceView::gendersave(int8_t value)
 {
-    if (presenter->getDisplayMode() == DARK)
-    {
-    	DefaultBackground.setVisible(false);
-    	DarkBackground.setVisible(true);
-    	ChildrenBackground.setVisible(false);
-    }
-    else if (presenter->getDisplayMode() == CHILDREN)
-    {
-    	DefaultBackground.setVisible(false);
-    	DarkBackground.setVisible(false);
-    	ChildrenBackground.setVisible(true);
-    }
-    else
-    {
-    	DefaultBackground.setVisible(true);
-    	DarkBackground.setVisible(false);
-    	ChildrenBackground.setVisible(false);
-    }
+    presenter->savegender(value);
 }
 
-void GenderChoiceView::AlarmOrEvent(void)
+void genderchoiceView::SetupDisplayMode(void)
 {
-	static_cast<FrontendApplication*>(Application::getInstance())->gotoMainScreenNoTransition();
+	if (presenter->GetdisplayMode() == 1)
+	{
+		backend.setVisible(0);
+		BackendBlack.setVisible(1);
+		BackendChildren.setVisible(0);
+	}
+	else if (presenter->GetdisplayMode() == 2)
+	{
+		backend.setVisible(0);
+		BackendBlack.setVisible(0);
+		BackendChildren.setVisible(2);
+	}
+	else
+	{
+		backend.setVisible(1);
+		BackendBlack.setVisible(0);
+		BackendChildren.setVisible(0);
+	}
 }
 
-void GenderChoiceView::ChooseGender(uint8_t value)
+void genderchoiceView::AlarmOrEvent(void)
 {
-	presenter->savePatientGender(value);
-	GenderChoiceViewBase::ChooseGender(value);
+	static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
 }

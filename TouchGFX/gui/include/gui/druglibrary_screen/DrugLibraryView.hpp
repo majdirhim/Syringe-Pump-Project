@@ -11,6 +11,8 @@ public:
     virtual ~DrugLibraryView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    void SetupDisplayMode(void);
+    virtual void AlarmOrEvent(void);
 protected:
 };
 

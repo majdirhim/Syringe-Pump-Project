@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\include",
+    "\\include\\gui",
+    "\\include\\gui\\common",
+    "\\src",
+    "\\src\\common",
+    "\\src\\new_paitent_screen"
+  ],
+  "SelectedNode": "\\src\\new_paitent_screen\\New_PaitentView.cpp",
+  "PreviewInSolutionExplorer": false
+}

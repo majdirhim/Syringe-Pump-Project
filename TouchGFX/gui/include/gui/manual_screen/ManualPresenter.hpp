@@ -24,6 +24,11 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
+    uint8_t GetdisplayMode(void)
+    {
+        return model->GetDisplayMode();
+    }
+    virtual void AlarmOrEvent(void);
 
     virtual ~ManualPresenter() {};
 

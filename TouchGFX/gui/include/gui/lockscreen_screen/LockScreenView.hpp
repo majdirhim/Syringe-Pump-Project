@@ -37,4 +37,3 @@ protected:
 };
 
 #endif // LOCKSCREENVIEW_HPP
-

@@ -16,3 +16,8 @@ void BatteryPresenter::deactivate()
 {
 
 }
+
+void BatteryPresenter::AlarmOrEvent(void)
+ {
+        view.AlarmOrEvent();
+}

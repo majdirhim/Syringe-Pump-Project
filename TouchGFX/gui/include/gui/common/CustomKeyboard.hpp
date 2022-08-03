@@ -30,7 +30,7 @@ public:
      */
     void setTouchable(bool touch);
 
-    Unicode::UnicodeChar * getBuffer();
+    Unicode::UnicodeChar* getBuffer(); // add
 
 private:
     /*

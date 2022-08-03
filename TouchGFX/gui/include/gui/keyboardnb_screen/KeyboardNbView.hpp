@@ -1,44 +1,49 @@
 #ifndef KEYBOARDNBVIEW_HPP
 #define KEYBOARDNBVIEW_HPP
 
-#include <gui_generated/keyboardnb_screen/KeyboardNbViewBase.hpp>
-#include <gui/keyboardnb_screen/KeyboardNbPresenter.hpp>
-#include "../../../Core/Inc/SW_common.h"
+#include <gui_generated/keyboardnb_screen/KeyboardNBViewBase.hpp>
+#include <gui/keyboardnb_screen/KeyboardNBPresenter.hpp>
+#include <string> 
+#include <stdio.h>
 
-
-
-class KeyboardNbView : public KeyboardNbViewBase
+class KeyboardNBView : public KeyboardNBViewBase
 {
 public:
-    KeyboardNbView();
-    virtual ~KeyboardNbView() {}
+    KeyboardNBView();
+    virtual ~KeyboardNBView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    virtual void write0();
+    virtual void write1();
+    virtual void write2();
+    virtual void write3();
+    virtual void write4();
+    virtual void write5();
+    virtual void write6();
+    virtual void write7();
+    virtual void write8();
+    virtual void write9();
+    virtual void writecomma();
+    virtual void savedata();
+    virtual void IT_ERASE();
+    void writetoscreen(const char var);
+    virtual void closepopup();
+    void showpopup(void);
+    void SetupDisplayMode(void);
     virtual void AlarmOrEvent(void);
-    void setupDisplayMode(void);
-    virtual void ChangeScreen();
-    virtual void Input0();
-    virtual void Input1();
-    virtual void Input2();
-    virtual void Input3();
-    virtual void Input4();
-    virtual void Input5();
-    virtual void Input6();
-    virtual void Input7();
-    virtual void Input8();
-    virtual void Input9();
-    virtual void InputComma();
-    void writeToScreen(char Input);
-    virtual void SaveData();
-    virtual void EraseInput();
-    void setUnit(void);
-    void setFloatArea();
 protected:
-    uint8_t User;
-    uint8_t Step;
-    SW_float UserInput;
-    uint8_t Comma = false;
-    char InputString[5] = "0";
+    int pas;
+    char inputString[5] = "0";
+    int comma = 0;
+    ps_float userinput;
+
+    Unicode::UnicodeChar keyboardBuff[3];
+    /*
+    * Callback Declarations
+    */
+
+
 };
 
 #endif // KEYBOARDNBVIEW_HPP

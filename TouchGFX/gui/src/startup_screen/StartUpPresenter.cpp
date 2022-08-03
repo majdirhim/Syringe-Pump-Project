@@ -1,28 +1,24 @@
-#include <gui/startup_screen/StartUpView.hpp>
-#include <gui/startup_screen/StartUpPresenter.hpp>
+#include <gui/startup_screen/startupView.hpp>
+#include <gui/startup_screen/startupPresenter.hpp>
 
-StartUpPresenter::StartUpPresenter(StartUpView& v)
+startupPresenter::startupPresenter(startupView& v)
     : view(v)
 {
 
 }
 
-void StartUpPresenter::activate()
+void startupPresenter::activate()
 {
 
 }
 
-void StartUpPresenter::deactivate()
+void startupPresenter::deactivate()
 {
 
 }
 
-uint8_t StartUpPresenter::getDisplayMode()
-{
-	return model->getDisplayMode();
+void startupPresenter::AlarmOrEvent(void)
+ {
+        view.AlarmOrEvent();
 }
 
-uint8_t StartUpPresenter::getInitStatus()
-{
-	return model->getInitStatus();
-}

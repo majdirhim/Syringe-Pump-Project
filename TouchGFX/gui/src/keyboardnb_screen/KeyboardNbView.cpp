@@ -1,356 +1,253 @@
-#include <gui/keyboardnb_screen/KeyboardNbView.hpp>
-#include <stdlib.h>
+#include <gui/keyboardnb_screen/KeyboardNBView.hpp>
+#include <string>
 
-
-KeyboardNbView::KeyboardNbView()
+KeyboardNBView::KeyboardNBView()
 {
+    
 
 }
 
-void KeyboardNbView::setupScreen()
+void KeyboardNBView::setupScreen()
 {
-	User = presenter->getKeyboardUser();
-	Step  = 0;
-	UserInput.BeforeComma = 0;
-	UserInput.AfterComma = 0;
-	setUnit();
-	setupDisplayMode();
-	setFloatArea();
-    KeyboardNbViewBase::setupScreen();
+   touchgfx_printf("------------------  %d  \n", presenter->getinputdestinsation());
+   pas = 0;
+   userinput.value = 0;
+   userinput.scale = 0;
+   SetupDisplayMode();
+   KeyboardNBViewBase::setupScreen();
 }
 
-void KeyboardNbView::tearDownScreen()
+void KeyboardNBView::tearDownScreen()
 {
-    KeyboardNbViewBase::tearDownScreen();
+    KeyboardNBViewBase::tearDownScreen();
 }
 
-void KeyboardNbView::setupDisplayMode(void)
+void KeyboardNBView::write0()
 {
-    if (presenter->getDisplayMode() == DARK)
+    
+    writetoscreen('0');
+
+}
+
+void KeyboardNBView::write1()
+{
+    writetoscreen('1');
+}
+
+void KeyboardNBView::write2()
+{
+    writetoscreen('2');
+
+}
+
+void KeyboardNBView::write3()
+{
+    writetoscreen('3');
+}
+
+void KeyboardNBView::write4()
+{
+    writetoscreen('4');
+}
+
+void KeyboardNBView::write5()
+{
+    writetoscreen('5');
+}
+
+void KeyboardNBView::write6()
+{
+    writetoscreen('6');
+}
+
+void KeyboardNBView::write7()
+{
+    writetoscreen('7');
+}
+
+void KeyboardNBView::write8()
+{
+    writetoscreen('8');
+}
+
+void KeyboardNBView::write9()
+{
+    writetoscreen('9');
+}
+
+void KeyboardNBView::writecomma()
+{
+    comma = 1;
+}
+
+void KeyboardNBView::writetoscreen(const char var)
+{ 
+    switch (comma)
     {
-    	DefaultBackground.setVisible(false);
-    	DarkBackground.setVisible(true);
-    	ChildrenBackground.setVisible(false);
-    }
-    else if (presenter->getDisplayMode() == CHILDREN)
-    {
-    	DefaultBackground.setVisible(false);
-    	DarkBackground.setVisible(false);
-    	ChildrenBackground.setVisible(true);
-    }
-    else
-    {
-    	DefaultBackground.setVisible(true);
-    	DarkBackground.setVisible(false);
-    	ChildrenBackground.setVisible(false);
-    }
-}
-
-void KeyboardNbView::AlarmOrEvent(void)
-{
-	static_cast<FrontendApplication*>(Application::getInstance())->gotoMainScreenNoTransition();
-}
-
-void KeyboardNbView::ChangeScreen()
-{
-	switch(User)
-	{
-	case AGE:
-	case HEIGHT:
-	case WEIGHT:
-		static_cast<FrontendApplication*>(Application::getInstance())->gotoNewPatientScreenWipeTransitionNorth();
-		break;
-	case TOTALVOLUME:
-	case INFUSIONVOLUME:
-	case FLOWRATE:
-	case KVO:
-	case BOLUS:
-		static_cast<FrontendApplication*>(Application::getInstance())->gotoConfigurationScreenWipeTransitionNorth();
-		break;
-	case FLOWRATE_MAIN :
-	case TOTALVOLUME_MAIN :
-		static_cast<FrontendApplication*>(Application::getInstance())->gotoMainScreenWipeTransitionNorth();
-		break;
-	case PRESSURE_H:
-	case PRESSURE_M:
-	case PRESSURE_L:
-
-		break;
-	}
-}
-
-void KeyboardNbView::Input0()
-{
-	writeToScreen('0');
-}
-
-void KeyboardNbView::Input1()
-{
-	writeToScreen('1');
-}
-
-void KeyboardNbView::Input2()
-{
-	writeToScreen('2');
-}
-
-void KeyboardNbView::Input3()
-{
-	writeToScreen('3');
-}
-
-void KeyboardNbView::Input4()
-{
-	writeToScreen('4');
-}
-
-void KeyboardNbView::Input5()
-{
-	writeToScreen('5');
-}
-
-void KeyboardNbView::Input6()
-{
-	writeToScreen('6');
-}
-
-void KeyboardNbView::Input7()
-{
-	writeToScreen('7');
-}
-
-void KeyboardNbView::Input8()
-{
-	writeToScreen('8');
-}
-
-void KeyboardNbView::Input9()
-{
-	writeToScreen('9');
-}
-
-void KeyboardNbView::InputComma()
-{
-	Comma = true;
-}
-
-void KeyboardNbView::writeToScreen(char Input)
-{
-    switch (Comma)
-    {
-    case false :
-        if (Step <= 3)
+    case 0 :
+        if (pas <= 3)
         {
-            *(InputString + Step) = Input;
-            Step++;
-            Unicode::snprintf(IntTextAreaBuffer, INTTEXTAREA_SIZE, InputString);
-            IntTextArea.invalidate();
+            *(inputString + pas) = var;
+            pas++;
+            touchgfx_printf(" 000  %s  \n", inputString);
+            Unicode::snprintf(textArea_centaineBuffer, TEXTAREA_CENTAINE_SIZE, inputString);
+            textArea_centaine.invalidate();
         }
-        else if (Step > 3)
+        else if (pas > 3)
         {
-        	EraseInput();
-            *(InputString + Step) = Input;
-            Step++;
-            Unicode::snprintf(IntTextAreaBuffer, INTTEXTAREA_SIZE, InputString);
-            IntTextArea.invalidate();
+            IT_ERASE();
+            *(inputString + pas) = var;
+            pas++;
+            touchgfx_printf(" 000  %s  \n", inputString);
+            Unicode::snprintf(textArea_centaineBuffer, TEXTAREA_CENTAINE_SIZE, inputString);
+            textArea_centaine.invalidate();
         }
         break;
-    case true :
-    	UserInput.AfterComma = Input - 48;
-        Unicode::snprintf(FloatTextAreaBuffer, FLOATTEXTAREA_SIZE, &Input);
-        FloatTextArea.invalidate();
-        Comma = false;
+    case 1 :
+        userinput.scale = var - 48;
+        Unicode::snprintf(textArea_commaBuffer, TEXTAREA_COMMA_SIZE, &var);
+        textArea_comma.invalidate();
+        comma = 0;
         break;
     default :
         break;
+    }    
+}
+
+void KeyboardNBView::IT_ERASE()
+{
+        Unicode::snprintf(textArea_centaineBuffer, TEXTAREA_CENTAINE_SIZE, "0");
+        Unicode::snprintf(textArea_commaBuffer, TEXTAREA_COMMA_SIZE, "0");
+        textArea_comma.invalidate();
+        textArea_centaine.invalidate();
+        memset(inputString, 0, 4);
+        userinput.scale = 0;
+        pas = 0;
+}
+
+void KeyboardNBView::showpopup(void)
+{
+    modalinputerror.setVisible(true);
+    modalinputerror.setTouchable(true);
+    modalinputerror.invalidate();
+}
+
+void KeyboardNBView::closepopup(void)
+{
+    modalinputerror.setVisible(false);
+    modalinputerror.setTouchable(false);
+    modalinputerror.invalidate();
+    IT_ERASE();
+}
+
+void KeyboardNBView::savedata()
+{
+    userinput.value = atoi(inputString);
+    touchgfx_printf(" -------------------------------------   %d  \n", userinput.value);
+    uint16_t N = presenter->getinputdestinsation();
+    switch (N) 
+    {
+    case 1:
+        presenter->saverate(userinput);
+        static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
+        break;
+    case 2 :
+        presenter->savevolume(userinput);
+        static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
+        break;
+    case 3 :
+    	presenter->savedinfusionvolume(userinput);
+    	static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
+    	break;
+    case 4 :
+        if ((userinput.value < 0) || (userinput.value > 5) || ((userinput.value == 5) && (userinput.scale > 0)) || ((userinput.value == 0) && (userinput.scale == 0)))
+        {
+            showpopup();
+            Unicode::snprintf(errorBuffer, ERROR_SIZE, "0 < = KVO < = 5");
+            error.invalidate();
+        }
+        else 
+        {
+            presenter->saveKVO(userinput);
+            static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
+        }
+        break;
+    case 5 :
+        presenter->savebolus(userinput);
+        static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
+        break;
+    case 61 :
+        if((userinput.value < presenter->getoclusionMedium()) || (userinput.value < presenter->getoclusionLow()))
+        {
+            showpopup();
+            Unicode::snprintf(errorBuffer, ERROR_SIZE, "%d < %d\n%d < %d", presenter->getoclusionLow(), userinput.value, presenter->getoclusionMedium(), userinput.value);
+            error.invalidate();
+        }
+        else{
+            presenter->saveoclusionHigh(userinput.value);
+        	static_cast<FrontendApplication*>(Application::getInstance())->gotoOclusion_levelScreenNoTransition();
+        }
+        break;
+    case 62 :
+        if (((presenter->getoclusionHigh() != 0) && (userinput.value > presenter->getoclusionHigh())) || (userinput.value < presenter->getoclusionLow()))
+        {
+            showpopup();
+            Unicode::snprintf(errorBuffer, ERROR_SIZE, "%d < %d\n%d > %d", presenter->getoclusionLow(), userinput.value, presenter->getoclusionHigh(), userinput.value);
+            error.invalidate();
+        }
+        else{
+            presenter->saveoclusionMedium(userinput.value);
+        static_cast<FrontendApplication*>(Application::getInstance())->gotoOclusion_levelScreenNoTransition();
+        }
+        break;
+    case 63 :
+        if (((presenter->getoclusionMedium() != 0) && (userinput.value > presenter->getoclusionMedium())) || ((presenter->getoclusionHigh() != 0) && (userinput.value > presenter->getoclusionHigh())))
+        {
+            showpopup();
+            Unicode::snprintf(errorBuffer, ERROR_SIZE, "%d > %d\n%d > %d", presenter->getoclusionMedium(), userinput.value, presenter->getoclusionHigh(), userinput.value);
+            error.invalidate();
+        }
+        else{
+         presenter->saveoclusionLow(userinput.value);
+        static_cast<FrontendApplication*>(Application::getInstance())->gotoOclusion_levelScreenNoTransition();
+        }
+        break;
+    case 8 :
+    	presenter->saveposition(userinput.value);
+    	static_cast<FrontendApplication*>(Application::getInstance())->gototestVersionScreenNoTransition();
+    	break;
+    case 7 :
+    	presenter->savediameter(userinput.value);
+    	static_cast<FrontendApplication*>(Application::getInstance())->gototestVersionScreenNoTransition();
+    	break;
+    default : 
+        break;
     }
 }
 
-void KeyboardNbView::SaveData()
+void KeyboardNBView::SetupDisplayMode(void)
 {
-	UserInput.BeforeComma = atoi(InputString);
-	
-	switch(User)
-	{
-	case AGE:
-		if((UserInput.BeforeComma <= 255) && (UserInput.BeforeComma > 0))
-		{
-			presenter->savePatientAge((uint8_t)UserInput.BeforeComma);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case HEIGHT:
-		if((UserInput.BeforeComma <= 255) && (UserInput.BeforeComma > 0))
-		{
-			presenter->savePatientHeight((uint8_t)UserInput.BeforeComma);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case WEIGHT:
-			presenter->savePatientWeight(UserInput.BeforeComma);
-			ChangeScreen();
-		break;
-	case TOTALVOLUME:
-	case TOTALVOLUME_MAIN :
-		// cannot bigger than syringe volume
-		if (1)
-		{
-			presenter->saveTotalVolume(UserInput);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case INFUSIONVOLUME:
-		// cannot bigger than syringe volume 
-		if (1)
-		{
-			presenter->saveInfusionVolume(UserInput);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case FLOWRATE:
-	case FLOWRATE_MAIN:
-		// cannot bigger than syringe volume 
-		if (1)
-		{
-			presenter->saveFlowaRate(UserInput);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case KVO:
-		// cannot bigger than syringe volume 
-		if (1)
-		{
-			presenter->saveKVORate(UserInput);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case BOLUS:
-		// cannot bigger than syringe volume 
-		if (1)
-		{
-			presenter->saveBolusRate(UserInput);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case PRESSURE_H:
-		// cannot bigger than syringe volume 
-		if (1)
-		{
-			presenter->savePressureThresholdHigh(UserInput.BeforeComma);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case PRESSURE_M:
-		// cannot bigger than syringe volume 
-		if (1)
-		{
-			presenter->savePressureThresholdMedium(UserInput.BeforeComma);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	case PRESSURE_L:
-		// cannot bigger than syringe volume 
-		if (1)
-		{
-			presenter->savePressureThresholdLow(UserInput.BeforeComma);
-			ChangeScreen();
-		}
-		else
-		{
-
-		}
-		break;
-	}
+    if (presenter->GetdisplayMode() == 1)
+    {
+        Backend.setVisible(0);
+        BackendBlack.setVisible(1);
+        BackendChildren.setVisible(0);
+    }
+    else if (presenter->GetdisplayMode() == 2)
+    {
+        Backend.setVisible(0);
+        BackendBlack.setVisible(0);
+        BackendChildren.setVisible(1);
+    }
+    else
+    {
+        Backend.setVisible(1);
+        BackendBlack.setVisible(0);
+        BackendChildren.setVisible(0);
+    }
 }
 
-void KeyboardNbView::EraseInput()
+void KeyboardNBView::AlarmOrEvent(void)
 {
-    Unicode::snprintf(IntTextAreaBuffer, INTTEXTAREA_SIZE, "0");
-    Unicode::snprintf(FloatTextAreaBuffer, FLOATTEXTAREA_SIZE, "0");
-    IntTextArea.invalidate();
-    FloatTextArea.invalidate();
-    memset(InputString, 0, 4);
-    UserInput.AfterComma = 0;
-    UserInput.BeforeComma = 0;
-    Step = 0;
+    static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
 }
-
-void KeyboardNbView::setUnit()
-{
-	switch(User)
-	{
-	case AGE:
-		Unicode::snprintf(UnitTextAreaBuffer, UNITTEXTAREA_SIZE, "");
-		break;
-	case HEIGHT:
-		Unicode::snprintf(UnitTextAreaBuffer, UNITTEXTAREA_SIZE, "cm");
-		break;
-	case WEIGHT:
-		Unicode::snprintf(UnitTextAreaBuffer, UNITTEXTAREA_SIZE, "Kg");
-		break;
-	case PRESSURE_H:
-	case PRESSURE_M:
-	case PRESSURE_L:
-		Unicode::snprintf(UnitTextAreaBuffer, UNITTEXTAREA_SIZE, "mmHg");
-		break;
-	case FLOWRATE:
-	case KVO:
-	case BOLUS:
-	case FLOWRATE_MAIN:
-		Unicode::snprintf(UnitTextAreaBuffer, UNITTEXTAREA_SIZE, "mL/h");
-		break;
-	case TOTALVOLUME:
-	case INFUSIONVOLUME:
-	case TOTALVOLUME_MAIN:
-		Unicode::snprintf(UnitTextAreaBuffer, UNITTEXTAREA_SIZE, "mL");
-		break;
-	}
-	UnitTextArea.invalidate();
-}
-
-void KeyboardNbView::setFloatArea()
-{
-	if ((User == AGE) || (User == PRESSURE_L) || (User == PRESSURE_M) || (User == PRESSURE_H))
-	{
-		FloatTextArea.setVisible(false);
-	}
-}
-
-
-

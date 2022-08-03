@@ -16,3 +16,8 @@ void MaintenancePresenter::deactivate()
 {
 
 }
+
+void MaintenancePresenter::AlarmOrEvent(void)
+ {
+        view.AlarmOrEvent();
+}

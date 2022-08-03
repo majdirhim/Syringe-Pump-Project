@@ -9,6 +9,9 @@
 #include <gui/maintenance_screen/MaintenancePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class MaintenanceViewBase : public touchgfx::View<MaintenancePresenter>
 {
@@ -26,11 +29,24 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage ChildrenBackground;
-    touchgfx::ScalableImage DarkBackground;
-    touchgfx::ScalableImage DefaultBackground;
+    touchgfx::ScalableImage BackendBlack;
+    touchgfx::ScalableImage BackendChildren;
+    touchgfx::Image backend;
+    touchgfx::Box box1;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  btn_Back;
+    touchgfx::TextArea Syringe_PUMP;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<MaintenanceViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

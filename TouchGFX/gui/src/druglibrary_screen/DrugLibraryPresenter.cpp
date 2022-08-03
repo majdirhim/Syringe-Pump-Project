@@ -16,3 +16,8 @@ void DrugLibraryPresenter::deactivate()
 {
 
 }
+
+void DrugLibraryPresenter::AlarmOrEvent(void)
+ {
+        view.AlarmOrEvent();
+}

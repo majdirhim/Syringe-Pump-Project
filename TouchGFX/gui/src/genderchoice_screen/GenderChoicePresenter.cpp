@@ -1,33 +1,28 @@
-#include <gui/genderchoice_screen/GenderChoiceView.hpp>
-#include <gui/genderchoice_screen/GenderChoicePresenter.hpp>
+#include <gui/genderchoice_screen/genderchoiceView.hpp>
+#include <gui/genderchoice_screen/genderchoicePresenter.hpp>
 
-GenderChoicePresenter::GenderChoicePresenter(GenderChoiceView& v)
+genderchoicePresenter::genderchoicePresenter(genderchoiceView& v)
     : view(v)
 {
 
 }
 
-void GenderChoicePresenter::activate()
+void genderchoicePresenter::activate()
 {
 
 }
 
-void GenderChoicePresenter::deactivate()
+void genderchoicePresenter::deactivate()
 {
 
 }
 
-uint8_t GenderChoicePresenter::getDisplayMode()
+void genderchoicePresenter::savegender(uint8_t value)
 {
-	return model->getDisplayMode();
+    model->savegender(value);
 }
 
-void GenderChoicePresenter::AlarmOrEvent(void)
-{
+void genderchoicePresenter::AlarmOrEvent(void)
+ {
         view.AlarmOrEvent();
-}
-
-void GenderChoicePresenter::savePatientGender(uint8_t value)
-{
-	model->savePatientGender(value);
 }

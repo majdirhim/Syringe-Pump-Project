@@ -6,12 +6,12 @@
 
 using namespace touchgfx;
 
-class KeyboardNbView;
+class KeyboardNBView;
 
-class KeyboardNbPresenter : public touchgfx::Presenter, public ModelListener
+class KeyboardNBPresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    KeyboardNbPresenter(KeyboardNbView& v);
+    KeyboardNBPresenter(KeyboardNBView& v);
 
     /**
      * The activate function is called automatically when this screen is "switched in"
@@ -25,32 +25,93 @@ public:
      */
     virtual void deactivate();
 
-    virtual ~KeyboardNbPresenter() {};
-
+    virtual ~KeyboardNBPresenter() {};
+    uint8_t GetdisplayMode(void)
+    {
+        return model->GetDisplayMode();
+    }
     virtual void AlarmOrEvent(void);
+    void saveinputdestinsation(int16_t var)
+    {
+        model->saveinputdestinsation(var);
+    }
+    int16_t getinputdestinsation()
+    {
+        return model->getinputdestinsation();
+    }
 
-    uint8_t getDisplayMode(void);
+    void saverate(ps_float rate)
+    {
+        model->saverate(rate);
+    }
+    ps_float getrate()
+    {
+        return model->getrate();
+    }
 
-    uint8_t getKeyboardUser(void);
+    void savevolume(ps_float volume)
+    {
+        model->savevolume(volume);
+    }
+    ps_float getvolume()
+    {
+        return model->getvolume();
+    }
 
-    void savePatientWeight(uint16_t);
-    void savePatientHeight(uint8_t);
-    void savePatientAge(uint8_t);
+    void saveoclusionHigh(int16_t pressure)
+    {
+        model->saveoclusionHigh(pressure);
+    }
+    int16_t getoclusionHigh()
+    {
+        return model->getoclusionHigh();
+    }
+    void saveoclusionMedium(int16_t pressure)
+    {
+        model->saveoclusionMedium(pressure);
+    }
+    int16_t getoclusionMedium()
+    {
+        return model->getoclusionMedium();
+    }
+    void saveoclusionLow(int16_t pressure)
+    {
+        model->saveoclusionLow(pressure);
+    }
+    int16_t getoclusionLow()
+    {
+        return model->getoclusionLow();
+    }
 
-    void saveBolusRate(SW_float);
-    void saveKVORate(SW_float);
-    void saveInfusionVolume(SW_float);
-    void saveTotalVolume(SW_float);
-    void saveFlowaRate(SW_float);
+    void saveKVO(ps_float kvo)
+    {
+        model->saveKVO(kvo);
+    }
 
-    void savePressureThresholdLow(uint16_t);
-    void savePressureThresholdMedium(uint16_t);
-    void savePressureThresholdHigh(uint16_t);
+    void savebolus(ps_float bolus)
+    {
+        model->savebolus(bolus);
+    }
+
+    void saveposition(uint32_t bolus)
+    {
+        model->savePosition(bolus);
+    }
+
+    void savediameter(uint16_t bolus)
+    {
+        model->saveDiameter(bolus);
+    }
+
+    void savedinfusionvolume(ps_float volume)
+    {
+        model->saveinfusionvolume(volume);
+    }
 
 private:
-    KeyboardNbPresenter();
+    KeyboardNBPresenter();
 
-    KeyboardNbView& view;
+    KeyboardNBView& view;
 };
 
 #endif // KEYBOARDNBPRESENTER_HPP

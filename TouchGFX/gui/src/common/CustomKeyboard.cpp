@@ -1,6 +1,5 @@
 #include <gui/common/CustomKeyboard.hpp>
-#include <string.h>
-#include <touchgfx/Color.hpp>
+#include <cstring>
 
 CustomKeyboard::CustomKeyboard() : keyboard(),
     modeBtnTextArea(),
@@ -28,7 +27,7 @@ CustomKeyboard::CustomKeyboard() : keyboard(),
     firstCharacterEntry = true;
 
     modeBtnTextArea.setPosition(5, 196, 56, 40);
-    modeBtnTextArea.setColor(Color::getColorFrom24BitRGB(0xFF, 0xFF, 0xFF));
+    //modeBtnTextArea.setColor(Color::getColorFrom24BitRGB(0xFF, 0xFF, 0xFF));
 
     setKeyMappingList();
 
@@ -123,9 +122,8 @@ void CustomKeyboard::setTouchable(bool touch)
     keyboard.setTouchable(touch);
 }
 
-Unicode::UnicodeChar * CustomKeyboard::getBuffer()
+Unicode::UnicodeChar* CustomKeyboard::getBuffer() // add
 {
-	return keyboard.getBuffer();
+    return keyboard.getBuffer();
 }
-
 

@@ -1,95 +1,95 @@
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:62:13:touchgfx::Drawable::~Drawable()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:62:13:virtual touchgfx::Drawable::~Drawable()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:400:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:488:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:498:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:512:10:void touchgfx::Drawable::setVisible(bool)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:534:10:bool touchgfx::Drawable::isVisible() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:546:10:bool touchgfx::Drawable::isTouchable() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:585:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:622:10:void touchgfx::Drawable::resetDrawChainCache()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:700:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:46:13:touchgfx::Screen::~Screen()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:46:13:virtual touchgfx::Screen::~Screen()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:93:18:virtual void touchgfx::Screen::setupScreen()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
-d:\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+dp/hard/bits/gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::~Widget()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:83:10:void touchgfx::Box::setAlpha(uint8_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:98:18:virtual void touchgfx::Box::invalidateContent() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:118:18:virtual void touchgfx::Image::invalidateContent() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:51:13:touchgfx::AbstractPainter::~AbstractPainter()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:51:13:virtual touchgfx::AbstractPainter::~AbstractPainter()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:70:18:touchgfx::CWRUtil::Q5::Q5(int)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:virtual touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<StartUpPresenter>::~View()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<StartUpPresenter>::~View()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/startup_screen/StartUpViewBase.hpp:25:13:StartUpViewBase::~StartUpViewBase()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/startup_screen/StartUpViewBase.hpp:25:13:virtual StartUpViewBase::~StartUpViewBase()	16	static
-../TouchGFX/gui/include/gui/startup_screen/StartUpView.hpp:11:13:StartUpView::~StartUpView()	16	static
-../TouchGFX/gui/include/gui/startup_screen/StartUpView.hpp:11:13:virtual StartUpView::~StartUpView()	16	static
-../TouchGFX/gui/src/startup_screen/StartUpView.cpp:4:1:StartUpView::StartUpView()	16	static
-../TouchGFX/gui/src/startup_screen/StartUpView.cpp:9:6:virtual void StartUpView::setupScreen()	16	static
-../TouchGFX/gui/src/startup_screen/StartUpView.cpp:15:6:virtual void StartUpView::tearDownScreen()	16	static
-../TouchGFX/gui/src/startup_screen/StartUpView.cpp:20:6:void StartUpView::setupDisplayMode()	16	static
-../TouchGFX/gui/src/startup_screen/StartUpView.cpp:42:6:virtual void StartUpView::handleTickEvent()	16	static
-../TouchGFX/gui/src/startup_screen/StartUpView.cpp:92:6:virtual void StartUpView::checkInitStatus()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:194:10:void touchgfx::Circle::setArc(T, T) [with T = int]	40	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:touchgfx::Container::~Container()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:virtual touchgfx::Container::~Container()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:35:7:touchgfx::ScalableImage::~ScalableImage()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:35:7:virtual touchgfx::ScalableImage::~ScalableImage()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::ScalableImage>::~MoveAnimator()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::ScalableImage>::~MoveAnimator()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:47:7:touchgfx::ModalWindow::~ModalWindow()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:47:7:virtual touchgfx::ModalWindow::~ModalWindow()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:33:7:touchgfx::CanvasWidget::~CanvasWidget()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:33:7:virtual touchgfx::CanvasWidget::~CanvasWidget()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:48:7:touchgfx::Circle::~Circle()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:48:7:virtual touchgfx::Circle::~Circle()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:32:7:touchgfx::PainterRGB565::~PainterRGB565()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:32:7:virtual touchgfx::PainterRGB565::~PainterRGB565()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<StartUpViewBase, const touchgfx::FadeAnimator<touchgfx::Box>&>::~Callback()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<StartUpViewBase, const touchgfx::FadeAnimator<touchgfx::Box>&>::~Callback()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<StartUpViewBase, const touchgfx::MoveAnimator<touchgfx::ScalableImage>&>::~Callback()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<StartUpViewBase, const touchgfx::MoveAnimator<touchgfx::ScalableImage>&>::~Callback()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Box]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Box]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Box]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::ScalableImage]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::ScalableImage]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::ScalableImage]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = StartUpViewBase; T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = StartUpViewBase; T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = StartUpViewBase; T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = StartUpViewBase; T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Box]	40	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::ScalableImage]	32	static
+Drawable.hpp:62:13:touchgfx::Drawable::~Drawable()	16	static
+Drawable.hpp:62:13:virtual touchgfx::Drawable::~Drawable()	16	static
+Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	16	static
+Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	16	static
+Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	16	static
+Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	16	static
+Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	16	static
+Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	16	static
+Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	16	static
+Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	16	static
+Drawable.hpp:400:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
+Drawable.hpp:488:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
+Drawable.hpp:498:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
+Drawable.hpp:512:10:void touchgfx::Drawable::setVisible(bool)	16	static
+Drawable.hpp:534:10:bool touchgfx::Drawable::isVisible() const	16	static
+Drawable.hpp:546:10:bool touchgfx::Drawable::isTouchable() const	16	static
+Drawable.hpp:585:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
+Drawable.hpp:622:10:void touchgfx::Drawable::resetDrawChainCache()	16	static
+Drawable.hpp:700:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	24	static
+Screen.hpp:46:13:touchgfx::Screen::~Screen()	16	static
+Screen.hpp:46:13:virtual touchgfx::Screen::~Screen()	16	static
+Screen.hpp:93:18:virtual void touchgfx::Screen::setupScreen()	16	static
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
+Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+Widget.hpp:47:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
+Widget.hpp:36:7:touchgfx::Widget::~Widget()	16	static
+Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
+Box.hpp:83:10:void touchgfx::Box::setAlpha(uint8_t)	16	static
+Box.hpp:98:18:virtual void touchgfx::Box::invalidateContent() const	16	static
+Image.hpp:118:18:virtual void touchgfx::Image::invalidateContent() const	16	static
+TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
+TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
+AbstractPainter.hpp:51:13:touchgfx::AbstractPainter::~AbstractPainter()	16	static
+AbstractPainter.hpp:51:13:virtual touchgfx::AbstractPainter::~AbstractPainter()	16	static
+CWRUtil.hpp:70:18:touchgfx::CWRUtil::Q5::Q5(int)	16	static
+AbstractPainterRGB565.hpp:34:7:touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
+AbstractPainterRGB565.hpp:34:7:virtual touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
+View.hpp:36:7:touchgfx::View<StartUpPresenter>::~View()	16	static
+View.hpp:36:7:virtual touchgfx::View<StartUpPresenter>::~View()	16	static
+StartUpViewBase.hpp:25:13:StartUpViewBase::~StartUpViewBase()	16	static
+StartUpViewBase.hpp:25:13:virtual StartUpViewBase::~StartUpViewBase()	16	static
+StartUpView.hpp:11:13:StartUpView::~StartUpView()	16	static
+StartUpView.hpp:11:13:virtual StartUpView::~StartUpView()	16	static
+StartUpView.cpp:4:1:StartUpView::StartUpView()	16	static
+StartUpView.cpp:9:6:virtual void StartUpView::setupScreen()	16	static
+StartUpView.cpp:15:6:virtual void StartUpView::tearDownScreen()	16	static
+StartUpView.cpp:20:6:void StartUpView::setupDisplayMode()	16	static
+StartUpView.cpp:42:6:virtual void StartUpView::handleTickEvent()	16	static
+StartUpView.cpp:92:6:virtual void StartUpView::checkInitStatus()	16	static
+Circle.hpp:194:10:void touchgfx::Circle::setArc(T, T) [with T = int]	40	static
+Container.hpp:40:7:touchgfx::Container::~Container()	16	static
+Container.hpp:40:7:virtual touchgfx::Container::~Container()	16	static
+Box.hpp:29:7:touchgfx::Box::~Box()	16	static
+Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
+Image.hpp:38:7:touchgfx::Image::~Image()	16	static
+Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
+ScalableImage.hpp:35:7:touchgfx::ScalableImage::~ScalableImage()	16	static
+ScalableImage.hpp:35:7:virtual touchgfx::ScalableImage::~ScalableImage()	16	static
+MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::ScalableImage>::~MoveAnimator()	16	static
+MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::ScalableImage>::~MoveAnimator()	16	static
+FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	16	static
+FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	16	static
+ModalWindow.hpp:47:7:touchgfx::ModalWindow::~ModalWindow()	16	static
+ModalWindow.hpp:47:7:virtual touchgfx::ModalWindow::~ModalWindow()	16	static
+TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	16	static
+TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	16	static
+CanvasWidget.hpp:33:7:touchgfx::CanvasWidget::~CanvasWidget()	16	static
+CanvasWidget.hpp:33:7:virtual touchgfx::CanvasWidget::~CanvasWidget()	16	static
+Circle.hpp:48:7:touchgfx::Circle::~Circle()	16	static
+Circle.hpp:48:7:virtual touchgfx::Circle::~Circle()	16	static
+PainterRGB565.hpp:32:7:touchgfx::PainterRGB565::~PainterRGB565()	16	static
+PainterRGB565.hpp:32:7:virtual touchgfx::PainterRGB565::~PainterRGB565()	16	static
+Callback.hpp:357:8:touchgfx::Callback<StartUpViewBase, const touchgfx::FadeAnimator<touchgfx::Box>&>::~Callback()	16	static
+Callback.hpp:357:8:virtual touchgfx::Callback<StartUpViewBase, const touchgfx::FadeAnimator<touchgfx::Box>&>::~Callback()	16	static
+Callback.hpp:357:8:touchgfx::Callback<StartUpViewBase, const touchgfx::MoveAnimator<touchgfx::ScalableImage>&>::~Callback()	16	static
+Callback.hpp:357:8:virtual touchgfx::Callback<StartUpViewBase, const touchgfx::MoveAnimator<touchgfx::ScalableImage>&>::~Callback()	16	static
+Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
+Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
+Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
+Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
+FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Box]	16	static
+FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Box]	16	static
+FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Box]	16	static
+MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::ScalableImage]	16	static
+MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::ScalableImage]	16	static
+MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::ScalableImage]	16	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = StartUpViewBase; T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = StartUpViewBase; T1 = const touchgfx::MoveAnimator<touchgfx::ScalableImage>&]	16	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = StartUpViewBase; T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = StartUpViewBase; T1 = const touchgfx::FadeAnimator<touchgfx::Box>&]	16	static
+FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Box]	40	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::ScalableImage]	32	static

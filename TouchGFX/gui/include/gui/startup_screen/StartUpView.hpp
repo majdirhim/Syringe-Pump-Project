@@ -1,19 +1,19 @@
 #ifndef STARTUPVIEW_HPP
 #define STARTUPVIEW_HPP
 
-#include <gui_generated/startup_screen/StartUpViewBase.hpp>
-#include <gui/startup_screen/StartUpPresenter.hpp>
+#include <gui_generated/startup_screen/startupViewBase.hpp>
+#include <gui/startup_screen/startupPresenter.hpp>
 
-class StartUpView : public StartUpViewBase
+class startupView : public startupViewBase
 {
 public:
-    StartUpView();
-    virtual ~StartUpView() {}
+    startupView();
+    virtual ~startupView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
-    void setupDisplayMode(void);
-    virtual void handleTickEvent(void);
-    virtual void checkInitStatus();
+    void SetupDisplayMode(void);
+    virtual void AlarmOrEvent(void);
+
 protected:
 };
 

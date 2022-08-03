@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
 ################################################################################
 
 -include ../makefile.init
@@ -12,74 +12,119 @@ RM := rm -rf
 -include TouchGFX/target/generated/subdir.mk
 -include TouchGFX/target/subdir.mk
 -include TouchGFX/gui/src/transitions_screen/subdir.mk
+-include TouchGFX/gui/src/timeparam_screen/subdir.mk
+-include TouchGFX/gui/src/testversion_screen/subdir.mk
 -include TouchGFX/gui/src/syringeselection_screen/subdir.mk
 -include TouchGFX/gui/src/syringelibrary_screen/subdir.mk
+-include TouchGFX/gui/src/syringedetected_screen/subdir.mk
 -include TouchGFX/gui/src/startup_screen/subdir.mk
 -include TouchGFX/gui/src/specialmodes_screen/subdir.mk
+-include TouchGFX/gui/src/specialmode_screen/subdir.mk
 -include TouchGFX/gui/src/sound_screen/subdir.mk
 -include TouchGFX/gui/src/settings_time_date_screen/subdir.mk
 -include TouchGFX/gui/src/settings_screen/subdir.mk
+-include TouchGFX/gui/src/settings__screen_screen/subdir.mk
+-include TouchGFX/gui/src/screenselectdrug_screen/subdir.mk
+-include TouchGFX/gui/src/screenkeyboard_screen/subdir.mk
 -include TouchGFX/gui/src/samepatient_screen/subdir.mk
+-include TouchGFX/gui/src/same_patient_screen/subdir.mk
 -include TouchGFX/gui/src/perfusiontimesetting_screen/subdir.mk
 -include TouchGFX/gui/src/patientdatabase_screen/subdir.mk
 -include TouchGFX/gui/src/password_screen/subdir.mk
 -include TouchGFX/gui/src/oclusionthresholds_screen/subdir.mk
+-include TouchGFX/gui/src/oclusion_level_screen/subdir.mk
 -include TouchGFX/gui/src/newpatient_screen/subdir.mk
+-include TouchGFX/gui/src/new_paitent_screen/subdir.mk
 -include TouchGFX/gui/src/model/subdir.mk
 -include TouchGFX/gui/src/manual_screen/subdir.mk
 -include TouchGFX/gui/src/maintenance_screen/subdir.mk
+-include TouchGFX/gui/src/mainscreen_withstart_screen/subdir.mk
 -include TouchGFX/gui/src/main_screen/subdir.mk
+-include TouchGFX/gui/src/logscreen_screen/subdir.mk
 -include TouchGFX/gui/src/lockscreen_screen/subdir.mk
 -include TouchGFX/gui/src/language_screen/subdir.mk
 -include TouchGFX/gui/src/keyboardnb_screen/subdir.mk
 -include TouchGFX/gui/src/keyboard_screen/subdir.mk
+-include TouchGFX/gui/src/intro_screen/subdir.mk
+-include TouchGFX/gui/src/intro_1_screen/subdir.mk
 -include TouchGFX/gui/src/home_screen/subdir.mk
 -include TouchGFX/gui/src/genderchoice_screen/subdir.mk
+-include TouchGFX/gui/src/functiongeneration_screen/subdir.mk
 -include TouchGFX/gui/src/druglibrary_screen/subdir.mk
 -include TouchGFX/gui/src/displaymode_screen/subdir.mk
 -include TouchGFX/gui/src/diagnostic_screen/subdir.mk
 -include TouchGFX/gui/src/departements_screen/subdir.mk
+-include TouchGFX/gui/src/departement_screen/subdir.mk
 -include TouchGFX/gui/src/containers/subdir.mk
 -include TouchGFX/gui/src/configuration_screen/subdir.mk
 -include TouchGFX/gui/src/common/subdir.mk
 -include TouchGFX/gui/src/battery_screen/subdir.mk
+-include TouchGFX/gui/src/alarmlist_screen/subdir.mk
 -include TouchGFX/gui/src/alarmandeventconfig_screen/subdir.mk
 -include TouchGFX/gui/src/activealarms_screen/subdir.mk
 -include TouchGFX/generated/texts/src/subdir.mk
+-include TouchGFX/generated/images/src/time/subdir.mk
+-include TouchGFX/generated/images/src/screenlogo/subdir.mk
+-include TouchGFX/generated/images/src/screenbutton/subdir.mk
+-include TouchGFX/generated/images/src/screen4/subdir.mk
+-include TouchGFX/generated/images/src/screen3/subdir.mk
+-include TouchGFX/generated/images/src/screen2/circle/subdir.mk
+-include TouchGFX/generated/images/src/screen2/subdir.mk
+-include TouchGFX/generated/images/src/screen1/subdir.mk
 -include TouchGFX/generated/images/src/mini_Flat_hourglass/subdir.mk
+-include TouchGFX/generated/images/src/icon/subdir.mk
+-include TouchGFX/generated/images/src/button/subdir.mk
 -include TouchGFX/generated/images/src/__designer/subdir.mk
+-include TouchGFX/generated/images/src/Flat_hourglass/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
 -include TouchGFX/generated/gui_generated/src/transitions_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/timeparam_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/testversion_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/syringeselection_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/syringelibrary_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/syringedetected_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/startup_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/specialmodes_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/specialmode_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/sound_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/settings_time_date_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/settings_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/settings__screen_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screenselectdrug_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screenkeyboard_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/samepatient_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/same_patient_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/perfusiontimesetting_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/patientdatabase_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/password_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/oclusionthresholds_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/oclusion_level_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/newpatient_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/new_paitent_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/manual_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/maintenance_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/mainscreen_withstart_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/main_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/logscreen_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/lockscreen_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/language_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/keyboardnb_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/keyboard_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/intro_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/intro_1_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/home_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/genderchoice_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/functiongeneration_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/druglibrary_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/displaymode_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/diagnostic_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/departements_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/departement_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/generated/gui_generated/src/configuration_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk
 -include TouchGFX/generated/gui_generated/src/battery_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/alarmlist_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/alarmandeventconfig_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/activealarms_screen/subdir.mk
 -include TouchGFX/generated/fonts/src/subdir.mk
@@ -222,14 +267,14 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 EXECUTABLES += \
 openh7.elf \
 
-MAP_FILES += \
-openh7.map \
-
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
 openh7.list \
+
+OBJCOPY_BIN += \
+openh7.bin \
 
 
 # All Target
@@ -239,8 +284,8 @@ all: main-build
 main-build: openh7.elf secondary-outputs
 
 # Tool invocations
-openh7.elf openh7.map: $(OBJS) $(USER_OBJS) D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\STM32H743IITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "openh7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\STM32H743IITX_FLASH.ld" -Wl,-Map="openh7.map" -Wl,--gc-sections -static -L"D:\STM32CubeIDE_1.6.1\STM32CubeIDE\openh7\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+openh7.elf: $(OBJS) $(USER_OBJS) C:\Users\HP\Documents\GitHub\openh7\STM32H743IITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "openh7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\HP\Documents\GitHub\openh7\STM32H743IITX_FLASH.ld" -Wl,-Map="openh7.map" -Wl,--gc-sections -static -L"C:\Users\HP\Documents\GitHub\openh7\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -254,12 +299,17 @@ openh7.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+openh7.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "openh7.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) default.size.stdout openh7.elf openh7.list openh7.map
+	-$(RM) default.size.stdout openh7.bin openh7.elf openh7.list
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

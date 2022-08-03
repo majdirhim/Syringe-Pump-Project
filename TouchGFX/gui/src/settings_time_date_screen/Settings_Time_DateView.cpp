@@ -10,7 +10,7 @@ void Settings_Time_DateView::setupScreen()
 	SetupDisplayMode();
     Settings_Time_DateViewBase::setupScreen();
 
-    //timeinput = presenter->getcurrentTime();
+    timeinput = presenter->GetCurrentTime();
 
     Unicode::snprintf(textaearHourBuffer, TEXTAEARHOUR_SIZE, "%02d", timeinput.hours);
     Unicode::snprintf(textAreaminuteBuffer, TEXTAREAMINUTE_SIZE, "%02d", timeinput.minutes);
@@ -49,30 +49,29 @@ void Settings_Time_DateView::buttonminutedownclicked()
     textAreaminute.invalidate();
 }
 
- void Settings_Time_DateView::SetupDisplayMode(void)
+void Settings_Time_DateView::SetupDisplayMode(void)
 {
-	//if (presenter->GetdisplayMode() == 1)
-	//{
-		// Backend.setVisible(0);
-		// BackendBlack.setVisible(1);
-		// BackendChildren.setVisible(0);
-	 }
-	// else if (presenter->GetdisplayMode() == 2)
-	// {
-		// Backend.setVisible(0);
-		// BackendBlack.setVisible(0);
-		// BackendChildren.setVisible(2);
-	// }
-	// else
-	// {
-		// Backend.setVisible(1);
-		// BackendBlack.setVisible(0);
-		// BackendChildren.setVisible(0);
-	//}
-// }
+	if (presenter->GetdisplayMode() == 1)
+	{
+		Backend.setVisible(0);
+		BackendBlack.setVisible(1);
+		BackendChildren.setVisible(0);
+	}
+	else if (presenter->GetdisplayMode() == 2)
+	{
+		Backend.setVisible(0);
+		BackendBlack.setVisible(0);
+		BackendChildren.setVisible(2);
+	}
+	else
+	{
+		Backend.setVisible(1);
+		BackendBlack.setVisible(0);
+		BackendChildren.setVisible(0);
+	}
+}
 
 void Settings_Time_DateView::AlarmOrEvent(void)
 {
-	//static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
+	static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
 }
-

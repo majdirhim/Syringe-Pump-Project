@@ -1,108 +1,44 @@
-#include <gui/startup_screen/StartUpView.hpp>
-#include "../../../Core/Inc/SW_common.h"
+#include <gui/startup_screen/startupView.hpp>
 
-StartUpView::StartUpView()
+startupView::startupView()
 {
 
 }
 
-void StartUpView::setupScreen()
+void startupView::setupScreen()
 {
-	setupDisplayMode();
-    StartUpViewBase::setupScreen();
+    SetupDisplayMode();
+    startupViewBase::setupScreen();
 }
 
-void StartUpView::tearDownScreen()
+void startupView::tearDownScreen()
 {
-    StartUpViewBase::tearDownScreen();
+    startupViewBase::tearDownScreen();
 }
 
-void StartUpView::setupDisplayMode(void)
+void startupView::SetupDisplayMode(void)
 {
-    if (presenter->getDisplayMode() == DARK)
+    if (presenter->GetdisplayMode() == 1)
     {
-    	DefaultBackground.setVisible(false);
-    	DarkBackground.setVisible(true);
-    	ChildrenBackground.setVisible(false);
+        backend.setVisible(0);
+        BackendBlack.setVisible(1);
+        BackendChildren.setVisible(0);
     }
-    else if (presenter->getDisplayMode() == CHILDREN)
+    else if (presenter->GetdisplayMode() == 2)
     {
-    	DefaultBackground.setVisible(false);
-    	DarkBackground.setVisible(false);
-    	ChildrenBackground.setVisible(true);
-    }
-    else
-    {
-    	DefaultBackground.setVisible(true);
-    	DarkBackground.setVisible(false);
-    	ChildrenBackground.setVisible(false);
-    }
-}
-
-void StartUpView::handleTickEvent(void)
-{
-    static int i = 0, state = 4;
-
-    switch(state)
-    {
-        case 0:
-        {
-            i++;
-            LoadingCercle.setArc(0, i);
-            LoadingCercle.invalidate();
-            if (i == 360)
-            {
-                state = 1;
-            }
-            break;
-        }
-        case 1:
-        {
-            i--;
-            LoadingCercle.setArc(0, i);
-            LoadingCercle.invalidate();
-            if (i == 0)
-            {
-                state = 4;
-            }
-            break;
-        }
-        case 4:
-        {
-            i++;
-            LoadingCercle.setArc(0, i);
-            LoadingCercle.invalidate();
-            if (i == 110)
-            {
-                state = 5;
-            }
-            break;
-        }
-        case 5:
-        {
-            LoadingCercle.setArc(0, 360);
-            LoadingCercle.invalidate();
-            state = 8;
-            checkInitStatus();
-            break;
-        }
+        backend.setVisible(0);
+        BackendBlack.setVisible(0);
+        BackendChildren.setVisible(2);
+   }
+   else
+   {
+        backend.setVisible(1);
+        BackendBlack.setVisible(0);
+        BackendChildren.setVisible(0);
     }
 }
 
-void StartUpView::checkInitStatus(void)
+void startupView::AlarmOrEvent(void)
 {
-
-    LoadingCercle.setVisible(false);
-    textArea1.setVisible(false);
-    LoadingCercle.invalidate();
-    textArea1.invalidate();
-	if(presenter->getInitStatus() == (uint8_t)true)
-	{
-		StartUpViewBase::initSuccess(true);
-	}
-	else
-	{
-		InitErrorPopUp.setVisible(true);
-		InitErrorPopUp.invalidate();
-	}
+	static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreen_WithSTARTScreenNoTransition();
 }

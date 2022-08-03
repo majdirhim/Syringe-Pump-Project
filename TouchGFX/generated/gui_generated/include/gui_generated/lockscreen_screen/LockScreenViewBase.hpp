@@ -9,10 +9,11 @@
 #include <gui/lockscreen_screen/LockScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class LockScreenViewBase : public touchgfx::View<LockScreenPresenter>
 {
@@ -24,17 +25,22 @@ public:
     /*
      * Virtual Action Handlers
      */
+    virtual void write0()
+    {
+        // Override and implement this function in LockScreen
+    }
+
+    virtual void IT_ERASE()
+    {
+        // Override and implement this function in LockScreen
+    }
+
     virtual void write1()
     {
         // Override and implement this function in LockScreen
     }
 
     virtual void write2()
-    {
-        // Override and implement this function in LockScreen
-    }
-
-    virtual void write0()
     {
         // Override and implement this function in LockScreen
     }
@@ -79,17 +85,12 @@ public:
         // Override and implement this function in LockScreen
     }
 
-    virtual void ChangePasswordF()
-    {
-        // Override and implement this function in LockScreen
-    }
-
     virtual void LockF()
     {
         // Override and implement this function in LockScreen
     }
 
-    virtual void IT_ERASE()
+    virtual void ChangePasswordF()
     {
         // Override and implement this function in LockScreen
     }
@@ -103,46 +104,44 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage BackendChildren;
     touchgfx::ScalableImage BackendBlack;
-    touchgfx::ScalableImage Backend;
-    touchgfx::Container keybord;
-    touchgfx::TextArea PasswordChangeSuccess;
-    touchgfx::TextArea InsertNewPassword;
-    touchgfx::TextArea InsertOldPassword;
-    touchgfx::TextArea PasswordError;
-    touchgfx::TextArea ScreenUnlocked;
-    touchgfx::TextArea ScreenLocked;
-    touchgfx::TextArea InsertPassword;
+    touchgfx::ScalableImage BackendChildren;
+    touchgfx::Image Backend;
+    touchgfx::Container Keyboard;
+    touchgfx::ScalableImage scalableImage1;
+    touchgfx::ScalableImage scalableImage2_1_1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button7;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button6;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button9;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button2;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button5;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button8;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button4;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  button3;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button0;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  ERASE;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  SET;
-    touchgfx::ScalableImage scalableImage3;
-    touchgfx::ScalableImage scalableImage1;
     touchgfx::TextAreaWithOneWildcard textArea_centaine;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  ButtonPoint;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button9;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button0;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button2;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button6;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button7;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button4;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button1;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button8;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button5;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button3;
+    touchgfx::TextArea InsertPassword;
+    touchgfx::TextArea ScreenLocked;
+    touchgfx::TextArea ScreenUnlocked;
+    touchgfx::TextArea PasswordError;
+    touchgfx::TextArea InsertOldPassword;
+    touchgfx::TextArea InsertNewPassword;
+    touchgfx::TextArea PasswordChangeSuccess;
     touchgfx::Container Intro;
-    touchgfx::Box box2;
+    touchgfx::Box box1_1;
     touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  LockUnlock;
-    touchgfx::Box box1;
+    touchgfx::Box box1_1_1;
     touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  ChangePassword;
-    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Back;
-    touchgfx::ScalableImage BackArrow;
-    touchgfx::Box box3;
+    touchgfx::Box box1;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  Back;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTAREA_CENTAINE_SIZE = 10;
+    static const uint16_t TEXTAREA_CENTAINE_SIZE = 6;
     touchgfx::Unicode::UnicodeChar textArea_centaineBuffer[TEXTAREA_CENTAINE_SIZE];
 
 private:

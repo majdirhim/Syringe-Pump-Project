@@ -6,12 +6,12 @@
 
 using namespace touchgfx;
 
-class GenderChoiceView;
+class genderchoiceView;
 
-class GenderChoicePresenter : public touchgfx::Presenter, public ModelListener
+class genderchoicePresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    GenderChoicePresenter(GenderChoiceView& v);
+    genderchoicePresenter(genderchoiceView& v);
 
     /**
      * The activate function is called automatically when this screen is "switched in"
@@ -25,18 +25,18 @@ public:
      */
     virtual void deactivate();
 
-    virtual ~GenderChoicePresenter() {};
-
+    virtual void savegender(uint8_t value);
+    uint8_t GetdisplayMode(void)
+    {
+        return model->GetDisplayMode();
+    }
     virtual void AlarmOrEvent(void);
-
-    uint8_t getDisplayMode(void);
-
-    void savePatientGender(uint8_t);
+    virtual ~genderchoicePresenter() {};
 
 private:
-    GenderChoicePresenter();
+    genderchoicePresenter();
 
-    GenderChoiceView& view;
+    genderchoiceView& view;
 };
 
 #endif // GENDERCHOICEPRESENTER_HPP

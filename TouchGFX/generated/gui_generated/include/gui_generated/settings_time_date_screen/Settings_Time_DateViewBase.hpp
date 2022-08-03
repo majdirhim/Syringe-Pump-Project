@@ -9,11 +9,13 @@
 #include <gui/settings_time_date_screen/Settings_Time_DatePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <gui/containers/CustomContainer1.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class Settings_Time_DateViewBase : public touchgfx::View<Settings_Time_DatePresenter>
 {
@@ -25,12 +27,7 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void buttonminuteupclicked()
-    {
-        // Override and implement this function in Settings_Time_Date
-    }
-
-    virtual void buttonminutedownclicked()
+    virtual void buttonhourupclicked()
     {
         // Override and implement this function in Settings_Time_Date
     }
@@ -40,7 +37,12 @@ public:
         // Override and implement this function in Settings_Time_Date
     }
 
-    virtual void buttonhourupclicked()
+    virtual void buttonminuteupclicked()
+    {
+        // Override and implement this function in Settings_Time_Date
+    }
+
+    virtual void buttonminutedownclicked()
     {
         // Override and implement this function in Settings_Time_Date
     }
@@ -59,23 +61,22 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage BackendChildren;
     touchgfx::ScalableImage BackendBlack;
-    touchgfx::ScalableImage Backend;
-    touchgfx::Box box1;
-    touchgfx::Box box2;
-    touchgfx::TextArea textArea1;
-    touchgfx::TextArea textArea2;
+    touchgfx::ScalableImage BackendChildren;
+    touchgfx::Image Backend;
+    CustomContainer1 customContainer11;
+    CustomContainer1 customContainer11_1;
+    touchgfx::TextArea textareahourcaption;
     touchgfx::TextAreaWithOneWildcard textaearHour;
+    touchgfx::TextArea textareaminutecaption;
     touchgfx::TextAreaWithOneWildcard textAreaminute;
     touchgfx::Button buttonhourup;
     touchgfx::Button buttonhourdown;
     touchgfx::Button buttonminuteup;
     touchgfx::Button buttonminutedown;
-    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  Back;
-    touchgfx::Box box3;
-    touchgfx::ScalableImage BackArrow;
     touchgfx::ButtonWithLabel buttonclock;
+    touchgfx::Box box1;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  btn_Back;
 
     /*
      * Wildcard Buffers

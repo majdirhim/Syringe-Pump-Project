@@ -20,11 +20,10 @@ public:
     virtual void AlarmOrEvent(void);
     virtual void saveclock()
     {
-        // presenter->savecurrentTime(timeinput);
+        presenter->SaveCurrentTime(timeinput);
     }
 protected:
     time_ps timeinput;
 };
 
 #endif // SETTINGS_TIME_DATEVIEW_HPP
-

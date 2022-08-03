@@ -1,18 +1,38 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
-
-#include <stdint.h>
-#include <string>
+#include <touchgfx/hal/types.hpp>
+#include <touchgfx/Utils.hpp>
 #include "../../../Core/Inc/SW_common.h"
-#include "../../../Core/Inc/Runtime_language.h"
-#include <touchgfx/Texts.hpp>
-#include "touchgfx/Utils.hpp"
-enum {
-    FIRST_CALL,
-    CALLER_FLOWRATE,
-    CALLER_VOLUME,
-    CALLER_TIME
-};
+
+#ifndef SIMULATOR
+#include "../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h"
+
+extern osMessageQueueId_t PerfusuinParametersDataQueue_handle;
+// temporary
+extern osMessageQueueId_t MotorSensorDataQueue_Handle;
+
+
+extern osMessageQueueId_t SystemInitParam_handle;
+extern osMessageQueueId_t PatientData_handle;
+extern osMessageQueueId_t ScreenDataQueue_Handle;
+extern osMessageQueueId_t AlarmsToScreen_handle;
+extern osMessageQueueId_t BatteryStatus_handle;
+extern osMessageQueueId_t PatientDataRequest_handle;
+extern osMessageQueueId_t EventstoScreenQueue_Handle;
+extern osMessageQueueId_t LogQueue_Handle;
+extern osMessageQueueId_t LogRequestQueue_Handle;
+extern osMessageQueueId_t PatientNameQueue_handle;
+extern osMessageQueueId_t PressureQueue_handle;
+extern osMessageQueueId_t DrugDataQueue_handle;
+extern osMessageQueueId_t SoundDataQueue_handle;
+extern osMessageQueueId_t TimeDataQueue_handle;
+extern osMessageQueueId_t CurrentPressureDataQueue_handle;
+extern osMessageQueueId_t MuteRequestQueue_handle;
+extern osMessageQueueId_t InitAckQueue_handle;
+#endif
+
+
+
 
 
 class ModelListener;
@@ -27,192 +47,174 @@ public:
         modelListener = listener;
     }
 
-    void tick();
-    /*======================= Model Listener Functions ======================================*/
+    bool GetSyringeState();
+
+    uint16_t GetSyringeDiameter(void);
+
+    void SaveCurrentTime(time_ps time);
+    time_ps getcurrenttime();
+
+    void savedrug(int8_t savedrug);
+    int8_t getdrug();
+
+    void saveinputdestinsation(int16_t savevar);
+    int16_t getinputdestinsation();
+
+    void saverate(ps_float saverate);
+    ps_float getrate();
+
+    void savevolume(ps_float savevolume);
+    ps_float getvolume();
+
+    void saveinfusionvolume(ps_float savevolume);
+    ps_float getinfusionvolume();
+
+    void saveoclusionLow(int16_t pressure);
+    int16_t getoclusionLow();
+
+    void saveoclusionMedium(int16_t pressure);
+    int16_t getoclusionMedium();
+
+    void saveoclusionHigh(int16_t pressure);
+    int16_t getoclusionHigh();
+
+    uint16_t getcurrentpressure();
+
+    void saveKVO(ps_float kvo);
+    ps_float getKVO();
+
+    void savebolus(ps_float bolus);
+    ps_float getbolus();
+
+    void datachanged(void);
+
+    // void saveMode(uint8_t);
+
+    void purgeactivate(uint8_t);
+    uint8_t purgeget(void);
+
+    void savePerfusiontime(time_ps h);
+    time_ps getPerfusiontime();
+
+    void calculateParametersLeft(retun_parameters);
+
+    void savePerfusionmode(int mode);
+    int getPerfusionmode(void);
+
+    void saveDiameter(uint16_t diameter);
+    void savePosition(uint32_t position);
+    void saveEnd(uint8_t end);
+    void saveStart(uint8_t start);
+
+    void savegender(uint8_t value);
+    uint8_t getgender();
+
+    void savepatientname(char*, uint8_t len);
+    char* getpatientname(void);
+
+    void savepatientheight(uint16_t);
+    uint16_t getpatientheight(void);
+
+    void savepatientweight(uint16_t);
+    uint16_t getpatientweight(void);
+
+    void savepatientage(uint8_t);
+    uint8_t getpatientage(void);
+
+    battery_info getbatteryinfo(void);
+    void batteryinfoready(void);
+    
     void AlarmOrEvent(void);
-    void batteryUpdated(void);
-    void currentTimeUpdated(void);
-    void syringeUpdated(void);
-    void motorStatusUpdated(void);
-    /*====================== Alarms And Event =============================================*/
-    uint8_t getActiveEvents(uint8_t);
-    const char* getEventTitle(uint8_t);
-    EventTypeT getLatestEvent();
-    uint8_t getPendingEventStatus();
-    void savePendingEventStatus(void);
-    void saveMuteStatus(void);
-    uint16_t getpwdtech(void);
-       void savepwdtech(uint16_t screen);
+
+    alarm_info getalarminfo(void);
+    bool getalarmpending();
+    void savealarmpending(bool);
+
+    ps_float getvolumeleft(void);
+
+    time_ps gettimeleft(void);
+
+    uint8_t GetDisplayMode(void);
+     void   SaveDisplayMode(uint8_t);
+
+     uint8_t getsound(void);
+     void   savesound(uint8_t);
+
+     uint16_t getpassword(void);
+     void   savepassword(uint16_t);
+
+     void RequeststoredData(void);
+     uint8_t PatientDataRequestAnswer(void);
+
+     uint8_t GetAlarmVector(uint8_t);
+
+    void calculateparameters(int callerid);
+
+    void  SavePatient(void);
+
+    void SaveMute(uint8_t);
+    uint8_t GetMute(void);
+
+    void SaveLock(uint8_t);
+    uint8_t GetLock(void);
+
+    uint8_t Geteventpending(void);
+    void Saveeventpending(uint8_t event);
+    uint8_t Getevent(void);
+    logT  GetLogVector(uint8_t index);
+    void RequeststorelogdData(uint8_t);
+    uint8_t LogDataRequestAnswer(void);
+
     uint8_t getscreenlock(void);
-       void savescreenlock(uint8_t screen);
-       void SaveLock(uint8_t);
-        uint8_t GetLock(void);
-        uint16_t getpassword(void);
-       void   savepassword(uint16_t);
-        uint8_t GetDisplayMode(void);
-             void   SaveDisplayMode(uint8_t);
-             void saveCurrentTime(time_ps time);
-            time_ps getcurrenttime();
+    void savescreenlock(uint8_t screen);
 
-    /*====================== Initialisation =============================================*/
-    uint8_t getInitStatus(void);
-    uint8_t getDisplayMode(void);
-    void saveDisplayMode(uint8_t);
-    /*====================== Patient ====================================================*/
-    Patient_dataT getPatient(void);
-    void savePatientWeight(uint16_t);
-    void savePatientHeight(uint8_t);
-    void savePatientName(char *);
-    void savePatientAge(uint8_t);
-    void savePatientGender(uint8_t);
-    void requestLastPatientData(void);
-    void RequestPatientSearch(char *);
-    uint8_t getPatientDataRequestState(void);
-    /*====================== Perfusion Parameters =================================================*/
-    void saveFlowaRate(SW_float);
-    SW_float getFlowRate(void);
-    void saveTotalVolume(SW_float);
-    SW_float getTotalVolume(void);
-    void saveInfusionVolume(SW_float);
-    SW_float getInfusionVolume(void);
-    void saveKVORate(SW_float);
-    SW_float getKVORate(void);
-    void saveBolusRate(SW_float);
-    SW_float getBolusRate(void);
-    uint8_t getMode(void);
-    void saveMode(uint8_t);
-    SW_time getInfusionTIme();
-    void saveInfusionTime(SW_time);
-    void calculateThirdParameter(uint8_t);
-    void saveInfusionData(void);
-    SW_float getVolumeLeft();
-    SW_time getTimeLeft();
-    void calculateTimeLeft();
-    Infusion_paramT getInfusionParameters();
-    /*====================== Pressure ===========================================================*/
-    Pressure_thresholdsT getPressureThresholds();
-    void savePressureThresholdLow(uint16_t);
-    void savePressureThresholdMedium(uint16_t);
-    void savePressureThresholdHigh(uint16_t);
-    float getCurrentPressure();
-    /*====================== Syringe ===========================================================*/
-    SyringeT getSyringe();
-    void saveSyringe(SyringeT);
-    uint8_t getSyringeState();
-    /*====================== Time ===========================================================*/
-    SW_time getCurrentTime(void);
-    /*====================== Battery ===========================================================*/
-    BatteryT getBattery();
-    /*====================== Drug ===========================================================*/
-    DrugT getDrug();
-    void saveDrug(DrugT);
-    /*====================== MISC ==============================================================*/
-    uint8_t getKeyboardUser(void);
-    void saveKeyboardUser(uint8_t);
+    uint8_t getdepartement(void);
+    void savedepartement(uint8_t screen);
 
+    uint16_t getpwdtech(void);
+    void savepwdtech(uint16_t screen);
+
+    uint8_t getinit(void);
+
+    ps_float getinfusionvolumeleft(void);
+    void tick();
 protected:
     ModelListener* modelListener;
-    uint8_t EventStates[NUMBER_OF_ALARMS + NUMBER_OF_ALERTS] = { 0 };
-    EventTypeT LatestEventReceived;
-    uint8_t PendingEventStatus;
-    uint8_t MuteStatus = 0;
-    uint8_t InitStatus;
-    System_init_paramT InitParam;
-    System_init_paramT InitialisationParameters;
-    Patient_dataT Patient = { "", 0, 0, 0, 0 };
-    uint8_t PatientDataArrivedAck;
-    uint8_t WaitingForPatientData;
-    Infusion_paramT PerfusionParameters;
-    SW_time InfusionTIme = { 0, 0, 0, 0, 0, 0 };
-    uint8_t PreviousCaller = FIRST_CALL;
-    Motor_StatusT MotorStatus;
-    SW_time Timeleft;
+    bool syringestatus;
+    int syringe_diameter;
     time_ps current_time;
-    Pressure_thresholdsT PressureThresholds;
-    float CurrentPressure;
-    uint8_t SyringeState;
+    int8_t drug;
+    int16_t inputdestinsation;
+    battery_info battery;
+    time_ps perfusion_time;
+    perfusionFV_parameters User_parameters;
+    alarm_info alarms;
+    bool alarmpending;
+    ps_float volume_left;
+    time_ps time_left;
+    int previouscallerid;
+    uint8_t purgepopup;
+    uint16_t currentpressure;
+    patient_dataT Patient;
+    pressure_dataT Pressure;
+    motor_sensor_dataT TempSensorData;
+    System_init_paramT InitParam;
+    uint8_t init;
+    uint8_t expectingPatientData;
+    uint8_t storedPatient;
+    uint8_t alarmsStates[17];
+    retun_parameters MotorResponse;
+    uint8_t expectingLogData;
+    logT logvector[32];
+    uint8_t event;
+    uint8_t eventpending;
+    uint8_t storedLog;
+    uint8_t Lock;
+    uint8_t Mute;
+    Infusion_paramT PerfusionParameters;
     uint8_t screenlock;
     uint16_t technicianpassword;
-    uint8_t Lock;
-    SyringeT Syringe = { 0, "", ML50, 0 };
-    SW_time CurrentTime;
-    BatteryT Battery;
-    DrugT Drug = { 0, "", NO_THREAT, 0.0, 0.0 };
-    uint8_t KeyboardUser;
-
-    const char * EventListEnglish[NUMBER_OF_ALARMS + NUMBER_OF_ALERTS + NUMBER_OF_NOTIFICATIONS + NUMBER_OF_DEFAULT_EVENTS] = {
-        LINE_OCCLUDED_TITLE_ENGLISH_HIGH,
-        BATTERY_OVERCURRENT_TITLE_ENGLISH,
-        BATTERY_OVERHEAT_TITLE_ENGLISH,
-        BATTERY_CHARGE_DEPLETED_TITLE_ENGLISH,
-        BATTERY_CONTACT_FAILURE_TITLE_ENGLISH,
-        BATTERTY_CHARGE_TIMEOUT_TITLE_ENGLISH,
-        MOTOR_THERMAL_OVERHEAT_TITLE_ENGLISH,
-        MOTOR_THERMAL_SHUTDOWN_TITLE_ENGLISH,
-        MOTOR_OVERCURRENT_TITLE_ENGLISH,
-        MOTOR_UNDERVOLTAGE_TITLE_ENGLISH,
-        MOTOR_DRIVER_NOT_RESPONSDING_TITLE_ENGLISH,
-        POSTION_ERROR_TITLE_ENGLISH,
-        SYRINGUE_NOT_DETECTED_ALARM_TITLE_ENGLISH,
-        SYRINGE_EMPTY_TITLE_ENGLISH,
-        END_OF_TRAIL_TITLE_ENGLISH,
-        LINE_OCCLUDED_TITLE_ENGLISH_MEDIUM,
-        BATTERY_NO_CHARGING_CURRENT_TITLE_ENGLISH,
-        BATTERY_LOW_TEMPERATURE_TITLE_ENGLISH,
-        BATTERY_LOW_CHARGE_TITLE_ENGLISH,
-        INTERNAL_SOFTWARE_ERROR_TITLE_ENGLISH,
-        INFUSION_COMPLETE_TITLE_ENGLISH,
-        BOLUS_COMPLETE_TITLE_ENGLISH,
-        KVO_STARTED_TITLE_ENGLISH,
-        SYRINGE_NEAR_EMPTY_TITLE_ENGLISH,
-        LINE_OCCLUDED_TITLE_ENGLISH_LOW,
-        COMPLETE_EDITING_INFO_TITLE_ENGLISH,
-        PUMP_IS_IDLE_TITLE_ENGLISH,
-        PERFUSION_STARTED_TITLE_ENGLISH,
-        PERFUSION_STOPPED_TITLE_ENGLISH,
-        BOLUS_STARTED_TITLE_ENGLISH,
-        BOLUS_STOPPED_TITLE_ENGLISH,
-        KVO_STOPPED_TITLE_ENGLISH,
-        PURGE_STARTED_TITLE_ENGLISH,
-        PURGE_STOPPED_TITLE_ENGLISH
-    };
-
-    const char* EventListFrench[NUMBER_OF_ALARMS + NUMBER_OF_ALERTS + NUMBER_OF_NOTIFICATIONS + NUMBER_OF_DEFAULT_EVENTS] = {
-        LINE_OCCLUDED_TITLE_FRENCH_HIGH,
-        BATTERY_OVERCURRENT_TITLE_FRENCH,
-        BATTERY_OVERHEAT_TITLE_FRENCH,
-        BATTERY_CHARGE_DEPLETED_TITLE_FRENCH,
-        BATTERY_CONTACT_FAILURE_TITLE_FRENCH,
-        BATTERTY_CHARGE_TIMEOUT_TITLE_FRENCH,
-        MOTOR_THERMAL_OVERHEAT_TITLE_FRENCH,
-        MOTOR_THERMAL_SHUTDOWN_TITLE_FRENCH,
-        MOTOR_OVERCURRENT_TITLE_FRENCH,
-        MOTOR_UNDERVOLTAGE_TITLE_FRENCH,
-        MOTOR_DRIVER_NOT_RESPONSDING_TITLE_FRENCH,
-        POSTION_ERROR_TITLE_FRENCH,
-        SYRINGUE_NOT_DETECTED_ALARM_TITLE_FRENCH,
-        SYRINGE_EMPTY_TITLE_FRENCH,
-        END_OF_TRAIL_TITLE_FRENCH,
-        LINE_OCCLUDED_TITLE_FRENCH_MEDIUM,
-        BATTERY_NO_CHARGING_CURRENT_TITLE_FRENCH,
-        BATTERY_LOW_TEMPERATURE_TITLE_FRENCH,
-        BATTERY_LOW_CHARGE_TITLE_FRENCH,
-        INTERNAL_SOFTWARE_ERROR_TITLE_FRENCH,
-        INFUSION_COMPLETE_TITLE_FRENCH,
-        BOLUS_COMPLETE_TITLE_FRENCH,
-        KVO_STARTED_TITLE_FRENCH,
-        SYRINGE_NEAR_EMPTY_TITLE_FRENCH,
-        LINE_OCCLUDED_TITLE_FRENCH_LOW,
-        COMPLETE_EDITING_INFO_TITLE_FRENCH,
-        PUMP_IS_IDLE_TITLE_FRENCH,
-        PERFUSION_STARTED_TITLE_FRENCH,
-        PERFUSION_STOPPED_TITLE_FRENCH,
-        BOLUS_STARTED_TITLE_FRENCH,
-        BOLUS_STOPPED_TITLE_FRENCH,
-        KVO_STOPPED_TITLE_FRENCH,
-        PURGE_STARTED_TITLE_FRENCH,
-        PURGE_STOPPED_TITLE_FRENCH
-    };
+    ps_float infusion_volume_left;
 };
 
 #endif // MODEL_HPP

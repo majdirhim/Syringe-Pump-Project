@@ -4,34 +4,66 @@
 #include <gui_generated/battery_screen/BatteryViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
-BatteryViewBase::BatteryViewBase()
+BatteryViewBase::BatteryViewBase() :
+    flexButtonCallback(this, &BatteryViewBase::flexButtonCallbackHandler)
 {
 
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
-    ChildrenBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
-    ChildrenBackground.setPosition(0, 0, 480, 272);
-    ChildrenBackground.setVisible(false);
-    ChildrenBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    BackendBlack.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND3_ID));
+    BackendBlack.setPosition(0, 0, 480, 272);
+    BackendBlack.setVisible(false);
+    BackendBlack.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    DarkBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND3_ID));
-    DarkBackground.setPosition(0, 0, 480, 272);
-    DarkBackground.setVisible(false);
-    DarkBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    BackendChildren.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
+    BackendChildren.setPosition(0, 0, 481, 272);
+    BackendChildren.setVisible(false);
+    BackendChildren.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    DefaultBackground.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND2_ID));
-    DefaultBackground.setPosition(0, 0, 480, 272);
-    DefaultBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    backend.setXY(0, 0);
+    backend.setBitmap(touchgfx::Bitmap(BITMAP_MINI_BACKEND2_ID));
+
+    box1.setPosition(376, 8, 95, 32);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(90);
+
+    btn_Back.setIconBitmaps(Bitmap(BITMAP_GROUPE49_ID), Bitmap(BITMAP_GROUPE49_ID));
+    btn_Back.setIconXY(16, 9);
+    btn_Back.setText(TypedText(T___SINGLEUSE_75BR));
+    btn_Back.setTextPosition(23, 6, 95, 32);
+    btn_Back.setTextColors(touchgfx::Color::getColorFromRGB(245, 245, 245), touchgfx::Color::getColorFromRGB(242, 242, 242));
+    btn_Back.setPosition(376, 8, 95, 32);
+    btn_Back.setAction(flexButtonCallback);
+
+    Syringe_PUMP.setXY(179, 8);
+    Syringe_PUMP.setColor(touchgfx::Color::getColorFromRGB(237, 223, 223));
+    Syringe_PUMP.setLinespacing(0);
+    Syringe_PUMP.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AWKA));
 
     add(__background);
-    add(ChildrenBackground);
-    add(DarkBackground);
-    add(DefaultBackground);
+    add(BackendBlack);
+    add(BackendChildren);
+    add(backend);
+    add(box1);
+    add(btn_Back);
+    add(Syringe_PUMP);
 }
 
 void BatteryViewBase::setupScreen()
 {
 
+}
+
+void BatteryViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &btn_Back)
+    {
+        //Interaction6
+        //When btn_Back clicked change screen to Settings__screen
+        //Go to Settings__screen with no screen transition
+        application().gotoSettings__screenScreenNoTransition();
+    }
 }

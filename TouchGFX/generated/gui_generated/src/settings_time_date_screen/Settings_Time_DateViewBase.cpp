@@ -14,148 +14,140 @@ Settings_Time_DateViewBase::Settings_Time_DateViewBase() :
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
-    BackendChildren.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
-    BackendChildren.setPosition(0, 0, 480, 272);
-    BackendChildren.setVisible(false);
-    BackendChildren.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-
     BackendBlack.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND3_ID));
     BackendBlack.setPosition(0, 0, 480, 272);
     BackendBlack.setVisible(false);
     BackendBlack.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    Backend.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND2_ID));
-    Backend.setPosition(0, 2, 480, 270);
-    Backend.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    BackendChildren.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
+    BackendChildren.setPosition(0, 0, 481, 272);
+    BackendChildren.setVisible(false);
+    BackendChildren.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    box1.setPosition(63, 72, 75, 80);
-    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    box1.setAlpha(155);
+    Backend.setXY(0, 0);
+    Backend.setBitmap(touchgfx::Bitmap(BITMAP_MINI_BACKEND2_ID));
 
-    box2.setPosition(296, 72, 75, 80);
-    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    box2.setAlpha(155);
+    customContainer11.setXY(86, 46);
 
-    textArea1.setXY(76, 72);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_K1RL));
+    customContainer11_1.setXY(308, 46);
 
-    textArea2.setXY(300, 72);
-    textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea2.setLinespacing(0);
-    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DP63));
+    textareahourcaption.setPosition(86, 46, 77, 24);
+    textareahourcaption.setColor(touchgfx::Color::getColorFromRGB(241, 241, 241));
+    textareahourcaption.setLinespacing(0);
+    textareahourcaption.setTypedText(touchgfx::TypedText(T___SINGLEUSE_KRS5));
 
-    textaearHour.setPosition(85, 108, 28, 36);
-    textaearHour.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textaearHour.setPosition(87, 70, 77, 51);
+    textaearHour.setColor(touchgfx::Color::getColorFromRGB(241, 241, 241));
     textaearHour.setLinespacing(0);
-    Unicode::snprintf(textaearHourBuffer, TEXTAEARHOUR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_WGW1).getText());
+    Unicode::snprintf(textaearHourBuffer, TEXTAEARHOUR_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_08OG).getText());
     textaearHour.setWildcard(textaearHourBuffer);
-    textaearHour.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QWNB));
+    textaearHour.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0PG4));
 
-    textAreaminute.setXY(319, 108);
-    textAreaminute.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textareaminutecaption.setPosition(309, 46, 77, 24);
+    textareaminutecaption.setColor(touchgfx::Color::getColorFromRGB(241, 241, 241));
+    textareaminutecaption.setLinespacing(0);
+    textareaminutecaption.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L0Z4));
+
+    textAreaminute.setPosition(311, 70, 77, 50);
+    textAreaminute.setColor(touchgfx::Color::getColorFromRGB(241, 241, 241));
     textAreaminute.setLinespacing(0);
-    Unicode::snprintf(textAreaminuteBuffer, TEXTAREAMINUTE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_Q4AF).getText());
+    Unicode::snprintf(textAreaminuteBuffer, TEXTAREAMINUTE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LAL6).getText());
     textAreaminute.setWildcard(textAreaminuteBuffer);
-    textAreaminute.resizeToCurrentText();
-    textAreaminute.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GMQ3));
+    textAreaminute.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BV43));
 
-    buttonhourup.setXY(163, 81);
-    buttonhourup.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_UP_ARROW_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_UP_ARROW_32_ID));
+    buttonhourup.setXY(180, 51);
+    buttonhourup.setBitmaps(touchgfx::Bitmap(BITMAP_UP_ARROW_ID), touchgfx::Bitmap(BITMAP_UP_ARROW_PRESSED_ID));
     buttonhourup.setAction(buttonCallback);
 
-    buttonhourdown.setXY(163, 125);
-    buttonhourdown.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_DOWN_ARROW_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_DOWN_ARROW_32_ID));
+    buttonhourdown.setXY(180, 93);
+    buttonhourdown.setBitmaps(touchgfx::Bitmap(BITMAP_DOWN_ARROW_ID), touchgfx::Bitmap(BITMAP_DOWN_ARROW_PRESSED_ID));
     buttonhourdown.setAction(buttonCallback);
 
-    buttonminuteup.setXY(240, 81);
-    buttonminuteup.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_UP_ARROW_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_UP_ARROW_32_ID));
+    buttonminuteup.setXY(266, 51);
+    buttonminuteup.setBitmaps(touchgfx::Bitmap(BITMAP_UP_ARROW_ID), touchgfx::Bitmap(BITMAP_UP_ARROW_PRESSED_ID));
     buttonminuteup.setAction(buttonCallback);
 
-    buttonminutedown.setXY(240, 125);
-    buttonminutedown.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_DOWN_ARROW_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_DOWN_ARROW_32_ID));
+    buttonminutedown.setXY(266, 93);
+    buttonminutedown.setBitmaps(touchgfx::Bitmap(BITMAP_DOWN_ARROW_ID), touchgfx::Bitmap(BITMAP_DOWN_ARROW_PRESSED_ID));
     buttonminutedown.setAction(buttonCallback);
 
-    Back.setText(TypedText(T___SINGLEUSE_ZD48));
-    Back.setTextPosition(19, 3, 94, 31);
-    Back.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Back.setPosition(371, 10, 94, 31);
-    Back.setAction(flexButtonCallback);
-
-    box3.setPosition(371, 10, 94, 31);
-    box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    box3.setAlpha(90);
-
-    BackArrow.setBitmap(touchgfx::Bitmap(BITMAP_GROUPE49_ID));
-    BackArrow.setPosition(375, 16, 22, 15);
-    BackArrow.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-
-    buttonclock.setXY(136, 187);
-    buttonclock.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonclock.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LVNN));
+    buttonclock.setXY(192, 169);
+    buttonclock.setBitmaps(touchgfx::Bitmap(BITMAP_BTN_ROUND_ID), touchgfx::Bitmap(BITMAP_BTN_ROUND_PRESSED_ID));
+    buttonclock.setLabelText(touchgfx::TypedText(T___SINGLEUSE_HVIA));
     buttonclock.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonclock.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonclock.setAction(buttonCallback);
 
+    box1.setPosition(376, 8, 95, 32);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(90);
+
+    btn_Back.setIconBitmaps(Bitmap(BITMAP_GROUPE49_ID), Bitmap(BITMAP_GROUPE49_ID));
+    btn_Back.setIconXY(16, 9);
+    btn_Back.setText(TypedText(T___SINGLEUSE_BRJL));
+    btn_Back.setTextPosition(23, 6, 95, 32);
+    btn_Back.setTextColors(touchgfx::Color::getColorFromRGB(245, 245, 245), touchgfx::Color::getColorFromRGB(242, 242, 242));
+    btn_Back.setPosition(376, 8, 95, 32);
+    btn_Back.setAction(flexButtonCallback);
+
     add(__background);
-    add(BackendChildren);
     add(BackendBlack);
+    add(BackendChildren);
     add(Backend);
-    add(box1);
-    add(box2);
-    add(textArea1);
-    add(textArea2);
+    add(customContainer11);
+    add(customContainer11_1);
+    add(textareahourcaption);
     add(textaearHour);
+    add(textareaminutecaption);
     add(textAreaminute);
     add(buttonhourup);
     add(buttonhourdown);
     add(buttonminuteup);
     add(buttonminutedown);
-    add(Back);
-    add(box3);
-    add(BackArrow);
     add(buttonclock);
+    add(box1);
+    add(btn_Back);
 }
 
 void Settings_Time_DateViewBase::setupScreen()
 {
-
+    customContainer11.initialize();
+    customContainer11_1.initialize();
 }
 
 void Settings_Time_DateViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
     if (&src == &buttonhourup)
     {
-        //Interaction5
+        //Interaction1
         //When buttonhourup clicked call virtual function
         //Call buttonhourupclicked
         buttonhourupclicked();
     }
     else if (&src == &buttonhourdown)
     {
-        //Interaction4
+        //Interaction2
         //When buttonhourdown clicked call virtual function
         //Call buttonhourdownclicked
         buttonhourdownclicked();
     }
     else if (&src == &buttonminuteup)
     {
-        //Interaction2
+        //Interaction3
         //When buttonminuteup clicked call virtual function
         //Call buttonminuteupclicked
         buttonminuteupclicked();
     }
     else if (&src == &buttonminutedown)
     {
-        //Interaction3
+        //Interaction4
         //When buttonminutedown clicked call virtual function
         //Call buttonminutedownclicked
         buttonminutedownclicked();
     }
     else if (&src == &buttonclock)
     {
-        //Interaction6
+        //Interaction5
         //When buttonclock clicked call virtual function
         //Call saveclock
         saveclock();
@@ -164,11 +156,11 @@ void Settings_Time_DateViewBase::buttonCallbackHandler(const touchgfx::AbstractB
 
 void Settings_Time_DateViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &Back)
+    if (&src == &btn_Back)
     {
-        //Interaction1
-        //When Back clicked change screen to Settings
-        //Go to Settings with no screen transition
-        application().gotoSettingsScreenNoTransition();
+        //Interaction6
+        //When btn_Back clicked change screen to Settings__screen
+        //Go to Settings__screen with no screen transition
+        application().gotoSettings__screenScreenNoTransition();
     }
 }

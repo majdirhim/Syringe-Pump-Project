@@ -9,6 +9,7 @@
 #include <gui/druglibrary_screen/DrugLibraryPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
@@ -28,15 +29,12 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage ChildrenBackground;
-    touchgfx::ScalableImage DarkBackground;
-    touchgfx::ScalableImage DefaultBackground;
-    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  backbutton;
-    touchgfx::ScalableImage BackArrow;
+    touchgfx::ScalableImage BackendBlack;
+    touchgfx::ScalableImage BackendChildren;
+    touchgfx::Image backend;
     touchgfx::Box box1;
-    touchgfx::TextArea textArea1;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButton10;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButton11;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  btn_Back;
+    touchgfx::TextArea Syringe_PUMP;
 
 private:
 

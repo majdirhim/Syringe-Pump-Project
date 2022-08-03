@@ -2,6 +2,8 @@
 #define FRONTENDAPPLICATION_HPP
 
 #include <gui_generated/common/FrontendApplicationBase.hpp>
+#include "../../../Core/Inc/SW_common.h"
+#include <touchgfx/Color.hpp>
 
 class FrontendHeap;
 

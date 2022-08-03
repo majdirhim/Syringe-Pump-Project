@@ -16,3 +16,8 @@ void ManualPresenter::deactivate()
 {
 
 }
+
+void ManualPresenter::AlarmOrEvent(void)
+ {
+        view.AlarmOrEvent();
+}

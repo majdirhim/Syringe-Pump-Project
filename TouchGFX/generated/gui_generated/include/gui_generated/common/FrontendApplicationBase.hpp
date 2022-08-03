@@ -17,181 +17,151 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoStartUpScreenNoTransition();
+        gotostartupScreenNoTransition();
     }
 
-    // StartUp
-    void gotoStartUpScreenNoTransition();
+    // startup
+    void gotostartupScreenNoTransition();
 
-    // Home
-    void gotoHomeScreenNoTransition();
+    // New_Paitent
+    void gotoNew_PaitentScreenNoTransition();
 
-    void gotoHomeScreenWipeTransitionWest();
+    // Same_Patient
+    void gotoSame_PatientScreenNoTransition();
 
-    // NewPatient
-    void gotoNewPatientScreenWipeTransitionEast();
+    // SpecialMode
+    void gotoSpecialModeScreenNoTransition();
 
-    void gotoNewPatientScreenWipeTransitionNorth();
+    // ScreenKeyboard
+    void gotoScreenKeyboardScreenNoTransition();
 
-    // SamePatient
-    void gotoSamePatientScreenWipeTransitionEast();
+    // genderchoice
+    void gotogenderchoiceScreenNoTransition();
 
-    // SpecialModes
-    void gotoSpecialModesScreenWipeTransitionEast();
+    // mainScreen_WithSTART
+    void gotomainScreen_WithSTARTScreenNoTransition();
 
-    // PatientDatabase
-    void gotoPatientDatabaseScreenWipeTransitionEast();
+    // testVersion
+    void gototestVersionScreenNoTransition();
 
-    void gotoPatientDatabaseScreenWipeTransitionNorth();
+    // syringedetected
+    void gotosyringedetectedScreenNoTransition();
 
-    // GenderChoice
-    void gotoGenderChoiceScreenWipeTransitionSouth();
+    // Settings__screen
+    void gotoSettings__screenScreenNoTransition();
 
-    // Keyboard
-    void gotoKeyboardScreenWipeTransitionSouth();
+    // KeyboardNB
+    void gotoKeyboardNBScreenNoTransition();
 
-    // KeyboardNb
-    void gotoKeyboardNbScreenWipeTransitionSouth();
+    // Settings_Time_Date
+    void gotoSettings_Time_DateScreenNoTransition();
 
-    // Main
-    void gotoMainScreenWipeTransitionEast();
+    // Screenselectdrug
+    void gotoScreenselectdrugScreenNoTransition();
 
-    void gotoMainScreenWipeTransitionNorth();
+    // Oclusion_level
+    void gotoOclusion_levelScreenNoTransition();
 
-    void gotoMainScreenWipeTransitionWest();
+    // timeparam
+    void gototimeparamScreenNoTransition();
 
-    void gotoMainScreenNoTransition();
-
-    // Configuration
-    void gotoConfigurationScreenWipeTransitionSouth();
-
-    void gotoConfigurationScreenWipeTransitionNorth();
-
-    // ActiveAlarms
-    void gotoActiveAlarmsScreenWipeTransitionEast();
-
-    // OclusionThresholds
-    void gotoOclusionThresholdsScreenWipeTransitionSouth();
-
-    // Settings
-    void gotoSettingsScreenWipeTransitionEast();
-
-    void gotoSettingsScreenNoTransition();
-
-    // PerfusionTimeSetting
-    void gotoPerfusionTimeSettingScreenWipeTransitionSouth();
-
-    // Departements
-    void gotoDepartementsScreenNoTransition();
-
-    // Battery
-    void gotoBatteryScreenNoTransition();
-
-    // Manual
-    void gotoManualScreenWipeTransitionSouth();
+    // AlarmList
+    void gotoAlarmListScreenNoTransition();
 
     // LockScreen
     void gotoLockScreenScreenNoTransition();
 
+    // LogScreen
+    void gotoLogScreenScreenNoTransition();
+
+    // Departement
+    void gotoDepartementScreenNoTransition();
+
     // DrugLibrary
     void gotoDrugLibraryScreenNoTransition();
 
-    void gotoDrugLibraryScreenWipeTransitionSouth();
+    // Manual
+    void gotoManualScreenNoTransition();
 
-    // SyringeSelection
-    void gotoSyringeSelectionScreenWipeTransitionSouth();
+    // Battery
+    void gotoBatteryScreenNoTransition();
 
-    // Settings_Time_Date
-    void gotoSettings_Time_DateScreenNoTransition();
+    // Maintenance
+    void gotoMaintenanceScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // StartUp
-    void gotoStartUpScreenNoTransitionImpl();
+    // startup
+    void gotostartupScreenNoTransitionImpl();
 
-    // Home
-    void gotoHomeScreenNoTransitionImpl();
+    // New_Paitent
+    void gotoNew_PaitentScreenNoTransitionImpl();
 
-    void gotoHomeScreenWipeTransitionWestImpl();
+    // Same_Patient
+    void gotoSame_PatientScreenNoTransitionImpl();
 
-    // NewPatient
-    void gotoNewPatientScreenWipeTransitionEastImpl();
+    // SpecialMode
+    void gotoSpecialModeScreenNoTransitionImpl();
 
-    void gotoNewPatientScreenWipeTransitionNorthImpl();
+    // ScreenKeyboard
+    void gotoScreenKeyboardScreenNoTransitionImpl();
 
-    // SamePatient
-    void gotoSamePatientScreenWipeTransitionEastImpl();
+    // genderchoice
+    void gotogenderchoiceScreenNoTransitionImpl();
 
-    // SpecialModes
-    void gotoSpecialModesScreenWipeTransitionEastImpl();
+    // mainScreen_WithSTART
+    void gotomainScreen_WithSTARTScreenNoTransitionImpl();
 
-    // PatientDatabase
-    void gotoPatientDatabaseScreenWipeTransitionEastImpl();
+    // testVersion
+    void gototestVersionScreenNoTransitionImpl();
 
-    void gotoPatientDatabaseScreenWipeTransitionNorthImpl();
+    // syringedetected
+    void gotosyringedetectedScreenNoTransitionImpl();
 
-    // GenderChoice
-    void gotoGenderChoiceScreenWipeTransitionSouthImpl();
+    // Settings__screen
+    void gotoSettings__screenScreenNoTransitionImpl();
 
-    // Keyboard
-    void gotoKeyboardScreenWipeTransitionSouthImpl();
+    // KeyboardNB
+    void gotoKeyboardNBScreenNoTransitionImpl();
 
-    // KeyboardNb
-    void gotoKeyboardNbScreenWipeTransitionSouthImpl();
+    // Settings_Time_Date
+    void gotoSettings_Time_DateScreenNoTransitionImpl();
 
-    // Main
-    void gotoMainScreenWipeTransitionEastImpl();
+    // Screenselectdrug
+    void gotoScreenselectdrugScreenNoTransitionImpl();
 
-    void gotoMainScreenWipeTransitionNorthImpl();
+    // Oclusion_level
+    void gotoOclusion_levelScreenNoTransitionImpl();
 
-    void gotoMainScreenWipeTransitionWestImpl();
+    // timeparam
+    void gototimeparamScreenNoTransitionImpl();
 
-    void gotoMainScreenNoTransitionImpl();
-
-    // Configuration
-    void gotoConfigurationScreenWipeTransitionSouthImpl();
-
-    void gotoConfigurationScreenWipeTransitionNorthImpl();
-
-    // ActiveAlarms
-    void gotoActiveAlarmsScreenWipeTransitionEastImpl();
-
-    // OclusionThresholds
-    void gotoOclusionThresholdsScreenWipeTransitionSouthImpl();
-
-    // Settings
-    void gotoSettingsScreenWipeTransitionEastImpl();
-
-    void gotoSettingsScreenNoTransitionImpl();
-
-    // PerfusionTimeSetting
-    void gotoPerfusionTimeSettingScreenWipeTransitionSouthImpl();
-
-    // Departements
-    void gotoDepartementsScreenNoTransitionImpl();
-
-    // Battery
-    void gotoBatteryScreenNoTransitionImpl();
-
-    // Manual
-    void gotoManualScreenWipeTransitionSouthImpl();
+    // AlarmList
+    void gotoAlarmListScreenNoTransitionImpl();
 
     // LockScreen
     void gotoLockScreenScreenNoTransitionImpl();
 
+    // LogScreen
+    void gotoLogScreenScreenNoTransitionImpl();
+
+    // Departement
+    void gotoDepartementScreenNoTransitionImpl();
+
     // DrugLibrary
     void gotoDrugLibraryScreenNoTransitionImpl();
 
-    void gotoDrugLibraryScreenWipeTransitionSouthImpl();
+    // Manual
+    void gotoManualScreenNoTransitionImpl();
 
-    // SyringeSelection
-    void gotoSyringeSelectionScreenWipeTransitionSouthImpl();
+    // Battery
+    void gotoBatteryScreenNoTransitionImpl();
 
-    // Settings_Time_Date
-    void gotoSettings_Time_DateScreenNoTransitionImpl();
+    // Maintenance
+    void gotoMaintenanceScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

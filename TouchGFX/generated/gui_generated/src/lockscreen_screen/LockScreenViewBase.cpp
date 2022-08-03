@@ -13,263 +13,267 @@ LockScreenViewBase::LockScreenViewBase() :
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
-    BackendChildren.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
-    BackendChildren.setPosition(0, 0, 479, 272);
-    BackendChildren.setVisible(false);
-    BackendChildren.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-
     BackendBlack.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND3_ID));
     BackendBlack.setPosition(0, 0, 480, 272);
     BackendBlack.setVisible(false);
     BackendBlack.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    Backend.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND2_ID));
-    Backend.setPosition(0, 0, 479, 272);
-    Backend.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    BackendChildren.setBitmap(touchgfx::Bitmap(BITMAP_BACKEND4_ID));
+    BackendChildren.setPosition(0, 0, 481, 272);
+    BackendChildren.setVisible(false);
+    BackendChildren.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
 
-    keybord.setPosition(35, 8, 405, 264);
+    Backend.setXY(0, 0);
+    Backend.setBitmap(touchgfx::Bitmap(BITMAP_MINI_BACKEND2_ID));
 
-    PasswordChangeSuccess.setPosition(109, 14, 213, 29);
-    PasswordChangeSuccess.setColor(touchgfx::Color::getColorFromRGB(71, 217, 17));
-    PasswordChangeSuccess.setLinespacing(0);
-    PasswordChangeSuccess.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L3CI));
-    keybord.add(PasswordChangeSuccess);
+    Keyboard.setPosition(0, 1, 480, 271);
+    Keyboard.setVisible(false);
 
-    InsertNewPassword.setPosition(136, 20, 144, 23);
-    InsertNewPassword.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    InsertNewPassword.setLinespacing(0);
-    InsertNewPassword.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7TAL));
-    keybord.add(InsertNewPassword);
-
-    InsertOldPassword.setXY(138, 7);
-    InsertOldPassword.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    InsertOldPassword.setLinespacing(0);
-    InsertOldPassword.setTypedText(touchgfx::TypedText(T___SINGLEUSE_IOS3));
-    keybord.add(InsertOldPassword);
-
-    PasswordError.setXY(154, 9);
-    PasswordError.setColor(touchgfx::Color::getColorFromRGB(250, 22, 22));
-    PasswordError.setLinespacing(0);
-    PasswordError.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L61T));
-    keybord.add(PasswordError);
-
-    ScreenUnlocked.setPosition(167, 16, 61, 18);
-    ScreenUnlocked.setColor(touchgfx::Color::getColorFromRGB(73, 230, 16));
-    ScreenUnlocked.setLinespacing(0);
-    ScreenUnlocked.setTypedText(touchgfx::TypedText(T___SINGLEUSE_64Y5));
-    keybord.add(ScreenUnlocked);
-
-    ScreenLocked.setPosition(167, 7, 122, 29);
-    ScreenLocked.setColor(touchgfx::Color::getColorFromRGB(47, 235, 14));
-    ScreenLocked.setLinespacing(0);
-    ScreenLocked.setTypedText(touchgfx::TypedText(T___SINGLEUSE_P0N8));
-    keybord.add(ScreenLocked);
-
-    InsertPassword.setPosition(151, 0, 108, 41);
-    InsertPassword.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    InsertPassword.setLinespacing(0);
-    InsertPassword.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LTB8));
-    keybord.add(InsertPassword);
-
-    ERASE.setBoxWithBorderPosition(0, 0, 100, 41);
-    ERASE.setBorderSize(1);
-    ERASE.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(230, 14, 14), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    ERASE.setText(TypedText(T___SINGLEUSE_ZSAQ));
-    ERASE.setTextPosition(0, 7, 100, 41);
-    ERASE.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ERASE.setPosition(244, 216, 100, 41);
-    ERASE.setAlpha(185);
-    ERASE.setAction(flexButtonCallback);
-    keybord.add(ERASE);
-
-    SET.setBoxWithBorderPosition(0, 0, 100, 43);
-    SET.setBorderSize(1);
-    SET.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(33, 153, 0), touchgfx::Color::getColorFromRGB(61, 204, 0), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    SET.setText(TypedText(T___SINGLEUSE_H98R));
-    SET.setTextPosition(0, 8, 100, 43);
-    SET.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    SET.setPosition(244, 169, 100, 43);
-    SET.setAlpha(189);
-    SET.setAction(flexButtonCallback);
-    keybord.add(SET);
-
-    scalableImage3.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_MEDIUM_PRESSED_ID));
-    scalableImage3.setPosition(99, 44, 230, 60);
-    scalableImage3.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    keybord.add(scalableImage3);
-
-    scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_RECTANGLE46_ID));
-    scalableImage1.setPosition(79, 114, 271, 145);
+    scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_MEDIUM_PRESSED_ID));
+    scalableImage1.setPosition(111, 60, 230, 60);
     scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    scalableImage1.setAlpha(90);
-    keybord.add(scalableImage1);
+    Keyboard.add(scalableImage1);
 
-    textArea_centaine.setPosition(196, 62, 38, 24);
-    textArea_centaine.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea_centaine.setLinespacing(0);
-    Unicode::snprintf(textArea_centaineBuffer, TEXTAREA_CENTAINE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_71J6).getText());
-    textArea_centaine.setWildcard(textArea_centaineBuffer);
-    textArea_centaine.setTypedText(touchgfx::TypedText(T___SINGLEUSE_44T9));
-    keybord.add(textArea_centaine);
+    scalableImage2_1_1.setBitmap(touchgfx::Bitmap(BITMAP_RECTANGLE46_ID));
+    scalableImage2_1_1.setPosition(94, 130, 269, 141);
+    scalableImage2_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    scalableImage2_1_1.setAlpha(102);
+    Keyboard.add(scalableImage2_1_1);
 
-    ButtonPoint.setBoxWithBorderPosition(0, 0, 50, 43);
-    ButtonPoint.setBorderSize(1);
-    ButtonPoint.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    ButtonPoint.setText(TypedText(T___SINGLEUSE_U7AN));
-    ButtonPoint.setTextPosition(0, 2, 50, 43);
-    ButtonPoint.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ButtonPoint.setPosition(294, 123, 50, 43);
-    keybord.add(ButtonPoint);
-
-    Button9.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button9.setBorderSize(1);
-    Button9.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button9.setText(TypedText(T___SINGLEUSE_YRT7));
-    Button9.setTextPosition(0, 9, 50, 43);
-    Button9.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button9.setPosition(190, 216, 50, 43);
-    Button9.setAction(flexButtonCallback);
-    keybord.add(Button9);
-
-    Button0.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button0.setBorderSize(1);
-    Button0.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button0.setText(TypedText(T___SINGLEUSE_DV0T));
-    Button0.setTextPosition(0, 8, 50, 43);
-    Button0.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button0.setPosition(242, 123, 50, 43);
-    Button0.setAction(flexButtonCallback);
-    keybord.add(Button0);
-
-    Button2.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button2.setBorderSize(1);
-    Button2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button2.setText(TypedText(T___SINGLEUSE_G43A));
-    Button2.setTextPosition(1, 9, 50, 43);
-    Button2.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button2.setPosition(138, 123, 50, 43);
-    Button2.setAction(flexButtonCallback);
-    keybord.add(Button2);
-
-    Button6.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button6.setBorderSize(1);
-    Button6.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button6.setText(TypedText(T___SINGLEUSE_56H6));
-    Button6.setTextPosition(1, 8, 50, 43);
-    Button6.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button6.setPosition(190, 169, 50, 43);
-    Button6.setAction(flexButtonCallback);
-    keybord.add(Button6);
-
-    Button7.setBoxWithBorderPosition(0, 0, 50, 43);
+    Button7.setBoxWithBorderPosition(0, 0, 56, 40);
     Button7.setBorderSize(1);
     Button7.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button7.setText(TypedText(T___SINGLEUSE_4JNQ));
-    Button7.setTextPosition(0, 10, 50, 43);
-    Button7.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button7.setPosition(86, 216, 50, 43);
+    Button7.setText(TypedText(T___SINGLEUSE_POA2));
+    Button7.setTextPosition(0, 6, 56, 40);
+    Button7.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button7.setPosition(100, 136, 56, 40);
+    Button7.setAlpha(177);
     Button7.setAction(flexButtonCallback);
-    keybord.add(Button7);
+    Keyboard.add(Button7);
 
-    Button4.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button4.setBorderSize(1);
-    Button4.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button4.setText(TypedText(T___SINGLEUSE_Z4QF));
-    Button4.setTextPosition(0, 9, 50, 43);
-    Button4.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button4.setPosition(86, 169, 50, 43);
-    Button4.setAction(flexButtonCallback);
-    keybord.add(Button4);
+    Button6.setBoxWithBorderPosition(0, 0, 56, 40);
+    Button6.setBorderSize(1);
+    Button6.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Button6.setText(TypedText(T___SINGLEUSE_JH3G));
+    Button6.setTextPosition(0, 6, 56, 40);
+    Button6.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button6.setPosition(222, 179, 56, 40);
+    Button6.setAlpha(177);
+    Button6.setAction(flexButtonCallback);
+    Keyboard.add(Button6);
 
-    Button1.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button1.setBorderSize(1);
-    Button1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button1.setText(TypedText(T___SINGLEUSE_6EXD));
-    Button1.setTextPosition(0, 9, 50, 43);
-    Button1.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button1.setPosition(86, 123, 50, 43);
-    Button1.setAction(flexButtonCallback);
-    keybord.add(Button1);
+    Button9.setBoxWithBorderPosition(0, 0, 56, 40);
+    Button9.setBorderSize(1);
+    Button9.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Button9.setText(TypedText(T___SINGLEUSE_R1NV));
+    Button9.setTextPosition(0, 6, 56, 40);
+    Button9.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button9.setPosition(222, 136, 56, 40);
+    Button9.setAlpha(177);
+    Button9.setAction(flexButtonCallback);
+    Keyboard.add(Button9);
 
-    Button8.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button8.setBorderSize(1);
-    Button8.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button8.setText(TypedText(T___SINGLEUSE_BI5N));
-    Button8.setTextPosition(0, 10, 50, 43);
-    Button8.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button8.setPosition(138, 216, 50, 43);
-    Button8.setAction(flexButtonCallback);
-    keybord.add(Button8);
+    Button2.setBoxWithBorderPosition(0, 0, 56, 40);
+    Button2.setBorderSize(1);
+    Button2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Button2.setText(TypedText(T___SINGLEUSE_TPQ6));
+    Button2.setTextPosition(0, 6, 56, 40);
+    Button2.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button2.setPosition(162, 222, 56, 40);
+    Button2.setAlpha(177);
+    Button2.setAction(flexButtonCallback);
+    Keyboard.add(Button2);
 
-    Button5.setBoxWithBorderPosition(0, 0, 50, 43);
+    Button5.setBoxWithBorderPosition(0, 0, 56, 40);
     Button5.setBorderSize(1);
     Button5.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button5.setText(TypedText(T___SINGLEUSE_UGK8));
-    Button5.setTextPosition(0, 9, 50, 43);
-    Button5.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button5.setPosition(138, 169, 50, 43);
+    Button5.setText(TypedText(T___SINGLEUSE_CIW1));
+    Button5.setTextPosition(0, 6, 56, 40);
+    Button5.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button5.setPosition(162, 179, 56, 40);
+    Button5.setAlpha(177);
     Button5.setAction(flexButtonCallback);
-    keybord.add(Button5);
+    Keyboard.add(Button5);
 
-    Button3.setBoxWithBorderPosition(0, 0, 50, 43);
-    Button3.setBorderSize(1);
-    Button3.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    Button3.setText(TypedText(T___SINGLEUSE_J7ED));
-    Button3.setTextPosition(0, 9, 50, 43);
-    Button3.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Button3.setPosition(190, 123, 50, 43);
-    Button3.setAction(flexButtonCallback);
-    keybord.add(Button3);
+    Button8.setBoxWithBorderPosition(0, 0, 56, 40);
+    Button8.setBorderSize(1);
+    Button8.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Button8.setText(TypedText(T___SINGLEUSE_03VN));
+    Button8.setTextPosition(0, 6, 56, 40);
+    Button8.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button8.setPosition(162, 136, 56, 40);
+    Button8.setAlpha(177);
+    Button8.setAction(flexButtonCallback);
+    Keyboard.add(Button8);
 
-    Intro.setPosition(0, 57, 480, 215);
+    Button1.setBoxWithBorderPosition(0, 0, 56, 40);
+    Button1.setBorderSize(1);
+    Button1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Button1.setText(TypedText(T___SINGLEUSE_IYIZ));
+    Button1.setTextPosition(0, 6, 56, 40);
+    Button1.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button1.setPosition(100, 222, 56, 40);
+    Button1.setAlpha(177);
+    Button1.setAction(flexButtonCallback);
+    Keyboard.add(Button1);
 
-    box2.setPosition(291, 128, 125, 44);
-    box2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    box2.setAlpha(90);
-    Intro.add(box2);
+    Button4.setBoxWithBorderPosition(0, 0, 56, 40);
+    Button4.setBorderSize(1);
+    Button4.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Button4.setText(TypedText(T___SINGLEUSE_28TC));
+    Button4.setTextPosition(0, 6, 56, 40);
+    Button4.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button4.setPosition(100, 179, 56, 40);
+    Button4.setAlpha(177);
+    Button4.setAction(flexButtonCallback);
+    Keyboard.add(Button4);
 
-    LockUnlock.setText(TypedText(T___SINGLEUSE_MGXU));
-    LockUnlock.setTextPosition(0, 10, 125, 44);
-    LockUnlock.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    LockUnlock.setPosition(291, 128, 125, 44);
+    button3.setBoxWithBorderPosition(0, 0, 56, 40);
+    button3.setBorderSize(1);
+    button3.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    button3.setText(TypedText(T___SINGLEUSE_JHIF));
+    button3.setTextPosition(0, 6, 56, 40);
+    button3.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    button3.setPosition(222, 222, 56, 40);
+    button3.setAlpha(177);
+    button3.setAction(flexButtonCallback);
+    Keyboard.add(button3);
+
+    Button0.setBoxWithBorderPosition(0, 0, 72, 40);
+    Button0.setBorderSize(1);
+    Button0.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    Button0.setText(TypedText(T___SINGLEUSE_955V));
+    Button0.setTextPosition(0, 6, 72, 40);
+    Button0.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    Button0.setPosition(284, 136, 72, 40);
+    Button0.setAlpha(177);
+    Button0.setAction(flexButtonCallback);
+    Keyboard.add(Button0);
+
+    ERASE.setBoxWithBorderPosition(0, 0, 72, 40);
+    ERASE.setBorderSize(1);
+    ERASE.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(240, 18, 18), touchgfx::Color::getColorFromRGB(240, 18, 18), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    ERASE.setText(TypedText(T___SINGLEUSE_JU1T));
+    ERASE.setTextPosition(0, 10, 72, 40);
+    ERASE.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(150, 163, 55));
+    ERASE.setPosition(284, 179, 72, 40);
+    ERASE.setAction(flexButtonCallback);
+    Keyboard.add(ERASE);
+
+    SET.setBoxWithBorderPosition(0, 0, 72, 40);
+    SET.setBorderSize(1);
+    SET.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 205, 6), touchgfx::Color::getColorFromRGB(0, 205, 6), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    SET.setText(TypedText(T___SINGLEUSE_NKXD));
+    SET.setTextPosition(0, 10, 72, 40);
+    SET.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(150, 163, 55));
+    SET.setPosition(284, 222, 72, 40);
+    SET.setAlpha(177);
+    SET.setAction(flexButtonCallback);
+    Keyboard.add(SET);
+
+    textArea_centaine.setPosition(187, 76, 83, 28);
+    textArea_centaine.setColor(touchgfx::Color::getColorFromRGB(253, 253, 253));
+    textArea_centaine.setLinespacing(0);
+    Unicode::snprintf(textArea_centaineBuffer, TEXTAREA_CENTAINE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_SNWF).getText());
+    textArea_centaine.setWildcard(textArea_centaineBuffer);
+    textArea_centaine.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L16G));
+    Keyboard.add(textArea_centaine);
+
+    InsertPassword.setPosition(111, 18, 230, 43);
+    InsertPassword.setVisible(false);
+    InsertPassword.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    InsertPassword.setLinespacing(0);
+    InsertPassword.setTypedText(touchgfx::TypedText(T___SINGLEUSE_5BQO));
+    Keyboard.add(InsertPassword);
+
+    ScreenLocked.setPosition(111, 18, 230, 43);
+    ScreenLocked.setVisible(false);
+    ScreenLocked.setColor(touchgfx::Color::getColorFromRGB(2, 253, 0));
+    ScreenLocked.setLinespacing(0);
+    ScreenLocked.setTypedText(touchgfx::TypedText(T___SINGLEUSE_25DV));
+    Keyboard.add(ScreenLocked);
+
+    ScreenUnlocked.setPosition(111, 18, 230, 43);
+    ScreenUnlocked.setVisible(false);
+    ScreenUnlocked.setColor(touchgfx::Color::getColorFromRGB(0, 253, 40));
+    ScreenUnlocked.setLinespacing(0);
+    ScreenUnlocked.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MKT0));
+    Keyboard.add(ScreenUnlocked);
+
+    PasswordError.setPosition(111, 18, 230, 43);
+    PasswordError.setVisible(false);
+    PasswordError.setColor(touchgfx::Color::getColorFromRGB(253, 0, 0));
+    PasswordError.setLinespacing(0);
+    PasswordError.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GJKB));
+    Keyboard.add(PasswordError);
+
+    InsertOldPassword.setPosition(111, 18, 230, 43);
+    InsertOldPassword.setVisible(false);
+    InsertOldPassword.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    InsertOldPassword.setLinespacing(0);
+    InsertOldPassword.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1WMN));
+    Keyboard.add(InsertOldPassword);
+
+    InsertNewPassword.setPosition(111, 18, 230, 43);
+    InsertNewPassword.setVisible(false);
+    InsertNewPassword.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    InsertNewPassword.setLinespacing(0);
+    InsertNewPassword.setTypedText(touchgfx::TypedText(T___SINGLEUSE_KJWE));
+    Keyboard.add(InsertNewPassword);
+
+    PasswordChangeSuccess.setPosition(111, 18, 230, 43);
+    PasswordChangeSuccess.setVisible(false);
+    PasswordChangeSuccess.setColor(touchgfx::Color::getColorFromRGB(0, 255, 30));
+    PasswordChangeSuccess.setLinespacing(0);
+    PasswordChangeSuccess.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8L5V));
+    Keyboard.add(PasswordChangeSuccess);
+
+    Intro.setPosition(0, 41, 480, 231);
+
+    box1_1.setPosition(304, 95, 131, 37);
+    box1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1_1.setAlpha(90);
+    Intro.add(box1_1);
+
+    LockUnlock.setText(TypedText(T___SINGLEUSE_BBA7));
+    LockUnlock.setTextPosition(0, 10, 131, 35);
+    LockUnlock.setTextColors(touchgfx::Color::getColorFromRGB(245, 245, 245), touchgfx::Color::getColorFromRGB(242, 242, 242));
+    LockUnlock.setPosition(304, 96, 131, 35);
     LockUnlock.setAction(flexButtonCallback);
     Intro.add(LockUnlock);
 
-    box1.setPosition(35, 128, 125, 44);
-    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    box1.setAlpha(90);
-    Intro.add(box1);
+    box1_1_1.setPosition(59, 97, 131, 35);
+    box1_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1_1_1.setAlpha(90);
+    Intro.add(box1_1_1);
 
-    ChangePassword.setText(TypedText(T___SINGLEUSE_KMCX));
-    ChangePassword.setTextPosition(1, 10, 125, 44);
-    ChangePassword.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ChangePassword.setPosition(35, 128, 125, 44);
+    ChangePassword.setText(TypedText(T___SINGLEUSE_BF2C));
+    ChangePassword.setTextPosition(0, 10, 131, 35);
+    ChangePassword.setTextColors(touchgfx::Color::getColorFromRGB(245, 245, 245), touchgfx::Color::getColorFromRGB(242, 242, 242));
+    ChangePassword.setPosition(59, 97, 131, 35);
     ChangePassword.setAction(flexButtonCallback);
     Intro.add(ChangePassword);
 
-    Back.setText(TypedText(T___SINGLEUSE_XF2P));
-    Back.setTextPosition(-2, 5, 80, 36);
-    Back.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Back.setPosition(383, 13, 80, 36);
+    box1.setPosition(376, 8, 95, 32);
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setAlpha(90);
+
+    Back.setIconBitmaps(Bitmap(BITMAP_GROUPE49_ID), Bitmap(BITMAP_GROUPE49_ID));
+    Back.setIconXY(16, 9);
+    Back.setText(TypedText(T___SINGLEUSE_0HWG));
+    Back.setTextPosition(23, 6, 95, 32);
+    Back.setTextColors(touchgfx::Color::getColorFromRGB(245, 245, 245), touchgfx::Color::getColorFromRGB(242, 242, 242));
+    Back.setPosition(376, 9, 95, 32);
     Back.setAction(flexButtonCallback);
 
-    BackArrow.setBitmap(touchgfx::Bitmap(BITMAP_GROUPE49_ID));
-    BackArrow.setPosition(391, 26, 21, 11);
-    BackArrow.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-
-    box3.setPosition(383, 13, 80, 36);
-    box3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    box3.setAlpha(90);
-
     add(__background);
-    add(BackendChildren);
     add(BackendBlack);
+    add(BackendChildren);
     add(Backend);
-    add(keybord);
+    add(Keyboard);
     add(Intro);
+    add(box1);
     add(Back);
-    add(BackArrow);
-    add(box3);
 }
 
 void LockScreenViewBase::setupScreen()
@@ -279,109 +283,109 @@ void LockScreenViewBase::setupScreen()
 
 void LockScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &ERASE)
+    if (&src == &Button7)
     {
-        //Interaction15
+        //Interaction9
+        //When Button7 clicked call virtual function
+        //Call write7
+        write7();
+    }
+    else if (&src == &Button6)
+    {
+        //Interaction8
+        //When Button6 clicked call virtual function
+        //Call write6
+        write6();
+    }
+    else if (&src == &Button9)
+    {
+        //Interaction11
+        //When Button9 clicked call virtual function
+        //Call write9
+        write9();
+    }
+    else if (&src == &Button2)
+    {
+        //Interaction4
+        //When Button2 clicked call virtual function
+        //Call write2
+        write2();
+    }
+    else if (&src == &Button5)
+    {
+        //Interaction7
+        //When Button5 clicked call virtual function
+        //Call write5
+        write5();
+    }
+    else if (&src == &Button8)
+    {
+        //Interaction10
+        //When Button8 clicked call virtual function
+        //Call write8
+        write8();
+    }
+    else if (&src == &Button1)
+    {
+        //Interaction3
+        //When Button1 clicked call virtual function
+        //Call write1
+        write1();
+    }
+    else if (&src == &Button4)
+    {
+        //Interaction6
+        //When Button4 clicked call virtual function
+        //Call write4
+        write4();
+    }
+    else if (&src == &button3)
+    {
+        //Interaction5
+        //When button3 clicked call virtual function
+        //Call write3
+        write3();
+    }
+    else if (&src == &Button0)
+    {
+        //Interaction1
+        //When Button0 clicked call virtual function
+        //Call write0
+        write0();
+    }
+    else if (&src == &ERASE)
+    {
+        //Interaction2
         //When ERASE clicked call virtual function
         //Call IT_ERASE
         IT_ERASE();
     }
     else if (&src == &SET)
     {
-        //Interaction11
+        //Interaction12
         //When SET clicked call virtual function
         //Call savedata
         savedata();
     }
-    else if (&src == &Button9)
-    {
-        //Interaction10
-        //When Button9 clicked call virtual function
-        //Call write9
-        write9();
-    }
-    else if (&src == &Button0)
-    {
-        //Interaction3
-        //When Button0 clicked call virtual function
-        //Call write0
-        write0();
-    }
-    else if (&src == &Button2)
-    {
-        //Interaction2
-        //When Button2 clicked call virtual function
-        //Call write2
-        write2();
-    }
-    else if (&src == &Button6)
-    {
-        //Interaction7
-        //When Button6 clicked call virtual function
-        //Call write6
-        write6();
-    }
-    else if (&src == &Button7)
-    {
-        //Interaction8
-        //When Button7 clicked call virtual function
-        //Call write7
-        write7();
-    }
-    else if (&src == &Button4)
-    {
-        //Interaction5
-        //When Button4 clicked call virtual function
-        //Call write4
-        write4();
-    }
-    else if (&src == &Button1)
-    {
-        //Interaction1
-        //When Button1 clicked call virtual function
-        //Call write1
-        write1();
-    }
-    else if (&src == &Button8)
-    {
-        //Interaction9
-        //When Button8 clicked call virtual function
-        //Call write8
-        write8();
-    }
-    else if (&src == &Button5)
-    {
-        //Interaction6
-        //When Button5 clicked call virtual function
-        //Call write5
-        write5();
-    }
-    else if (&src == &Button3)
-    {
-        //Interaction4
-        //When Button3 clicked call virtual function
-        //Call write3
-        write3();
-    }
     else if (&src == &LockUnlock)
     {
-        //Interaction14
+        //Interaction15
         //When LockUnlock clicked call virtual function
         //Call LockF
         LockF();
     }
     else if (&src == &ChangePassword)
     {
-        //Interaction13
+        //Interaction16
         //When ChangePassword clicked call virtual function
         //Call ChangePasswordF
         ChangePasswordF();
     }
     else if (&src == &Back)
     {
-        //Interaction12
-        //When Back clicked change screen to Settings
-        //Go to Settings with no screen transition
-        application().gotoSettingsScreenNoTransition();
+        //Interaction14
+        //When Back clicked change screen to Settings__screen
+        //Go to Settings__screen with no screen transition
+        application().gotoSettings__screenScreenNoTransition();
     }
 }

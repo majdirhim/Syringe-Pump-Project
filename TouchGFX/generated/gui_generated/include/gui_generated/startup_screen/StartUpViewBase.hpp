@@ -6,38 +6,25 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
-#include <gui/startup_screen/StartUpPresenter.hpp>
+#include <gui/startup_screen/startupPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
-#include <touchgfx/containers/ModalWindow.hpp>
-#include <touchgfx/Color.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/canvas/Circle.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/FadeAnimator.hpp>
-#include <touchgfx/mixins/MoveAnimator.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
-class StartUpViewBase : public touchgfx::View<StartUpPresenter>
+class startupViewBase : public touchgfx::View<startupPresenter>
 {
 public:
-    StartUpViewBase();
-    virtual ~StartUpViewBase() {}
+    startupViewBase();
+    virtual ~startupViewBase() {}
     virtual void setupScreen();
 
     /*
      * Custom Actions
      */
-    virtual void initSuccess(uint8_t value);
-    virtual void handleTickEvent();
-
-    /*
-     * Virtual Action Handlers
-     */
-    virtual void checkInitStatus()
-    {
-        // Override and implement this function in StartUp
-    }
+    virtual void action1();
 
 protected:
     FrontendApplication& application() {
@@ -48,42 +35,31 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage ChildrenBackground;
-    touchgfx::ScalableImage DarkBackground;
-    touchgfx::ScalableImage DefaultBackground;
-    touchgfx::MoveAnimator< touchgfx::ScalableImage > MediWaveLogo;
-    touchgfx::FadeAnimator< touchgfx::Box > WhiteScreen;
-    touchgfx::ModalWindow InitErrorPopUp;
-    touchgfx::TextArea InitErrorMessage;
-    touchgfx::Circle LoadingCercle;
-    touchgfx::PainterRGB565 LoadingCerclePainter;
-    touchgfx::TextArea textArea1;
+    touchgfx::ScalableImage BackendBlack;
+    touchgfx::ScalableImage BackendChildren;
+    touchgfx::Image backend;
+    touchgfx::ScalableImage scalableImage1;
+    touchgfx::ScalableImage logoMEDIWAVE;
+    touchgfx::TextArea Syringe_PUMP;
+    touchgfx::Button button;
+    touchgfx::IconButtonStyle< touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  >  New_Patient;
+    touchgfx::IconButtonStyle< touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  >  Same_Patient;
+    touchgfx::IconButtonStyle< touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  >  Special_Mode;
 
 private:
 
     /*
-     * Delay Variable Declarations
+     * Callback Declarations
      */
-    static const uint16_t WAITFORINIT_DURATION = 60;
-    uint16_t waitForInitCounter;
-    /*
-     * Interaction Callback Declarations
-     */
-    touchgfx::Callback < StartUpViewBase, const touchgfx::FadeAnimator<touchgfx::Box>& >  hideWhiteScreenEndedCallback;
-    touchgfx::Callback < StartUpViewBase, const touchgfx::MoveAnimator<touchgfx::ScalableImage>& > moveLogoEndedCallback;
-
+    touchgfx::Callback<startupViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<startupViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
-     * Interaction Handlers
+     * Callback Handler Declarations
      */
-    void hideWhiteScreenEndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Box>& comp);
-    void moveLogoEndedCallbackHandler(const touchgfx::MoveAnimator<touchgfx::ScalableImage>& comp);
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint16_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 };
 
 #endif // STARTUPVIEWBASE_HPP

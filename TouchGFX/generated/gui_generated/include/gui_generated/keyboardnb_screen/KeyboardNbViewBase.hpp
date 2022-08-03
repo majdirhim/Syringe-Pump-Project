@@ -6,90 +6,95 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
-#include <gui/keyboardnb_screen/KeyboardNbPresenter.hpp>
+#include <gui/keyboardnb_screen/KeyboardNBPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/ModalWindow.hpp>
+#include <touchgfx/Color.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
 
-class KeyboardNbViewBase : public touchgfx::View<KeyboardNbPresenter>
+class KeyboardNBViewBase : public touchgfx::View<KeyboardNBPresenter>
 {
 public:
-    KeyboardNbViewBase();
-    virtual ~KeyboardNbViewBase() {}
+    KeyboardNBViewBase();
+    virtual ~KeyboardNBViewBase() {}
     virtual void setupScreen();
 
     /*
      * Virtual Action Handlers
      */
-    virtual void ChangeScreen()
+    virtual void write0()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input0()
+    virtual void IT_ERASE()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input1()
+    virtual void write1()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input2()
+    virtual void write2()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input3()
+    virtual void write3()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input4()
+    virtual void write4()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input5()
+    virtual void write5()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input6()
+    virtual void write6()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input7()
+    virtual void write7()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input8()
+    virtual void write8()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void Input9()
+    virtual void write9()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void InputComma()
+    virtual void savedata()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void SaveData()
+    virtual void writecomma()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
-    virtual void EraseInput()
+    virtual void closepopup()
     {
-        // Override and implement this function in KeyboardNb
+        // Override and implement this function in KeyboardNB
     }
 
 protected:
@@ -101,54 +106,55 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage ChildrenBackground;
-    touchgfx::ScalableImage DarkBackground;
-    touchgfx::ScalableImage DefaultBackground;
-    touchgfx::Box BackBtnBox;
-    touchgfx::TextButtonStyle< touchgfx::ClickButtonTrigger >  BackBtn;
-    touchgfx::ScalableImage BackArrow;
-    touchgfx::ScalableImage KeyBoardBackground;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn7;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn4;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn1;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn2;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn5;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn8;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn9;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn6;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn3;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Btn0;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  BtnComma;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  EraseBtn;
-    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  SaveBtn;
-    touchgfx::ScalableImage InputBackground;
-    touchgfx::TextAreaWithOneWildcard IntTextArea;
-    touchgfx::TextAreaWithOneWildcard FloatTextArea;
-    touchgfx::TextAreaWithOneWildcard UnitTextArea;
-    touchgfx::TextAreaWithOneWildcard PasswordTextArea;
+    touchgfx::ScalableImage BackendBlack;
+    touchgfx::ScalableImage BackendChildren;
+    touchgfx::Image Backend;
+    touchgfx::Box box1;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  Back;
+    touchgfx::ScalableImage scalableImage1;
+    touchgfx::ScalableImage scalableImage2_1_1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button7;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button6;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button9;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button2;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button5;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button8;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button4;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  button3;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Button0;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  ERASE;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  SET;
+    touchgfx::TextAreaWithOneWildcard textArea_centaine;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  Buttoncoma;
+    touchgfx::TextAreaWithOneWildcard textArea_comma;
+    touchgfx::ModalWindow modalinputerror;
+    touchgfx::TextArea inputerror;
+    touchgfx::ButtonWithIcon buttonWithIcon1;
+    touchgfx::TextAreaWithOneWildcard error;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t INTTEXTAREA_SIZE = 5;
-    touchgfx::Unicode::UnicodeChar IntTextAreaBuffer[INTTEXTAREA_SIZE];
-    static const uint16_t FLOATTEXTAREA_SIZE = 3;
-    touchgfx::Unicode::UnicodeChar FloatTextAreaBuffer[FLOATTEXTAREA_SIZE];
-    static const uint16_t UNITTEXTAREA_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar UnitTextAreaBuffer[UNITTEXTAREA_SIZE];
-    static const uint16_t PASSWORDTEXTAREA_SIZE = 19;
-    touchgfx::Unicode::UnicodeChar PasswordTextAreaBuffer[PASSWORDTEXTAREA_SIZE];
+    static const uint16_t TEXTAREA_CENTAINE_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar textArea_centaineBuffer[TEXTAREA_CENTAINE_SIZE];
+    static const uint16_t TEXTAREA_COMMA_SIZE = 2;
+    touchgfx::Unicode::UnicodeChar textArea_commaBuffer[TEXTAREA_COMMA_SIZE];
+    static const uint16_t ERROR_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar errorBuffer[ERROR_SIZE];
 
 private:
 
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<KeyboardNbViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+    touchgfx::Callback<KeyboardNBViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<KeyboardNBViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };

@@ -2,1077 +2,2125 @@
 <TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.19.1">
   <Languages>
     <Language Id="GB" />
-    <Language Id="FR" />
+    <Language Id="FRA" />
   </Languages>
   <Texts>
     <TextGroup Id="Group1">
-      <Text Id="__SingleUse_JIW4" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Initialisation error ....&#10;    System Restart </Translation>
-        <Translation Language="FR">Initialisation error ....&#10;    System Restart </Translation>
+      <Text Id="__SingleUse_JXA2" Alignment="Center" TypographyId="Typography_00_A">
+        <Translation Language="GB" Alignment="Center">Syringe PUMP </Translation>
+        <Translation Language="FRA" Alignment="Center">Pousse Seringue</Translation>
       </Text>
-      <Text Id="__SingleUse_4IHP" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">New Patient</Translation>
-        <Translation Language="FR">New Patient</Translation>
+      <Text Id="__SingleUse_U0NG" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">Syringe Diameter : &lt;value&gt; mm</Translation>
+        <Translation Language="FRA">Volume de la seringue: &lt;value&gt;ml</Translation>
       </Text>
-      <Text Id="__SingleUse_6VQU" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Last Patient</Translation>
-        <Translation Language="FR">Same Patient</Translation>
+      <Text Id="__SingleUse_6XFO" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
       </Text>
-      <Text Id="__SingleUse_LS2S" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Special Modes</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+      <Text Id="__SingleUse_J6C3" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
       </Text>
-      <Text Id="__SingleUse_PCEM" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Patients DataBase</Translation>
-        <Translation Language="FR">Patients DataBase</Translation>
+      <Text Id="__SingleUse_HKJB" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
       </Text>
-      <Text Id="__SingleUse_WYBN" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">SyriWave</Translation>
-        <Translation Language="FR">SyriWave</Translation>
+      <Text Id="__SingleUse_99BE" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
       </Text>
-      <Text Id="__SingleUse_Q1XL" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">New Patient</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_B942" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
       </Text>
-      <Text Id="__SingleUse_0ZXQ" Alignment="Right" TypographyId="ButtonsEng">
+      <Text Id="__SingleUse_AQPM" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_RIAU" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_BW4A" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_979G" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_CW42" Alignment="Center" TypographyId="Typography_05">
+        <Translation Language="GB">SELECT</Translation>
+        <Translation Language="FRA">SÉLECTIONNER</Translation>
+      </Text>
+      <Text Id="__SingleUse_IFSE" Alignment="Center" TypographyId="Typography_05">
+        <Translation Language="GB">CANCEL</Translation>
+        <Translation Language="FRA">ANNULER</Translation>
+      </Text>
+      <Text Id="__SingleUse_X3XK" Alignment="Center" TypographyId="Typography_12_A">
+        <Translation Language="GB">Auto Diagnostic</Translation>
+        <Translation Language="FRA" Alignment="Center">Diagnostic &#10;automatique</Translation>
+      </Text>
+      <Text Id="__SingleUse_W60U" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Display mode</Translation>
+        <Translation Language="FRA">Mode d'affichage</Translation>
+      </Text>
+      <Text Id="__SingleUse_5VFP" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Time &amp; Date</Translation>
+        <Translation Language="FRA">Heure et  Date</Translation>
+      </Text>
+      <Text Id="__SingleUse_I36A" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Language</Translation>
+        <Translation Language="FRA">Langue</Translation>
+      </Text>
+      <Text Id="__SingleUse_5S1U" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Sound</Translation>
+        <Translation Language="FRA">son</Translation>
+      </Text>
+      <Text Id="__SingleUse_QJCB" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Manual</Translation>
+        <Translation Language="FRA">Manuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_A5BP" Alignment="Center" TypographyId="Typography_12_A">
+        <Translation Language="GB">Drug Library</Translation>
+        <Translation Language="FRA" Alignment="Center">Bibliothèque de&#10;médicaments</Translation>
+      </Text>
+      <Text Id="__SingleUse_ECT5" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Departement</Translation>
+        <Translation Language="FRA">Departement</Translation>
+      </Text>
+      <Text Id="__SingleUse_8KYY" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">History</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_V08F" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Configuration</Translation>
+        <Translation Language="FRA">Configuration</Translation>
+      </Text>
+      <Text Id="__SingleUse_6JEO" Alignment="Center" TypographyId="Typography_11_A">
+        <Translation Language="GB">START</Translation>
+        <Translation Language="FRA">Commencer</Translation>
+      </Text>
+      <Text Id="__SingleUse_1T7J" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_0460" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;- h -- min</Translation>
+        <Translation Language="FRA">&#10;- h -- min</Translation>
+      </Text>
+      <Text Id="__SingleUse_N8XO" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- ml</Translation>
+        <Translation Language="FRA">&#10;-- ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_1VJ1" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_4LQ3" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_BKR7" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_EIPF" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_TWYG" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">-- </Translation>
+        <Translation Language="FRA">-- </Translation>
+      </Text>
+      <Text Id="__SingleUse_FXKR" Alignment="Center" TypographyId="Typography_09">
         <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+        <Translation Language="FRA">Retour</Translation>
       </Text>
-      <Text Id="__SingleUse_2MRF" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Name</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_72ZK" Alignment="Center" TypographyId="Typography_11">
+        <Translation Language="GB">START</Translation>
+        <Translation Language="FRA" Alignment="Center">Commencer</Translation>
       </Text>
-      <Text Id="__SingleUse_SEI9" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Age</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_G3SA" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
       </Text>
-      <Text Id="__SingleUse_KDZJ" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Height</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_AHH2" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Weight</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_ESE7" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Gender</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_G9T6" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Save</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_3CBF" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">cm</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_DM4E" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Kg</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_HT20" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_NLK2" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_5CD1" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_YNPX" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_DG0Q" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_IZWW" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Female</Translation>
-        <Translation Language="FR">Anonymous Patient</Translation>
-      </Text>
-      <Text Id="__SingleUse_8W0H" Alignment="Right" TypographyId="BackButton">
+      <Text Id="__SingleUse_XK69" Alignment="Center" TypographyId="Typography_09">
         <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+        <Translation Language="FRA">Retour</Translation>
       </Text>
-      <Text Id="__SingleUse_Z6T1" Alignment="Center" TypographyId="ButtonsEng">
+      <Text Id="__SingleUse_QHLV" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
+      </Text>
+      <Text Id="__SingleUse_3KNR" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
+      </Text>
+      <Text Id="__SingleUse_B9ES" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
+      </Text>
+      <Text Id="__SingleUse_O0G1" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
+      </Text>
+      <Text Id="__SingleUse_JQID" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
+      </Text>
+      <Text Id="__SingleUse_L23C" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_VFXH" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_1RK4" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_LQZM" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_KCN4" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
+      </Text>
+      <Text Id="__SingleUse_K2P7" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
+      </Text>
+      <Text Id="__SingleUse_XG5P" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
+      </Text>
+      <Text Id="__SingleUse_W10G" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
+      </Text>
+      <Text Id="__SingleUse_B2XX" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
+      </Text>
+      <Text Id="__SingleUse_OJ9X" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_XFZT" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZKG8" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_B4QG" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_DO3S" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
+      </Text>
+      <Text Id="__SingleUse_M5OP" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
+      </Text>
+      <Text Id="__SingleUse_KIUA" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
+      </Text>
+      <Text Id="__SingleUse_1E2S" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
+      </Text>
+      <Text Id="__SingleUse_2B7B" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
+      </Text>
+      <Text Id="__SingleUse_D0HF" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_D5IN" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_A7O2" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_LTDX" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_9FKT" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
+      </Text>
+      <Text Id="__SingleUse_4UMP" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
+      </Text>
+      <Text Id="__SingleUse_UY2U" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
+      </Text>
+      <Text Id="__SingleUse_RYG9" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
+      </Text>
+      <Text Id="__SingleUse_6ODM" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
+      </Text>
+      <Text Id="__SingleUse_HXPR" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_WAPM" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_32ZI" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_BFTX" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_0OHT" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
+      </Text>
+      <Text Id="__SingleUse_N2UO" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
+      </Text>
+      <Text Id="__SingleUse_DY6M" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
+      </Text>
+      <Text Id="__SingleUse_0P56" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q0PL" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z363" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_F9V1" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_9USL" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_ETIS" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_HT8P" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_DBN7" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">7</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA">7</Translation>
       </Text>
-      <Text Id="__SingleUse_PND1" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">4</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_P89H" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">1</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_VV5Q" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">2</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_WOC7" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">5</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_WN5R" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">8</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_6FTS" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">9</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_EE3I" Alignment="Center" TypographyId="ButtonsEng">
+      <Text Id="__SingleUse_EDWO" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">6</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA">6</Translation>
       </Text>
-      <Text Id="__SingleUse_L6B2" Alignment="Center" TypographyId="ButtonsEng">
+      <Text Id="__SingleUse_722K" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">9</Translation>
+        <Translation Language="FRA">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_0H76" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">2</Translation>
+        <Translation Language="FRA">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_RNON" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">5</Translation>
+        <Translation Language="FRA">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_G3PT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">8</Translation>
+        <Translation Language="FRA">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_FUHH" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">1</Translation>
+        <Translation Language="FRA">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_GMZ6" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">4</Translation>
+        <Translation Language="FRA">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_2AIY" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">3</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA">3</Translation>
       </Text>
-      <Text Id="__SingleUse_3XIZ" Alignment="Center" TypographyId="ButtonsEng">
+      <Text Id="__SingleUse_Q8ZB" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">0</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA">0</Translation>
       </Text>
-      <Text Id="__SingleUse_C8BK" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">.</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_NG3G" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">ERASE</Translation>
+        <Translation Language="FRA">EFFACER</Translation>
       </Text>
-      <Text Id="__SingleUse_0PAV" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Erase</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_2IV7" Alignment="Center" TypographyId="Typography_04_A">
+        <Translation Language="GB">SET</Translation>
+        <Translation Language="FRA">VALIDER</Translation>
       </Text>
-      <Text Id="__SingleUse_90TU" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Save</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_U3UL" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;.</Translation>
-      </Text>
-      <Text Id="__SingleUse_AB4J" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_4VWK" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">.&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;.</Translation>
-      </Text>
-      <Text Id="__SingleUse_E06Z" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">0</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_TCW9" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;.</Translation>
-      </Text>
-      <Text Id="__SingleUse_FM5X" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_LV1R" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;.</Translation>
-      </Text>
-      <Text Id="__SingleUse_H5TO" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Male</Translation>
-        <Translation Language="FR">Anonymous Patient</Translation>
-      </Text>
-      <Text Id="__SingleUse_X80P" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Gender</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_9ZZ9" Alignment="Right" TypographyId="BackButton">
+      <Text Id="__SingleUse_WLA4" Alignment="Center" TypographyId="Typography_09">
         <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+        <Translation Language="FRA">Retour</Translation>
       </Text>
-      <Text Id="__SingleUse_ZDYH" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Cancel</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+      <Text Id="__SingleUse_EUIJ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">7</Translation>
+        <Translation Language="FRA">7</Translation>
       </Text>
-      <Text Id="__SingleUse_AO6C" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Save</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+      <Text Id="__SingleUse_W42T" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">6</Translation>
+        <Translation Language="FRA">6</Translation>
       </Text>
-      <Text Id="EnteredText" Alignment="Left" TypographyId="Display">
+      <Text Id="__SingleUse_5OIV" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">9</Translation>
+        <Translation Language="FRA">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_D5SZ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">2</Translation>
+        <Translation Language="FRA">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_9IQT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">5</Translation>
+        <Translation Language="FRA">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_YM9A" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">8</Translation>
+        <Translation Language="FRA">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_9I07" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">1</Translation>
+        <Translation Language="FRA">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_9JV4" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">4</Translation>
+        <Translation Language="FRA">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_M51H" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">3</Translation>
+        <Translation Language="FRA">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_28CV" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+        <Translation Language="FRA">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_GFF9" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">ERASE</Translation>
+        <Translation Language="FRA">Effacer</Translation>
+      </Text>
+      <Text Id="__SingleUse_8IC6" Alignment="Center" TypographyId="Typography_04_A">
+        <Translation Language="GB">SET</Translation>
+        <Translation Language="FRA" Alignment="Center">Valider</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z58N" Alignment="Center" TypographyId="Typography_14">
+        <Translation Language="GB" Alignment="Center">Same Patient</Translation>
+        <Translation Language="FRA" Alignment="Center">Patient existant</Translation>
+      </Text>
+      <Text Id="__SingleUse_4RF2" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">name_patient</Translation>
+        <Translation Language="FRA">Nom_PATIENT</Translation>
+      </Text>
+      <Text Id="__SingleUse_UIJN" Alignment="Center" TypographyId="Typography_13">
+        <Translation Language="GB">0000</Translation>
+        <Translation Language="FRA">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_D4UW" Alignment="Center" TypographyId="Typography_14">
+        <Translation Language="GB" Alignment="Center">Special Mode</Translation>
+        <Translation Language="FRA" Alignment="Center">Mode Special</Translation>
+      </Text>
+      <Text Id="__SingleUse_2NII" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_DK7A" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Configuration</Translation>
+        <Translation Language="FRA">Configuration</Translation>
+      </Text>
+      <Text Id="__SingleUse_G5MS" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_GAB1" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;- h -- min</Translation>
+        <Translation Language="FRA">&#10;- h -- min</Translation>
+      </Text>
+      <Text Id="__SingleUse_G4HD" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- ml</Translation>
+        <Translation Language="FRA">&#10;-- ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_LI95" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z9WT" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_YZSM" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_UTGU" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_A42O" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">-- </Translation>
+        <Translation Language="FRA">-- </Translation>
+      </Text>
+      <Text Id="__SingleUse_87H9" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">No Syringe &#10;detected</Translation>
+        <Translation Language="FRA" Alignment="Center">Pas de seringue&#10;détectée</Translation>
+      </Text>
+      <Text Id="__SingleUse_FXVU" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Auto Diagnostic</Translation>
+        <Translation Language="FRA" Alignment="Center">Diagnostic &#10;automatique</Translation>
+      </Text>
+      <Text Id="__SingleUse_GSHJ" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Display mode</Translation>
+        <Translation Language="FRA">Mode d'affichage</Translation>
+      </Text>
+      <Text Id="__SingleUse_XRKU" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Time &amp;Date</Translation>
+        <Translation Language="FRA">Heure Date</Translation>
+      </Text>
+      <Text Id="__SingleUse_NNSE" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Language</Translation>
+        <Translation Language="FRA">Langue</Translation>
+      </Text>
+      <Text Id="__SingleUse_YNLQ" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Sound</Translation>
+        <Translation Language="FRA">Son</Translation>
+      </Text>
+      <Text Id="__SingleUse_MA8X" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Manual</Translation>
+        <Translation Language="FRA">Manuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_4R1L" Alignment="Center" TypographyId="Typography_12_B">
+        <Translation Language="GB">Drug Library</Translation>
+        <Translation Language="FRA" Alignment="Center">Bibliothèque de&#10;médicaments</Translation>
+      </Text>
+      <Text Id="__SingleUse_B2FN" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Departement</Translation>
+        <Translation Language="FRA">Departement</Translation>
+      </Text>
+      <Text Id="__SingleUse_A90C" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">History</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_OCNG" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
+      </Text>
+      <Text Id="__SingleUse_RJYD" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_JVGW" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">No Syringe &#10;detected</Translation>
+        <Translation Language="FRA">Pas de seringue&#10;détectée</Translation>
+      </Text>
+      <Text Id="__SingleUse_LY0U" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Configuration</Translation>
+        <Translation Language="FRA">Configuration</Translation>
+      </Text>
+      <Text Id="__SingleUse_W0XF" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Alarm</Translation>
+        <Translation Language="FRA">Alarme</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y80Z" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Purge</Translation>
+        <Translation Language="FRA">Purge</Translation>
+      </Text>
+      <Text Id="__SingleUse_15H4" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
+      </Text>
+      <Text Id="__SingleUse_L6TO" Alignment="Center" TypographyId="Typography_11_A">
+        <Translation Language="GB">START</Translation>
+        <Translation Language="FRA">Commencer</Translation>
+      </Text>
+      <Text Id="__SingleUse_XQ0W" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_AF9D" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Configuration</Translation>
+        <Translation Language="FRA">Configuration</Translation>
+      </Text>
+      <Text Id="__SingleUse_L5NI" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_KE9N" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;- h -- min</Translation>
+        <Translation Language="FRA">&#10;- h -- min</Translation>
+      </Text>
+      <Text Id="__SingleUse_CU1K" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- ml</Translation>
+        <Translation Language="FRA">&#10;-- ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_MVNP" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_LXOW" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_B41M" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_B295" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;-- -- -- --</Translation>
+        <Translation Language="FRA">&#10;-- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_7ETR" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">-- </Translation>
+        <Translation Language="FRA">-- </Translation>
+      </Text>
+      <Text Id="__SingleUse_1T33" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Auto Diagnostic</Translation>
+        <Translation Language="FRA">Diagnostic automatique</Translation>
+      </Text>
+      <Text Id="__SingleUse_URPX" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Display mode</Translation>
+        <Translation Language="FRA">Mode d'affichage</Translation>
+      </Text>
+      <Text Id="__SingleUse_6311" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Time &amp;Date</Translation>
+        <Translation Language="FRA">Heure Date</Translation>
+      </Text>
+      <Text Id="__SingleUse_EJBC" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Language</Translation>
+        <Translation Language="FRA">Langue</Translation>
+      </Text>
+      <Text Id="__SingleUse_CKKN" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Sound</Translation>
+        <Translation Language="FRA">Son</Translation>
+      </Text>
+      <Text Id="__SingleUse_0NCQ" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Manual</Translation>
+        <Translation Language="FRA">Manuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_DAGR" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Drug Library</Translation>
+        <Translation Language="FRA">Bibliothèque de médicaments</Translation>
+      </Text>
+      <Text Id="__SingleUse_EEP8" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Departement</Translation>
+        <Translation Language="FRA">Departement</Translation>
+      </Text>
+      <Text Id="__SingleUse_BKT3" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">History</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_1U53" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
+      </Text>
+      <Text Id="__SingleUse_I10H" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_CAH2" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">No Syringe &#10;detected</Translation>
+        <Translation Language="FRA">Pas de seringue&#10;détectée</Translation>
+      </Text>
+      <Text Id="__SingleUse_172X" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">No Syringe &#10;detected</Translation>
+        <Translation Language="FRA">Pas de seringue&#10;détectée</Translation>
+      </Text>
+      <Text Id="__SingleUse_3G0O" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QNZT" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Name</Translation>
+        <Translation Language="FRA">Nom</Translation>
+      </Text>
+      <Text Id="__SingleUse_L7S1" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_O304" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Weight</Translation>
+        <Translation Language="FRA">Poids</Translation>
+      </Text>
+      <Text Id="__SingleUse_0HLS" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PQE9" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Age</Translation>
+        <Translation Language="FRA">Age</Translation>
+      </Text>
+      <Text Id="__SingleUse_X4ND" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2O0H" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Height</Translation>
+        <Translation Language="FRA">Taille</Translation>
+      </Text>
+      <Text Id="__SingleUse_M2E4" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UFMN" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Gender</Translation>
+        <Translation Language="FRA">Genre</Translation>
+      </Text>
+      <Text Id="__SingleUse_4LSL" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_J83J" Alignment="Center" TypographyId="Typography_05">
+        <Translation Language="GB">OK</Translation>
+        <Translation Language="FRA">OK</Translation>
+      </Text>
+      <Text Id="EnteredText" Alignment="Center" TypographyId="Display">
         <Translation Language="GB">&lt;placeholder&gt;</Translation>
-        <Translation Language="FR">&lt;placeholder&gt;</Translation>
+        <Translation Language="FRA">&lt;placeholder&gt;</Translation>
       </Text>
       <Text Id="NumMode" Alignment="Center" TypographyId="Mode">
         <Translation Language="GB">ABC</Translation>
-        <Translation Language="FR">ABC</Translation>
+        <Translation Language="FRA">ABC</Translation>
       </Text>
       <Text Id="AlphaMode" Alignment="Center" TypographyId="Mode">
         <Translation Language="GB">123</Translation>
-        <Translation Language="FR">123</Translation>
+        <Translation Language="FRA">123</Translation>
       </Text>
-      <Text Id="__SingleUse_83FX" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Last Patient</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_KNBT" Alignment="Center" TypographyId="Typography_05">
+        <Translation Language="GB">Cancel</Translation>
+        <Translation Language="FRA">Annuler</Translation>
       </Text>
-      <Text Id="__SingleUse_ROIJ" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_XC7I" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Name</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_5OJ3" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Age</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_O8FC" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Height</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_6W7I" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Weight</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_3U0V" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Gender</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_QBOP" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Use</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_ME17" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">cm</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_TJV8" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Kg</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_BEJS" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_L4UA" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_EJJZ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_3BEM" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_6736" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_YW3W" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_XS50" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_WMJE" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_MHB1" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_MO78" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_VQAS" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Error, no patients found&#10; in the database</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_QV20" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">TIVA</Translation>
-        <Translation Language="FR">Anonymous Patient</Translation>
-      </Text>
-      <Text Id="__SingleUse_PCA4" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">AIVOC</Translation>
-        <Translation Language="FR">Anonymous Patient</Translation>
-      </Text>
-      <Text Id="__SingleUse_K31T" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Anesthesia algorithms</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_LIM2" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_7VPT" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Patients Database</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_B957" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Error, patient not found&#10; in the database</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_FW4M" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_LM1G" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Name</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_5AST" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Age</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_6T0L" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Height</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_2HC0" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Weight</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_GL1P" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Gender</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_W6JA" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Kg</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_OB5F" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">cm</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_FLYQ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_JUK2" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_TR6V" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_2CQ4" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_HW6V" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_4AEJ" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_FF24" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_EM69" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_J0FQ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_SVRV" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_OBHW" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Use</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_AZPC" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Input Patient Name</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_BJRJ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_AI3R" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Search</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_Z3MV" Alignment="Center" TypographyId="BackButton">
-        <Translation Language="GB">Setting</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_PAR1" Alignment="Center" TypographyId="BackButton">
+      <Text Id="__SingleUse_WJIM" Alignment="Center" TypographyId="Typography_10">
         <Translation Language="GB">Configuration</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+        <Translation Language="FRA">Configuration</Translation>
       </Text>
-      <Text Id="__SingleUse_O4MZ" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Active Alarms</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+      <Text Id="__SingleUse_C11W" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Alarm</Translation>
+        <Translation Language="FRA">Alarme</Translation>
       </Text>
-      <Text Id="__SingleUse_TVB0" Alignment="Right" TypographyId="BackButton">
+      <Text Id="__SingleUse_9W06" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Forward</Translation>
+        <Translation Language="FRA">Avancer</Translation>
+      </Text>
+      <Text Id="__SingleUse_GKPW" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z5KV" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Purge</Translation>
+        <Translation Language="FRA">Purge</Translation>
+      </Text>
+      <Text Id="__SingleUse_57YD" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">NO syringe &#10; detected </Translation>
+        <Translation Language="FRA">PAS de seringue&#10; détectée</Translation>
+      </Text>
+      <Text Id="__SingleUse_82ZY" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">&lt;valeur&gt;</Translation>
+        <Translation Language="FRA">&lt;valeur&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AE3P" Alignment="Center" TypographyId="Typography_06">
+        <Translation Language="GB">&lt;valeur&gt;</Translation>
+        <Translation Language="FRA">&lt;valeur&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MHVC" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0000</Translation>
+        <Translation Language="FRA">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_T122" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Alarm</Translation>
+        <Translation Language="FRA">Alarme</Translation>
+      </Text>
+      <Text Id="__SingleUse_N0NH" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Forward</Translation>
+        <Translation Language="FRA">Avancer</Translation>
+      </Text>
+      <Text Id="__SingleUse_UVE8" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
+      </Text>
+      <Text Id="__SingleUse_THUO" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Purge</Translation>
+        <Translation Language="FRA">Purge</Translation>
+      </Text>
+      <Text Id="__SingleUse_DQYZ" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">NO syringe &#10; detected </Translation>
+        <Translation Language="FRA">PAS de seringue&#10; détectée</Translation>
+      </Text>
+      <Text Id="__SingleUse_VEOJ" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Configuration</Translation>
+        <Translation Language="FRA">Configuration</Translation>
+      </Text>
+      <Text Id="__SingleUse_BCV5" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Alarm</Translation>
+        <Translation Language="FRA">Alarme</Translation>
+      </Text>
+      <Text Id="__SingleUse_3LT9" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Forward</Translation>
+        <Translation Language="FRA">Forward</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZNC7" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">NO syringe &#10;detected </Translation>
+        <Translation Language="FRA">PAS de seringue&#10;détectée</Translation>
+      </Text>
+      <Text Id="__SingleUse_DRHE" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
+      </Text>
+      <Text Id="__SingleUse_TQSM" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">&lt;valeur&gt;</Translation>
+        <Translation Language="FRA">&lt;valeur&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y1F3" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Purge</Translation>
+        <Translation Language="FRA">Purge</Translation>
+      </Text>
+      <Text Id="__SingleUse_UOL6" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_S6QP" Alignment="Left" TypographyId="Typography_00_B">
+        <Translation Language="GB">Auto Diagnostic</Translation>
+        <Translation Language="FRA" Alignment="Center">Diagnostic automatique</Translation>
+      </Text>
+      <Text Id="__SingleUse_NS0L" Alignment="Left" TypographyId="Default_A">
+        <Translation Language="GB">Diagnosing</Translation>
+        <Translation Language="FRA" Alignment="Center">Diagnostique &#10;en cours</Translation>
+      </Text>
+      <Text Id="__SingleUse_ESOJ" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Display Mode</Translation>
+        <Translation Language="FRA">Mode d'affichage</Translation>
+      </Text>
+      <Text Id="__SingleUse_CFIG" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">ENGLISH </Translation>
+        <Translation Language="FRA">ANGLAIS</Translation>
+      </Text>
+      <Text Id="__SingleUse_FWKW" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">FRENSH</Translation>
+        <Translation Language="FRA">FRANCAIS</Translation>
+      </Text>
+      <Text Id="__SingleUse_JTFE" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">History</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_VCVJ" Alignment="Left" TypographyId="Typography_03">
+        <Translation Language="GB">Event Name</Translation>
+        <Translation Language="FRA">Nom d'evenement</Translation>
+      </Text>
+      <Text Id="__SingleUse_72KO" Alignment="Left" TypographyId="Typography_03">
+        <Translation Language="GB">Time</Translation>
+        <Translation Language="FRA">Temps</Translation>
+      </Text>
+      <Text Id="__SingleUse_AXQ3" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Hour</Translation>
+        <Translation Language="FRA">Heure</Translation>
+      </Text>
+      <Text Id="__SingleUse_6WTV" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_06AA" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_CJKT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Minute</Translation>
+        <Translation Language="FRA">Minute</Translation>
+      </Text>
+      <Text Id="__SingleUse_T9X7" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_EZX9" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_0M3L" Alignment="Center" TypographyId="Typography_15_A">
+        <Translation Language="GB">save</Translation>
+        <Translation Language="FRA" Alignment="Center">sauvegarder</Translation>
+      </Text>
+      <Text Id="__SingleUse_7RNL" Alignment="Center" TypographyId="Typography_12_A">
+        <Translation Language="GB">Auto Diagnostic</Translation>
+        <Translation Language="FRA" Alignment="Center">Diagnostic&#10;automatique</Translation>
+      </Text>
+      <Text Id="__SingleUse_HAJO" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YOJS" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Display mode</Translation>
+        <Translation Language="FRA">mode d'affichage</Translation>
+      </Text>
+      <Text Id="__SingleUse_DZ5M" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Time &amp;Date</Translation>
+        <Translation Language="FRA">Heure et Date</Translation>
+      </Text>
+      <Text Id="__SingleUse_SECM" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Language</Translation>
+        <Translation Language="FRA">Langue</Translation>
+      </Text>
+      <Text Id="__SingleUse_2C08" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Sound</Translation>
+        <Translation Language="FRA">Son</Translation>
+      </Text>
+      <Text Id="__SingleUse_FNKK" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Manual</Translation>
+        <Translation Language="FRA">Manuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_ARDT" Alignment="Center" TypographyId="Typography_12_A">
+        <Translation Language="GB">Drug Library</Translation>
+        <Translation Language="FRA" Alignment="Center">Bibliothèque&#10;de médicaments</Translation>
+      </Text>
+      <Text Id="__SingleUse_3IXJ" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Departement</Translation>
+        <Translation Language="FRA">Departement</Translation>
+      </Text>
+      <Text Id="__SingleUse_SZ2B" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">History</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_A54E" Alignment="Center" TypographyId="Typography_11">
+        <Translation Language="GB">START</Translation>
+        <Translation Language="FRA" Alignment="Center">Commencer</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZF4O" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
+      </Text>
+      <Text Id="__SingleUse_3KQV" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_KRS5" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Hour</Translation>
+        <Translation Language="FRA">Heure</Translation>
+      </Text>
+      <Text Id="__SingleUse_0PG4" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_08OG" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_L0Z4" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Minute</Translation>
+        <Translation Language="FRA">Minute</Translation>
+      </Text>
+      <Text Id="__SingleUse_BV43" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LAL6" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_HVIA" Alignment="Center" TypographyId="Typography_15_A">
+        <Translation Language="GB">save</Translation>
+        <Translation Language="FRA" Alignment="Center">sauvegarder</Translation>
+      </Text>
+      <Text Id="__SingleUse_S5Q0" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_BRJL" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="SingleUseId446" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">list of patient :</Translation>
+        <Translation Language="FRA">list of patient :</Translation>
+      </Text>
+      <Text Id="SingleUseId447" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Height</Translation>
+        <Translation Language="FRA">Height</Translation>
+      </Text>
+      <Text Id="SingleUseId448" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Age</Translation>
+        <Translation Language="FRA">Age</Translation>
+      </Text>
+      <Text Id="SingleUseId449" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Weight</Translation>
+        <Translation Language="FRA">Weight</Translation>
+      </Text>
+      <Text Id="SingleUseId450" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Name</Translation>
+        <Translation Language="FRA">Name</Translation>
+      </Text>
+      <Text Id="SingleUseId451" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">gender</Translation>
+        <Translation Language="FRA">gender</Translation>
+      </Text>
+      <Text Id="SingleUseId452" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId453" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId454" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId455" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId456" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId457" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">ENGLISH </Translation>
+        <Translation Language="FRA">ENGLISH </Translation>
+      </Text>
+      <Text Id="SingleUseId458" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">french </Translation>
+        <Translation Language="FRA">french </Translation>
+      </Text>
+      <Text Id="SingleUseId459" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Back</Translation>
+      </Text>
+      <Text Id="SingleUseId460" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Display Mode</Translation>
+        <Translation Language="FRA">Display Mode</Translation>
+      </Text>
+      <Text Id="SingleUseId461" Alignment="Center" TypographyId="Typography_15">
+        <Translation Language="GB">&lt;hour&gt;:&lt;min&gt;</Translation>
+        <Translation Language="FRA">&lt;hour&gt;:&lt;min&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId462" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="SingleUseId463" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="SingleUseId464" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Back</Translation>
+      </Text>
+      <Text Id="SingleUseId465" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Back</Translation>
+      </Text>
+      <Text Id="SingleUseId466" Alignment="Center" TypographyId="Typography_15">
+        <Translation Language="GB">:&lt;sec&gt;</Translation>
+        <Translation Language="FRA">:&lt;sec&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId467" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="SingleUseId468" Alignment="Center" TypographyId="Typography_15">
+        <Translation Language="GB">:&lt;sec&gt;</Translation>
+        <Translation Language="FRA">:&lt;sec&gt;</Translation>
+      </Text>
+      <Text Id="SingleUseId469" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z2SC" Alignment="Center" TypographyId="Typography_15">
+        <Translation Language="GB">&lt;hour&gt;:&lt;min&gt;</Translation>
+        <Translation Language="FRA">&lt;hour&gt;:&lt;min&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_T8LB" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_RY39" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_PAMI" Alignment="Center" TypographyId="Typography_15">
+        <Translation Language="GB">:&lt;sec&gt;</Translation>
+        <Translation Language="FRA">:&lt;sec&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PWKJ" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_FVXF" Alignment="Center" TypographyId="Typography_15">
+        <Translation Language="GB">&lt;hour&gt;:&lt;min&gt;</Translation>
+        <Translation Language="FRA">&lt;hour&gt;:&lt;min&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_GFM4" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_RXF3" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_QNEI" Alignment="Center" TypographyId="Typography_15">
+        <Translation Language="GB">:&lt;sec&gt;</Translation>
+        <Translation Language="FRA">:&lt;sec&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_D1KN" Alignment="Left" TypographyId="Typography_15">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_YKPT" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
+      </Text>
+      <Text Id="__SingleUse_1JUS" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
+      </Text>
+      <Text Id="__SingleUse_SIKP" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
+      </Text>
+      <Text Id="__SingleUse_H9GD" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
+      </Text>
+      <Text Id="__SingleUse_EN5N" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
+      </Text>
+      <Text Id="__SingleUse_VRU3" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_T9SC" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_5DFX" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_L6V5" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_GEN7" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aciclovir</Translation>
+        <Translation Language="FRA">Aciclovir</Translation>
+      </Text>
+      <Text Id="__SingleUse_V3LJ" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Ventolin</Translation>
+        <Translation Language="FRA">Ventolin</Translation>
+      </Text>
+      <Text Id="__SingleUse_N0WQ" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Altiazem</Translation>
+        <Translation Language="FRA">Altiazem</Translation>
+      </Text>
+      <Text Id="__SingleUse_GADZ" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actilyse</Translation>
+        <Translation Language="FRA">Actilyse</Translation>
+      </Text>
+      <Text Id="__SingleUse_571H" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Actrapide</Translation>
+        <Translation Language="FRA">Actrapide</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZW91" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Aggrastat</Translation>
+        <Translation Language="FRA">Aggrastat</Translation>
+      </Text>
+      <Text Id="__SingleUse_0RWP" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">Amiodarone</Translation>
+        <Translation Language="FRA">Amiodarone</Translation>
+      </Text>
+      <Text Id="__SingleUse_DWDK" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Amikacine</Translation>
+        <Translation Language="FRA">Amikacine</Translation>
+      </Text>
+      <Text Id="__SingleUse_OK7A" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Adrenaline</Translation>
+        <Translation Language="FRA">Adrenaline</Translation>
+      </Text>
+      <Text Id="__SingleUse_A811" Alignment="Center" TypographyId="Typography_02_A">
+        <Translation Language="GB">Select Drug</Translation>
+        <Translation Language="FRA" Alignment="Center">Sélectionnez un médicament</Translation>
+      </Text>
+      <Text Id="__SingleUse_FLP3" Alignment="Center" TypographyId="Typography_03_A">
+        <Translation Language="GB">Select drug </Translation>
+        <Translation Language="FRA" Alignment="Center">Sélectionnez un médicament</Translation>
+      </Text>
+      <Text Id="__SingleUse_NB55" Alignment="Center" TypographyId="Typography_05_A">
+        <Translation Language="GB">SELECT</Translation>
+        <Translation Language="FRA" Alignment="Center">SÉLECTIONNER</Translation>
+      </Text>
+      <Text Id="__SingleUse_9P1O" Alignment="Center" TypographyId="Typography_05_A">
+        <Translation Language="GB">CANCEL</Translation>
+        <Translation Language="FRA" Alignment="Center">ANNULER</Translation>
+      </Text>
+      <Text Id="__SingleUse_FNFT" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">System sound</Translation>
+        <Translation Language="FRA">Son systeme</Translation>
+      </Text>
+      <Text Id="__SingleUse_EVGD" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_H6F0" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Display Mode</Translation>
+        <Translation Language="FRA">Mode d'affichage</Translation>
+      </Text>
+      <Text Id="__SingleUse_WMC6" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">ENGLISH </Translation>
+        <Translation Language="FRA">ANGLAIS</Translation>
+      </Text>
+      <Text Id="__SingleUse_CDZ7" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">FRENSH</Translation>
+        <Translation Language="FRA">FRANÇAIS</Translation>
+      </Text>
+      <Text Id="__SingleUse_F9BO" Alignment="Right" TypographyId="Typography_08">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_GGOZ" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">0</Translation>
+        <Translation Language="FRA">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_W1PX" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_5YFA" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_FO5O" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Occlusion Levels</Translation>
+        <Translation Language="FRA">Niveau d'oclusion</Translation>
+      </Text>
+      <Text Id="__SingleUse_1YUJ" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">                     |    &lt;value&gt;mmHg</Translation>
+        <Translation Language="FRA">                     |    &lt;value&gt;mmHg</Translation>
+      </Text>
+      <Text Id="__SingleUse_FZGA" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">                       |    &lt;value&gt; mmHg</Translation>
+        <Translation Language="FRA">                       |    &lt;value&gt; mmHg</Translation>
+      </Text>
+      <Text Id="__SingleUse_9925" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">                    |   &lt;value&gt; mmHg</Translation>
+        <Translation Language="FRA">                    |   &lt;value&gt; mmHg</Translation>
+      </Text>
+      <Text Id="__SingleUse_04JF" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">-- -- -- </Translation>
+        <Translation Language="FRA">-- -- -- </Translation>
+      </Text>
+      <Text Id="__SingleUse_M0M8" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">High level</Translation>
+        <Translation Language="FRA">Haut niveau</Translation>
+      </Text>
+      <Text Id="__SingleUse_GRRP" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Low level</Translation>
+        <Translation Language="FRA">Niveau faible</Translation>
+      </Text>
+      <Text Id="__SingleUse_QR57" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Medium level</Translation>
+        <Translation Language="FRA">Niveau moyen</Translation>
+      </Text>
+      <Text Id="__SingleUse_HB0Y" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">-- -- --</Translation>
+        <Translation Language="FRA">-- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_IKFQ" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">-- -- -- </Translation>
+        <Translation Language="FRA">-- -- -- </Translation>
+      </Text>
+      <Text Id="__SingleUse_P2JR" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_AOZX" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Hour</Translation>
+        <Translation Language="FRA">Heure</Translation>
+      </Text>
+      <Text Id="__SingleUse_9T7A" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PAYO" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_B7HK" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Minute</Translation>
+        <Translation Language="FRA">Minute</Translation>
+      </Text>
+      <Text Id="__SingleUse_HE2Y" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4I37" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">00</Translation>
+        <Translation Language="FRA">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_IDXQ" Alignment="Center" TypographyId="Typography_15_A">
+        <Translation Language="GB">save</Translation>
+        <Translation Language="FRA" Alignment="Center">sauvegarder</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y2ZT" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_R572" Alignment="Left" TypographyId="Typography_14">
+        <Translation Language="GB" Alignment="Center">New Patient</Translation>
+        <Translation Language="FRA" Alignment="Center">Nouveau Patient</Translation>
+      </Text>
+      <Text Id="__SingleUse_13P7" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Start</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_U4SH" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">End</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_NMWL" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_C4JK" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Male</Translation>
+        <Translation Language="FRA">Male</Translation>
+      </Text>
+      <Text Id="__SingleUse_9VX2" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Female</Translation>
+        <Translation Language="FRA">Female</Translation>
+      </Text>
+      <Text Id="__SingleUse_U2O5" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_6RLX" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">   High</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_KE7G" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB"> Medium</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_9OSN" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">   Low</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y5D9" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_0WU6" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Flowrate/Volume</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_QLN4" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">  Bolus</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_SPU6" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB"> Purge</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_IFI9" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Flowrate/Time</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_PUBC" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Volume/Time</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_T46I" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_OQMX" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">  Bolus</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_L5VE" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB"> Purge</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_RXB8" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Volume/Time</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_HROU" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Flowrate/Volume</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_DRE5" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UA83" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">--    --    --</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_GT7E" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Continue</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_3BQ5" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Stop</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZLRA" Alignment="Left" TypographyId="Typography_07">
+        <Translation Language="GB">ml/h</Translation>
+        <Translation Language="FRA">ml/h</Translation>
+      </Text>
+      <Text Id="__SingleUse_9ZSW" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">: Rate </Translation>
+        <Translation Language="FRA">: Taux</Translation>
+      </Text>
+      <Text Id="__SingleUse_3PPU" Alignment="Left" TypographyId="Typography_05">
+        <Translation Language="GB">Injected : &lt;&gt; ml</Translation>
+        <Translation Language="FRA">Injecté : &lt;&gt; ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_DJ27" Alignment="Center" TypographyId="Typography_05">
+        <Translation Language="GB">End In</Translation>
+        <Translation Language="FRA" Alignment="Center">Temps&#10;restant</Translation>
+      </Text>
+      <Text Id="__SingleUse_FR8B" Alignment="Left" TypographyId="Typography_05">
+        <Translation Language="GB">&lt;value&gt;:&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;h &lt;value&gt;min</Translation>
+      </Text>
+      <Text Id="__SingleUse_0BYN" Alignment="Left" TypographyId="Typography_05">
+        <Translation Language="GB">-</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_RSR2" Alignment="Center" TypographyId="Typography_09_A">
+        <Translation Language="GB">Drug</Translation>
+        <Translation Language="FRA" Alignment="Left">Medicament</Translation>
+      </Text>
+      <Text Id="__SingleUse_8QKQ" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Volume</Translation>
+        <Translation Language="FRA">Volume</Translation>
+      </Text>
+      <Text Id="__SingleUse_HGI5" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Time</Translation>
+        <Translation Language="FRA">Temps</Translation>
+      </Text>
+      <Text Id="__SingleUse_9OUO" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;valeur&gt;</Translation>
+        <Translation Language="FRA">&lt;valeur&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9RBE" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">-- -- -- -- --</Translation>
+        <Translation Language="FRA">-- -- -- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_VNZ6" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&lt;&gt; ml</Translation>
+        <Translation Language="FRA">&lt;&gt; ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_199M" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">---</Translation>
+        <Translation Language="FRA">---</Translation>
+      </Text>
+      <Text Id="__SingleUse_COFY" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">  &lt;value&gt;h &lt;value&gt;min</Translation>
+        <Translation Language="FRA">  &lt;value&gt;h &lt;value&gt;min</Translation>
+      </Text>
+      <Text Id="__SingleUse_XDTR" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">-</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_IZYN" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">--</Translation>
+        <Translation Language="FRA">--</Translation>
+      </Text>
+      <Text Id="__SingleUse_F8N7" Alignment="Center" TypographyId="Typography_17">
+        <Translation Language="GB">&lt;VALEUR_RATE&gt;</Translation>
+        <Translation Language="FRA">&lt;VALEUR_RATE&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_A681" Alignment="Left" TypographyId="Typography_17">
+        <Translation Language="GB">000</Translation>
+        <Translation Language="FRA">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_6UCI" Alignment="Center" TypographyId="Default_B">
+        <Translation Language="GB" Alignment="Center">Test</Translation>
+        <Translation Language="FRA" Alignment="Center">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_9T2E" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Configuration</Translation>
+        <Translation Language="FRA">Configuration</Translation>
+      </Text>
+      <Text Id="__SingleUse_2UB8" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Alarm</Translation>
+        <Translation Language="FRA">Alarme</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q8O2" Alignment="Center" TypographyId="Typography_10">
         <Translation Language="GB">Patient</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+        <Translation Language="FRA">Avancer</Translation>
       </Text>
-      <Text Id="__SingleUse_58U5" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Lock</Translation>
-        <Translation Language="FR">Special Modes</Translation>
+      <Text Id="__SingleUse_BUH6" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">NO syringe &#10;detected </Translation>
+        <Translation Language="FRA">PAS de seringue&#10;détectée</Translation>
       </Text>
-      <Text Id="__SingleUse_2YCO" Alignment="Center" TypographyId="BackButton">
-        <Translation Language="GB">Help</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_ETUA" Alignment="Center" TypographyId="Keyboard">
+      <Text Id="__SingleUse_5DGJ" Alignment="Center" TypographyId="Typography_11">
         <Translation Language="GB">START</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA" Alignment="Center">Commencer</Translation>
       </Text>
-      <Text Id="__SingleUse_JCCV" Alignment="Center" TypographyId="Keyboard">
-        <Translation Language="GB">STOP</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_2Y9W" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="FRA">Paramètres</Translation>
       </Text>
-      <Text Id="__SingleUse_PYAX" Alignment="Center" TypographyId="MainText">
-        <Translation Language="GB">Pause</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_A254" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Forward</Translation>
+        <Translation Language="FRA">Purge</Translation>
       </Text>
-      <Text Id="__SingleUse_MT9L" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Bolus</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_BIPR" Alignment="Left" TypographyId="Typography_07">
+        <Translation Language="GB">ml/h</Translation>
+        <Translation Language="FRA">ml/h</Translation>
       </Text>
-      <Text Id="__SingleUse_I2ME" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">Injected : &lt;value&gt; mL</Translation>
-        <Translation Language="FR">Injected : &lt;value&gt; mL</Translation>
+      <Text Id="__SingleUse_M6YD" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">: Rate </Translation>
+        <Translation Language="FRA">: Taux</Translation>
       </Text>
-      <Text Id="__SingleUse_40PE" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
+      <Text Id="__SingleUse_LOYX" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Volume</Translation>
+        <Translation Language="FRA">Volume</Translation>
       </Text>
-      <Text Id="__SingleUse_CI4C" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">End In: &lt;value&gt;h:&lt;value&gt;min</Translation>
-        <Translation Language="FR">End In: &lt;value&gt;h:&lt;value&gt;min</Translation>
+      <Text Id="__SingleUse_Y06H" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Time</Translation>
+        <Translation Language="FRA">Temps</Translation>
       </Text>
-      <Text Id="__SingleUse_0DX6" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">--</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_GXLY" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">---</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_E5T7" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; mL</Translation>
-        <Translation Language="FR">&lt;&gt; mL</Translation>
-      </Text>
-      <Text Id="__SingleUse_EDJZ" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; h &lt;value&gt; min</Translation>
-        <Translation Language="FR">&lt;&gt; h &lt;value&gt; min</Translation>
-      </Text>
-      <Text Id="__SingleUse_MRVC" Alignment="Left" TypographyId="SmallAriel10">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_Q76S" Alignment="Left" TypographyId="SmallAriel10">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_7TMR" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">Total Volume</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_9LRO" Alignment="Left" TypographyId="Keyboard">
-        <Translation Language="GB">: Rate</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_CRI4" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">mL/h</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_COM5" Alignment="Right" TypographyId="Titles">
-        <Translation Language="GB">&lt;&gt; </Translation>
-        <Translation Language="FR">&lt;&gt; mL</Translation>
-      </Text>
-      <Text Id="__SingleUse_FJI1" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">0000.0</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_0AUG" Alignment="Center" TypographyId="MediumTitle">
-        <Translation Language="GB">&lt;&gt; </Translation>
-        <Translation Language="FR">&lt;&gt; mL</Translation>
-      </Text>
-      <Text Id="__SingleUse_SB7F" Alignment="Left" TypographyId="ItalicArial14">
+      <Text Id="__SingleUse_UU5Q" Alignment="Left" TypographyId="Typography_09_B">
         <Translation Language="GB">Drug</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA" Alignment="Center">Medicament</Translation>
       </Text>
-      <Text Id="__SingleUse_51DX" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">-- -- -- -- -- --</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_A0NY" Alignment="Center" TypographyId="Keyboard">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_1K2I" Alignment="Center" TypographyId="Keyboard">
-        <Translation Language="GB">&lt;&gt;h:&lt;&gt;min</Translation>
-        <Translation Language="FR">&lt;&gt;h:&lt;&gt;min</Translation>
-      </Text>
-      <Text Id="__SingleUse_IREQ" Alignment="Left" TypographyId="Keyboard">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_40NG" Alignment="Left" TypographyId="Keyboard">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_O1JO" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">Infusion Time</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_FV6K" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_J161" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; mmHG</Translation>
-        <Translation Language="FR">&lt;&gt; mmHG</Translation>
-      </Text>
-      <Text Id="__SingleUse_W3UZ" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">0000</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_FALA" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">Current Pressure </Translation>
-        <Translation Language="FR">Current Pressure </Translation>
-      </Text>
-      <Text Id="__SingleUse_V1TP" Alignment="Center" TypographyId="BackButton">
-        <Translation Language="GB">Close Graph</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_ZMCQ" Alignment="Center" TypographyId="BackButton">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_GS2L" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Diagnosing System</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_3G5M" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_JFUW" Alignment="Left" TypographyId="BackButton">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_39Y9" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_BH6T" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_JJJA" Alignment="Center" TypographyId="BackButton">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_LOI4" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_GZHD" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_F77U" Alignment="Right" TypographyId="BackButton">
-        <Translation Language="GB">Back</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_JU8Y" Alignment="Center" TypographyId="BackButton">
-        <Translation Language="GB">Configuration</Translation>
-        <Translation Language="FR">Special Modes</Translation>
-      </Text>
-      <Text Id="__SingleUse_6S50" Alignment="Center" TypographyId="Titles">
-        <Translation Language="GB">&lt;&gt; mL/h</Translation>
-        <Translation Language="FR">&lt;&gt; mL/h</Translation>
-      </Text>
-      <Text Id="__SingleUse_481E" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">0000.0</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_CVGS" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">Infusion Rate</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_4HRK" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt; mL/h</Translation>
-      </Text>
-      <Text Id="__SingleUse_SI6S" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">-- -- -- --</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_C4R9" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">Drug</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_HZA1" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; mL</Translation>
-        <Translation Language="FR">&lt;&gt; mL/h</Translation>
-      </Text>
-      <Text Id="__SingleUse_DN0H" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">----</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_83NG" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">Total Volume</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_P4QD" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; h : &lt;&gt; min</Translation>
-        <Translation Language="FR">&lt;&gt; h : &lt;&gt; min</Translation>
-      </Text>
-      <Text Id="__SingleUse_E7AK" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">--</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_3O68" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">Infusion Time</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_PWCB" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">--</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_XPVC" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; mL</Translation>
-        <Translation Language="FR">&lt;&gt; mL/h</Translation>
-      </Text>
-      <Text Id="__SingleUse_A6SF" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">----</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_8ABY" Alignment="Center" TypographyId="SmallAriel10">
+      <Text Id="__SingleUse_YB53" Alignment="Left" TypographyId="Typography_09">
         <Translation Language="GB">VTBI</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA">Volume limite</Translation>
       </Text>
-      <Text Id="__SingleUse_48UA" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; mL/h</Translation>
-        <Translation Language="FR">&lt;&gt; mL/h</Translation>
+      <Text Id="__SingleUse_O2PL" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Occlusion level</Translation>
+        <Translation Language="FRA">Niveau d'Occlusion </Translation>
       </Text>
-      <Text Id="__SingleUse_3L5Y" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">0.1</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_12OE" Alignment="Center" TypographyId="SmallAriel10">
+      <Text Id="__SingleUse_UFEA" Alignment="Left" TypographyId="Typography_09">
         <Translation Language="GB">KVO Rate</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA">Taux KVO </Translation>
       </Text>
-      <Text Id="__SingleUse_3GG3" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">&lt;&gt; mL/h</Translation>
-        <Translation Language="FR">&lt;&gt; mL/h</Translation>
+      <Text Id="__SingleUse_YG6I" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">Bolus</Translation>
+        <Translation Language="FRA">Bolus</Translation>
       </Text>
-      <Text Id="__SingleUse_3BLQ" Alignment="Left" TypographyId="Titles">
-        <Translation Language="GB">300</Translation>
-        <Translation Language="FR">-</Translation>
+      <Text Id="__SingleUse_S6QE" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">    Low &#10;      &lt;value&gt;   </Translation>
+        <Translation Language="FRA">       &lt;value&gt;        mmHg</Translation>
       </Text>
-      <Text Id="__SingleUse_ILFS" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">Bolus Rate</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_6EUQ" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">000</Translation>
+        <Translation Language="FRA">000</Translation>
       </Text>
-      <Text Id="__SingleUse_MLFD" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">Low</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_OSVC" Alignment="Center" TypographyId="Typography_10">
+        <Translation Language="GB">Configuration</Translation>
+        <Translation Language="FRA">Configuration</Translation>
       </Text>
-      <Text Id="__SingleUse_6LQ4" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">Medium</Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_22CP" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
       </Text>
-      <Text Id="__SingleUse_45FE" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">High</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_1NK5" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">&lt;&gt; mmHg</Translation>
-        <Translation Language="FR">&lt;&gt; mmHg</Translation>
-      </Text>
-      <Text Id="__SingleUse_YVNF" Alignment="Left" TypographyId="SmallAriel10">
-        <Translation Language="GB">400</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_OB2R" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">&lt;&gt; mmHg</Translation>
-        <Translation Language="FR">&lt;&gt; mmHg</Translation>
-      </Text>
-      <Text Id="__SingleUse_FNMP" Alignment="Left" TypographyId="SmallAriel10">
-        <Translation Language="GB">600</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_WKIS" Alignment="Center" TypographyId="SmallAriel10">
-        <Translation Language="GB">&lt;&gt; mmHg</Translation>
-        <Translation Language="FR">&lt;&gt; mmHg</Translation>
-      </Text>
-      <Text Id="__SingleUse_0L97" Alignment="Left" TypographyId="SmallAriel10">
-        <Translation Language="GB">800</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_CL1W" Alignment="Center" TypographyId="MediumTitle">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_9JOL" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">-------</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_W98N" Alignment="Left" TypographyId="ItalicArial14">
-        <Translation Language="GB">0000</Translation>
-        <Translation Language="FR">-</Translation>
-      </Text>
-      <Text Id="__SingleUse_Z880" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">Close</Translation>
-        <Translation Language="FR">Pass</Translation>
-      </Text>
-      <Text Id="__SingleUse_RFH6" Alignment="Center" TypographyId="ItalicArial14">
-        <Translation Language="GB">Mute</Translation>
-        <Translation Language="FR">Pass</Translation>
-      </Text>
-      <Text Id="__SingleUse_HXGG" Alignment="Center" TypographyId="BackButton">
-        <Translation Language="GB">START STATION</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_QOOR" Alignment="Center" TypographyId="Keyboard">
+      <Text Id="__SingleUse_6PG9" Alignment="Center" TypographyId="Typography_11">
         <Translation Language="GB">START</Translation>
-        <Translation Language="FR">New Text</Translation>
+        <Translation Language="FRA" Alignment="Center">Commencer</Translation>
+      </Text>
+      <Text Id="__SingleUse_MWCT" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;&lt;value&gt;</Translation>
+        <Translation Language="FRA">&#10;&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_RNTG" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">-- -- --</Translation>
+        <Translation Language="FRA">-- -- --</Translation>
+      </Text>
+      <Text Id="__SingleUse_KY9R" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;&lt;value&gt;h &lt;value&gt;min</Translation>
+        <Translation Language="FRA">&#10;&lt;value&gt;h &lt;value&gt;min</Translation>
+      </Text>
+      <Text Id="__SingleUse_4YYY" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">-</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_E1TU" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">--</Translation>
+        <Translation Language="FRA">--</Translation>
+      </Text>
+      <Text Id="__SingleUse_RPO6" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;&lt; &gt;ml</Translation>
+        <Translation Language="FRA">&#10;&lt; &gt;ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_GNS2" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">---</Translation>
+        <Translation Language="FRA">---</Translation>
+      </Text>
+      <Text Id="__SingleUse_DYDI" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10; &lt;value&gt;ml/h</Translation>
+        <Translation Language="FRA">&#10; &lt;value&gt;ml/h</Translation>
+      </Text>
+      <Text Id="__SingleUse_A655" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">---</Translation>
+        <Translation Language="FRA">---</Translation>
+      </Text>
+      <Text Id="__SingleUse_36XT" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">&#10;&lt;value&gt;ml/h</Translation>
+        <Translation Language="FRA">&#10;&lt;value&gt;ml/h</Translation>
+      </Text>
+      <Text Id="__SingleUse_UNF0" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">---</Translation>
+        <Translation Language="FRA">---</Translation>
+      </Text>
+      <Text Id="__SingleUse_SEHE" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">           High                  Medium &#10;            &lt;value&gt;          |            &lt;value&gt;          |</Translation>
+        <Translation Language="FRA">&#10;            &lt;value&gt;         |          &lt;value&gt;         |</Translation>
+      </Text>
+      <Text Id="__SingleUse_DOKF" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">000</Translation>
+        <Translation Language="FRA">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_6VS7" Alignment="Left" TypographyId="Typography_09">
+        <Translation Language="GB">000</Translation>
+        <Translation Language="FRA">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_HGND" Alignment="Left" TypographyId="Typography_20">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_41DV" Alignment="Left" TypographyId="Typography_06">
+        <Translation Language="GB">000</Translation>
+        <Translation Language="FRA">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_V0R8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_234I" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_D99D" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">.</Translation>
+        <Translation Language="FRA">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_KYNC" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">. &lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FOYZ" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">0</Translation>
+        <Translation Language="FRA">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_O7MO" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Input Error</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_O8YX" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_TTZ3" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">-- -- -- -- -- -- --</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_KTF2" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_XJLK" Alignment="Left" TypographyId="Typography_05">
+        <Translation Language="GB">--</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_TBC6" Alignment="Center" TypographyId="Typography_11">
+        <Translation Language="GB">STOP</Translation>
+        <Translation Language="FRA" Alignment="Center">Commencer</Translation>
+      </Text>
+      <Text Id="__SingleUse_VOWT" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Close</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_3K8P" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Diameter</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_COHY" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Position</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_NCT4" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Done</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_FHZT" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Purge ?</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_KF30" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Purge</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_TUP5" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_COFM" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">-----</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_4Q29" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_LE4I" Alignment="Left" TypographyId="Typography_00_B">
+        <Translation Language="GB">Auto Diagnostic</Translation>
+        <Translation Language="FRA" Alignment="Center">Diagnostic automatique</Translation>
+      </Text>
+      <Text Id="__SingleUse_VJ16" Alignment="Left" TypographyId="Default_A">
+        <Translation Language="GB">Diagnosing</Translation>
+        <Translation Language="FRA" Alignment="Center">Diagnostique &#10;en cours</Translation>
+      </Text>
+      <Text Id="__SingleUse_MRPU" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZQFM" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MSVP" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">-----</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_U6AI" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">----------</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_5CMX" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_I437" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JUTA" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Name</Translation>
+        <Translation Language="FRA">Nom</Translation>
+      </Text>
+      <Text Id="__SingleUse_NQ7A" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_O7OC" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Weight</Translation>
+        <Translation Language="FRA">Poids</Translation>
+      </Text>
+      <Text Id="__SingleUse_F4FV" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_J39L" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Age</Translation>
+        <Translation Language="FRA">Age</Translation>
+      </Text>
+      <Text Id="__SingleUse_4MOO" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_EVNT" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Height</Translation>
+        <Translation Language="FRA">Taille</Translation>
+      </Text>
+      <Text Id="__SingleUse_6EXR" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">Gender</Translation>
+        <Translation Language="FRA">Genre</Translation>
+      </Text>
+      <Text Id="__SingleUse_XSLF" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_7E96" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">IVOC</Translation>
+        <Translation Language="FRA">Male</Translation>
+      </Text>
+      <Text Id="__SingleUse_VVBX" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">TIVA</Translation>
+        <Translation Language="FRA">Female</Translation>
+      </Text>
+      <Text Id="__SingleUse_S7CA" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_61NP" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FE51" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">Volume Left         : &lt;value&gt; ml</Translation>
+        <Translation Language="FRA">Volume de la seringue: &lt;value&gt;ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_COEJ" Alignment="Left" TypographyId="Typography_01">
+        <Translation Language="GB">Total Volume       : &lt;value&gt; ml</Translation>
+        <Translation Language="FRA">Volume de la seringue: &lt;value&gt;ml</Translation>
+      </Text>
+      <Text Id="__SingleUse_J6OX" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB"> &lt;value&gt;ml/h</Translation>
+        <Translation Language="FRA"> &lt;value&gt;ml/h</Translation>
+      </Text>
+      <Text Id="__SingleUse_TAYE" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">---</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_3D0J" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Lock</Translation>
+        <Translation Language="FRA">Departement</Translation>
+      </Text>
+      <Text Id="__SingleUse_L16G" Alignment="Center" TypographyId="Typography_08">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_SNWF" Alignment="Left" TypographyId="Typography_08">
+        <Translation Language="GB">0000</Translation>
+        <Translation Language="FRA">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_0HWG" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_POA2" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">7</Translation>
+        <Translation Language="FRA">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_JH3G" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">6</Translation>
+        <Translation Language="FRA">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_R1NV" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">9</Translation>
+        <Translation Language="FRA">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_TPQ6" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">2</Translation>
+        <Translation Language="FRA">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_CIW1" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">5</Translation>
+        <Translation Language="FRA">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_03VN" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">8</Translation>
+        <Translation Language="FRA">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_IYIZ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">1</Translation>
+        <Translation Language="FRA">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_28TC" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">4</Translation>
+        <Translation Language="FRA">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_JHIF" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">3</Translation>
+        <Translation Language="FRA">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_955V" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+        <Translation Language="FRA">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_JU1T" Alignment="Center" TypographyId="Typography_04">
+        <Translation Language="GB">ERASE</Translation>
+        <Translation Language="FRA">Effacer</Translation>
+      </Text>
+      <Text Id="__SingleUse_NKXD" Alignment="Center" TypographyId="Typography_04_A">
+        <Translation Language="GB">SET</Translation>
+        <Translation Language="FRA" Alignment="Center">Valider</Translation>
+      </Text>
+      <Text Id="__SingleUse_6ZCR" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_V5QV" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Dark Mode</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_2WUV" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Children Mode</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_8ENS" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Default Mode</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_ILMM" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Next</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_HL6H" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">No stored log found</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_NASF" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Previous</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_BBA7" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Lock</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_BF2C" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Change Password</Translation>
+        <Translation Language="FRA">Retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_5BQO" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Insert Password </Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_1WMN" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Insert Old Password</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_KJWE" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Insert New Password</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_GJKB" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Incorrect Password</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_8L5V" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Password Changed</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_25DV" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Screen Locked</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_MKT0" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Screen Unlocked</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_WXU3" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Unlock Screen</Translation>
+        <Translation Language="FRA">Alarme</Translation>
+      </Text>
+      <Text Id="__SingleUse_LKXH" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Mute</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_57UU" Alignment="Center" TypographyId="Typography_12_A">
+        <Translation Language="GB">Battery</Translation>
+        <Translation Language="FRA" Alignment="Center">Bibliothèque de&#10;médicaments</Translation>
+      </Text>
+      <Text Id="__SingleUse_8T6E" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Maintenance</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_NN92" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_188Z" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_KGKA" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_75BR" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_CV1X" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z336" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_WDGA" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_0LXJ" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
+      </Text>
+      <Text Id="__SingleUse_89H9" Alignment="Center" TypographyId="Typography_00_A">
+        <Translation Language="GB" Alignment="Center">Departement</Translation>
+        <Translation Language="FRA" Alignment="Center">Pousse Seringue</Translation>
+      </Text>
+      <Text Id="__SingleUse_L19X" Alignment="Center" TypographyId="Typography_00_A">
+        <Translation Language="GB" Alignment="Center">Drug Library</Translation>
+        <Translation Language="FRA" Alignment="Center">Pousse Seringue</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y4TE" Alignment="Center" TypographyId="Typography_00_A">
+        <Translation Language="GB" Alignment="Center">User Manual</Translation>
+        <Translation Language="FRA" Alignment="Center">Pousse Seringue</Translation>
+      </Text>
+      <Text Id="__SingleUse_AWKA" Alignment="Center" TypographyId="Typography_00_A">
+        <Translation Language="GB" Alignment="Center">Battery</Translation>
+        <Translation Language="FRA" Alignment="Center">Pousse Seringue</Translation>
+      </Text>
+      <Text Id="__SingleUse_5DRN" Alignment="Center" TypographyId="Typography_00_A">
+        <Translation Language="GB" Alignment="Center">Maintenance</Translation>
+        <Translation Language="FRA" Alignment="Center">Pousse Seringue</Translation>
+      </Text>
+      <Text Id="__SingleUse_2JOT" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="FRA">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UCGX" Alignment="Center" TypographyId="Typography_12_A">
+        <Translation Language="GB">Pediatrics</Translation>
+        <Translation Language="FRA" Alignment="Center">Bibliothèque de&#10;médicaments</Translation>
+      </Text>
+      <Text Id="__SingleUse_2799" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Emergency</Translation>
+        <Translation Language="FRA">Departement</Translation>
+      </Text>
+      <Text Id="__SingleUse_TAB7" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">NeoNatal</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_XCGL" Alignment="Center" TypographyId="Typography_12_A">
+        <Translation Language="GB">Intensive Care</Translation>
+        <Translation Language="FRA" Alignment="Center">Bibliothèque de&#10;médicaments</Translation>
+      </Text>
+      <Text Id="__SingleUse_VD85" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Maternity</Translation>
+        <Translation Language="FRA">Departement</Translation>
+      </Text>
+      <Text Id="__SingleUse_KY59" Alignment="Center" TypographyId="Typography_12">
+        <Translation Language="GB">Other</Translation>
+        <Translation Language="FRA">Historique</Translation>
+      </Text>
+      <Text Id="__SingleUse_3GEX" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="FRA">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3JQY" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">-----</Translation>
+        <Translation Language="FRA">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_VYOI" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Close</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_VM50" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Mute</Translation>
+        <Translation Language="FRA">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_5UV9" Alignment="Center" TypographyId="Typography_09">
+        <Translation Language="GB">Back</Translation>
+        <Translation Language="FRA">retour</Translation>
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_V8R5" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Other</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_1MV9" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Maternity</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_MKXQ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Intensive Care</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_8QYX" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Neo Natal </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_ELEQ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Emergency</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_MXAU" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Pediatrics</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_VSQ5" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Back </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_4HY1" Alignment="Center" TypographyId="Titles">
-        <Translation Language="GB">Departements </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_LVNN" Alignment="Center" TypographyId="Display">
-        <Translation Language="GB">save</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_ZD48" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">back</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_Q4AF" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_GMQ3" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">New Text&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_WGW1" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">00</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_QWNB" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-        <Translation Language="FR">New Text&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_DP63" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Minute</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_K1RL" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Hour</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_L3CI" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Password changed successfully</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_7TAL" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Insert New Password</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_IOS3" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Insert Old Password</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_L61T" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Password  Error</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_64Y5" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">ScreenUnlocked</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_P0N8" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">ScreenLocked</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_LTB8" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">InsertPassword</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_71J6" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">0000</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_44T9" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="FR">New Text&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_ZSAQ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">ERASE </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_H98R" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">SET</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_U7AN" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">.</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_DV0T" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">0</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_YRT7" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">9</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_BI5N" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">8</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_4JNQ" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">7</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_56H6" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">6</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_UGK8" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">5</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_Z4QF" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">4</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_J7ED" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">3</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_G43A" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">2</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_6EXD" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">1</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_XF2P" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Back </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_MGXU" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Lock</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_KMCX" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">change password </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_9G21" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Low Level</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_18YZ" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">Meduim Level </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_FUJ6" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">high Level</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_L2V7" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">-- -- --</Translation>
-        <Translation Language="FR" />
-      </Text>
-      <Text Id="__SingleUse_F23Q" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">-- -- --</Translation>
-        <Translation Language="FR" />
-      </Text>
-      <Text Id="__SingleUse_3CO7" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">-- -- --</Translation>
-        <Translation Language="FR" />
-      </Text>
-      <Text Id="__SingleUse_PD38" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">                           | &lt;value&gt; mmHg</Translation>
-        <Translation Language="FR">New Text&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_I0JO" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">                           | &lt;value&gt; mmHg</Translation>
-        <Translation Language="FR">New Text&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_TZIN" Alignment="Left" TypographyId="MediumTitle">
-        <Translation Language="GB">                           | &lt;value&gt; mmHg</Translation>
-        <Translation Language="FR">New Text&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_NS2E" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">Back </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_45OJ" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Occlusion Levels</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_FV99" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Total volume:     ml</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_50N1" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">Volume left :       ml</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_TREB" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">syringe diameter :       mm</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_R9UI" Alignment="Left" TypographyId="ButtonsEng">
-        <Translation Language="GB">New Text</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_6E1A" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">CANCEL </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_NKBY" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">SELECT </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_0HV7" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">Select Drug </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_QJFH" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">00:00:00</Translation>
-        <Translation Language="FR" Alignment="Left">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_3G1V" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">START </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_NIFO" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Settings</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_XP7J" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">back</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_K7GG" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Maintenance</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_ISTM" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Lock </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_SMCB" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Battery </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_TK12" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">History </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_YJJ3" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Departement</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_GYDD" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Drug Library</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_PCMY" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Manual</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_T2J3" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Sound</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_5HCX" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Language </Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_JCAK" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Time &amp; Date</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_Y36A" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Display mode</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_RIMM" Alignment="Center" TypographyId="ButtonsEng">
-        <Translation Language="GB">Auto diagnostic</Translation>
-        <Translation Language="FR">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_OZDQ" Alignment="Right" TypographyId="ButtonsEng">
-        <Translation Language="GB">back </Translation>
-        <Translation Language="FR">New Text</Translation>
+      <Text Id="__SingleUse_58OY" Alignment="Left" TypographyId="Typography_00_A">
+        <Translation Language="GB">no data have found</Translation>
+        <Translation Language="FRA">New Text</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="times.ttf" Size="27" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="ButtonsEng" Font="AGENCYB.TTF" Size="19" Bpp="4" Direction="LTR" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="Titles" Font="AGENCYB.TTF" Size="50" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="MediumTitle" Font="AGENCYB.TTF" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="BackButton" Font="AGENCYB.TTF" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="-., 0123456789" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="Display" Font="AGENCYB.TTF" Size="28" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="Mode" Font="AGENCYB.TTF" Size="24" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="Keyboard" Font="AGENCYB.TTF" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="MainText" Font="AGENCYB.TTF" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="ItalicArial14" Font="AGENCYB.TTF" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;éèà" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="SmallAriel10" Font="AGENCYB.TTF" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_00_A" Font="ariblk.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="GB" Font="ariblk.ttf" Size="30" Bpp="4" Direction="RTL" FallbackCharacter="?" />
+      <LanguageSetting Language="FRA" Font="ariblk.ttf" Size="30" Bpp="4" Direction="RTL" FallbackCharacter="?" />
+    </Typography>
+    <Typography Id="Typography_01" Font="segoeui.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_03" Font="ariblk.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_04" Font="ariblk.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_05" Font="ariali.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_12_A" Font="AGENCYB.TTF" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="FRA" Font="AGENCYB.TTF" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    </Typography>
+    <Typography Id="Typography_12" Font="AGENCYB.TTF" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_10" Font="arial.ttf" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_11_A" Font="arialbd.ttf" Size="21" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_09" Font="arial.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_06" Font="arial.ttf" Size="88" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_11" Font="arialbd.ttf" Size="21" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="FRA" Font="segoeui.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    </Typography>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_04_A" Font="ariblk.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="FRA" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    </Typography>
+    <Typography Id="Typography_14" Font="arial.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="GB" Font="arial.ttf" Size="18" Bpp="4" Direction="RTL" FallbackCharacter="?" />
+      <LanguageSetting Language="FRA" Font="arial.ttf" Size="18" Bpp="4" Direction="RTL" FallbackCharacter="?" />
+    </Typography>
+    <Typography Id="Typography_13" Font="AGENCYR.TTF" Size="65" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_12_B" Font="AGENCYB.TTF" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="FRA" Font="AGENCYB.TTF" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    </Typography>
+    <Typography Id="Typography_08" Font="arialbd.ttf" Size="23" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Display" Font="arial.ttf" Size="28" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Mode" Font="arial.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00_B" Font="ariblk.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="FRA" Font="ariblk.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    </Typography>
+    <Typography Id="Default_A" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9">
+      <LanguageSetting Language="FRA" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    </Typography>
+    <Typography Id="Typography_00" Font="ariblk.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
-    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_01" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_15_A" Font="arial.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9">
+      <LanguageSetting Language="FRA" Font="arial.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    </Typography>
+    <Typography Id="Typography_15" Font="arial.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="Typography_02_A" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="FRA" Font="segoeui.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    </Typography>
+    <Typography Id="Typography_03_A" Font="ariblk.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?">
+      <LanguageSetting Language="FRA" Font="ariblk.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    </Typography>
+    <Typography Id="Typography_05_A" Font="ariali.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9">
+      <LanguageSetting Language="FRA" Font="arial.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    </Typography>
+    <Typography Id="Typography_02" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_07" Font="arialbd.ttf" Size="52" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_09_A" Font="arial.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9">
+      <LanguageSetting Language="FRA" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    </Typography>
+    <Typography Id="Typography_17" Font="arial.ttf" Size="55" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Default_B" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9">
+      <LanguageSetting Language="GB" Font="verdana.ttf" Size="20" Bpp="4" Direction="RTL" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="a-z,A-Z,0-9" />
+      <LanguageSetting Language="FRA" Font="verdana.ttf" Size="20" Bpp="4" Direction="RTL" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    </Typography>
+    <Typography Id="Typography_09_B" Font="arial.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9">
+      <LanguageSetting Language="FRA" Font="arial.ttf" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    </Typography>
+    <Typography Id="Typography_20" Font="arial.ttf" Size="45" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Keyboard" Font="arial.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_16" Font="arial.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Typography_18" Font="AGENCYB.TTF" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_19" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Verdana15" Font="verdana.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
   </Typographies>
 </TextDatabase>
