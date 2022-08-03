@@ -5,7 +5,7 @@ extern osMessageQueueId_t AlarmsQHandle;
 
 void Alarm_Action(uint8_t event){
 	switch(event){
-	case LINE_OCCLUDED_HIGH :
+	case OVERPRESSURE :
 		//pressure passed the high threshhold
 
 		/*for prototyping only*/
@@ -25,7 +25,7 @@ void Alarm_Action(uint8_t event){
 		HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
 		HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, SET);
 		break;
-	case BATTERY_CHARGE_DEPLETED :
+	case BATTERY_CHHARGE_DEPLETED :
 		//Battery charge level is lower than 10min
 		HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
 		HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, SET);
@@ -80,19 +80,19 @@ void Alerts_Action (uint8_t event){
 	case LINE_OCCLUDED_MEDIUM :
 		//
 		break;
-	case BATTERY_NO_CHARGE_CURRENT:
+	case BATTERY_UNDERCURRENT:
 		//
 		break;
-	case BATTERY_LOW_TEMPERATURE:
+	case BATTERY_UNDERHEAT:
 		//
 		break;
 	case BATTERY_LOW_CHARGE:
 		//
 		break;
-	case INTERNAL_SOFTWARE_ERROR:
+	case INTERNAL_ERROR:
 		//
 		break;
-	case INFUSION_COMPLETE:
+	case PERFUSION_COMPLETE:
 		//
 		break;
 	case BOLUS_COMPLETE:
@@ -112,12 +112,6 @@ void Alerts_Action (uint8_t event){
 void Notifs_Action(uint8_t event){
 	switch(event){
 	case LINE_OCCLUDED_LOW :
-		//
-		break;
-	case COMPLETE_EDITING_INFO :
-		//
-		break;
-	case PUMP_IS_IDLE :
 		//
 		break;
 	case POWER_SOURCE_CHANGED :
@@ -140,6 +134,9 @@ void Default_Event_Action(uint8_t event){
 		//
 		break;
 	case BOLUS_STOPPED:
+		//
+		break;
+	case KVO_STARTED:
 		//
 		break;
 	case KVO_STOPPED:

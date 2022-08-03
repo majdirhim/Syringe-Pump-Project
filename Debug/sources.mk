@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 ELF_SRCS := 
@@ -18,13 +18,14 @@ OBJDUMP_LIST :=
 C_UPPER_DEPS := 
 S_DEPS := 
 C_DEPS := 
-OBJCOPY_BIN := 
 CC_DEPS := 
 SIZE_OUTPUT := 
 C++_DEPS := 
+SU_FILES := 
 EXECUTABLES := 
 OBJS := 
 CXX_DEPS := 
+MAP_FILES := 
 S_UPPER_DEPS := 
 CPP_DEPS := 
 
@@ -198,48 +199,4 @@ TouchGFX/gui/src/testversion_screen \
 TouchGFX/gui/src/timeparam_screen \
 TouchGFX/target \
 TouchGFX/target/generated \
-TouchGFX/generated/gui_generated/src/activealarms_screen \
-TouchGFX/generated/gui_generated/src/alarmandeventconfig_screen \
-TouchGFX/generated/gui_generated/src/configuration_screen \
-TouchGFX/generated/gui_generated/src/departements_screen \
-TouchGFX/generated/gui_generated/src/diagnostic_screen \
-TouchGFX/generated/gui_generated/src/displaymode_screen \
-TouchGFX/generated/gui_generated/src/home_screen \
-TouchGFX/generated/gui_generated/src/keyboard_screen \
-TouchGFX/generated/gui_generated/src/language_screen \
-TouchGFX/generated/gui_generated/src/main_screen \
-TouchGFX/generated/gui_generated/src/newpatient_screen \
-TouchGFX/generated/gui_generated/src/oclusionthresholds_screen \
-TouchGFX/generated/gui_generated/src/password_screen \
-TouchGFX/generated/gui_generated/src/patientdatabase_screen \
-TouchGFX/generated/gui_generated/src/perfusiontimesetting_screen \
-TouchGFX/generated/gui_generated/src/samepatient_screen \
-TouchGFX/generated/gui_generated/src/settings_screen \
-TouchGFX/generated/gui_generated/src/sound_screen \
-TouchGFX/generated/gui_generated/src/specialmodes_screen \
-TouchGFX/generated/gui_generated/src/syringelibrary_screen \
-TouchGFX/generated/gui_generated/src/syringeselection_screen \
-TouchGFX/generated/gui_generated/src/transitions_screen \
-TouchGFX/gui/src/activealarms_screen \
-TouchGFX/gui/src/alarmandeventconfig_screen \
-TouchGFX/gui/src/configuration_screen \
-TouchGFX/gui/src/departements_screen \
-TouchGFX/gui/src/diagnostic_screen \
-TouchGFX/gui/src/displaymode_screen \
-TouchGFX/gui/src/home_screen \
-TouchGFX/gui/src/keyboard_screen \
-TouchGFX/gui/src/language_screen \
-TouchGFX/gui/src/main_screen \
-TouchGFX/gui/src/newpatient_screen \
-TouchGFX/gui/src/oclusionthresholds_screen \
-TouchGFX/gui/src/password_screen \
-TouchGFX/gui/src/patientdatabase_screen \
-TouchGFX/gui/src/perfusiontimesetting_screen \
-TouchGFX/gui/src/samepatient_screen \
-TouchGFX/gui/src/settings_screen \
-TouchGFX/gui/src/sound_screen \
-TouchGFX/gui/src/specialmodes_screen \
-TouchGFX/gui/src/syringelibrary_screen \
-TouchGFX/gui/src/syringeselection_screen \
-TouchGFX/gui/src/transitions_screen \
 

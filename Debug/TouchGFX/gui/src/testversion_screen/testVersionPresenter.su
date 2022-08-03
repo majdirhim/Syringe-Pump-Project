@@ -1,0 +1,18 @@
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:10:5:ModelListener::ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:virtual ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:14:18:virtual void ModelListener::batterystateready()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:18:virtual void ModelListener::AlarmOrEvent()	16	static
+../TouchGFX/gui/include/gui/testversion_screen/testVersionPresenter.hpp:32:13:testVersionPresenter::~testVersionPresenter()	16	static
+../TouchGFX/gui/include/gui/testversion_screen/testVersionPresenter.hpp:32:13:virtual testVersionPresenter::~testVersionPresenter()	16	static
+../TouchGFX/gui/src/testversion_screen/testVersionPresenter.cpp:4:1:testVersionPresenter::testVersionPresenter(testVersionView&)	16	static
+../TouchGFX/gui/src/testversion_screen/testVersionPresenter.cpp:10:6:virtual void testVersionPresenter::activate()	16	static
+../TouchGFX/gui/src/testversion_screen/testVersionPresenter.cpp:15:6:virtual void testVersionPresenter::deactivate()	16	static
+../TouchGFX/gui/src/testversion_screen/testVersionPresenter.cpp:20:6:void testVersionPresenter::sendstart(uint8_t)	16	static
+../TouchGFX/gui/src/testversion_screen/testVersionPresenter.cpp:25:6:void testVersionPresenter::sendend(uint8_t)	16	static
+../TouchGFX/gui/src/testversion_screen/testVersionPresenter.cpp:30:6:void testVersionPresenter::sendvar(uint16_t)	16	static

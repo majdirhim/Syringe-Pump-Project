@@ -1,0 +1,15 @@
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:10:5:ModelListener::ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:virtual ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:14:18:virtual void ModelListener::batterystateready()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:18:virtual void ModelListener::AlarmOrEvent()	16	static
+../TouchGFX/gui/include/gui/mainscreen_withstart_screen/mainScreen_WithSTARTPresenter.hpp:28:13:mainScreen_WithSTARTPresenter::~mainScreen_WithSTARTPresenter()	16	static
+../TouchGFX/gui/include/gui/mainscreen_withstart_screen/mainScreen_WithSTARTPresenter.hpp:28:13:virtual mainScreen_WithSTARTPresenter::~mainScreen_WithSTARTPresenter()	16	static
+../TouchGFX/gui/src/mainscreen_withstart_screen/mainScreen_WithSTARTPresenter.cpp:4:1:mainScreen_WithSTARTPresenter::mainScreen_WithSTARTPresenter(mainScreen_WithSTARTView&)	16	static
+../TouchGFX/gui/src/mainscreen_withstart_screen/mainScreen_WithSTARTPresenter.cpp:10:6:virtual void mainScreen_WithSTARTPresenter::activate()	16	static
+../TouchGFX/gui/src/mainscreen_withstart_screen/mainScreen_WithSTARTPresenter.cpp:15:6:virtual void mainScreen_WithSTARTPresenter::deactivate()	16	static

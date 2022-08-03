@@ -1,0 +1,22 @@
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:10:5:ModelListener::ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:virtual ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:14:18:virtual void ModelListener::batterystateready()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:18:virtual void ModelListener::AlarmOrEvent()	16	static
+../TouchGFX/gui/include/gui/new_paitent_screen/New_PaitentPresenter.hpp:43:13:New_PaitentPresenter::~New_PaitentPresenter()	16	static
+../TouchGFX/gui/include/gui/new_paitent_screen/New_PaitentPresenter.hpp:43:13:virtual New_PaitentPresenter::~New_PaitentPresenter()	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:4:1:New_PaitentPresenter::New_PaitentPresenter(New_PaitentView&)	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:10:6:virtual void New_PaitentPresenter::activate()	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:15:6:virtual void New_PaitentPresenter::deactivate()	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:20:9:uint8_t New_PaitentPresenter::getgender()	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:25:6:void New_PaitentPresenter::savepatientage(uint8_t)	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:30:6:void New_PaitentPresenter::savepatientname(char*, uint8_t)	24	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:35:6:void New_PaitentPresenter::savepatientgender(uint8_t)	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:40:6:void New_PaitentPresenter::savepatientheight(uint16_t)	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:45:6:void New_PaitentPresenter::savepatientweight(uint16_t)	16	static
+../TouchGFX/gui/src/new_paitent_screen/New_PaitentPresenter.cpp:50:6:virtual void New_PaitentPresenter::AlarmOrEvent()	16	static

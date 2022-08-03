@@ -244,7 +244,7 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the queue(s) */
   /* creation of InfusionQ */
-  InfusionQHandle = osMessageQueueNew (16, sizeof(Infusion_paramT), &InfusionQ_attributes);
+  InfusionQHandle = osMessageQueueNew (8, sizeof(perfusionFV_parameters), &InfusionQ_attributes);
 
   /* creation of VolumeQ */
   VolumeQHandle = osMessageQueueNew (8, sizeof(float), &VolumeQ_attributes);
@@ -268,19 +268,19 @@ void MX_FREERTOS_Init(void) {
   ModeQHandle = osMessageQueueNew (8, sizeof(uint8_t), &ModeQ_attributes);
 
   /* creation of LogQ */
-  LogQHandle = osMessageQueueNew (4, sizeof(Log), &LogQ_attributes);
+  LogQHandle = osMessageQueueNew (16, sizeof(Log), &LogQ_attributes);
 
   /* creation of AlarmsQ */
   AlarmsQHandle = osMessageQueueNew (8, sizeof(uint8_t), &AlarmsQ_attributes);
 
   /* creation of patientQ */
-  patientQHandle = osMessageQueueNew (4, sizeof(Patient_dataT), &patientQ_attributes);
+  patientQHandle = osMessageQueueNew (4, sizeof(patient_dataT), &patientQ_attributes);
 
   /* creation of drugQ */
   drugQHandle = osMessageQueueNew (2, sizeof(DrugT), &drugQ_attributes);
 
   /* creation of BatteryQ */
-  BatteryQHandle = osMessageQueueNew (2, sizeof(BatteryT), &BatteryQ_attributes);
+  BatteryQHandle = osMessageQueueNew (2, sizeof(battery_info), &BatteryQ_attributes);
 
   /* creation of TotalVolQ */
   TotalVolQHandle = osMessageQueueNew (2, sizeof(float), &TotalVolQ_attributes);
@@ -331,23 +331,23 @@ void MX_FREERTOS_Init(void) {
 void StartBatteryManage(void *argument)
 {
   /* USER CODE BEGIN StartBatteryManage */
-	BatteryT battstate;
+	battery_info battstate;
 	/* Infinite loop */
 	for (;;) {
 		uint16_t percent = relativeStateOfCharge();
-		battstate.BatteryChargeLevel = (uint8_t) percent;
+		battstate.charge_level = (uint8_t) percent;
 
 		uint16_t timetoempty = runtimetoempty();
 		battstate.TimeToEmpty = (uint8_t) timetoempty;
 		osMessageQueuePut(BatteryQHandle, &battstate, 1, 1);
 		if (timetoempty <= 10)
-			Alarm_Action(BATTERY_CHARGE_DEPLETED);
+			Alarm_Action(BATTERY_CHHARGE_DEPLETED);
 		if (timetoempty <= 120)
 			Alerts_Action(BATTERY_LOW_CHARGE);
 
 		uint16_t Amps = current(); //mA
 		if (Amps < 10)
-			Alerts_Action(BATTERY_NO_CHARGE_CURRENT);
+			Alerts_Action(BATTERY_UNDERCURRENT);
 		if (Amps > 5000) // amps threshhold
 			Alarm_Action(BATTERY_OVERCURRENT);
 
@@ -355,7 +355,7 @@ void StartBatteryManage(void *argument)
 		if (battemp >= 80)
 			Alarm_Action(BATTERY_OVERHEAT);
 		if (battemp <= -20)
-			Alerts_Action(BATTERY_LOW_TEMPERATURE);
+			Alerts_Action(BATTERY_UNDERHEAT);
 		osDelay(100);
 	}
   /* USER CODE END StartBatteryManage */
@@ -414,8 +414,8 @@ void Cloud_Connectivity(void *argument)
 	float Flowrate = 0, Timeleft = 0, Volumeleft = 0,Totalvol;
 	Log data;
 	uint8_t event;
-	BatteryT battstate;
-	Patient_dataT patient;
+	battery_info battstate;
+	patient_dataT patient;
 	DrugT drug;
 	/********** UNIQUE ID ***********/
 	uint32_t (*unique_id_1) = (uint32_t*) (0x1FF1E800); // BASE address (reference manual stm32h743)
@@ -440,9 +440,9 @@ void Cloud_Connectivity(void *argument)
 		sprintf(data.jsondata,
 				"{\n  \"InfusionState\": {\n    \"FlowRate\": \"%f\",\n    \"TotalVolume\": \"%f\",\n    \"VolumeLeft\": \"%f\",\n    \"TimeLeft\": \"%f\"\n  },\n  \"AlarmsAndAlerts\": \"%u\",\n  \"BatteryState\": {\n    \"Percent\": \"%u\",\n    \"TimeToEmpty\": \"%u\"\n  },\n  \"Patient\": {\n    \"Name\": \"%s\",\n    \"Age\": \"%u\",\n    \"Height\": \"%u\",\n    \"Weight\": \"%u\",\n    \"Gender\": \"%s\"\n  },\n  \"Drug\": \"%s\"\n\t}",
 				(Flowrate/1000), (Totalvol/1000), (Volumeleft/1000), Timeleft, event,
-				battstate.BatteryChargeLevel, battstate.TimeToEmpty,
-				patient.Name, patient.Age, patient.Height, patient.Weight,
-				patient.Gender, drug.Name);
+				battstate.charge_level, battstate.TimeToEmpty,
+				patient.name, patient.age, patient.height, patient.weight,
+				patient.gender, drug.Name);
 		HTTPSPUT(URL, data.jsondata);
 		osMessageQueuePut(LogQHandle, &data, 1, 5);
 		osDelay(10);
@@ -497,27 +497,27 @@ void Sensors_measurements(void *argument)
 void Interface(void *argument)
 {
   /* USER CODE BEGIN Interface */
-	Infusion_paramT msgPerfusionParameters;
-	msgPerfusionParameters.Mode = 0;
+	perfusionFV_parameters msgPerfusionParameters;
+	msgPerfusionParameters.mode = 0;
 	/* Infinite loop */
 	for (;;) {
 		// ***** 0 => StopMode , 8=> PauseMode *******
 
 		if (osMessageQueueGet(InfusionQHandle, &msgPerfusionParameters, 10U,
-				100) == osOK && msgPerfusionParameters.Mode != 0
-				&& msgPerfusionParameters.Mode != 8) {
-			msgPerfusionParameters.Flowrate *= 1000; // cm^3/h ==> mm^3/h
-			msgPerfusionParameters.InfousionVolume *= 1000; // cm^3 ==> mm^3
-			msgPerfusionParameters.TotalVolume*=1000; // cm^3 ==> mm^3
-			osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.Flowrate,
+				100) == osOK && msgPerfusionParameters.mode != 0
+				&& msgPerfusionParameters.mode != 8) {
+			msgPerfusionParameters.flowrate.value *= 1000; // cm^3/h ==> mm^3/h
+			msgPerfusionParameters.infusion_volume.value *= 1000; // cm^3 ==> mm^3
+			msgPerfusionParameters.total_volume.value*=1000; // cm^3 ==> mm^3
+			osMessageQueuePut(FlowRateQHandle, &msgPerfusionParameters.flowrate.value,
 					5, 100);
 			osMessageQueuePut(VolumeQHandle,
-					&msgPerfusionParameters.InfousionVolume, 5, 100);
-			osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 5,
+					&msgPerfusionParameters.infusion_volume.value, 5, 100);
+			osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.mode, 5,
 					10);
-			osMessageQueuePut(TotalVolQHandle, &msgPerfusionParameters.TotalVolume, 5, 10);
+			osMessageQueuePut(TotalVolQHandle, &msgPerfusionParameters.total_volume.value, 5, 10);
 		} else
-			osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.Mode, 5,
+			osMessageQueuePut(ModeQHandle, &msgPerfusionParameters.mode, 5,
 					10);
 		osDelay(10);
 	}

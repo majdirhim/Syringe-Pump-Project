@@ -1,0 +1,15 @@
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:10:5:ModelListener::ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:virtual ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:14:18:virtual void ModelListener::batterystateready()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:18:virtual void ModelListener::AlarmOrEvent()	16	static
+../TouchGFX/gui/include/gui/functiongeneration_screen/functiongenerationPresenter.hpp:28:13:functiongenerationPresenter::~functiongenerationPresenter()	16	static
+../TouchGFX/gui/include/gui/functiongeneration_screen/functiongenerationPresenter.hpp:28:13:virtual functiongenerationPresenter::~functiongenerationPresenter()	16	static
+../TouchGFX/gui/src/functiongeneration_screen/functiongenerationPresenter.cpp:4:1:functiongenerationPresenter::functiongenerationPresenter(functiongenerationView&)	16	static
+../TouchGFX/gui/src/functiongeneration_screen/functiongenerationPresenter.cpp:10:6:virtual void functiongenerationPresenter::activate()	16	static
+../TouchGFX/gui/src/functiongeneration_screen/functiongenerationPresenter.cpp:15:6:virtual void functiongenerationPresenter::deactivate()	16	static

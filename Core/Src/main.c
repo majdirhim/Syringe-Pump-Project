@@ -471,7 +471,7 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
-	  Alerts_Action(INTERNAL_SOFTWARE_ERROR);
+	  Alerts_Action(INTERNAL_ERROR);
   }
   /* USER CODE END Error_Handler_Debug */
 }

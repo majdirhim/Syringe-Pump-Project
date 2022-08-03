@@ -1,7 +1,7 @@
-freertos.c:228:6:MX_FREERTOS_Init	8	static
-freertos.c:331:6:StartBatteryManage	32	static
-freertos.c:371:6:Stepper_motor	40	static
-freertos.c:411:6:Cloud_Connectivity	992	static
-freertos.c:461:6:Sensors_measurements	48	static
-freertos.c:497:6:Interface	48	static
-freertos.c:534:6:StartDataStorage	1632	static
+../Core/Src/freertos.c:228:6:MX_FREERTOS_Init	8	static
+../Core/Src/freertos.c:331:6:StartBatteryManage	40	static
+../Core/Src/freertos.c:371:6:Stepper_motor	40	static
+../Core/Src/freertos.c:411:6:Cloud_Connectivity	1000	static
+../Core/Src/freertos.c:461:6:Sensors_measurements	48	static
+../Core/Src/freertos.c:497:6:Interface	64	static
+../Core/Src/freertos.c:534:6:StartDataStorage	1632	static

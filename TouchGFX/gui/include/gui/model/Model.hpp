@@ -211,7 +211,7 @@ protected:
     uint8_t storedLog;
     uint8_t Lock;
     uint8_t Mute;
-    Infusion_paramT PerfusionParameters;
+    perfusionFV_parameters PerfusionParameters;
     uint8_t screenlock;
     uint16_t technicianpassword;
     ps_float infusion_volume_left;
