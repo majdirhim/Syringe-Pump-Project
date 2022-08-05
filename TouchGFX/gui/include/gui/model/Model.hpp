@@ -12,6 +12,7 @@ extern osMessageQueueId_t MotorSensorDataQueue_Handle;
 
 extern osMessageQueueId_t LogQHandle;
 extern osMessageQueueId_t patientQHandle;
+extern osMessageQueueId_t InfusionQHandle;
 
 extern osMessageQueueId_t SystemInitParam_handle;
 extern osMessageQueueId_t PatientData_handle;

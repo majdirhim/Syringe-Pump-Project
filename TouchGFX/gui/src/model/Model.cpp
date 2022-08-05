@@ -557,7 +557,7 @@ void Model::calculateparameters(int callerid)
 void Model::datachanged(void)
 {
 #ifndef SIMULATOR
-	//osMessageQueuePut(PerfusuinParametersDataQueue_handle, &User_parameters, 0, 0);
+	osMessageQueuePut(InfusionQHandle, &User_parameters, 0, 0);
 #endif
 }
 
