@@ -536,7 +536,7 @@ void StartDataStorage(void *argument)
   /* USER CODE BEGIN StartDataStorage */
 	FRESULT res; /* FatFs function common result code */
 	uint32_t byteswritten; /* File write/read counts */
-	uint8_t wtext[525] = "";
+	uint8_t wtext[550] = "";
 	uint8_t rtext[_MAX_SS];/* File read buffer */
 	Log data;
 	RTC_DateTypeDef sdatestructure;
@@ -548,11 +548,16 @@ void StartDataStorage(void *argument)
 		HAL_RTC_GetDate(&hrtc, &sdatestructure, RTC_FORMAT_BIN);
 		HAL_RTC_GetTime(&hrtc, &stimestructure, RTC_FORMAT_BIN);
 		osMessageQueueGet(LogQHandle, &data, 1, 100);
-		sprintf(wtext, "%02d/%02d/%02d %02d:%02d:%02d\r\n %s",
+		if(data.isStart==1)
+			sprintf(wtext, "%02d/%02d/%02d %02d:%02d:%02d\r\n %s\n%s",
 				2000 + sdatestructure.Year, sdatestructure.Month,
 				sdatestructure.Date, stimestructure.Hours,
-				stimestructure.Minutes, stimestructure.Seconds,data.jsondata);// yy/mm/dd h:m:s
-
+				stimestructure.Minutes, stimestructure.Seconds,data.clickevents,data.jsondata);// yy/mm/dd h:m:s
+		else
+			sprintf(wtext,"%02d/%02d/%02d %02d:%02d:%02d\r\n %s",
+				2000 + sdatestructure.Year, sdatestructure.Month,
+				sdatestructure.Date, stimestructure.Hours,
+				stimestructure.Minutes, stimestructure.Seconds,data.clickevents);
 		if (f_mount(&SDFatFS, (TCHAR const*) SDPath, 0) != FR_OK) {
 			Error_Handler(); // Alerts_Action(internal_soft);
 		} else {

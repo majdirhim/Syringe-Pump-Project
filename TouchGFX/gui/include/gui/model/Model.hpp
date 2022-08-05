@@ -3,7 +3,6 @@
 #include <touchgfx/hal/types.hpp>
 #include <touchgfx/Utils.hpp>
 #include "../../../Core/Inc/SW_common.h"
-
 #ifndef SIMULATOR
 #include "../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h"
 
@@ -11,6 +10,8 @@ extern osMessageQueueId_t PerfusuinParametersDataQueue_handle;
 // temporary
 extern osMessageQueueId_t MotorSensorDataQueue_Handle;
 
+extern osMessageQueueId_t LogQHandle;
+extern osMessageQueueId_t patientQHandle;
 
 extern osMessageQueueId_t SystemInitParam_handle;
 extern osMessageQueueId_t PatientData_handle;
@@ -29,6 +30,7 @@ extern osMessageQueueId_t TimeDataQueue_handle;
 extern osMessageQueueId_t CurrentPressureDataQueue_handle;
 extern osMessageQueueId_t MuteRequestQueue_handle;
 extern osMessageQueueId_t InitAckQueue_handle;
+extern Log data;
 #endif
 
 
@@ -177,6 +179,9 @@ public:
     uint8_t getinit(void);
 
     ps_float getinfusionvolumeleft(void);
+
+    void toLog(char str[30]);
+
     void tick();
 protected:
     ModelListener* modelListener;

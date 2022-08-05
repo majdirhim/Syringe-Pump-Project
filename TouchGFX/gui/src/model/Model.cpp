@@ -2,7 +2,7 @@
 #include <gui/model/ModelListener.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <string.h>
-
+#include "stdio.h"
 
 
 Model::Model() :
@@ -332,6 +332,9 @@ void Model::saveStart(uint8_t start)
 void Model::savegender(uint8_t value)
 {
     Patient.gender = value;
+#ifndef SIMULATOR
+    osMessageQueuePut(patientQHandle, &Patient, 0, 0);
+#endif
 }
 uint8_t Model::getgender()
 {
@@ -341,6 +344,9 @@ uint8_t Model::getgender()
 void Model::savepatientage(uint8_t value)
 {
     Patient.age = value;
+#ifndef SIMULATOR
+    osMessageQueuePut(patientQHandle, &Patient, 0, 0);
+#endif
 }
 uint8_t Model::getpatientage(void)
 {
@@ -352,7 +358,7 @@ void Model::savepatientname(char* value, uint8_t len)
 	memset(Patient.name, 0, 18);
     strncpy(Patient.name, value, len);
 #ifndef SIMULATOR
-    //osMessageQueuePut(PatientNameQueue_handle, &Patient.name, 0, 0);
+    osMessageQueuePut(patientQHandle, &Patient, 0, 0);
 #endif
 
 }
@@ -364,6 +370,9 @@ char* Model::getpatientname(void)
 void Model::savepatientheight(uint16_t value)
 {
     Patient.height = value;
+#ifndef SIMULATOR
+    osMessageQueuePut(patientQHandle, &Patient, 0, 0);
+#endif
 }
 uint16_t Model::getpatientheight(void)
 {
@@ -373,6 +382,9 @@ uint16_t Model::getpatientheight(void)
 void Model::savepatientweight(uint16_t value)
 {
     Patient.weight = value;
+#ifndef SIMULATOR
+    osMessageQueuePut(patientQHandle, &Patient, 0, 0);
+#endif
 }
 uint16_t Model::getpatientweight(void)
 {
@@ -681,4 +693,16 @@ void Model::savepwdtech(uint16_t screen)
 uint8_t Model::getinit(void)
 {
 	return init;
+}
+
+
+void Model::toLog(char msg[30]){
+#ifndef SIMULATOR
+	sprintf(data.clickevents,"Button %s has been clicked",msg);
+	if(strcmp(msg,"START")==0)
+		data.isStart=1;
+	else
+		data.isStart=0;
+	osMessageQueuePut(LogQHandle, &data, 1, 5);
+#endif
 }

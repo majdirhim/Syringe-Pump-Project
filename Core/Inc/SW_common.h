@@ -178,6 +178,8 @@ typedef struct {
 
 typedef struct {
 	char jsondata[500];
+	char clickevents[30];
+	uint8_t isStart; // start=>1
 }Log;
 
 
