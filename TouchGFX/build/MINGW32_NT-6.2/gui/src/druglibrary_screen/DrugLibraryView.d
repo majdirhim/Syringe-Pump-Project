@@ -38,10 +38,10 @@ build/MINGW32_NT-6.2/gui/src/druglibrary_screen/DrugLibraryView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  gui/include/gui/model/Model.hpp \
- gui/include/../../../Core/Inc/SW_common.h \
- gui/include/../../../Core/Inc/Runtime_language.h \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/types.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
+ gui/include/../../../Core/Inc/SW_common.h \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  gui/include/gui/druglibrary_screen/DrugLibraryPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
@@ -62,6 +62,7 @@ build/MINGW32_NT-6.2/gui/src/druglibrary_screen/DrugLibraryView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
@@ -146,13 +147,13 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/../../../Core/Inc/SW_common.h:
-
-gui/include/../../../Core/Inc/Runtime_language.h:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/types.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
+gui/include/../../../Core/Inc/SW_common.h:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
@@ -193,6 +194,8 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
 

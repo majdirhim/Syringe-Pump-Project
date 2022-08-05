@@ -38,15 +38,12 @@ build/MINGW32_NT-6.2/gui/src/containers/CustomContainer1.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  gui/include/gui/model/Model.hpp \
- gui/include/../../../Core/Inc/SW_common.h \
- gui/include/../../../Core/Inc/Runtime_language.h \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/types.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
+ gui/include/../../../Core/Inc/SW_common.h \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
 
 gui/include/gui/containers/CustomContainer1.hpp:
 
@@ -124,20 +121,14 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/../../../Core/Inc/SW_common.h:
-
-gui/include/../../../Core/Inc/Runtime_language.h:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/types.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
+gui/include/../../../Core/Inc/SW_common.h:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:

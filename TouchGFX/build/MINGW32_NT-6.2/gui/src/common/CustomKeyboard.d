@@ -27,11 +27,7 @@ build/MINGW32_NT-6.2/gui/src/common/CustomKeyboard.o: \
  generated/fonts/include/fonts/ApplicationFontProvider.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/FontManager.hpp \
  generated/images/include/BitmapDatabase.hpp \
- gui/include/gui/common/KeyboardKeyMapping.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp
+ gui/include/gui/common/KeyboardKeyMapping.hpp
 
 gui/include/gui/common/CustomKeyboard.hpp:
 
@@ -88,11 +84,3 @@ generated/fonts/include/fonts/ApplicationFontProvider.hpp:
 generated/images/include/BitmapDatabase.hpp:
 
 gui/include/gui/common/KeyboardKeyMapping.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:

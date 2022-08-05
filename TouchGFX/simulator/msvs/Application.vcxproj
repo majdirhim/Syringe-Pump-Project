@@ -115,6 +115,15 @@
     <ClCompile Include="..\..\gui\src\timeparam_screen\timeparamPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\timeparam_screen\timeparamView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\timeparam_screen\timeparamViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\genderchoice_screen\GenderChoicePresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\genderchoice_screen\GenderChoiceView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\genderchoice_screen\genderchoiceViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\keyboardnb_screen\KeyboardNbPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\keyboardnb_screen\KeyboardNbView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\keyboardnb_screen\KeyboardNBViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\startup_screen\StartUpPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\startup_screen\StartUpView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\startup_screen\startupViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xlsx"/>
@@ -361,6 +370,15 @@
     <ClInclude Include="..\..\gui\include\gui\timeparam_screen\timeparamPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\timeparam_screen\timeparamView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timeparam_screen\timeparamViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\genderchoice_screen\GenderChoicePresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\genderchoice_screen\GenderChoiceView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\genderchoice_screen\genderchoiceViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\keyboardnb_screen\KeyboardNbPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\keyboardnb_screen\KeyboardNbView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\keyboardnb_screen\KeyboardNBViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\startup_screen\StartUpPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\startup_screen\StartUpView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\startup_screen\startupViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

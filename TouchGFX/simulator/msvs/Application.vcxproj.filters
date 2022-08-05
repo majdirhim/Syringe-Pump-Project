@@ -810,6 +810,33 @@
     <ClCompile Include="..\..\generated\gui_generated\src\timeparam_screen\timeparamViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\timeparam_screen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gui\src\genderchoice_screen\GenderChoicePresenter.cpp">
+      <Filter>Source Files\gui\genderchoice_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\genderchoice_screen\GenderChoiceView.cpp">
+      <Filter>Source Files\gui\genderchoice_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\genderchoice_screen\genderchoiceViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\genderchoice_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\keyboardnb_screen\KeyboardNbPresenter.cpp">
+      <Filter>Source Files\gui\keyboardnb_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\keyboardnb_screen\KeyboardNbView.cpp">
+      <Filter>Source Files\gui\keyboardnb_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\keyboardnb_screen\KeyboardNBViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\keyboardnb_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\startup_screen\StartUpPresenter.cpp">
+      <Filter>Source Files\gui\startup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\startup_screen\StartUpView.cpp">
+      <Filter>Source Files\gui\startup_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\startup_screen\startupViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\startup_screen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xlsx">
@@ -1539,6 +1566,33 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timeparam_screen\timeparamViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\timeparam_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\genderchoice_screen\GenderChoicePresenter.hpp">
+      <Filter>Header Files\gui\genderchoice_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\genderchoice_screen\GenderChoiceView.hpp">
+      <Filter>Header Files\gui\genderchoice_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\genderchoice_screen\genderchoiceViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\genderchoice_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\keyboardnb_screen\KeyboardNbPresenter.hpp">
+      <Filter>Header Files\gui\keyboardnb_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\keyboardnb_screen\KeyboardNbView.hpp">
+      <Filter>Header Files\gui\keyboardnb_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\keyboardnb_screen\KeyboardNBViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\keyboardnb_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\startup_screen\StartUpPresenter.hpp">
+      <Filter>Header Files\gui\startup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\startup_screen\StartUpView.hpp">
+      <Filter>Header Files\gui\startup_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\startup_screen\startupViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\startup_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

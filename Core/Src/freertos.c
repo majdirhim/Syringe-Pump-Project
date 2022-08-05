@@ -539,6 +539,7 @@ void StartDataStorage(void *argument)
 	uint8_t wtext[550] = "";
 	uint8_t rtext[_MAX_SS];/* File read buffer */
 	Log data;
+	uint8_t event; // Alarm or event ID (number)
 	RTC_DateTypeDef sdatestructure;
 	RTC_TimeTypeDef stimestructure;
 	extern RTC_HandleTypeDef hrtc;
@@ -549,15 +550,16 @@ void StartDataStorage(void *argument)
 		HAL_RTC_GetTime(&hrtc, &stimestructure, RTC_FORMAT_BIN);
 		osMessageQueueGet(LogQHandle, &data, 1, 100);
 		if(data.isStart==1)
-			sprintf(wtext, "%02d/%02d/%02d %02d:%02d:%02d\r\n %s\n%s",
+			sprintf(wtext, "%02d/%02d/%02d %02d:%02d:%02d\n %s\n%s\r\n",
 				2000 + sdatestructure.Year, sdatestructure.Month,
 				sdatestructure.Date, stimestructure.Hours,
 				stimestructure.Minutes, stimestructure.Seconds,data.clickevents,data.jsondata);// yy/mm/dd h:m:s
 		else
-			sprintf(wtext,"%02d/%02d/%02d %02d:%02d:%02d\r\n %s",
+			osMessageQueueGet(AlarmsQHandle, &event, 1, 10);
+			sprintf(wtext,"%02d/%02d/%02d %02d:%02d:%02d\n %s\n Alarms/Alerts: %u\r\n",
 				2000 + sdatestructure.Year, sdatestructure.Month,
 				sdatestructure.Date, stimestructure.Hours,
-				stimestructure.Minutes, stimestructure.Seconds,data.clickevents);
+				stimestructure.Minutes, stimestructure.Seconds,data.clickevents,event);
 		if (f_mount(&SDFatFS, (TCHAR const*) SDPath, 0) != FR_OK) {
 			Error_Handler(); // Alerts_Action(internal_soft);
 		} else {
