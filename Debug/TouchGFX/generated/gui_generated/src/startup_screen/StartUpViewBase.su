@@ -88,11 +88,11 @@
 ../TouchGFX/generated/gui_generated/include/gui_generated/startup_screen/startupViewBase.hpp:21:13:startupViewBase::~startupViewBase()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/startup_screen/startupViewBase.hpp:21:13:virtual startupViewBase::~startupViewBase()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/startup_screen/startupViewBase.hpp:30:26:FrontendApplication& startupViewBase::application()	16	static
-../TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.cpp:9:1:startupViewBase::startupViewBase()	336	static
-../TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.cpp:93:6:virtual void startupViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.cpp:98:6:virtual void startupViewBase::action1()	16	static
-../TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.cpp:103:6:void startupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
-../TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.cpp:114:6:void startupViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.cpp:9:1:startupViewBase::startupViewBase()	336	static
+../TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.cpp:93:6:virtual void startupViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.cpp:98:6:virtual void startupViewBase::action1()	16	static
+../TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.cpp:103:6:void startupViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.cpp:114:6:void startupViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = startupPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:virtual touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static

@@ -5,13 +5,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.cpp 
+../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.cpp 
 
 OBJS += \
-./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.o 
+./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.o 
 
 CPP_DEPS += \
-./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.d 
+./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +21,7 @@ TouchGFX/generated/gui_generated/src/keyboardnb_screen/%.o TouchGFX/generated/gu
 clean: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-keyboardnb_screen
 
 clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-keyboardnb_screen:
-	-$(RM) ./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.d ./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.o ./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.su
+	-$(RM) ./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.d ./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.o ./TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-keyboardnb_screen
 

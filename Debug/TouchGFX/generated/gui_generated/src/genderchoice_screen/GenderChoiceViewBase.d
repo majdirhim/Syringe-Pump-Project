@@ -1,5 +1,5 @@
-TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.o: \
- ../TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.cpp \
+TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.o: \
+ ../TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.cpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/genderchoice_screen/genderchoiceViewBase.hpp \
  ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

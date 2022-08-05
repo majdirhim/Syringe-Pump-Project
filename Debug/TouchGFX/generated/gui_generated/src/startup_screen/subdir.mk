@@ -5,13 +5,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.cpp 
+../TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.cpp 
 
 OBJS += \
-./TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.o 
+./TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.o 
 
 CPP_DEPS += \
-./TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.d 
+./TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +21,7 @@ TouchGFX/generated/gui_generated/src/startup_screen/%.o TouchGFX/generated/gui_g
 clean: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-startup_screen
 
 clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-startup_screen:
-	-$(RM) ./TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.d ./TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.o ./TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.su
+	-$(RM) ./TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.d ./TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.o ./TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-startup_screen
 

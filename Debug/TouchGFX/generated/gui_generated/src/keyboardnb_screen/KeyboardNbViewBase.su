@@ -120,10 +120,10 @@
 ../TouchGFX/generated/gui_generated/include/gui_generated/keyboardnb_screen/KeyboardNBViewBase.hpp:90:18:virtual void KeyboardNBViewBase::writecomma()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/keyboardnb_screen/KeyboardNBViewBase.hpp:95:18:virtual void KeyboardNBViewBase::closepopup()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/keyboardnb_screen/KeyboardNBViewBase.hpp:101:26:FrontendApplication& KeyboardNBViewBase::application()	16	static
-../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.cpp:9:1:KeyboardNBViewBase::KeyboardNBViewBase()	1016	static
-../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.cpp:245:6:virtual void KeyboardNBViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.cpp:250:6:void KeyboardNBViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
-../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.cpp:261:6:void KeyboardNBViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.cpp:9:1:KeyboardNBViewBase::KeyboardNBViewBase()	1016	static
+../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.cpp:245:6:virtual void KeyboardNBViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.cpp:250:6:void KeyboardNBViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.cpp:261:6:void KeyboardNBViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = KeyboardNBPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:virtual touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static

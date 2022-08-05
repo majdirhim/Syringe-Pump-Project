@@ -5,13 +5,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.cpp 
+../TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.cpp 
 
 OBJS += \
-./TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.o 
+./TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.o 
 
 CPP_DEPS += \
-./TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.d 
+./TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +21,7 @@ TouchGFX/generated/gui_generated/src/genderchoice_screen/%.o TouchGFX/generated/
 clean: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-genderchoice_screen
 
 clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-genderchoice_screen:
-	-$(RM) ./TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.d ./TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.o ./TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.su
+	-$(RM) ./TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.d ./TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.o ./TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-genderchoice_screen
 

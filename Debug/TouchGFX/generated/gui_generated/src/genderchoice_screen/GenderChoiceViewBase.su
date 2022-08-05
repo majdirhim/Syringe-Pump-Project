@@ -89,11 +89,11 @@
 ../TouchGFX/generated/gui_generated/include/gui_generated/genderchoice_screen/genderchoiceViewBase.hpp:20:13:virtual genderchoiceViewBase::~genderchoiceViewBase()	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/genderchoice_screen/genderchoiceViewBase.hpp:31:18:virtual void genderchoiceViewBase::gendersave(int8_t)	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/genderchoice_screen/genderchoiceViewBase.hpp:37:26:FrontendApplication& genderchoiceViewBase::application()	16	static
-../TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.cpp:9:1:genderchoiceViewBase::genderchoiceViewBase()	176	static
-../TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.cpp:66:6:virtual void genderchoiceViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.cpp:71:6:virtual void genderchoiceViewBase::gendervaar(int8_t)	16	static
-../TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.cpp:84:6:void genderchoiceViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
-../TouchGFX/generated/gui_generated/src/genderchoice_screen/GenderChoiceViewBase.cpp:102:6:void genderchoiceViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.cpp:9:1:genderchoiceViewBase::genderchoiceViewBase()	176	static
+../TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.cpp:66:6:virtual void genderchoiceViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.cpp:71:6:virtual void genderchoiceViewBase::gendervaar(int8_t)	16	static
+../TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.cpp:84:6:void genderchoiceViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/genderchoice_screen/genderchoiceViewBase.cpp:102:6:void genderchoiceViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = genderchoicePresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:virtual touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static

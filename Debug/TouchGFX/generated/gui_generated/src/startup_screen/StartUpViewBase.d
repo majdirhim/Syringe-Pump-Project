@@ -1,5 +1,5 @@
-TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.o: \
- ../TouchGFX/generated/gui_generated/src/startup_screen/StartUpViewBase.cpp \
+TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.o: \
+ ../TouchGFX/generated/gui_generated/src/startup_screen/startupViewBase.cpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/startup_screen/startupViewBase.hpp \
  ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

@@ -1,5 +1,5 @@
-TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.o: \
- ../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNbViewBase.cpp \
+TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.o: \
+ ../TouchGFX/generated/gui_generated/src/keyboardnb_screen/KeyboardNBViewBase.cpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/keyboardnb_screen/KeyboardNBViewBase.hpp \
  ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
